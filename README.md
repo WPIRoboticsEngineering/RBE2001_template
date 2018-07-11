@@ -83,7 +83,7 @@ Under Private Library path select
 
 Under toolchains, select New.. and search for where you extracted Arduino. 
 
-Under Libraries, select New.. and search for your user library directory. It is usually in \Documents\Arduino\libraries for Windows, or $HOME/Arduino/libraries for Unix systems. You know you have the right one if the folder contains ESP32Servo, Esp32SimplePacketComs, SimplePacketComs, EspWii and WiiChuck Directories from the library install step above. Remember the location of this folder, it will be where you clone your code in a coming step. 
+Under Libraries, select New.. and search for your user library directory. It is usually in (your users home)\Documents\Arduino\libraries for Windows, or (your users home)/Arduino/libraries for Unix systems. You know you have the right one if the folder contains ESP32Servo, Esp32SimplePacketComs, SimplePacketComs, EspWii and WiiChuck Directories from the library install step above. Remember the location of this folder, it will be where you clone your code in a coming step. 
 
 ## Clone your project
 
@@ -96,7 +96,13 @@ In the browser, Click the clone or download button in your new project and selec
 
 Copy the clone URL.
 
-In Eclipse, right click in the git repositories and select clone. If your URL is still copied in the clip board, Eclipse will autofill most the clone information. You need to change 2 things. 1) Add your username and password. 2) set the target directory to your Arduino libraries folder. It is usually in \Documents\Arduino\libraries for windows, or $HOME/Arduino/libraries for Unix systems. 
+In Eclipse, right click in the git repositories and select clone. If your URL is still copied in the clip board, Eclipse will autofill most the clone information for the first step. Add your username and password.
+
+Hit next and get to the Branch Selection window, change nothing and hit next.
+
+Set the Destination Directory to your Arduino libraries folder (the folder you are still remembering from above). It is usually in (your users home)\Documents\Arduino\libraries for Windows, or (your users home)/Arduino/libraries for Unix systems. 
+
+Hit FInish
 
 ## Open your project and start working
 
