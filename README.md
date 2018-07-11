@@ -75,6 +75,16 @@ Install "The Arduino Eclipse IDE named Sloeber" and restart eclipse.
 
 Set the workspace to Arduino mode. 
 
+Open the Arduino Preferences:
+```
+Arduino -> Preferences
+```
+Under Private Library path select 
+
+Under toolchains, select New.. and search for where you extracted Arduino. 
+
+Under Libraries, select New.. and search for your user library directory. It is usually in \Documents\Arduino\libraries for Windows, or $HOME/Arduino/libraries for Unix systems. You know you have the right one if the folder contains ESP32Servo, Esp32SimplePacketComs, SimplePacketComs, EspWii and WiiChuck Directories from the library install step above. Remember the location of this folder, it will be where you clone your code in a coming step. 
+
 ## Clone your project
 
 In eclipse, open 
@@ -115,13 +125,7 @@ RBE2001 examples ->Final Project
 ```
 Hit finish. The code that you should edit is in your project under libraries/RBE2001/
 
-### If the ESP32 toolchain is not an option, or your library is not visible
-In eclipse, Use the 
-```
-Arduino -> Perferences menu
-```
-Under toolchains, select New.. and search for where you extracted Arduino. 
-Under Libraries, select New.. and search for the directory in which you cloned your GIT clone.
+
 
 # Commit your changes
 
