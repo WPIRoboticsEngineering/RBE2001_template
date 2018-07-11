@@ -45,7 +45,7 @@ https://github.com/WPIRoboticsEngineering/RBE2001_template
 
 BE SURE TO SELECT PRIVATE! 
 
-Set the name during the import step as "RBE2001"
+Set the name during the import step as "RBE2001". **Do Not put anything different from that exact string**, Arduino uses directory names to find header files, and this project needs the name to be exactly "RBE2001". Change only if you and your team have all had exprence with Arduino Library develoment.  
 
 ## Add your team mates as collaborators
 
@@ -79,11 +79,20 @@ Open the Arduino Preferences:
 ```
 Arduino -> Preferences
 ```
-Under Private Library path select 
 
-Under toolchains, select New.. and search for where you extracted Arduino. 
+Under toolchains, select New.. and search for (where you extracted Arduino)/hardware/ 
 
-Under Libraries, select New.. and search for your user library directory. It is usually in (your users home)\Documents\Arduino\libraries for Windows, or (your users home)/Arduino/libraries for Unix systems. You know you have the right one if the folder contains ESP32Servo, Esp32SimplePacketComs, SimplePacketComs, EspWii and WiiChuck Directories from the library install step above. Remember the location of this folder, it will be where you clone your code in a coming step. 
+Mine looks like:
+```
+/opt/arduino-1.8.1/hardware/
+```
+
+Under Private Library path, select New.. and search for your user library directory. It is usually in (your users home)\Documents\Arduino\libraries for Windows, or (your users home)/Arduino/libraries for Unix systems. You know you have the right one if the folder contains ESP32Servo, Esp32SimplePacketComs, SimplePacketComs, EspWii and WiiChuck Directories from the library install step above. Remember the location of this folder, it will be where you clone your code in a coming step. 
+
+Mine looks like:
+```
+/home/hephaestus/Arduino/libraries/
+```
 
 ## Clone your project
 
