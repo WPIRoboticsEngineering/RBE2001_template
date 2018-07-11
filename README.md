@@ -57,7 +57,23 @@ Search and add your team mates.
 
 # Develop Code for your project
 
-Open Eclipse and set the workspace to Arduino mode. 
+## Install Eclipse and the Sloeber plugin (If the computer doesnt already have it)
+
+Download the eclipse installer from here:
+
+https://www.eclipse.org/downloads/
+
+Install the C developemt version. 
+
+Once the install is done, open eclipse and go to the workbench. Open
+```
+Help->Eclipse Marketplace...
+```
+Search for Sloeber 
+
+Install "The Arduino Eclipse IDE named Sloeber" and restart eclipse. 
+
+Set the workspace to Arduino mode. 
 
 ## Clone your project
 
