@@ -10,7 +10,7 @@ http://users.wpi.edu/~glipin/.uploads/RBE-arduino.zip
 
 And extract it somewhare on your computer. Run Arduino in the extracted folder.
 
-## Personal Computer install Linux / Mac /Windows deep install
+## Personal Computer install Linux / Mac 
 
 see: https://github.com/espressif/arduino-esp32#installation-instructions
 
