@@ -176,6 +176,16 @@ and verify your changes are there.
 # 2001 Final Project Commands
 
 ## Warehouse Robot
+### E-Stop 
+
+| |ID | byte |
+|--- |--- | --- |
+| downstream Bytes |4 | 0 |
+| Contents downstream |1989 | --- |
+| upstream Bytes |4 | 0 |
+| Contents upstream |1989 | ---|
+
+Set an E-Stop fault on the robot. No data is transmitted, but the state of the robot should be effected. The robot should freeze all motor functions within a 10ms of receiving this command. 
 
 ### Get Status
 | |ID | byte |
@@ -210,7 +220,7 @@ Request the status of the robot. The byte value represents the robot state.
 | upstream Bytes |4 | 0 |
 | Contents upstream |1871 | ---|
 
-Clear all faults on the robot. No data is transmitted, but the state of the robot should be effected. 
+Clear all faults on the robot. No data is transmitted, but the state of the robot should be effected. The robot should bring it's self online. 
 
 ### Pick Order
 
