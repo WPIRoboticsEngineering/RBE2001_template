@@ -102,7 +102,12 @@ Hit next and get to the Branch Selection window, change nothing and hit next.
 
 Set the Destination Directory to your Arduino libraries folder (the folder you are still remembering from above). It is usually in (your users home)\Documents\Arduino\libraries for Windows, or (your users home)/Arduino/libraries for Unix systems. 
 
-Hit FInish
+Mine looks like:
+```
+/home/hephaestus/Arduino/libraries/RBE2001
+```
+
+Hit Finish
 
 ## Open your project and start working
 
