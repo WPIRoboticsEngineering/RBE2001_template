@@ -3,14 +3,14 @@ Template code for the RBE 2001 final project
 
 # Arduino and the ESP32 Toolchain
 
-## Windows  
+## Personal Computer install Windows  
 download:
 
 http://users.wpi.edu/~glipin/.uploads/RBE-arduino.zip
 
 And extract it somewhare on your computer. Run Arduino in the extracted folder.
 
-## Linux / Mac /Windows full install
+## Personal Computer install Linux / Mac /Windows deep install
 
 see: https://github.com/espressif/arduino-esp32#installation-instructions
 
@@ -57,7 +57,7 @@ Search and add your team mates.
 
 # Develop Code for your project
 
-## Install Eclipse and the Sloeber plugin (If the computer doesnt already have it)
+## Install Eclipse and the Sloeber plugin (If the computer doesn't already have it)
 
 Download the eclipse installer from here:
 
