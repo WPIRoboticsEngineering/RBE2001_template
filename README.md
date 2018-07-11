@@ -19,10 +19,15 @@ see: https://github.com/espressif/arduino-esp32#installation-instructions
 Open Arduino and select Sketch->Libraries -> Manage Libraries
 
 Search for and install:
+
 ESP32Servo
+
 Esp32SimplePacketComs
+
 SimplePacketComs
+
 EspWii
+
 WiiChuck
 
 # Set up your project
@@ -33,7 +38,11 @@ In the browser, click the "+" button next to your user Icon in the upper right c
 
 Select Import repository. 
 
-Use the URL of this repository as the source, and BE SURE TO SELECT PRIVATE! 
+Use the URL:
+
+https://github.com/WPIRoboticsEngineering/RBE2001_template
+
+BE SURE TO SELECT PRIVATE! 
 
 Set the name during the import step as "RBE2001"
 
@@ -64,13 +73,21 @@ To open the project you will be using Sloeber and the "Linked Example" developme
 In Eclipse, Right click in the Project View and select New->Arduino Sketch
 
 Give it a name, and select the ESP32 toolchain. 
+
 Board: ESP32 Dev Module
+
 Upload Protocol: Default
+
 Port (the port your device is on)
+
 Core Debug Level: None
+
 Flash Frequency 80mhz
+
 Flash Mode: QIO
+
 Flash Size: 4mb
+
 Upload Speed: 921600
 
 Then hit next
@@ -88,8 +105,16 @@ Under Libraries, select New.. and search for the directory in which you cloned y
 
 When you make a change to any line of code, you should commit your changes. If you have worked for ~1 hour, then you should make a commit with a message describing your work. To do so, go back to Git Repositories, and right click on your repository->Commit
 
+Be sure to set the "Author" and "Committer" fields sould both contain the same data like this:
+
+Kevin Harrington <harrington@wpi.edu>
+
+
 Messages should consist of 60 charrectors of short description describing what changed, 2 new lines, then a t least one full sentance describing the justification for the change. If you have more than one fime, only commit one at a time. using the "+" and "-" buttons in the Git Staging section. 
 
+When you have chages to share with your team, first Right click on the repository and select "Pull". Merge any changes your team mates made and published to upstream. Then commit the merge (or commit nothing if the merge was clean) and push your changes to the upstream server.
+
+Once you have pushed your changes, be sure to verify that they are on GitHub. On your repository, go to Insights->Network and verify your changes are there. 
 
 # 2001 Final Project Commands
 
