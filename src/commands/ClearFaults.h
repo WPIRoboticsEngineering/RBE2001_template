@@ -1,9 +1,9 @@
-#include <robot/MyRobot.h>
-#include <SimplePacketComs.h>
+
 
 #if !defined(CLEARFAULTS)
 #define CLEARFAULTS
-
+#include <robot/MyRobot.h>
+#include <SimplePacketComs.h>
 class ClearFaults: public PacketEventAbstract {
 	MyRobot* robotPointer;
 public:

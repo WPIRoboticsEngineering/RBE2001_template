@@ -21,6 +21,7 @@ enum RobotStatus {
 #include <commands/GetLocation.h>
 #include <commands/GetStatus.h>
 #include <commands/PickOrder.h>
+#include <commands/EStop.h>
 #include <Arduino.h>
 #include <SimplePacketComs.h>
 

@@ -149,7 +149,13 @@ Hit finish. The code that you should edit is in your project under libraries/RBE
 
 # Commit your changes
 
-When you make a change to any line of code, you should commit your changes. If you have worked for ~1 hour, then you should make a commit with a message describing your work. To do so, go back to Git Repositories, and right click on your repository->Commit
+When you make a change to any line of code, you should commit your changes. If you have worked for ~1 hour, then you should make a commit with a message describing your work. To do so, go back to 
+
+Git Repositories
+
+Expand it and right click on Working Tree and select Add to Index. This loads your changes into the git module.
+
+Finally right click on RBE2001[master]->Commit
 
 Be sure to set the "Author" and "Committer" fields sould both contain the same data like this:
 ```
@@ -208,14 +214,14 @@ Clear all faults on the robot. No data is transmitted, but the state of the robo
 
 ### Pick Order
 
-| |ID | float |float |float |float |float |float |
-|--- |--- | --- |--- | --- |--- | --- | --- |
-| downstream Bytes |4 | 4 | 4 | 4 | 4 | 4 | 4 |
-| Contents downstream |1936 | pickup area | pickup x | pickup z | drop off area | drop off  x | drop off  z |
+| |ID | float |float |float |
+|--- |--- | --- |--- | --- |
+| downstream Bytes |4 | 4 | 4 | 4 |
+| Contents downstream |1936 | pickup material | dropoff angle | dropoff position | 
 | upstream Bytes |4 | 0 |
 | Contents upstream |1936 | ---|
 
-An order is placed with the robot. The first 3 values are the pickup location, followed by the x and Z values in MM of the shelf where the pallet is located. The second 3 values are the drop off location, followed by the X and Z values in MM of the shelf where the pallet is to be deposited. 
+An order is placed with the robot. The first 3 values are the pickup material, followed by the drop off angle and the drop off position.
 
 ### Get Location 
 | |ID | float |float |float |float |float |float |float |float |
