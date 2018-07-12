@@ -138,6 +138,7 @@ Core Debug Level: None
 Flash Frequency 80mhz
 Flash Mode: QIO
 Flash Size: 4mb
+Partition Scheme: Default
 Upload Speed: 921600
 ```
 Then hit next
