@@ -45,6 +45,9 @@ https://github.com/WPIRoboticsEngineering/RBE2001_template
 
 BE SURE TO SELECT PRIVATE! 
 
+If private is not an option, follow these instructions: https://help.github.com/articles/applying-for-a-student-developer-pack/
+
+
 Set the name during the import step as "RBE2001". **Do Not put anything different from that exact string**, Arduino uses directory names to find header files, and this project needs the name to be exactly "RBE2001". Change only if you and your team have all had exprence with Arduino Library develoment.  
 
 ## Add your team mates as collaborators
