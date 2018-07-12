@@ -153,6 +153,11 @@ Hit finish. The code that you should edit is in your project under libraries/RBE
 
 # Commit your changes
 
+### Unfamiliar with Git?
+
+run through this tutorial: https://resources.github.com/videos/github-best-practices/
+
+### Familiar with Git?
 When you make a change to any line of code, you should commit your changes. If you have worked for ~1 hour, then you should make a commit with a message describing your work. To do so, go back to 
 
 Git Repositories
