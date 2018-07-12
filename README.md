@@ -84,14 +84,14 @@ Under toolchains, select New.. and search for (where you extracted Arduino)/hard
 
 Mine looks like:
 ```
-/opt/arduino-1.8.1/hardware/
+C:\WPIAPPS\arduino-1.8.3\hardware\
 ```
 
 Under Private Library path, select New.. and search for your user library directory. It is usually in (your users home)\Documents\Arduino\libraries for Windows, or (your users home)/Arduino/libraries for Unix systems. You know you have the right one if the folder contains ESP32Servo, Esp32SimplePacketComs, SimplePacketComs, EspWii and WiiChuck Directories from the library install step above. Remember the location of this folder, it will be where you clone your code in a coming step. 
 
 Mine looks like:
 ```
-/home/hephaestus/Arduino/libraries/
+C:\Users\harrington\Documents\Arduino\libraries
 ```
 
 ## Clone your project
@@ -113,7 +113,7 @@ Set the Destination Directory to your Arduino libraries folder (the folder you a
 
 Mine looks like:
 ```
-/home/hephaestus/Arduino/libraries/RBE2001
+C:\Users\harrington\Documents\Arduino\libraries\RBE2001
 ```
 
 Hit Finish
