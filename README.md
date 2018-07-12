@@ -181,6 +181,53 @@ Insights->Network
 ```
 and verify your changes are there. 
 
+# Code Structure
+
+Your code for your robot is now set up as what Arduino calls a "Library". Libraries are collections of source code with example uses of that cource code. For your labs, the "examples" directory contains .ino files. The .ion file launched the code and should be as tiny as possible, less than 40 lines total. In general, students shouldn't change the .ino examples. 
+
+Student code lives entirely in the "RBE2001" folder under libraries in eclipse. You should modify only code in that directory. 
+
+## .h and .cpp files
+
+Header files, ending in .h, contain function definitions. Executable code nd memory allocations do not belong in here. Class definitions and function definitions do belong in here.
+
+Source files, ending in .cpp, contain executable code. This is code that will execute or declare memory usage. Class function definitions and method definitions belong in this file.
+
+Naming conventions insist that the .h and .cpp files have the same base name, and that name match the name of the class defined inside. 
+
+SimplePacketComs library is the core communication library to pass data from the Field Controller application and Esp32. Data is passed as a call and response from the application to the Esp32 and back. The call comes in as a UDP packet on port 1865. The response goes back to the host as a responding UDP packet. The first 4 bytes of a command contain an integer representing the command ID. THe next 60 bytes are data. Responses have the same command ID bytes, and data comign from the ESP32 back to the Application.
+
+SimplePacketComs library is initialized with: 
+
+```
+launchControllerServer();
+```
+
+Commands are added to the SimplePacketComs library with:
+
+```
+addServer(PacketEventAbstract *) 
+```
+
+SimplePacketComs library loop will connect and maintain connection to the WiFi, listen to incomming commands, and route the commands to the approprate server object. Loop is called with:
+
+```
+loopServer();
+```
+## DO Change
+
+MyRobot is the main class that defines your robot. All the code associated with the robot belongs in that class. The name of your robot is defined in this class. ALl memory used by your robot should be declared in the MyRobot class definition, and all robot methods belong in the MyRObot class.
+
+Commands are single function classes that represent one command that comes in from the control application. Each command has a function called 
+```
+event(float*)
+```
+that is called by the SimplePacketComs library when that command is recived from the WiFi connection.
+
+
+## DO NOT Change
+
+The .ino file, any library besides RBE2001 or sloeber.ino.cpp. 
 
 # 2001 Final Project Commands
 
