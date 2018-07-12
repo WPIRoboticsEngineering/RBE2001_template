@@ -80,7 +80,7 @@ Open the Arduino Preferences:
 Arduino -> Preferences
 ```
 
-Under toolchains, select New.. and search for (where you extracted Arduino)/hardware/ 
+Under Private Hardware Path, select New.. and search for (where you extracted Arduino)/hardware/ 
 
 Mine looks like:
 ```
