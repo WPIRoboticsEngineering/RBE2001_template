@@ -6,27 +6,28 @@
 #include <RBE2001.h>
 #include <Wire.h>
 
-MyRobot robot;
+MyRobot * robotPointer;
 void setup() {
 	// Initialize the server mechanism with at least one listener
 	launchControllerServer();
+	robotPointer = new MyRobot();
 	//Estop command
-	addServer((PacketEventAbstract *)new EStop(&robot));
+	addServer((PacketEventAbstract *)new EStop(robotPointer));
 	// clear any fault command
-	addServer((PacketEventAbstract *)new ClearFaults(&robot));
+	addServer((PacketEventAbstract *)new ClearFaults(robotPointer));
 	// Pick up an panel command
-	addServer((PacketEventAbstract *)new PickOrder(&robot));
+	addServer((PacketEventAbstract *)new PickOrder(robotPointer));
 	// Get the status of the robot
-	addServer((PacketEventAbstract *)new GetStatus(&robot));
+	addServer((PacketEventAbstract *)new GetStatus(robotPointer));
 	// Get the location of the robot
-	addServer((PacketEventAbstract *)new GetLocation(&robot));
+	addServer((PacketEventAbstract *)new GetLocation(robotPointer));
 	// Direct drive robot command
-	addServer((PacketEventAbstract *)new DirectDrive(&robot));
+	addServer((PacketEventAbstract *)new DirectDrive(robotPointer));
 	// Set the name of the robot for the UDP server
-	setNameUdpDevice(robot.getName());
+	setNameUdpDevice(robotPointer->getName());
 }
 
 void loop() {
 	loopServer();
-	robot.loop();
+	robotPointer->loop();
 }
