@@ -12,7 +12,7 @@ And extract it somewhare on your computer. Run Arduino in the extracted folder.
 
 ## Personal Computer install Linux / Mac 
 
-see: https://github.com/espressif/arduino-esp32#installation-instructions
+see: https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md
 
 ## Arduino Libraries
 
@@ -257,15 +257,16 @@ Request the status of the robot. The byte value represents the robot state.
 |--- |--- |
 | Ready for new task | 0 |
 | Heading to pickup | 1 |
-| Picking up | 2 |
-| Heading to Dropoff | 3 |
-| Dropping off | 4 |
-| Heading to safe zone| 5 |
-| Fault: failed pickup| 6 |(Bonus Points)
-| Fault: failed dropoff| 7 |(Bonus Points)
-| Fault: excessive load| 8 |(Bonus Points)
-| Fault: obstructed path| 9 |(Bonus Points)
-| Fault: E Stop pressed | 10 |
+| Waiting for approval to pickup | 2 |
+| Picking up | 3 |
+| Heading to Dropoff | 4 |
+| Dropping off | 5 |
+| Heading to safe zone| 6 |
+| Fault: failed pickup| 7 |(Bonus Points)
+| Fault: failed dropoff| 8 |(Bonus Points)
+| Fault: excessive load| 9 |(Bonus Points)
+| Fault: obstructed path| 10 |(Bonus Points)
+| Fault: E Stop pressed | 11 |
 
 ### Clear Faults 
 
@@ -277,7 +278,17 @@ Request the status of the robot. The byte value represents the robot state.
 | Contents upstream |1871 | ---|
 
 Clear all faults on the robot. No data is transmitted, but the state of the robot should be effected. The robot should bring it's self online. 
+### Approve 
 
+| |ID | byte |
+|--- |--- | --- |
+| downstream Bytes |4 | 0 |
+| Contents downstream |1994 | --- |
+| upstream Bytes |4 | 0 |
+| Contents upstream |1994 | ---|
+
+When the robot is in "Waiting for approval to pickup" state, this command is issued to advance the state machine. 
+ 
 ### Pick Order
 
 | |ID | float |float |float |

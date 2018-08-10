@@ -19,10 +19,8 @@ void setup() {
 	addServer((PacketEventAbstract *)new PickOrder(robotPointer));
 	// Get the status of the robot
 	addServer((PacketEventAbstract *)new GetStatus(robotPointer));
-	// Get the location of the robot
-	addServer((PacketEventAbstract *)new GetLocation(robotPointer));
-	// Direct drive robot command
-	addServer((PacketEventAbstract *)new DirectDrive(robotPointer));
+	// Approve a procede command from the controller
+	addServer((PacketEventAbstract *)new Approve(robotPointer));
 	// Set the name of the robot for the UDP server
 	setNameUdpDevice(robotPointer->getName());
 }
