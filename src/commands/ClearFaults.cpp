@@ -5,4 +5,5 @@
 // User data is written into the buffer to send it back
 void ClearFaults::event(float * buffer) {
 	// clear the faults somehow
+	Serial.println("ClearFaults::event");
 }

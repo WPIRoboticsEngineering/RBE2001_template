@@ -3,6 +3,7 @@
 MyRobot::MyRobot() {
 	//Put initialization code here
 	name = new String("Warehouse-21");
+	myStatus=Ready_for_new_task;
 
 }
 void MyRobot::loop() {

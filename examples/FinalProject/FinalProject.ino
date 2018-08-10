@@ -1,3 +1,4 @@
+#include <Preferences.h>
 #include <SimplePacketComs.h>
 #include <WiFi.h>
 #include <Esp32SimplePacketComs.h>
@@ -8,7 +9,7 @@
 
 MyRobot * robotPointer;
 void setup() {
-	// Initialize the server mechanism with at least one listener
+	// Initialize the server mechanism
 	launchControllerServer();
 	robotPointer = new MyRobot();
 	//Estop command

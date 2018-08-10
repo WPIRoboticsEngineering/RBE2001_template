@@ -7,6 +7,7 @@
 class MyRobot {
 private:
 	String * name;
+	enum RobotStatus myStatus;
 public:
 	MyRobot() ;
 	void loop();

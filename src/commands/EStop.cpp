@@ -9,5 +9,6 @@
 
 void EStop::event(float * buffer){
 	// Stop the robot immediatly
+	Serial.println("EStop::event");
 }
 
