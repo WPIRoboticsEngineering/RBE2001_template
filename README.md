@@ -229,6 +229,20 @@ that is called by the SimplePacketComs library when that command is recived from
 
 The .ino file, any library besides RBE2001 or sloeber.ino.cpp. 
 
+# 2001 control application
+The application to control your robot over the WIFi is located here:
+
+https://github.com/WPIRoboticsEngineering/RBE2001_template/releases
+
+To use it, download 2001FieldController.jar and right click and run as Java application. 
+
+You can also run it from the command line from the windows terminal:
+
+```
+javaw.exe -jar 2001FieldController.jar
+```
+
+
 # 2001 Final Project Commands
 
 ## Warehouse Robot
