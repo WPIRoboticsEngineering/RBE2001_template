@@ -15,9 +15,11 @@ And extract it somewhare on your computer. Run Arduino in the extracted folder.
 see: https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md
 
 ## Arduino Libraries
+### HOWTO
+For detailed instructions on how libraries work, see: https://www.arduino.cc/en/Guide/Libraries
 
 Open Arduino and select Sketch->Libraries -> Manage Libraries
-
+### Which Libraries
 Search for and install:
 
 ESP32Servo
