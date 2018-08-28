@@ -3,6 +3,11 @@ Template code for the RBE 2001 final project
 
 # Arduino and the ESP32 Toolchain
 
+## Driver
+
+https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
+
+
 ## Personal Computer install Windows  
 download:
 
