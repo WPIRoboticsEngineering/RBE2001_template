@@ -37,6 +37,27 @@ EspWii
 
 WiiChuck
 
+# Add WIFI network passwords (Home use only)
+
+In AK120d and FI103, the passwords will be pre-loaded into your modules. For any other network, including your home network to WiFI tethering through your phone, you will need to set the password.
+
+Open Arduino and open the Esp32SimplePacketComs->WifiManagerExample
+
+Program that example and open the serial consle. In the send txt box, type the SSID (Case sensitive!) and hit send. It will prompt for the password like this:
+
+```
+New ssid: hephaestus
+New password:
+```
+
+Type the password and it send again. If the credentials are correct you will see it get an IP address and write the passowrd to non-volitile memory:
+
+```
+WiFi connected! IP address: 192.168.43.127
+Writing new ssid hephaestus
+Writing new pass ****
+```
+
 # Set up your project
 
 ## Create your private repository (Once per term per team)
