@@ -17,7 +17,7 @@ And extract it somewhare on your computer. Run Arduino in the extracted folder.
 
 ## Personal Computer install Linux / Mac 
 
-see: https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md
+see: https://github.com/espressif/arduino-esp32#installation-instructions
 
 ## Arduino Libraries
 ### HOWTO
