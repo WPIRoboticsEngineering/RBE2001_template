@@ -7,7 +7,7 @@ enum RobotStatus {
 	Waiting_for_approval_to_pickup = 2,
 	Picking_up = 3,
 	Heading_to_Dropoff = 4,
-	Waiting_for_approval_to_pickup = 5,
+	Waiting_for_approval_to_dropoff = 5,
 	Dropping_off = 6,
 	Heading_to_safe_zone = 7,
 	Fault_failed_pickup = 8,

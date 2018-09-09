@@ -12,4 +12,5 @@ void PickOrder::event(float * buffer) {
 	Serial.println(
 			"Pick Order Recived from : " + String(pickupMaterial) + " "
 					+ String(dropoffAngle) + " " + String(dropoffPosition) );
+	robotPointer->myStatus=Waiting_for_approval_to_pickup;
 }
