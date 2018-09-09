@@ -302,13 +302,14 @@ Request the status of the robot. The byte value represents the robot state.
 | Waiting for approval to pickup | 2 |
 | Picking up | 3 |
 | Heading to Dropoff | 4 |
-| Dropping off | 5 |
-| Heading to safe zone| 6 |
-| Fault: failed pickup| 7 |(Bonus Points)
-| Fault: failed dropoff| 8 |(Bonus Points)
-| Fault: excessive load| 9 |(Bonus Points)
-| Fault: obstructed path| 10 |(Bonus Points)
-| Fault: E Stop pressed | 11 |
+| Waiting for approval to Dropoff | 5 |
+| Dropping off | 6 |
+| Heading to safe zone| 7 |
+| Fault: failed pickup| 8 |(Bonus Points)
+| Fault: failed dropoff| 9 |(Bonus Points)
+| Fault: excessive load| 10 |(Bonus Points)
+| Fault: obstructed path| 11 |(Bonus Points)
+| Fault: E Stop pressed | 12 |
 
 ### Clear Faults 
 
