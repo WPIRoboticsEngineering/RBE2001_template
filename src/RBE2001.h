@@ -7,13 +7,14 @@ enum RobotStatus {
 	Waiting_for_approval_to_pickup = 2,
 	Picking_up = 3,
 	Heading_to_Dropoff = 4,
-	Dropping_off = 5,
-	Heading_to_safe_zone = 6,
-	Fault_failed_pickup = 7,
-	Fault_failed_dropoff = 8,
-	Fault_excessive_load = 9,
-	Fault_obstructed_path = 10,
-	Fault_E_Stop_pressed = 11
+	Waiting_for_approval_to_pickup = 5,
+	Dropping_off = 6,
+	Heading_to_safe_zone = 7,
+	Fault_failed_pickup = 8,
+	Fault_failed_dropoff = 9,
+	Fault_excessive_load = 10,
+	Fault_obstructed_path = 11,
+	Fault_E_Stop_pressed = 12
 };
 
 #include <robot/MyRobot.h>
