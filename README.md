@@ -60,23 +60,9 @@ Writing new pass ****
 
 # Set up your project
 
-## Create your private repository (Once per term per team)
+Your privete Repository has been created for you here: https://github.com/RBE200x-lab
 
-In the browser, click the "+" button next to your user Icon in the upper right corner of any github page. 
-
-Select Import repository. 
-
-Use the URL:
-```
-https://github.com/WPIRoboticsEngineering/RBE2001_template
-```
-
-BE SURE TO SELECT PRIVATE! 
-
-If private is not an option, follow these instructions: https://help.github.com/articles/applying-for-a-student-developer-pack/
-
-
-Set the name during the import step as "RBE2001". **Do Not put anything different from that exact string**, Arduino uses directory names to find header files, and this project needs the name to be exactly "RBE2001". Change only if you and your team have all had exprence with Arduino Library develoment.  
+You and your team members should find your repository made with the template code in there. 
 
 ## Add your team mates as collaborators
 
