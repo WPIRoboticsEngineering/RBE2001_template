@@ -17,7 +17,14 @@ And extract it somewhare on your computer. Run Arduino in the extracted folder.
 
 ## Personal Computer install Linux / Mac 
 
-see: https://github.com/espressif/arduino-esp32#installation-instructions
+Mac instructions:
+
+https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/mac.md
+
+Linux Instructions:
+
+https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/debian_ubuntu.md
+
 
 ## Arduino Libraries
 ### HOWTO
