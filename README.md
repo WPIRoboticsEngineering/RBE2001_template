@@ -191,7 +191,7 @@ Be sure to set the "Author" and "Committer" fields sould both contain the same d
 Kevin Harrington <harrington@wpi.edu>
 ```
 
-Messages should consist of 60 charrectors of short description describing what changed, 2 new lines, then a t least one full sentance describing the justification for the change. If you have more than one fime, only commit one at a time. using the "+" and "-" buttons in the Git Staging section. 
+Messages should consist of 60 charrectors of short description describing what changed, 2 new lines, then a t least one full sentance describing the justification for the change. If you have more than one file, only commit one at a time. using the "+" and "-" buttons in the Git Staging section. 
 
 When you have chages to share with your team, first Right click on the repository and select "Pull". Merge any changes your team mates made and published to upstream. Then commit the merge (or commit nothing if the merge was clean) and push your changes to the upstream server.
 
