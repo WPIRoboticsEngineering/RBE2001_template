@@ -176,10 +176,16 @@ When you make a change to any line of code, you should commit your changes. If y
 
 Git Repositories
 
-Expand it and right click on Working Tree and select Add to Index. This loads your changes into the git module.
+Expand it and right click on 
+```
+Working Tree->Add to Index
+```
+This loads your changes into the git module.
 
-Finally right click on RBE2001[master]->Commit
-
+Finally right click on 
+```
+RBE2001[master]->Commit
+```
 Be sure to set the "Author" and "Committer" fields sould both contain the same data like this:
 ```
 Kevin Harrington <harrington@wpi.edu>
