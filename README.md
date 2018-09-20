@@ -126,13 +126,6 @@ Your privete Repository has been created for you here: https://github.com/RBE200
 
 You and your team members should find your repository made with the template code in there. 
 
-## Add your team mates as collaborators
-
-In your new repository, under 
-```
-Settings -> Collaborators
-```
-Search and add your team mates. 
 
 # Develop Code for your project
 
