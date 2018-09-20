@@ -5,7 +5,13 @@ Template code for the RBE 2001 final project
 
 ## Option 1) A lab machine
 
-Availible to all students. Note that Eclipse should be installed by you in your My Documents folder. 
+Availible to all students. 
+
+Note that Eclipse *should be installed by you* in your My Documents folder.  Each install of eclipse should be personal and not shared.
+
+Note that the driver is installed on these computers
+
+Note that Arduino with the ESP32 toolchain is already installed in C:\WPIAPPS\arduino-1.8.3\
 
 ##  Option 2) Personal Machine
 
@@ -22,6 +28,8 @@ OneDrive and Dropbox conflict with the install process and must be fully removed
 Eclipse should be installed in C:\eclipse
 
 Arduino should be installed in C:\RBE-arduino
+
+After installation of both, ensure your user has write access to the directories. 
 
 ### Unsupported OS's
 
