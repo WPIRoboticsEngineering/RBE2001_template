@@ -1,37 +1,73 @@
 # RBE2001_template
 Template code for the RBE 2001 final project
 
+# Pre-requirements 
+
+## A lab machine
+
+Availible to all students. Note that Eclipse should be installed by you in your My Documents folder. 
+
+## Personal Machine
+
+### Supported for this class
+
+Windows 10 Pro 
+
+A user name with no " " in the file path. Generally it is safe to use you WPI username as the username on your computer.
+
+Fresh install is genearlly reccomended every 6 months. Install disk are availible to students as a resource from the WPI Helpdesk.
+
+OneDrive and Dropbox conflict with the install process and must be fully removed from the user file paths. 
+
+Eclipse should be installed in C:\eclipse
+
+Arduino should be installed in C:\RBE-arduino
+
+### Unsupported OS's
+
+MacOS is unsupported and only intermittantly working. If you have MacOS please install a fresh copy of Windows 10. 
+
+Ubuntu 16.04 is unsupported but works well.
+
+Ubuntu 18.04 is unsupported but works well with some creative directions following. This will take more effort and would require pre-existing proficency in Linux. If you have 18.04 please install Windows 10 or 16.04. 
+
+
 # Arduino and the ESP32 Toolchain
 
 ## Driver
 
+This is installed on the lab machines already. 
+
+After extracting the Zip file, install the 64 bit version of the driver. 
+
 https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
 
 
-## Personal Computer install Windows  
+## Personal Computer install Windows  (Supported)
 download:
 
 http://users.wpi.edu/~glipin/.uploads/RBE-arduino.zip
 
 And extract it somewhare on your computer. Run Arduino in the extracted folder.
 
-## Personal Computer install Linux / Mac 
+## Personal Computer install Linux / Mac  (Unsupported)
 
-Mac instructions:
-
-https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/mac.md
-
-Linux Instructions:
+Linux Instructions (16.04 works well, 18.04 is a bit fiddely and needs extra steps but can be made to work):
 
 https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/debian_ubuntu.md
 
 
-## Arduino Libraries
-### HOWTO
+Mac instructions (NOT SUPPORTED BY THE LAB, HAS LOTS OF PROBLEMS):
+
+https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/mac.md
+
+
+# Arduino Libraries
+## HOWTO
 For detailed instructions on how libraries work, see: https://www.arduino.cc/en/Guide/Libraries
 
 Open Arduino and select Sketch->Libraries -> Manage Libraries
-### Which Libraries
+## Which Libraries
 Search for and install:
 
 ESP32Servo
