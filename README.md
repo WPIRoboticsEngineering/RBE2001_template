@@ -19,7 +19,7 @@ Note that Arduino with the ESP32 toolchain is already installed in C:\WPIAPPS\ar
 
 Windows 10 Pro 
 
-A user name with no " " in the file path. Generally it is safe to use you WPI username as the username on your computer.
+A user name with no " " in the file path. Generally it is safe to use your WPI username as the username on your computer.
 
 Fresh install is genearlly reccomended every 6 months. Install disk are availible to students as a resource from the WPI Helpdesk.
 
