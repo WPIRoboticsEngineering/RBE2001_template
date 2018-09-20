@@ -1,13 +1,13 @@
 # RBE2001_template
 Template code for the RBE 2001 final project
 
-# Pre-requirements 
+# Development Computer Options  
 
-## A lab machine
+## Option 1) A lab machine
 
 Availible to all students. Note that Eclipse should be installed by you in your My Documents folder. 
 
-## Personal Machine
+##  Option 2) Personal Machine
 
 ### Supported for this class
 
