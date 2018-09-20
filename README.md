@@ -39,6 +39,17 @@ Ubuntu 16.04 is unsupported but works well.
 
 Ubuntu 18.04 is unsupported but works well with some creative directions following. This will take more effort and would require pre-existing proficency in Linux. If you have 18.04 please install Windows 10 or 16.04. 
 
+### How to get Windows 10 as a Student for free from WPI
+
+To get your student copy of Windows go here: 
+
+https://onlinestore.wpi.edu/
+
+Select windows 10, and download it. For students you get one copy and it is free. 
+
+You can follow this tutorial to install it:
+
+https://www.youtube.com/watch?v=aTVOTY93XXU
 
 # Arduino and the ESP32 Toolchain
 
