@@ -262,6 +262,16 @@ Your code for your robot is now set up as what Arduino calls a "Library". Librar
 
 Student code lives entirely in the "RBE2001" folder under libraries in eclipse. You should modify only code in that directory. 
 
+## Code Theory and High-level description
+
+At the top of the code we have an instance of the MyRobot() object called robotPointer. This is the object through which all of your code should flow.
+
+Next the set of 5 PacketEvents are added to the dispatcher. Each PacketEvent are stored in the dispatcher, and when an approprate packet is recieved, the event function is called on the approrpate PacketEvent. The dispatcher is called by loopServer() each iteration of the main loop, and at that time the stack is checked for new packets from the Field Controller application. 
+
+A copy of robotPointer is provided to each of the PacketEvents. When you want to read from or write to your robot from the event() function of a given PacketEvent, you use the robotPointer class variable provided in the sample code. The robotPointer is set in the constructor in each PacketEvent. 
+
+
+
 ## .h and .cpp files
 
 Header files, ending in .h, contain function definitions. Executable code nd memory allocations do not belong in here. Class definitions and function definitions do belong in here.
@@ -291,7 +301,7 @@ loopServer();
 ```
 ## DO Change
 
-MyRobot is the main class that defines your robot. All the code associated with the robot belongs in that class. The name of your robot is defined in this class. ALl memory used by your robot should be declared in the MyRobot class definition, and all robot methods belong in the MyRObot class.
+MyRobot is the main class that defines your robot. All the code associated with the robot belongs in that class. The name of your robot is defined in this class. All memory used by your robot should be declared in the MyRobot class definition, and all robot methods belong in the MyRobot class.
 
 Commands are single function classes that represent one command that comes in from the control application. Each command has a function called 
 ```
