@@ -284,7 +284,7 @@ Source files, ending in .cpp, contain executable code. This is code that will ex
 
 Naming conventions insist that the .h and .cpp files have the same base name, and that name match the name of the class defined inside. 
 
-SimplePacketComs library is the core communication library to pass data from the Field Controller application and Esp32. Data is passed as a call and response from the application to the Esp32 and back. The call comes in as a UDP packet on port 1865. The response goes back to the host as a responding UDP packet. The first 4 bytes of a command contain an integer representing the command ID. THe next 60 bytes are data. Responses have the same command ID bytes, and data comign from the ESP32 back to the Application.
+[SimplePacketComs library](https://github.com/madhephaestus/SimplePacketComs/blob/master/README.md) is the core communication library to pass data from the Field Controller application and Esp32. Data is passed as a call and response from the application to the Esp32 and back. The call comes in as a UDP packet on port 1865. The response goes back to the host as a responding UDP packet. The first 4 bytes of a command contain an integer representing the command ID. THe next 60 bytes are data. Responses have the same command ID bytes, and data comign from the ESP32 back to the Application.
 
 SimplePacketComs library is initialized with: 
 
