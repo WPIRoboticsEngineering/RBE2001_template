@@ -1,6 +1,10 @@
 # RBE2001_template
 Template code for the RBE 2001 final project
 
+# Hardware
+
+See: https://github.com/WPIRoboticsEngineering/RobotInterfaceBoard
+
 # Development Computer Options  
 
 ## Option 1) A lab machine
