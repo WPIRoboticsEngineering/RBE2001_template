@@ -69,7 +69,7 @@ https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vc
 ## Personal Computer install Windows  (Supported)
 download:
 
-http://users.wpi.edu/~glipin/.uploads/RBE-arduino.zip
+https://github.com/WPIRoboticsEngineering/RBE2002_template/releases/download/0.0.1/RBE-arduino110718.zip
 
 And extract it somewhare on your computer. Run Arduino in the extracted folder.
 
