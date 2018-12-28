@@ -25,6 +25,7 @@ protected:
 	double prevPos=0;
 	double Vel=0;
 	virtual void setOutput(int64_t out)=0;
+	double calcVel();
 public:
 	RBEPID myPID;
 	int64_t hardwareOutput=0;
@@ -36,7 +37,8 @@ public:
 	void SetTunings(double Kp, double Ki, double Kd);
 	void pidinit();
 	float getSetPoint();
-	double calcVel();
+	double getVelocityDegreesPerSecond();
+	double getAngleDegrees();
 	void setOutputUnitVector(float out);
 	virtual int64_t getPosition()=0;
 	virtual int64_t getOutputMin()=0;

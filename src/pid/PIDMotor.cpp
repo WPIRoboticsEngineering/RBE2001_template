@@ -84,6 +84,13 @@ void PIDMotor::SetTunings(double Kp, double Ki, double Kd) {
 }
 
 
+double  PIDMotor::getVelocityDegreesPerSecond(){
+	return Vel;
+}
+double  PIDMotor::getAngleDegrees(){
+	double curPos = getPosition();
+	return curPos/ ticksToDeg();
+}
 
 // Returns Vel in degress/second
 double PIDMotor::calcVel() {
@@ -98,10 +105,10 @@ double PIDMotor::calcVel() {
 	//encoder ticks since last call
 	movement = curPos - prevPos;
 	//encoder ticks to degrees
-	movement = movement * ticksToDeg();
+	movement = movement / ticksToDeg();
 	//timeInterval in seconds
 	timeInterval = timeInterval / 1000;
-	//Velocity in degrees per milliseconds
+	//Velocity in degrees per econds
 	Vel = movement / timeInterval;
 	//sets curent vals to previous
 	prevPos = curPos;
