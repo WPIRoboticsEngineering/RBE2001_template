@@ -83,6 +83,8 @@ void PIDMotor::SetTunings(double Kp, double Ki, double Kd) {
 	overrideCurrentPosition(getPosition());
 }
 
+
+
 // Returns Vel in degress/second
 double PIDMotor::calcVel() {
 	//current positions
@@ -91,12 +93,12 @@ double PIDMotor::calcVel() {
 	curTime = millis();
 	//time change in ms from last call
 	timeInterval = curTime - prevTime;
-	if (timeInterval < 100)
-		return Vel;		// If this is polled too fast, return the cached time
+	if (timeInterval < 20)
+		return Vel;		// If this is polled too fast, return the cached velocity
 	//encoder ticks since last call
 	movement = curPos - prevPos;
 	//encoder ticks to degrees
-	movement = movement * ticksToDeg;
+	movement = movement * ticksToDeg();
 	//timeInterval in seconds
 	timeInterval = timeInterval / 1000;
 	//Velocity in degrees per milliseconds

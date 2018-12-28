@@ -30,8 +30,14 @@ public:
 	double calcCur(void) {
 		return 0;
 	}
-	;
+	double ticksToDeg(){
+		return 16.0 * // Encoder CPR
+							50.0 * // Motor Gear box ratio
+							1.0 * // motor to wheel stage ratio
+							(1.0 / 360.0) * // degrees per revolution
+							encoder.countsMode; // full quadrature, 4 ticks be encoder count, half is 2 and single mode is one
 
+	}
 };
 
 #endif /* SRC_SERVOENCODERPIDMOTOR_H_ */

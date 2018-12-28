@@ -10,7 +10,7 @@
 #include <stdint.h>
 #include "RBEPID.h"
 #define PID_OUTPUT_COMPUTE_RANGE 900
-#define ticksToDeg 0.2206
+
 class PIDMotor {
 protected:
 
@@ -22,8 +22,8 @@ protected:
 	double prevTime=0;
 	double timeInterval=0;
 	double movement=0;
-	double prevPos;
-	double Vel;
+	double prevPos=0;
+	double Vel=0;
 	virtual void setOutput(int64_t out)=0;
 public:
 	RBEPID myPID;
@@ -44,7 +44,7 @@ public:
 	virtual int64_t getOutputMinDeadbad()=0;
 	virtual int64_t getOutputMaxDeadbad()=0;
 	virtual int64_t getOutputStop()=0;
-
+	virtual double ticksToDeg()=0;
 	virtual void overrideCurrentPositionHardware(int64_t val)=0;
 	virtual double calcCur(void)=0;
 

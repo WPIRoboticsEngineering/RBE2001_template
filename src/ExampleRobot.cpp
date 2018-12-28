@@ -37,28 +37,10 @@ ExampleRobot::ExampleRobot(String * mn) {
 	pidList[1] = &motor2;
 	pidList[2] = &motor3;
 	state = Startup;
-#if defined(	USE_WIFI)
-#if defined(USE_IMU)
-	sensor = NULL;
-#endif
-#if defined(USE_IR_CAM)
-	serverIR = NULL;
-#endif
-#endif
 	name = mn;
 }
 
-ExampleRobot::~ExampleRobot() {
-	// TODO Auto-generated destructor stub
-}
-void ExampleRobot::setupPIDServers(){
-#if defined(	USE_WIFI)
-	coms.attach(new PIDConfigureSimplePacketComsServer(numberOfPID,pidList)); // @suppress("Method cannot be resolved")
-	coms.attach(new GetPIDData(numberOfPID,pidList)); // @suppress("Method cannot be resolved")
-	coms.attach(new GetPIDConfigureSimplePacketComsServer(numberOfPID,pidList)); // @suppress("Method cannot be resolved")
-#endif
 
-}
 void ExampleRobot::setup() {
 	if (state != Startup)
 		return;
@@ -68,7 +50,7 @@ void ExampleRobot::setup() {
 #else
 	Serial.begin(115200);
 #endif
-	delay(100);
+
 	motor1.attach(MOTOR1_PWM, MOTOR1_DIR, MOTOR1_ENCA, MOTOR1_ENCB);
 	motor2.attach(MOTOR2_PWM, MOTOR2_DIR, MOTOR2_ENCA, MOTOR2_ENCB);
 	motor3.attach(MOTOR3_PWM,  MOTOR3_ENCA, MOTOR3_ENCB);
@@ -82,7 +64,18 @@ void ExampleRobot::setup() {
 #if defined(USE_WIFI)
 	// Attach coms
 	coms.attach(new NameCheckerServer(name)); // @suppress("Method cannot be resolved")
-	setupPIDServers();
+	coms.attach(new PIDConfigureSimplePacketComsServer(numberOfPID,pidList)); // @suppress("Method cannot be resolved")
+	coms.attach(new GetPIDData(numberOfPID,pidList)); // @suppress("Method cannot be resolved")
+	coms.attach(new GetPIDConfigureSimplePacketComsServer(numberOfPID,pidList)); // @suppress("Method cannot be resolved")
+	coms.attach((PacketEventAbstract *)new EStop(this));// @suppress("Method cannot be resolved")
+	// clear any fault command
+	coms.attach((PacketEventAbstract *)new ClearFaults(this));// @suppress("Method cannot be resolved")
+	// Pick up an panel command
+	coms.attach((PacketEventAbstract *)new PickOrder(this));// @suppress("Method cannot be resolved")
+	// Get the status of the robot
+	coms.attach((PacketEventAbstract *)new GetStatus(this));// @suppress("Method cannot be resolved")
+	// Approve a procede command from the controller
+	coms.attach((PacketEventAbstract *)new Approve(this));// @suppress("Method cannot be resolved")
 #endif
 
 }
@@ -98,5 +91,8 @@ void ExampleRobot::fastLoop() {
 		return;
 	}
 #endif
+	for(int i=0;i<numberOfPID;i++){
+		pidList[i]->loop();
+	}
 
 }

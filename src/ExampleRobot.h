@@ -26,6 +26,12 @@
 #include "commands/GetPIDData.h"
 #include "commands/PIDConfigureSimplePacketComsServer.h"
 
+#include "commands/Approve.h"
+#include "commands/ClearFaults.h"
+#include "commands/EStop.h"
+#include "commands/GetStatus.h"
+#include "commands/PickOrder.h"
+
 enum state_t {
 	Startup,
 	WaitForConnect,
