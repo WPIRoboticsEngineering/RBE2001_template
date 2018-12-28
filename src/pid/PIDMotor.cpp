@@ -108,7 +108,7 @@ double PIDMotor::calcVel() {
 	movement = movement / ticksToDeg();
 	//timeInterval in seconds
 	timeInterval = timeInterval / 1000;
-	//Velocity in degrees per econds
+	//Velocity in degrees per seconds
 	Vel = movement / timeInterval;
 	//sets curent vals to previous
 	prevPos = curPos;
