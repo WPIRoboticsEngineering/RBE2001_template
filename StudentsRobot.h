@@ -20,10 +20,25 @@ enum RobotStateMachine {
 	Halt=4
 
 };
+enum ComStackStatusState {
+	Ready_for_new_task = 0,
+	Heading_to_pickup = 1,
+	Waiting_for_approval_to_pickup = 2,
+	Picking_up = 3,
+	Heading_to_Dropoff = 4,
+	Waiting_for_approval_to_dropoff = 5,
+	Dropping_off = 6,
+	Heading_to_safe_zone = 7,
+	Fault_failed_pickup = 8,
+	Fault_failed_dropoff = 9,
+	Fault_excessive_load = 10,
+	Fault_obstructed_path = 11,
+	Fault_E_Stop_pressed = 12
+};
 class StudentsRobot {
 public:
 	StudentsRobot();
-	RobotStatus myCommandsStatus = Ready_for_new_task;
+	ComStackStatusState myCommandsStatus = Ready_for_new_task;
 	RobotStateMachine status=StartupRobot;
 	void Approve(float * data);
 	void ClearFaults(float * data);
