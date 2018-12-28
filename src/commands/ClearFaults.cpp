@@ -4,7 +4,5 @@
 // Buffer contains data from the packet coming in at the start of the function
 // User data is written into the buffer to send it back
 void ClearFaults::event(float * buffer) {
-	// clear the faults somehow
-	Serial.println("ClearFaults::event");
-	robotPointer->myCommandsStatus=Ready_for_new_task;
+	robotPointer->ClearFaults(buffer);
 }

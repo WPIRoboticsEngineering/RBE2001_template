@@ -4,12 +4,6 @@
 // Buffer contains data from the packet coming in at the start of the function
 // User data is written into the buffer to send it back
 void Approve::event(float * buffer) {
-	// approve the procession to new state
-	Serial.println("Approve::event");
+	robotPointer->Approve(buffer);
 
-	if(robotPointer->myCommandsStatus==Waiting_for_approval_to_pickup){
-		robotPointer->myCommandsStatus=Waiting_for_approval_to_dropoff;
-	}else{
-		robotPointer->myCommandsStatus=Ready_for_new_task;
-	}
 }

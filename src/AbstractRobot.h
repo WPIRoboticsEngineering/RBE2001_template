@@ -10,7 +10,7 @@
 #if defined(Arduino_h)
 #include <Arduino.h>
 #endif
-#include "config.h"
+#include "../config.h"
 #include <ESP32Servo.h>
 #include <ESP32Encoder.h>
 #include "../RBEPID.h"
