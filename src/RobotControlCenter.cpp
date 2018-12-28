@@ -89,6 +89,6 @@ void RobotControlCenter::fastLoop() {
 	}
 #endif
 	robot->pidLoop(&motor1, &motor2, &motor3);
-	robot->updateStateMachine();
+	robot->updateStateMachine(&motor1, &motor2, &motor3, &servo);
 
 }

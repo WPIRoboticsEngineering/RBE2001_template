@@ -63,10 +63,6 @@ private:
 
 	#endif
 
-	// RUn the game control logic
-	void runGameControl();
-	// Print the values of the robot
-	void printAll();
 	// The fast loop actions
 	// This should be run every loop and is internally gated for fast opperation
 	void fastLoop();

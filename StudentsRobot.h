@@ -30,7 +30,9 @@ public:
 	void PickOrder(float * buffer) ;
 	void attach(HBridgeEncoderPIDMotor * motor1,HBridgeEncoderPIDMotor * motor2, ServoEncoderPIDMotor * motor3, Servo * servo);
 	void pidLoop(HBridgeEncoderPIDMotor * motor1,HBridgeEncoderPIDMotor * motor2, ServoEncoderPIDMotor * motor3);
-	void updateStateMachine();
+	void updateStateMachine(HBridgeEncoderPIDMotor * motor1,
+			HBridgeEncoderPIDMotor * motor2, ServoEncoderPIDMotor * motor3,
+			Servo * servo);
 };
 
 #endif /* STUDENTSROBOT_H_ */

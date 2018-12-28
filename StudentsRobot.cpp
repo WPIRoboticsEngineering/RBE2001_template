@@ -11,7 +11,9 @@ StudentsRobot::StudentsRobot() {
 	// TODO Auto-generated constructor stub
 
 }
-void StudentsRobot::updateStateMachine(){
+void StudentsRobot::updateStateMachine(HBridgeEncoderPIDMotor * motor1,
+		HBridgeEncoderPIDMotor * motor2, ServoEncoderPIDMotor * motor3,
+		Servo * servo){
 	switch(status){
 	case StartupRobot:
 		//Do this onece at startup
@@ -45,11 +47,9 @@ void StudentsRobot::attach(HBridgeEncoderPIDMotor * motor1,
 }
 
 void StudentsRobot::pidLoop(HBridgeEncoderPIDMotor * motor1,HBridgeEncoderPIDMotor * motor2, ServoEncoderPIDMotor * motor3){
-	if(status!=Halt){
-		motor1->loop();
-		motor2->loop();
-		motor3->loop();
-	}
+	motor1->loop();
+	motor2->loop();
+	motor3->loop();
 }
 
 void StudentsRobot::Approve(float * data) {
