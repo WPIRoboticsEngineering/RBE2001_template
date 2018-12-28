@@ -40,6 +40,7 @@ AbstractRobot::AbstractRobot(String * mn) {
 	pidList[2] = &motor3;
 	state = Startup;
 	name = mn;
+	robot=NULL;
 }
 
 void AbstractRobot::setup() {
@@ -52,16 +53,8 @@ void AbstractRobot::setup() {
 	Serial.begin(115200);
 #endif
 	robot =  new StudentsRobot();
-	motor1.attach(MOTOR1_PWM, MOTOR1_DIR, MOTOR1_ENCA, MOTOR1_ENCB);
-	motor2.attach(MOTOR2_PWM, MOTOR2_DIR, MOTOR2_ENCA, MOTOR2_ENCB);
-	motor3.attach(MOTOR3_PWM, MOTOR3_ENCA, MOTOR3_ENCB);
 
-	Serial.println("Starting Motors");
-
-	// Set up digital servos
-	servo.setPeriodHertz(330);
-	servo.attach(SERVO_PIN, 1000, 2000);
-
+	robot->attach(&motor1, &motor2, &motor3, &servo);
 
 
 #if defined(USE_WIFI)
@@ -95,8 +88,6 @@ void AbstractRobot::fastLoop() {
 		return;
 	}
 #endif
-	for (int i = 0; i < numberOfPID; i++) {
-		pidList[i]->loop();
-	}
+	robot->pidLoop(&motor1, &motor2, &motor3);
 
 }

@@ -12,6 +12,25 @@ StudentsRobot::StudentsRobot() {
 
 }
 
+void StudentsRobot::attach(HBridgeEncoderPIDMotor * motor1,
+		HBridgeEncoderPIDMotor * motor2, ServoEncoderPIDMotor * motor3,
+		Servo * servo) {
+	motor1->attach(MOTOR1_PWM, MOTOR1_DIR, MOTOR1_ENCA, MOTOR1_ENCB);
+	motor2->attach(MOTOR2_PWM, MOTOR2_DIR, MOTOR2_ENCA, MOTOR2_ENCB);
+	motor3->attach(MOTOR3_PWM, MOTOR3_ENCA, MOTOR3_ENCB);
+
+	Serial.println("Starting Motors");
+	// Set up digital servos
+	servo->setPeriodHertz(330);
+	servo->attach(SERVO_PIN, 1000, 2000);
+}
+
+void StudentsRobot::pidLoop(HBridgeEncoderPIDMotor * motor1,HBridgeEncoderPIDMotor * motor2, ServoEncoderPIDMotor * motor3){
+	motor1->loop();
+	motor2->loop();
+	motor3->loop();
+}
+
 void StudentsRobot::Approve(float * data) {
 	// approve the procession to new state
 	Serial.println("Approve::event");
@@ -34,7 +53,7 @@ void StudentsRobot::EStop(float * buffer) {
 
 }
 void StudentsRobot::PickOrder(float * buffer) {
-	int numberOfFloats = 15;
+
 	float pickupMaterial = buffer[0];
 	float dropoffAngle = buffer[1];
 	float dropoffPosition = buffer[2];
