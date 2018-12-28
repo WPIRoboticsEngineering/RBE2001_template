@@ -5,16 +5,15 @@
  *      Author: hephaestus
  */
 
-#ifndef SRC_COMS_PIDCONFIGURESIMPLEPACKETCOMSSERVER_H_
-#define SRC_COMS_PIDCONFIGURESIMPLEPACKETCOMSSERVER_H_
+#ifndef SRC_COMSGet_PIDCONFIGURESIMPLEPACKETCOMSSERVER_H_
+#define SRC_COMGetS_PIDCONFIGURESIMPLEPACKETCOMSSERVER_H_
 #include <SimplePacketComs.h>
 #include "../pid/PIDMotor.h"
-
-class PIDConfigureSimplePacketComsServer: public PacketEventAbstract {
+class GetPIDConstants: public PacketEventAbstract {
 	PIDMotor ** pidlist;
 	int numPID;
 public:
-	PIDConfigureSimplePacketComsServer(int num, PIDMotor ** list);
+	GetPIDConstants(int num,PIDMotor ** list);
 	void event(float * buffer);
 
 };

@@ -5,9 +5,9 @@
  *      Author: hephaestus
  */
 
-#include "GetPIDConfigureSimplePacketComsServer.h"
+#include "GetPIDConstants.h"
 
-GetPIDConfigureSimplePacketComsServer::GetPIDConfigureSimplePacketComsServer(int num,
+GetPIDConstants::GetPIDConstants(int num,
 		PIDMotor ** list) :
 		PacketEventAbstract(1857) {
 	numPID = num;
@@ -15,7 +15,7 @@ GetPIDConfigureSimplePacketComsServer::GetPIDConfigureSimplePacketComsServer(int
 
 }
 
-void GetPIDConfigureSimplePacketComsServer::event(float * buffer){
+void GetPIDConstants::event(float * buffer){
 	  for(int i=0;i<numPID;i++){
 		  RBEPID * current = &pidlist[i]->myPID;
 		  buffer[(i*3)+0]=current->kp;

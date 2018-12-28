@@ -59,10 +59,10 @@ void RobotControlCenter::setup() {
 #if defined(USE_WIFI)
 	// Attach coms
 	coms.attach(new NameCheckerServer(name)); // @suppress("Method cannot be resolved")
-	coms.attach(new PIDConfigureSimplePacketComsServer(numberOfPID, pidList)); // @suppress("Method cannot be resolved")
+	coms.attach(new SetPIDConstants(numberOfPID, pidList)); // @suppress("Method cannot be resolved")
 	coms.attach(new GetPIDData(numberOfPID, pidList)); // @suppress("Method cannot be resolved")
 	coms.attach(// @suppress("Method cannot be resolved")
-			new GetPIDConfigureSimplePacketComsServer(numberOfPID, pidList));
+			new GetPIDConstants(numberOfPID, pidList));
 	coms.attach(new EStop(robot)); // @suppress("Method cannot be resolved")
 	// clear any fault command
 	coms.attach(new ClearFaults(robot));	// @suppress("Method cannot be resolved")

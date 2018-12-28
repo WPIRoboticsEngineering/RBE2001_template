@@ -7,6 +7,7 @@
 
 #ifndef SRC_ROBOTCONTROLCENTER_H_
 #define SRC_ROBOTCONTROLCENTER_H_
+
 #if defined(Arduino_h)
 #include <Arduino.h>
 #endif
@@ -23,9 +24,9 @@
 #include <Esp32SimplePacketComs.h>
 #include <wifi/WifiManager.h>
 #include <server/NameCheckerServer.h>
-#include "commands/GetPIDConfigureSimplePacketComsServer.h"
+#include "commands/GetPIDConstants.h"
 #include "commands/GetPIDData.h"
-#include "commands/PIDConfigureSimplePacketComsServer.h"
+#include "commands/SetPIDConstants.h"
 
 #include "commands/Approve.h"
 #include "commands/ClearFaults.h"

@@ -16,7 +16,7 @@ void StudentsRobot::updateStateMachine(PIDMotor * motor1,
 		Servo * servo){
 	switch(status){
 	case StartupRobot:
-		//Do this onece at startup
+		//Do this once at startup
 		status=Running;
 		break;
 	case Running:
