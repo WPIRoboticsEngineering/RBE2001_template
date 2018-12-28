@@ -21,6 +21,9 @@ public:
 	int64_t getPosition();
 	int64_t getOutputMin();
 	int64_t getOutputMax();
+	 int64_t getOutputMinDeadbad(){return 133;}
+	 int64_t getOutputMaxDeadbad(){return 133;};
+	 int64_t getOutputStop(){return 0;};
 	void setOutput(int64_t out);
 	void overrideCurrentPositionHardware(int64_t val);
 	ESP32Encoder encoder;

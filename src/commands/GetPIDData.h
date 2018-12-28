@@ -8,7 +8,7 @@
 #ifndef SRC_COMS_GETPIDDATA_H_
 #define SRC_COMS_GETPIDDATA_H_
 #include <SimplePacketComs.h>
-#include "../PIDMotor.h"
+#include "../pid/PIDMotor.h"
 class GetPIDData: public PacketEventAbstract {
 private:
 	PIDMotor ** pidlist;

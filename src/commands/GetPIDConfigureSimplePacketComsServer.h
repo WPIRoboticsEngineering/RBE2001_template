@@ -8,7 +8,7 @@
 #ifndef SRC_COMSGet_PIDCONFIGURESIMPLEPACKETCOMSSERVER_H_
 #define SRC_COMGetS_PIDCONFIGURESIMPLEPACKETCOMSSERVER_H_
 #include <SimplePacketComs.h>
-#include "../PIDMotor.h"
+#include "../pid/PIDMotor.h"
 class GetPIDConfigureSimplePacketComsServer: public PacketEventAbstract {
 	PIDMotor ** pidlist;
 	int numPID;

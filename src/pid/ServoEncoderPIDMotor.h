@@ -22,6 +22,9 @@ public:
 	int64_t getPosition();
 	int64_t getOutputMin();
 	int64_t getOutputMax();
+	 int64_t getOutputMinDeadbad(){return 5;}
+	 int64_t getOutputMaxDeadbad(){return 5;};
+	 int64_t getOutputStop(){return 90;};
 	void setOutput(int64_t out);
 	void overrideCurrentPositionHardware(int64_t val);
 	double calcCur(void) {

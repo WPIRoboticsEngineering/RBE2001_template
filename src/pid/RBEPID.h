@@ -21,7 +21,7 @@ public:
 	void setpid(float P, float I, float D);
 //calculate the output control signal
 	float calc(double setVel, double curVel);
-
+	void clearIntegralBuffer();
 private:
 
 };

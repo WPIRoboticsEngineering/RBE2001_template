@@ -17,10 +17,10 @@ GetPIDConfigureSimplePacketComsServer::GetPIDConfigureSimplePacketComsServer(int
 
 void GetPIDConfigureSimplePacketComsServer::event(float * buffer){
 	  for(int i=0;i<numPID;i++){
-		  PID * current = &pidlist[i]->myPID;
-		  buffer[(i*3)+0]=current->GetKp();
-		  buffer[(i*3)+1]=current->GetKi();
-		  buffer[(i*3)+2]=current->GetKd();
+		  RBEPID * current = &pidlist[i]->myPID;
+		  buffer[(i*3)+0]=current->kp;
+		  buffer[(i*3)+1]=current->ki;
+		  buffer[(i*3)+2]=current->kd;
 	  }
 
 }

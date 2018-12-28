@@ -13,7 +13,8 @@
 #define ticksToDeg 0.2206
 class PIDMotor {
 protected:
-
+	int sampleRateMs =5;
+	long lastTimeRunPID = 0;
 	float Kp=5, Ki=1.5, Kd=0.1;
 	double Setpoint=0, Input=0, Output=0;
 	bool lastErrPositive=false;
@@ -37,6 +38,9 @@ public:
 	virtual int64_t getPosition()=0;
 	virtual int64_t getOutputMin()=0;
 	virtual int64_t getOutputMax()=0;
+	virtual int64_t getOutputMinDeadbad()=0;
+	virtual int64_t getOutputMaxDeadbad()=0;
+	virtual int64_t getOutputStop()=0;
 	virtual void setOutput(int64_t out)=0;
 	virtual void overrideCurrentPositionHardware(int64_t val)=0;
 	virtual double calcCur(void)=0;

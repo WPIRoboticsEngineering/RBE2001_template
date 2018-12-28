@@ -21,9 +21,9 @@ void RBEPID::setpid(float P, float I, float D) {
 	kd = D;
 }
 
-//Write this function to calculate a control signal from the set velocity 
-//and the current velocity 
-float RBEPID::calc(double setVel, double curVel) {
+//Write this function to calculate a control signal from the set point
+//and the current position
+float RBEPID::calc(double set, double cur) {
 
 	// calculate error
 
@@ -33,8 +33,12 @@ float RBEPID::calc(double setVel, double curVel) {
 
 	// sum up the error value to send to the motor based off gain values.
 
-	// limit control value to 0-254
 
-	//return the control signal
+	//return the control signal from -1 to 1
 	return 0;
+}
+
+// Clear the integral accumulator
+void RBEPID::clearIntegralBuffer(){
+
 }
