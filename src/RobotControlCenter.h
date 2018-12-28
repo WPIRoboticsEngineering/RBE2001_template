@@ -27,7 +27,7 @@
 #include "commands/GetPIDConstants.h"
 #include "commands/GetPIDData.h"
 #include "commands/SetPIDConstants.h"
-
+#include "commands/SetPIDSetpoint.h"
 #include "commands/Approve.h"
 #include "commands/ClearFaults.h"
 #include "commands/EStop.h"

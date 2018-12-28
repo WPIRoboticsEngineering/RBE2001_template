@@ -40,7 +40,7 @@ RobotControlCenter::RobotControlCenter(String * mn) {
 	pidList[2] = &motor3;
 	state = Startup;
 	name = mn;
-	robot=NULL;
+	robot = NULL;
 }
 
 void RobotControlCenter::setup() {
@@ -52,26 +52,27 @@ void RobotControlCenter::setup() {
 #else
 	Serial.begin(115200);
 #endif
-	robot =  new StudentsRobot();
+	robot = new StudentsRobot();
 
 	robot->attach(&motor1, &motor2, &motor3, &servo);
 
 #if defined(USE_WIFI)
 	// Attach coms
 	coms.attach(new NameCheckerServer(name)); // @suppress("Method cannot be resolved")
+	coms.attach(new SetPIDSetpoint(numberOfPID, pidList)); // @suppress("Method cannot be resolved")
 	coms.attach(new SetPIDConstants(numberOfPID, pidList)); // @suppress("Method cannot be resolved")
 	coms.attach(new GetPIDData(numberOfPID, pidList)); // @suppress("Method cannot be resolved")
-	coms.attach(// @suppress("Method cannot be resolved")
+	coms.attach( // @suppress("Method cannot be resolved")
 			new GetPIDConstants(numberOfPID, pidList));
 	coms.attach(new EStop(robot)); // @suppress("Method cannot be resolved")
 	// clear any fault command
-	coms.attach(new ClearFaults(robot));	// @suppress("Method cannot be resolved")
+	coms.attach(new ClearFaults(robot));// @suppress("Method cannot be resolved")
 	// Pick up an panel command
 	coms.attach(new PickOrder(robot));// @suppress("Method cannot be resolved")
 	// Get the status of the robot
 	coms.attach(new GetStatus(robot));// @suppress("Method cannot be resolved")
 	// Approve a procede command from the controller
-	coms.attach(new Approve(robot));	// @suppress("Method cannot be resolved")
+	coms.attach(new Approve(robot));// @suppress("Method cannot be resolved")
 #endif
 
 }
