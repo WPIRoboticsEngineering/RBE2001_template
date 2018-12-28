@@ -11,6 +11,25 @@ StudentsRobot::StudentsRobot() {
 	// TODO Auto-generated constructor stub
 
 }
+void StudentsRobot::updateStateMachine(){
+	switch(status){
+	case StartupRobot:
+		//Do this onece at startup
+		status=Running;
+		break;
+	case Running:
+		// Do something
+		break;
+	case Halting:
+		// save state and enter safe mode
+		status=Halt;
+		break;
+	case Halt:
+		// in safe mode
+		break;
+
+	}
+}
 
 void StudentsRobot::attach(HBridgeEncoderPIDMotor * motor1,
 		HBridgeEncoderPIDMotor * motor2, ServoEncoderPIDMotor * motor3,
@@ -26,9 +45,11 @@ void StudentsRobot::attach(HBridgeEncoderPIDMotor * motor1,
 }
 
 void StudentsRobot::pidLoop(HBridgeEncoderPIDMotor * motor1,HBridgeEncoderPIDMotor * motor2, ServoEncoderPIDMotor * motor3){
-	motor1->loop();
-	motor2->loop();
-	motor3->loop();
+	if(status!=Halt){
+		motor1->loop();
+		motor2->loop();
+		motor3->loop();
+	}
 }
 
 void StudentsRobot::Approve(float * data) {
@@ -45,15 +66,16 @@ void StudentsRobot::ClearFaults(float * data) {
 	// clear the faults somehow
 	Serial.println("ClearFaults::event");
 	myCommandsStatus = Ready_for_new_task;
+	status=Running;
 }
 void StudentsRobot::EStop(float * buffer) {
 	// Stop the robot immediatly
 	Serial.println("EStop::event");
 	myCommandsStatus = Fault_E_Stop_pressed;
+	status=Halting;
 
 }
 void StudentsRobot::PickOrder(float * buffer) {
-
 	float pickupMaterial = buffer[0];
 	float dropoffAngle = buffer[1];
 	float dropoffPosition = buffer[2];

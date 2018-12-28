@@ -15,7 +15,8 @@
 enum RobotStateMachine {
 	StartupRobot = 0,
 	Running=1,
-	Halt=3
+	Halting=2,
+	Halt=3,
 
 };
 class StudentsRobot {
@@ -29,7 +30,7 @@ public:
 	void PickOrder(float * buffer) ;
 	void attach(HBridgeEncoderPIDMotor * motor1,HBridgeEncoderPIDMotor * motor2, ServoEncoderPIDMotor * motor3, Servo * servo);
 	void pidLoop(HBridgeEncoderPIDMotor * motor1,HBridgeEncoderPIDMotor * motor2, ServoEncoderPIDMotor * motor3);
-
+	void updateStateMachine();
 };
 
 #endif /* STUDENTSROBOT_H_ */
