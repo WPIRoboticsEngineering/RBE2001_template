@@ -17,6 +17,10 @@ void StudentsRobot::updateStateMachine(PIDMotor * motor1,
 	switch(status){
 	case StartupRobot:
 		//Do this once at startup
+		status=StartRunning;
+		break;
+	case 	StartRunning:
+		Serial.println("Start Running");
 		status=Running;
 		break;
 	case Running:
@@ -24,6 +28,7 @@ void StudentsRobot::updateStateMachine(PIDMotor * motor1,
 		break;
 	case Halting:
 		// save state and enter safe mode
+		Serial.println("Halting State machine");
 		status=Halt;
 		break;
 	case Halt:
@@ -66,7 +71,7 @@ void StudentsRobot::ClearFaults(float * data) {
 	// clear the faults somehow
 	Serial.println("ClearFaults::event");
 	myCommandsStatus = Ready_for_new_task;
-	status=Running;
+	status=StartRunning;
 }
 void StudentsRobot::EStop(float * buffer) {
 	// Stop the robot immediatly

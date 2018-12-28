@@ -14,9 +14,10 @@
 #include <ESP32Servo.h>
 enum RobotStateMachine {
 	StartupRobot = 0,
-	Running=1,
-	Halting=2,
-	Halt=3,
+	StartRunning=1,
+	Running=2,
+	Halting=3,
+	Halt=4
 
 };
 class StudentsRobot {
