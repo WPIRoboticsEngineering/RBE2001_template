@@ -20,7 +20,7 @@ void ExampleRobot::loop() {
 #if defined(USE_WIFI)
 			if (manager.getState() == Connected)
 #endif
-				state = readGame; // begin the main operation loop
+				state = run; // begin the main operation loop
 			break;
 		default:
 			break;
@@ -35,6 +35,7 @@ void ExampleRobot::loop() {
 ExampleRobot::ExampleRobot(String * mn) {
 	pidList[0] = &motor1;
 	pidList[1] = &motor2;
+	pidList[2] = &motor3;
 	state = Startup;
 #if defined(	USE_WIFI)
 #if defined(USE_IMU)
@@ -52,9 +53,9 @@ ExampleRobot::~ExampleRobot() {
 }
 void ExampleRobot::setupPIDServers(){
 #if defined(	USE_WIFI)
-	coms.attach(new PIDConfigureSimplePacketComsServer(numberOfPID,pidList));
-	coms.attach(new GetPIDData(numberOfPID,pidList));
-	coms.attach(new GetPIDConfigureSimplePacketComsServer(numberOfPID,pidList));
+	coms.attach(new PIDConfigureSimplePacketComsServer(numberOfPID,pidList)); // @suppress("Method cannot be resolved")
+	coms.attach(new GetPIDData(numberOfPID,pidList)); // @suppress("Method cannot be resolved")
+	coms.attach(new GetPIDConfigureSimplePacketComsServer(numberOfPID,pidList)); // @suppress("Method cannot be resolved")
 #endif
 
 }
@@ -70,22 +71,17 @@ void ExampleRobot::setup() {
 	delay(100);
 	motor1.attach(MOTOR1_PWM, MOTOR1_DIR, MOTOR1_ENCA, MOTOR1_ENCB);
 	motor2.attach(MOTOR2_PWM, MOTOR2_DIR, MOTOR2_ENCA, MOTOR2_ENCB);
+	motor3.attach(MOTOR3_PWM,  MOTOR3_ENCA, MOTOR3_ENCB);
+
 	Serial.println("Starting Motors");
 
 	// Set up digital servos
-	panEyes.setPeriodHertz(330);
-	panEyes.attach(SERVO_PAN, 1000, 2000);
-	jaw.setPeriodHertz(330);
-	jaw.attach(SERVO_JAW, 1000, 2000);
-	tiltEyes.setPeriodHertz(330);
-	tiltEyes.attach(SERVO_TILT, 1000, 2000);
-
-
-
+	servo.setPeriodHertz(330);
+	servo.attach(SERVO_PIN, 1000, 2000);
 
 #if defined(USE_WIFI)
 	// Attach coms
-	coms.attach(new NameCheckerServer(name));
+	coms.attach(new NameCheckerServer(name)); // @suppress("Method cannot be resolved")
 	setupPIDServers();
 #endif
 
@@ -97,7 +93,7 @@ void ExampleRobot::fastLoop() {
 #if defined(USE_WIFI)
 	manager.loop();
 	if (manager.getState() == Connected)
-		coms.server();
+		coms.server(); // @suppress("Method cannot be resolved")
 	else {
 		return;
 	}

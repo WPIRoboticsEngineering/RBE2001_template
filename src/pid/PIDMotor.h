@@ -24,8 +24,10 @@ protected:
 	double movement=0;
 	double prevPos;
 	double Vel;
+	virtual void setOutput(int64_t out)=0;
 public:
 	RBEPID myPID;
+	int64_t hardwareOutput=0;
 	PIDMotor();
 	virtual ~PIDMotor();
 	void loop();
@@ -35,13 +37,14 @@ public:
 	void pidinit();
 	float getSetPoint();
 	double calcVel();
+	void setOutputUnitVector(float out);
 	virtual int64_t getPosition()=0;
 	virtual int64_t getOutputMin()=0;
 	virtual int64_t getOutputMax()=0;
 	virtual int64_t getOutputMinDeadbad()=0;
 	virtual int64_t getOutputMaxDeadbad()=0;
 	virtual int64_t getOutputStop()=0;
-	virtual void setOutput(int64_t out)=0;
+
 	virtual void overrideCurrentPositionHardware(int64_t val)=0;
 	virtual double calcCur(void)=0;
 

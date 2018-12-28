@@ -29,39 +29,25 @@
 enum state_t {
 	Startup,
 	WaitForConnect,
-	readGame,
-	readIMU,
-	readIR
+	run
 	// Add more states here and be sure to add them to the cycle
 };
-#define numberOfPID  2
+#define numberOfPID  3
 
 class ExampleRobot {
 private:
 	HBridgeEncoderPIDMotor motor1;  // PID controlled motor object
 	HBridgeEncoderPIDMotor motor2; // PID controlled motor object
-
+	ServoEncoderPIDMotor   motor3; // PID controlled motor object
 	// Servo objects
-	Servo tiltEyes;
-	Servo jaw;
-	Servo panEyes;
+	Servo servo;
 	// A value to check if enough time has elapsed to tun the sensors and prints
 	int64_t lastPrint = 0;
 	// Change this to set your team name
 	String * name;//
 	// List of PID objects to use with PID server
-	 PIDMotor * pidList[numberOfPID];// = { &motor1.myPID, &motor2.myPID };
+	PIDMotor * pidList[numberOfPID];// = { &motor1.myPID, &motor2.myPID };
 
-	#if defined(USE_GAME_CONTOL)
-	//Wii game pad
-	Accessory control;
-	#endif
-	#if defined(USE_IMU)
-	// Simple packet coms server for IMU
-	GetIMU * sensor;
-	// The IMU object
-	Adafruit_BNO055 bno;
-	#endif
 	#if defined(USE_WIFI)
 	// SImple packet coms implementation useing WiFi
 	UDPSimplePacket coms;
@@ -69,11 +55,7 @@ private:
 	WifiManager manager;
 
 	#endif
-	#if defined(USE_IR_CAM)
-	// IR camera
-	DFRobotIRPosition myDFRobotIRPosition;
-	IRCamSimplePacketComsServer * serverIR;
-	#endif
+
 	// RUn the game control logic
 	void runGameControl();
 	// Print the values of the robot
