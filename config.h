@@ -9,7 +9,6 @@
 #define SRC_CONFIG_H_
 
 #define USE_WIFI
-#define PRINTROBOTDATA false
 
 // Pins
 #define MOTOR1_PWM 18
@@ -18,7 +17,6 @@
 
 #define MOTOR1_DIR 15
 #define MOTOR2_DIR 19
-#define MOTOR3_DIR 20
 
 #define MOTOR1_ENCA 36
 #define MOTOR1_ENCB 39
