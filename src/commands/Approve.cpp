@@ -6,6 +6,7 @@
 void Approve::event(float * buffer) {
 	// approve the procession to new state
 	Serial.println("Approve::event");
+
 	if(robotPointer->myStatus==Waiting_for_approval_to_pickup){
 		robotPointer->myStatus=Waiting_for_approval_to_dropoff;
 	}else{

@@ -5,7 +5,7 @@
  *      Author: hephaestus
  */
 
-#include <commands/EStop.h>
+#include "EStop.h"
 
 void EStop::event(float * buffer){
 	// Stop the robot immediatly

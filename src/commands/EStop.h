@@ -7,12 +7,12 @@
 
 #ifndef LIBRARIES_RBE2001_SRC_COMMANDS_ESTOP_H_
 #define LIBRARIES_RBE2001_SRC_COMMANDS_ESTOP_H_
-#include <robot/MyRobot.h>
+#include "../ExampleRobot.h"
 #include <SimplePacketComs.h>
 class EStop: public PacketEventAbstract {
-	MyRobot* robotPointer;
+	ExampleRobot* robotPointer;
 public:
-	EStop(MyRobot* robot) :
+	EStop(ExampleRobot* robot) :
 			PacketEventAbstract(1989) // Address of this event
 	{
 		robotPointer = robot;

@@ -17,11 +17,11 @@ PIDConfigureSimplePacketComsServer::PIDConfigureSimplePacketComsServer(int num,
 
 void PIDConfigureSimplePacketComsServer::event(float * buffer){
 	  for(int i=0;i<numPID;i++){
-		  PID * current = &pidlist[i]->myPID;
+		  RBEPID * current = &pidlist[i]->myPID;
 		  double kp=buffer[(i*3)+0];
 		  double ki=buffer[(i*3)+1];
 		  double kd=buffer[(i*3)+2];
-		  current->SetTunings(kp,ki,kd);
+		  current->setpid(kp,ki,kd);
 	  }
 
 }

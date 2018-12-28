@@ -2,13 +2,13 @@
 
 #if !defined(APPROVE_H)
 #define APPROVE_H
-#include <robot/MyRobot.h>
+#include "../ExampleRobot.h"
 #include <SimplePacketComs.h>
 class Approve: public PacketEventAbstract {
-	MyRobot* robotPointer;
+	ExampleRobot* robotPointer;
 public:
 	// Packet ID needs to be set
-	Approve(MyRobot* robot) :
+	Approve(ExampleRobot* robot) :
 			PacketEventAbstract(1994) // Address of this event
 	{
 		robotPointer = robot;
