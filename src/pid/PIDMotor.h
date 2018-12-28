@@ -13,7 +13,7 @@
 #define ticksToDeg 0.2206
 class PIDMotor {
 protected:
-	int sampleRateMs =5;
+
 	long lastTimeRunPID = 0;
 	float Kp=5, Ki=1.5, Kd=0.1;
 	double Setpoint=0, Input=0, Output=0;

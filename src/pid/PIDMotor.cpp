@@ -31,7 +31,7 @@ void PIDMotor::pidinit() {
 }
 
 void PIDMotor::loop() {
-	if(millis()-lastTimeRunPID>sampleRateMs){
+	if(millis()-lastTimeRunPID>myPID.sampleRateMs){
 		lastTimeRunPID=millis();
 	}else{
 		return;
