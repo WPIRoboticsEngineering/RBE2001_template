@@ -11,29 +11,21 @@
 #include <Arduino.h>
 #endif
 #include "config.h"
-#include <PID_v1.h>
 #include <ESP32Servo.h>
 #include <ESP32Encoder.h>
 #include "PIDMotor.h"
 #include "ServoEncoderPIDMotor.h"
 #include "HBridgeEncoderPIDMotor.h"
-#include <Wire.h>
-#include <WiiChuck.h>
-#include "GearWrist.h"
 #include <Preferences.h>
 #include <WiFi.h>
 #include <SimplePacketComs.h>
 #include <Esp32SimplePacketComs.h>
 #include <wifi/WifiManager.h>
 #include <server/NameCheckerServer.h>
-#include <Adafruit_Sensor.h>
-#include <Adafruit_BNO055.h>
-#include <BNO055SimplePacketComs.h>
-#include <DFRobotIRPosition.h>
-#include "coms/IRCamSimplePacketComsServer.h"
-#include "coms/GetPIDConfigureSimplePacketComsServer.h"
-#include "coms/GetPIDData.h"
-#include "coms/PIDConfigureSimplePacketComsServer.h"
+#include "commands/IRCamSimplePacketComsServer.h"
+#include "commands/GetPIDConfigureSimplePacketComsServer.h"
+#include "commands/GetPIDData.h"
+#include "commands/PIDConfigureSimplePacketComsServer.h"
 
 enum state_t {
 	Startup,
@@ -49,7 +41,7 @@ class ExampleRobot {
 private:
 	HBridgeEncoderPIDMotor motor1;  // PID controlled motor object
 	HBridgeEncoderPIDMotor motor2; // PID controlled motor object
-	GearWrist * wristPtr; // An object to mux/demux the 2 motors using the bevel gear differential.
+
 	// Servo objects
 	Servo tiltEyes;
 	Servo jaw;

@@ -1,20 +1,13 @@
 #include <ESP32Servo.h>
 #include <ESP32Encoder.h>
-#include <Wire.h>
-#include <WiiChuck.h>
 #include <Preferences.h>
 #include <WiFi.h>
 #include <SimplePacketComs.h>
 #include <Esp32SimplePacketComs.h>
 #include <wifi/WifiManager.h>
 #include <server/NameCheckerServer.h>
-#include <Adafruit_Sensor.h>
-#include <Adafruit_BNO055.h>
-#include <BNO055SimplePacketComs.h>
-#include <DFRobotIRPosition.h>
-#include <SPI.h>
 
-#include "src/ExampleRobot.h"
+#include "src/robot/ExampleRobot.h"
 
 ExampleRobot exampleRobot(new String("IMU-Team21"));
 void setup() {

@@ -7,8 +7,8 @@
 
 #ifndef SRC_PIDMOTOR_H_
 #define SRC_PIDMOTOR_H_
-#include <PID_v1.h>
 #include <stdint.h>
+#include "RBEPID.h"
 #define PID_OUTPUT_COMPUTE_RANGE 900
 #define ticksToDeg 0.2206
 class PIDMotor {
@@ -24,7 +24,7 @@ protected:
 	double prevPos;
 	double Vel;
 public:
-	PID myPID;
+	RBEPID myPID;
 	PIDMotor();
 	virtual ~PIDMotor();
 	void loop();
