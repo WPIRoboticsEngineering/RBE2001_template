@@ -5,8 +5,8 @@
  *      Author: hephaestus
  */
 
-#ifndef SRC_EXAMPLEROBOT_H_
-#define SRC_EXAMPLEROBOT_H_
+#ifndef SRC_ABSTRACTROBOT_H_
+#define SRC_ABSTRACTROBOT_H_
 #if defined(Arduino_h)
 #include <Arduino.h>
 #endif
@@ -40,7 +40,7 @@ enum state_t {
 };
 #define numberOfPID  3
 
-class ExampleRobot {
+class AbstractRobot {
 private:
 	HBridgeEncoderPIDMotor motor1;  // PID controlled motor object
 	HBridgeEncoderPIDMotor motor2; // PID controlled motor object
@@ -76,12 +76,12 @@ private:
 	// State machine state
 	state_t state=Startup;
 public:
-	ExampleRobot(String * name);
-	virtual ~ExampleRobot();
+	AbstractRobot(String * name);
+	virtual ~AbstractRobot();
 	// Pulse the loop function from the main thread
 	void loop();
 	RobotStatus myCommandsStatus = Ready_for_new_task;
 
 };
 
-#endif /* SRC_EXAMPLEROBOT_H_ */
+#endif /* SRC_ABSTRACTROBOT_H_ */

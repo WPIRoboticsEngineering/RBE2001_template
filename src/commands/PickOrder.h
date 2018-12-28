@@ -1,13 +1,14 @@
-#include "../ExampleRobot.h"
 #include <SimplePacketComs.h>
 #include "Arduino.h"
+
+#include "../AbstractRobot.h"
 #if !defined(PICKORDER)
 #define PICKORDER
 class PickOrder: public PacketEventAbstract {
-	ExampleRobot* robotPointer;
+	AbstractRobot* robotPointer;
 public:
 	// Packet ID needs to be set
-	PickOrder(ExampleRobot* robot) :
+	PickOrder(AbstractRobot* robot) :
 			PacketEventAbstract(1936)	// Address of this event
 	{
 		robotPointer = robot;

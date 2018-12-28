@@ -2,13 +2,14 @@
 
 #if !defined(CLEARFAULTS)
 #define CLEARFAULTS
-#include "../ExampleRobot.h"
 #include <SimplePacketComs.h>
+
+#include "../AbstractRobot.h"
 class ClearFaults: public PacketEventAbstract {
-	ExampleRobot* robotPointer;
+	AbstractRobot* robotPointer;
 public:
 	// Packet ID needs to be set
-	ClearFaults(ExampleRobot* robot) :
+	ClearFaults(AbstractRobot* robot) :
 			PacketEventAbstract(1871) // Address of this event
 	{
 		robotPointer = robot;

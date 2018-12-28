@@ -7,11 +7,11 @@
 #include <wifi/WifiManager.h>
 #include <server/NameCheckerServer.h>
 
-#include "src/ExampleRobot.h"
+#include "src/AbstractRobot.h"
 
-ExampleRobot * exampleRobot;
+AbstractRobot * exampleRobot;
 void setup() {
-	exampleRobot=new ExampleRobot(new String("IMU-Team21"));
+	exampleRobot=new AbstractRobot(new String("IMU-Team21"));
 }
 
 void loop() {

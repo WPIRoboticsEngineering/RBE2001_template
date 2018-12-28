@@ -5,9 +5,9 @@
  *      Author: hephaestus
  */
 
-#include "ExampleRobot.h"
+#include "AbstractRobot.h"
 
-void ExampleRobot::loop() {
+void AbstractRobot::loop() {
 	if (esp_timer_get_time() - lastPrint > 500
 			|| esp_timer_get_time() < lastPrint // check for the wrap over case
 					) {
@@ -34,7 +34,7 @@ void ExampleRobot::loop() {
 
 }
 
-ExampleRobot::ExampleRobot(String * mn) {
+AbstractRobot::AbstractRobot(String * mn) {
 	pidList[0] = &motor1;
 	pidList[1] = &motor2;
 	pidList[2] = &motor3;
@@ -42,7 +42,7 @@ ExampleRobot::ExampleRobot(String * mn) {
 	name = mn;
 }
 
-void ExampleRobot::setup() {
+void AbstractRobot::setup() {
 	if (state != Startup)
 		return;
 	state = WaitForConnect;
@@ -82,7 +82,7 @@ void ExampleRobot::setup() {
 
 }
 
-void ExampleRobot::fastLoop() {
+void AbstractRobot::fastLoop() {
 	if (state == Startup)    // Do not run before startp
 		return;
 #if defined(USE_WIFI)

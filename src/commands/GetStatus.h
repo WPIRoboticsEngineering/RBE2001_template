@@ -8,16 +8,16 @@
 #ifndef LIBRARIES_RBE2001_SRC_COMMANDS_GETSTATUS_H_
 #define LIBRARIES_RBE2001_SRC_COMMANDS_GETSTATUS_H_
 
-#include "../ExampleRobot.h"
 #include <SimplePacketComs.h>
+#include "../AbstractRobot.h"
 
 
 class GetStatus: public PacketEventAbstract {
-	ExampleRobot* robotPointer;
+	AbstractRobot* robotPointer;
 
 public:
 	// Packet ID needs to be set
-	GetStatus(ExampleRobot* robot) :
+	GetStatus(AbstractRobot* robot) :
 			PacketEventAbstract(2012)	// Address of this event
 	{
 		robotPointer = robot;
