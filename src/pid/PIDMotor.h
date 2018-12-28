@@ -8,7 +8,7 @@
 #ifndef SRC_PIDMOTOR_H_
 #define SRC_PIDMOTOR_H_
 #include <stdint.h>
-#include "RBEPID.h"
+#include "../../RBEPID.h"
 #define PID_OUTPUT_COMPUTE_RANGE 900
 
 class PIDMotor {

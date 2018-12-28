@@ -13,6 +13,7 @@
 #include "config.h"
 #include <ESP32Servo.h>
 #include <ESP32Encoder.h>
+#include "../RBEPID.h"
 #include "pid/PIDMotor.h"
 #include "pid/ServoEncoderPIDMotor.h"
 #include "pid/HBridgeEncoderPIDMotor.h"
@@ -31,7 +32,7 @@
 #include "commands/EStop.h"
 #include "commands/GetStatus.h"
 #include "commands/PickOrder.h"
-
+#include "../StudentsRobot.h"
 enum state_t {
 	Startup,
 	WaitForConnect,
@@ -77,10 +78,10 @@ private:
 	state_t state=Startup;
 public:
 	AbstractRobot(String * name);
-	virtual ~AbstractRobot();
+	 ~AbstractRobot(){}
 	// Pulse the loop function from the main thread
 	void loop();
-	RobotStatus myCommandsStatus = Ready_for_new_task;
+	StudentsRobot * robot;
 
 };
 

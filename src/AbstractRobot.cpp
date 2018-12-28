@@ -51,7 +51,7 @@ void AbstractRobot::setup() {
 #else
 	Serial.begin(115200);
 #endif
-
+	robot =  new StudentsRobot();
 	motor1.attach(MOTOR1_PWM, MOTOR1_DIR, MOTOR1_ENCA, MOTOR1_ENCB);
 	motor2.attach(MOTOR2_PWM, MOTOR2_DIR, MOTOR2_ENCA, MOTOR2_ENCB);
 	motor3.attach(MOTOR3_PWM, MOTOR3_ENCA, MOTOR3_ENCB);
@@ -62,6 +62,8 @@ void AbstractRobot::setup() {
 	servo.setPeriodHertz(330);
 	servo.attach(SERVO_PIN, 1000, 2000);
 
+
+
 #if defined(USE_WIFI)
 	// Attach coms
 	coms.attach(new NameCheckerServer(name)); // @suppress("Method cannot be resolved")
@@ -69,15 +71,15 @@ void AbstractRobot::setup() {
 	coms.attach(new GetPIDData(numberOfPID, pidList)); // @suppress("Method cannot be resolved")
 	coms.attach(// @suppress("Method cannot be resolved")
 			new GetPIDConfigureSimplePacketComsServer(numberOfPID, pidList));
-	coms.attach(new EStop(this)); // @suppress("Method cannot be resolved")
+	coms.attach(new EStop(robot)); // @suppress("Method cannot be resolved")
 	// clear any fault command
-	coms.attach(new ClearFaults(this));	// @suppress("Method cannot be resolved")
+	coms.attach(new ClearFaults(robot));	// @suppress("Method cannot be resolved")
 	// Pick up an panel command
-	coms.attach(new PickOrder(this));// @suppress("Method cannot be resolved")
+	coms.attach(new PickOrder(robot));// @suppress("Method cannot be resolved")
 	// Get the status of the robot
-	coms.attach(new GetStatus(this));// @suppress("Method cannot be resolved")
+	coms.attach(new GetStatus(robot));// @suppress("Method cannot be resolved")
 	// Approve a procede command from the controller
-	coms.attach(new Approve(this));	// @suppress("Method cannot be resolved")
+	coms.attach(new Approve(robot));	// @suppress("Method cannot be resolved")
 #endif
 
 }

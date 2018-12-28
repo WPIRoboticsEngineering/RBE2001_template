@@ -4,12 +4,12 @@
 #define CLEARFAULTS
 #include <SimplePacketComs.h>
 
-#include "../AbstractRobot.h"
+#include "../../StudentsRobot.h"
 class ClearFaults: public PacketEventAbstract {
-	AbstractRobot* robotPointer;
+	StudentsRobot * robotPointer;
 public:
 	// Packet ID needs to be set
-	ClearFaults(AbstractRobot* robot) :
+	ClearFaults(StudentsRobot * robot) :
 			PacketEventAbstract(1871) // Address of this event
 	{
 		robotPointer = robot;

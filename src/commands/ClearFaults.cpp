@@ -6,5 +6,5 @@
 void ClearFaults::event(float * buffer) {
 	// clear the faults somehow
 	Serial.println("ClearFaults::event");
-	robotPointer->myStatus=Ready_for_new_task;
+	robotPointer->myCommandsStatus=Ready_for_new_task;
 }

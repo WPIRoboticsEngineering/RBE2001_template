@@ -7,6 +7,8 @@
 
 #ifndef SRC_HBRIDGEENCODERPIDMOTOR_H_
 #define SRC_HBRIDGEENCODERPIDMOTOR_H_
+#define HBRIDGE_DEADBAND 138
+#define HBRIDGE_MAX 255
 #include "PIDMotor.h"
 #include <ESP32Servo.h>
 #include <ESP32Encoder.h>
@@ -21,8 +23,8 @@ public:
 	int64_t getPosition();
 	int64_t getOutputMin();
 	int64_t getOutputMax();
-	 int64_t getOutputMinDeadbad(){return 133;}
-	 int64_t getOutputMaxDeadbad(){return 133;};
+	 int64_t getOutputMinDeadbad(){return HBRIDGE_DEADBAND;}
+	 int64_t getOutputMaxDeadbad(){return HBRIDGE_DEADBAND;};
 	 int64_t getOutputStop(){return 0;};
 	void setOutput(int64_t out);
 	void overrideCurrentPositionHardware(int64_t val);

@@ -4,12 +4,12 @@
 #define APPROVE_H
 #include <SimplePacketComs.h>
 
-#include "../AbstractRobot.h"
+#include "../../StudentsRobot.h"
 class Approve: public PacketEventAbstract {
-	AbstractRobot* robotPointer;
+	StudentsRobot *  robotPointer;
 public:
 	// Packet ID needs to be set
-	Approve(AbstractRobot* robot) :
+	Approve(StudentsRobot * robot) :
 			PacketEventAbstract(1994) // Address of this event
 	{
 		robotPointer = robot;
