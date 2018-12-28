@@ -1,4 +1,3 @@
-#include <PID_v1.h>
 #include <ESP32Servo.h>
 #include <ESP32Encoder.h>
 #include <Wire.h>
