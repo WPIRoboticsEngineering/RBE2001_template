@@ -56,7 +56,6 @@ void RobotControlCenter::setup() {
 
 	robot->attach(&motor1, &motor2, &motor3, &servo);
 
-
 #if defined(USE_WIFI)
 	// Attach coms
 	coms.attach(new NameCheckerServer(name)); // @suppress("Method cannot be resolved")

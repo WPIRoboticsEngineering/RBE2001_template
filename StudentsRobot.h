@@ -9,8 +9,8 @@
 #define STUDENTSROBOT_H_
 #include "config.h"
 #include <Arduino.h>
-#include "pid/ServoEncoderPIDMotor.h"
-#include "pid/HBridgeEncoderPIDMotor.h"
+#include "src/pid/ServoEncoderPIDMotor.h"
+#include "src/pid/HBridgeEncoderPIDMotor.h"
 #include <ESP32Servo.h>
 enum RobotStateMachine {
 	StartupRobot = 0,
@@ -29,9 +29,9 @@ public:
 	void EStop(float * buffer);
 	void PickOrder(float * buffer) ;
 	void attach(HBridgeEncoderPIDMotor * motor1,HBridgeEncoderPIDMotor * motor2, ServoEncoderPIDMotor * motor3, Servo * servo);
-	void pidLoop(HBridgeEncoderPIDMotor * motor1,HBridgeEncoderPIDMotor * motor2, ServoEncoderPIDMotor * motor3);
-	void updateStateMachine(HBridgeEncoderPIDMotor * motor1,
-			HBridgeEncoderPIDMotor * motor2, ServoEncoderPIDMotor * motor3,
+	void pidLoop(PIDMotor * motor1,PIDMotor * motor2, PIDMotor * motor3);
+	void updateStateMachine(PIDMotor * motor1,
+			PIDMotor * motor2,PIDMotor * motor3,
 			Servo * servo);
 };
 
