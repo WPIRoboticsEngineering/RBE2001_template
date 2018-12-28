@@ -10,7 +10,7 @@
 void EStop::event(float * buffer){
 	// Stop the robot immediatly
 	Serial.println("EStop::event");
-	robotPointer->myStatus=Fault_E_Stop_pressed ;
+	robotPointer->myCommandsStatus=Fault_E_Stop_pressed ;
 
 }
 

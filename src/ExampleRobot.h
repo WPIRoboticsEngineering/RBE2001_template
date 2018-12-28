@@ -80,7 +80,7 @@ public:
 	virtual ~ExampleRobot();
 	// Pulse the loop function from the main thread
 	void loop();
-	RobotStatus myStatus = Ready_for_new_task;
+	RobotStatus myCommandsStatus = Ready_for_new_task;
 
 };
 

@@ -27,8 +27,10 @@ void ExampleRobot::loop() {
 		}
 		lastPrint = esp_timer_get_time(); // ensure 0.5 ms spacing *between* reads for Wifi to transact
 	}
-	// If this is run before the sensor reads, the I2C will fail because the time it takes to send the UDP causes a timeout
-	fastLoop();    // Run PID and wifi after State machine on all states
+	if (state != Startup) {
+		// If this is run before the sensor reads, the I2C will fail because the time it takes to send the UDP causes a timeout
+		fastLoop();    // Run PID and wifi after State machine on all states
+	}
 
 }
 
@@ -39,7 +41,6 @@ ExampleRobot::ExampleRobot(String * mn) {
 	state = Startup;
 	name = mn;
 }
-
 
 void ExampleRobot::setup() {
 	if (state != Startup)
@@ -53,7 +54,7 @@ void ExampleRobot::setup() {
 
 	motor1.attach(MOTOR1_PWM, MOTOR1_DIR, MOTOR1_ENCA, MOTOR1_ENCB);
 	motor2.attach(MOTOR2_PWM, MOTOR2_DIR, MOTOR2_ENCA, MOTOR2_ENCB);
-	motor3.attach(MOTOR3_PWM,  MOTOR3_ENCA, MOTOR3_ENCB);
+	motor3.attach(MOTOR3_PWM, MOTOR3_ENCA, MOTOR3_ENCB);
 
 	Serial.println("Starting Motors");
 
@@ -64,18 +65,19 @@ void ExampleRobot::setup() {
 #if defined(USE_WIFI)
 	// Attach coms
 	coms.attach(new NameCheckerServer(name)); // @suppress("Method cannot be resolved")
-	coms.attach(new PIDConfigureSimplePacketComsServer(numberOfPID,pidList)); // @suppress("Method cannot be resolved")
-	coms.attach(new GetPIDData(numberOfPID,pidList)); // @suppress("Method cannot be resolved")
-	coms.attach(new GetPIDConfigureSimplePacketComsServer(numberOfPID,pidList)); // @suppress("Method cannot be resolved")
-	coms.attach((PacketEventAbstract *)new EStop(this));// @suppress("Method cannot be resolved")
+	coms.attach(new PIDConfigureSimplePacketComsServer(numberOfPID, pidList)); // @suppress("Method cannot be resolved")
+	coms.attach(new GetPIDData(numberOfPID, pidList)); // @suppress("Method cannot be resolved")
+	coms.attach(// @suppress("Method cannot be resolved")
+			new GetPIDConfigureSimplePacketComsServer(numberOfPID, pidList));
+	coms.attach(new EStop(this)); // @suppress("Method cannot be resolved")
 	// clear any fault command
-	coms.attach((PacketEventAbstract *)new ClearFaults(this));// @suppress("Method cannot be resolved")
+	coms.attach(new ClearFaults(this));	// @suppress("Method cannot be resolved")
 	// Pick up an panel command
-	coms.attach((PacketEventAbstract *)new PickOrder(this));// @suppress("Method cannot be resolved")
+	coms.attach(new PickOrder(this));// @suppress("Method cannot be resolved")
 	// Get the status of the robot
-	coms.attach((PacketEventAbstract *)new GetStatus(this));// @suppress("Method cannot be resolved")
+	coms.attach(new GetStatus(this));// @suppress("Method cannot be resolved")
 	// Approve a procede command from the controller
-	coms.attach((PacketEventAbstract *)new Approve(this));// @suppress("Method cannot be resolved")
+	coms.attach(new Approve(this));	// @suppress("Method cannot be resolved")
 #endif
 
 }
@@ -91,7 +93,7 @@ void ExampleRobot::fastLoop() {
 		return;
 	}
 #endif
-	for(int i=0;i<numberOfPID;i++){
+	for (int i = 0; i < numberOfPID; i++) {
 		pidList[i]->loop();
 	}
 

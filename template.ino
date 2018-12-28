@@ -9,11 +9,11 @@
 
 #include "src/ExampleRobot.h"
 
-ExampleRobot exampleRobot(new String("IMU-Team21"));
+ExampleRobot * exampleRobot;
 void setup() {
-	// let the state machine handle this
+	exampleRobot=new ExampleRobot(new String("IMU-Team21"));
 }
 
 void loop() {
-	exampleRobot.loop();// run the state machine pulse
+	exampleRobot->loop();// run the state machine pulse
 }
