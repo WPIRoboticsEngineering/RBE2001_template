@@ -8,7 +8,7 @@
 #include "StudentsRobot.h"
 
 StudentsRobot::StudentsRobot() {
-	// TODO Auto-generated constructor stub
+	Serial.println("StudentsRobot::StudentsRobot called here ");
 
 }
 void StudentsRobot::updateStateMachine(PIDMotor * motor1,
@@ -18,6 +18,7 @@ void StudentsRobot::updateStateMachine(PIDMotor * motor1,
 	case StartupRobot:
 		//Do this once at startup
 		status=StartRunning;
+		Serial.println("StudentsRobot::updateStateMachine StartupRobot here ");
 		break;
 	case 	StartRunning:
 		Serial.println("Start Running");
@@ -45,10 +46,10 @@ void StudentsRobot::attach(HBridgeEncoderPIDMotor * motor1,
 	motor2->attach(MOTOR2_PWM, MOTOR2_DIR, MOTOR2_ENCA, MOTOR2_ENCB);
 	motor3->attach(MOTOR3_PWM, MOTOR3_ENCA, MOTOR3_ENCB);
 
-	Serial.println("Starting Motors");
 	// Set up digital servos
 	servo->setPeriodHertz(330);
 	servo->attach(SERVO_PIN, 1000, 2000);
+	Serial.println("StudentsRobot::attach called here ");
 }
 
 void StudentsRobot::pidLoop(PIDMotor * motor1,PIDMotor * motor2, PIDMotor * motor3){
@@ -59,7 +60,7 @@ void StudentsRobot::pidLoop(PIDMotor * motor1,PIDMotor * motor2, PIDMotor * moto
 
 void StudentsRobot::Approve(float * data) {
 	// approve the procession to new state
-	Serial.println("Approve::event");
+	Serial.println("StudentsRobot::Approve");
 
 	if (myCommandsStatus == Waiting_for_approval_to_pickup) {
 		myCommandsStatus = Waiting_for_approval_to_dropoff;
@@ -69,13 +70,13 @@ void StudentsRobot::Approve(float * data) {
 }
 void StudentsRobot::ClearFaults(float * data) {
 	// clear the faults somehow
-	Serial.println("ClearFaults::event");
+	Serial.println("StudentsRobot::ClearFaults");
 	myCommandsStatus = Ready_for_new_task;
 	status=StartRunning;
 }
 void StudentsRobot::EStop(float * buffer) {
 	// Stop the robot immediatly
-	Serial.println("EStop::event");
+	Serial.println("StudentsRobot::EStop");
 	myCommandsStatus = Fault_E_Stop_pressed;
 	status=Halting;
 
@@ -85,7 +86,7 @@ void StudentsRobot::PickOrder(float * buffer) {
 	float dropoffAngle = buffer[1];
 	float dropoffPosition = buffer[2];
 	Serial.println(
-			"Pick Order Recived from : " + String(pickupMaterial) + " "
+			"StudentsRobot::PickOrder Recived from : " + String(pickupMaterial) + " "
 					+ String(dropoffAngle) + " " + String(dropoffPosition));
 	myCommandsStatus = Waiting_for_approval_to_pickup;
 }
