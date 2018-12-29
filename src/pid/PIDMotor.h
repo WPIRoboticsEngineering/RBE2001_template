@@ -40,6 +40,7 @@ public:
 	double getVelocityDegreesPerSecond();
 	double getAngleDegrees();
 	void setOutputUnitVector(float out);
+	void stop();
 	virtual int64_t getPosition()=0;
 	virtual int64_t getOutputMin()=0;
 	virtual int64_t getOutputMax()=0;

@@ -27,17 +27,8 @@ public:
 	int64_t getOutputStop();
 	void setOutput(int64_t out);
 	void overrideCurrentPositionHardware(int64_t val);
-	double calcCur(void) {
-		return 0;
-	}
-	double ticksToDeg() {
-		return 16.0 * // Encoder CPR
-				50.0 * // Motor Gear box ratio
-				1.0 * // motor to wheel stage ratio
-				(1.0 / 360.0) * // degrees per revolution
-				encoder.countsMode; // full quadrature, 4 ticks be encoder count, half is 2 and single mode is one
-
-	}
+	double calcCur(void);
+	double ticksToDeg();
 };
 
 #endif /* SRC_SERVOENCODERPIDMOTOR_H_ */

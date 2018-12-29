@@ -33,14 +33,7 @@ public:
 	//This function should analogRead the current sense from the motor driver
 	//and convert the value to current in milliamps
 	double calcCur(void);
-	double ticksToDeg() {
-		return 16.0 * // Encoder CPR
-				50.0 * // Motor Gear box ratio
-				1.0 * // motor to wheel stage ratio
-				(1.0 / 360.0) * // degrees per revolution
-				encoder.countsMode; // full quadrature, 4 ticks be encoder count, half is 2 and single mode is one
-
-	}
+	double ticksToDeg();
 };
 
 #endif /* SRC_HBRIDGEENCODERPIDMOTOR_H_ */

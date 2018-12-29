@@ -115,3 +115,7 @@ double PIDMotor::calcVel() {
 	prevTime = curTime;
 	return Vel;
 }
+
+void PIDMotor::stop(){
+	setSetpoint(getPosition());
+}
