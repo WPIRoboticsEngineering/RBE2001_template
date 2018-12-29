@@ -29,7 +29,4 @@
 
 #define SERVO_PIN 27
 
-
-
-
 #endif /* SRC_CONFIG_H_ */

@@ -26,7 +26,7 @@ void RBEPID::setpid(float P, float I, float D) {
 float RBEPID::calc(double set, double cur) {
 
 	// calculate error
-	float err = set-cur;
+	float err = set - cur;
 	// calculate derivative of error
 	//TODO
 	// calculate integral error. Running average is best but hard to implement
@@ -34,16 +34,16 @@ float RBEPID::calc(double set, double cur) {
 	// sum up the error value to send to the motor based off gain values.
 	//TODO
 
-	float out = err* kp;// simple P controller
+	float out = err * kp;	// simple P controller
 	//return the control signal from -1 to 1
-	if(out>1)
-		out =1;
-	if (out<-1)
+	if (out > 1)
+		out = 1;
+	if (out < -1)
 		out = -1;
 	return 0;
 }
 
 // Clear the integral accumulator
-void RBEPID::clearIntegralBuffer(){
+void RBEPID::clearIntegralBuffer() {
 	//TODO
 }

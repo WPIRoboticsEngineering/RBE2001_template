@@ -11,9 +11,9 @@
 
 RobotControlCenter * exampleRobot;
 void setup() {
-	exampleRobot=new RobotControlCenter(new String("IMU-Team21"));
+	exampleRobot = new RobotControlCenter(new String("IMU-Team21"));
 }
 
 void loop() {
-	exampleRobot->loop();// run the state machine pulse
+	exampleRobot->loop(); // run the state machine pulse
 }

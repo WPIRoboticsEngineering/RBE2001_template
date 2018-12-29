@@ -1,4 +1,3 @@
-
 #if !defined(APPROVE_H)
 #define APPROVE_H
 #include <SimplePacketComs.h>

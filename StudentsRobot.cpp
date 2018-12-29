@@ -11,18 +11,17 @@ StudentsRobot::StudentsRobot() {
 	Serial.println("StudentsRobot::StudentsRobot called here ");
 
 }
-void StudentsRobot::updateStateMachine(PIDMotor * motor1,
-		PIDMotor * motor2, PIDMotor * motor3,
-		Servo * servo){
-	switch(status){
+void StudentsRobot::updateStateMachine(PIDMotor * motor1, PIDMotor * motor2,
+		PIDMotor * motor3, Servo * servo) {
+	switch (status) {
 	case StartupRobot:
 		//Do this once at startup
-		status=StartRunning;
+		status = StartRunning;
 		Serial.println("StudentsRobot::updateStateMachine StartupRobot here ");
 		break;
-	case 	StartRunning:
+	case StartRunning:
 		Serial.println("Start Running");
-		status=Running;
+		status = Running;
 		break;
 	case Running:
 		// Do something
@@ -30,7 +29,7 @@ void StudentsRobot::updateStateMachine(PIDMotor * motor1,
 	case Halting:
 		// save state and enter safe mode
 		Serial.println("Halting State machine");
-		status=Halt;
+		status = Halt;
 		break;
 	case Halt:
 		// in safe mode
@@ -56,7 +55,8 @@ void StudentsRobot::attach(HBridgeEncoderPIDMotor * motor1,
 	Serial.println("StudentsRobot::attach called here ");
 }
 
-void StudentsRobot::pidLoop(PIDMotor * motor1,PIDMotor * motor2, PIDMotor * motor3){
+void StudentsRobot::pidLoop(PIDMotor * motor1, PIDMotor * motor2,
+		PIDMotor * motor3) {
 	motor1->loop();
 	motor2->loop();
 	motor3->loop();
@@ -76,13 +76,13 @@ void StudentsRobot::ClearFaults(float * data) {
 	// clear the faults somehow
 	Serial.println("StudentsRobot::ClearFaults");
 	myCommandsStatus = Ready_for_new_task;
-	status=StartRunning;
+	status = StartRunning;
 }
 void StudentsRobot::EStop(float * buffer) {
 	// Stop the robot immediatly
 	Serial.println("StudentsRobot::EStop");
 	myCommandsStatus = Fault_E_Stop_pressed;
-	status=Halting;
+	status = Halting;
 
 }
 void StudentsRobot::PickOrder(float * buffer) {
@@ -90,7 +90,8 @@ void StudentsRobot::PickOrder(float * buffer) {
 	float dropoffAngle = buffer[1];
 	float dropoffPosition = buffer[2];
 	Serial.println(
-			"StudentsRobot::PickOrder Recived from : " + String(pickupMaterial) + " "
-					+ String(dropoffAngle) + " " + String(dropoffPosition));
+			"StudentsRobot::PickOrder Recived from : " + String(pickupMaterial)
+					+ " " + String(dropoffAngle) + " "
+					+ String(dropoffPosition));
 	myCommandsStatus = Waiting_for_approval_to_pickup;
 }

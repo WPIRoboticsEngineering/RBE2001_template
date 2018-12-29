@@ -1,4 +1,3 @@
-
 #if !defined(CLEARFAULTS)
 #define CLEARFAULTS
 #include <SimplePacketComs.h>

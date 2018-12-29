@@ -12,12 +12,12 @@ class RBEPID {
 
 public:
 	RBEPID();
-	float kp=1;
-	float ki=0;
-	float kd=0;
+	float kp = 1;
+	float ki = 0;
+	float kd = 0;
 	float last_error = 0;
 	float sum_error = 0;
-	int sampleRateMs =5;
+	int sampleRateMs = 5;
 //set PID constants
 	void setpid(float P, float I, float D);
 //calculate the output control signal
