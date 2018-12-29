@@ -57,3 +57,6 @@ double ServoEncoderPIDMotor::ticksToDeg() {
 double ServoEncoderPIDMotor::calcCur(void) {
 	return 0;
 }
+double ServoEncoderPIDMotor::getFreeSpinMaxDegreesPerSecond(){
+	return 186.0*60.0*360.0;
+}

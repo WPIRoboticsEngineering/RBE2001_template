@@ -34,6 +34,7 @@ public:
 	//and convert the value to current in milliamps
 	double calcCur(void);
 	double ticksToDeg();
+	double getFreeSpinMaxDegreesPerSecond();
 };
 
 #endif /* SRC_HBRIDGEENCODERPIDMOTOR_H_ */

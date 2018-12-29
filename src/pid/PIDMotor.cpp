@@ -32,15 +32,61 @@ void PIDMotor::loop() {
 	} else {
 		return;
 	}
-	Input = (float) getPosition();
-	bool thisErrPositive = (Setpoint-Input) > 0;
-	if (thisErrPositive != lastErrPositive) {
-		myPID.clearIntegralBuffer();
+	// Perform linear/sinusoidal interpolation
+	float interpElapsed = (float) (millis() - startTime);
+	if (interpElapsed < duration && duration > 0) {
+		// linear elapsed duration
+		float unitDuration = interpElapsed / duration;
+		if (mode == SIN) {
+			// sinusoidal ramp up and ramp down
+			float sinPortion = (cos(-PI * unitDuration) / 2) + 0.5;
+			unitDuration = sinPortion;
+		}
+		float setpointDiff = endSetpoint - startSetpoint;
+		float newSetpoint = startSetpoint + (setpointDiff * unitDuration);
+		Setpoint = newSetpoint;
+	} else {
+		// If there is no interpoation to perform, set the setpoint to the end state
+		Setpoint = endSetpoint;
 	}
-	lastErrPositive = thisErrPositive;
-	Output = myPID.calc(Setpoint, Input);
-	setOutputUnitVector(Output) ;
-	calcVel();// ensure the velocity value is kept up to date
+	calcVel(); // ensure the velocity value is kept up to date
+	if (mode != VEL) {
+		Input = (float) getPosition();
+		bool thisErrPositive = (Setpoint - Input) > 0;
+		if (thisErrPositive != lastErrPositive) {
+			myPID.clearIntegralBuffer();
+		}
+		lastErrPositive = thisErrPositive;
+		Output = myPID.calc(Setpoint, Input);
+		setOutputUnitVector(Output);
+	} else {
+		velocityLoop();
+	}
+}
+void PIDMotor::velocityLoop() {
+
+	double openLoopTerm = myFmap(targetDegreesPerSecond, -getFreeSpinMaxDegreesPerSecond(), getFreeSpinMaxDegreesPerSecond(),
+				-1, 1);
+
+	setOutputUnitVector(openLoopTerm);
+}
+
+void PIDMotor::SetTuningsVelocity(double Kp, double Kd) {
+	velocityPID.setpid(Kp, 0, Kd);
+
+}
+void PIDMotor::setVelocityDegreesPerSecond(float degreesPerSecond) {
+	if (abs(degreesPerSecond) > 0) {
+		if(degreesPerSecond>getFreeSpinMaxDegreesPerSecond())
+			degreesPerSecond=getFreeSpinMaxDegreesPerSecond();
+		if(degreesPerSecond<-getFreeSpinMaxDegreesPerSecond())
+					degreesPerSecond=-getFreeSpinMaxDegreesPerSecond();
+		targetDegreesPerSecond = degreesPerSecond;
+		mode = VEL;
+	} else {
+		stop();
+	}
+
 }
 // Set the output using a -1 to 1 unit vector.
 // Zero is stop
@@ -71,7 +117,7 @@ void PIDMotor::overrideCurrentPosition(int64_t val) {
 	myPID.clearIntegralBuffer();
 }
 void PIDMotor::setSetpoint(int64_t val) {
-	Setpoint = (float) val;
+	startInterpolation((float) val, 0, LIN);
 }
 float PIDMotor::getSetPoint() {
 	return Setpoint;
@@ -83,13 +129,12 @@ void PIDMotor::SetTunings(double Kp, double Ki, double Kd) {
 	overrideCurrentPosition(getPosition());
 }
 
-
-double  PIDMotor::getVelocityDegreesPerSecond(){
+double PIDMotor::getVelocityDegreesPerSecond() {
 	return calcVel();
 }
-double  PIDMotor::getAngleDegrees(){
+double PIDMotor::getAngleDegrees() {
 	double curPos = getPosition();
-	return curPos/ ticksToDeg();
+	return curPos / ticksToDeg();
 }
 
 // Returns Vel in degress/second
@@ -101,7 +146,7 @@ double PIDMotor::calcVel() {
 	//time change in ms from last call
 	timeInterval = curTime - prevTime;
 	if (timeInterval < 20)
-		return Vel;		// If this is polled too fast, return the cached velocity
+		return Vel;	// If this is polled too fast, return the cached velocity
 	//encoder ticks since last call
 	movement = curPos - prevPos;
 	//encoder ticks to degrees
@@ -116,6 +161,15 @@ double PIDMotor::calcVel() {
 	return Vel;
 }
 
-void PIDMotor::stop(){
+void PIDMotor::stop() {
 	setSetpoint(getPosition());
+}
+
+void PIDMotor::startInterpolation(float newSetpoint, long msTimeDuration,
+		interpolateMode mode) {
+	startSetpoint = Setpoint;
+	endSetpoint = newSetpoint;
+	startTime = millis();
+	duration = msTimeDuration;
+	this->mode = mode;
 }

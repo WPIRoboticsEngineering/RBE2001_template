@@ -75,3 +75,6 @@ double HBridgeEncoderPIDMotor::ticksToDeg() {
 			encoder.countsMode; // full quadrature, 4 ticks be encoder count, half is 2 and single mode is one
 
 }
+double HBridgeEncoderPIDMotor::getFreeSpinMaxDegreesPerSecond(){
+	return 186.0*60.0*360.0;
+}
