@@ -25,12 +25,11 @@ void ServoEncoderPIDMotor::attach(int servoPin,int encoderA, int encoderB){
 int64_t ServoEncoderPIDMotor::getPosition(){
 	return encoder.getCount();
 }
-int64_t ServoEncoderPIDMotor::getOutputMin(){
-	return 0;
-}
-int64_t ServoEncoderPIDMotor::getOutputMax(){
-	return 180;
-}
+int64_t ServoEncoderPIDMotor::getOutputMin(){return 0;}
+int64_t ServoEncoderPIDMotor::getOutputMax(){return 180;}
+int64_t ServoEncoderPIDMotor::getOutputMinDeadbad(){return 5;}
+int64_t ServoEncoderPIDMotor::getOutputMaxDeadbad(){return 5;}
+int64_t ServoEncoderPIDMotor::getOutputStop(){return 90;}
 void ServoEncoderPIDMotor::setOutput(int64_t out){
 	motor.write(out);
 }

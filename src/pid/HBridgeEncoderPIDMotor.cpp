@@ -27,12 +27,11 @@ void HBridgeEncoderPIDMotor::attach(int pwmPin,int directionPin,int encoderA, in
 int64_t HBridgeEncoderPIDMotor::getPosition(){
 	return encoder.getCount();
 }
-int64_t HBridgeEncoderPIDMotor::getOutputMin(){
-	return -HBRIDGE_MAX;
-}
-int64_t HBridgeEncoderPIDMotor::getOutputMax(){
-	return HBRIDGE_MAX;
-}
+int64_t HBridgeEncoderPIDMotor::getOutputMin(){return -HBRIDGE_MAX;}
+int64_t HBridgeEncoderPIDMotor::getOutputMax(){return HBRIDGE_MAX;}
+int64_t HBridgeEncoderPIDMotor::getOutputMinDeadbad(){return HBRIDGE_DEADBAND;}
+int64_t HBridgeEncoderPIDMotor::getOutputMaxDeadbad(){return HBRIDGE_DEADBAND;}
+int64_t HBridgeEncoderPIDMotor::getOutputStop(){return 0;}
 void HBridgeEncoderPIDMotor::setOutput(int64_t out){
 	if(out>0){
 		  digitalWrite(directionPin, HIGH);   // turn the LED on (HIGH is the voltage level)

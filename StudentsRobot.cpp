@@ -46,6 +46,10 @@ void StudentsRobot::attach(HBridgeEncoderPIDMotor * motor1,
 	motor2->attach(MOTOR2_PWM, MOTOR2_DIR, MOTOR2_ENCA, MOTOR2_ENCB);
 	motor3->attach(MOTOR3_PWM, MOTOR3_ENCA, MOTOR3_ENCB);
 
+	motor1->setSetpoint(motor1->getPosition());
+	motor2->setSetpoint(motor2->getPosition());
+	motor3->setSetpoint(motor3->getPosition());
+
 	// Set up digital servos
 	servo->setPeriodHertz(330);
 	servo->attach(SERVO_PIN, 1000, 2000);

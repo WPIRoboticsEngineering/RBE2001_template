@@ -23,7 +23,7 @@ PIDMotor::~PIDMotor() {
 	// TODO Auto-generated destructor stub
 }
 void PIDMotor::pidinit() {
-
+	myPID.clearIntegralBuffer();
 }
 
 void PIDMotor::loop() {
@@ -33,7 +33,7 @@ void PIDMotor::loop() {
 		return;
 	}
 	Input = (float) getPosition();
-	bool thisErrPositive = Input > 0;
+	bool thisErrPositive = (Setpoint-Input) > 0;
 	if (thisErrPositive != lastErrPositive) {
 		myPID.clearIntegralBuffer();
 	}
@@ -85,7 +85,7 @@ void PIDMotor::SetTunings(double Kp, double Ki, double Kd) {
 
 
 double  PIDMotor::getVelocityDegreesPerSecond(){
-	return Vel;
+	return calcVel();
 }
 double  PIDMotor::getAngleDegrees(){
 	double curPos = getPosition();

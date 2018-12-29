@@ -22,20 +22,20 @@ public:
 	int64_t getPosition();
 	int64_t getOutputMin();
 	int64_t getOutputMax();
-	 int64_t getOutputMinDeadbad(){return 5;}
-	 int64_t getOutputMaxDeadbad(){return 5;};
-	 int64_t getOutputStop(){return 90;};
+	int64_t getOutputMinDeadbad();
+	int64_t getOutputMaxDeadbad();
+	int64_t getOutputStop();
 	void setOutput(int64_t out);
 	void overrideCurrentPositionHardware(int64_t val);
 	double calcCur(void) {
 		return 0;
 	}
-	double ticksToDeg(){
+	double ticksToDeg() {
 		return 16.0 * // Encoder CPR
-							50.0 * // Motor Gear box ratio
-							1.0 * // motor to wheel stage ratio
-							(1.0 / 360.0) * // degrees per revolution
-							encoder.countsMode; // full quadrature, 4 ticks be encoder count, half is 2 and single mode is one
+				50.0 * // Motor Gear box ratio
+				1.0 * // motor to wheel stage ratio
+				(1.0 / 360.0) * // degrees per revolution
+				encoder.countsMode; // full quadrature, 4 ticks be encoder count, half is 2 and single mode is one
 
 	}
 };

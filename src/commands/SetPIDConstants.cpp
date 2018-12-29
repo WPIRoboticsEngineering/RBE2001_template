@@ -17,11 +17,10 @@ SetPIDConstants::SetPIDConstants(int num,
 
 void SetPIDConstants::event(float * buffer){
 	  for(int i=0;i<numPID;i++){
-		  RBEPID * current = &pidlist[i]->myPID;
 		  double kp=buffer[(i*3)+0];
 		  double ki=buffer[(i*3)+1];
 		  double kd=buffer[(i*3)+2];
-		  current->setpid(kp,ki,kd);
+		  pidlist[i]->SetTunings(kp,ki,kd);
 	  }
 
 }
