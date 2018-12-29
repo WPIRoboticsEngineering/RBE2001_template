@@ -29,7 +29,7 @@ public:
 	void overrideCurrentPositionHardware(int64_t val);
 	double calcCur(void);
 	double ticksToDeg();
-	 double getFreeSpinMaxDegreesPerSecond();
+	double getFreeSpinMaxDegreesPerSecond();
 };
 
 #endif /* SRC_SERVOENCODERPIDMOTOR_H_ */

@@ -35,10 +35,8 @@
 #include "commands/PickOrder.h"
 #include "../StudentsRobot.h"
 enum state_t {
-	Startup,
-	WaitForConnect,
-	run
-	// Add more states here and be sure to add them to the cycle
+	Startup, WaitForConnect, run
+// Add more states here and be sure to add them to the cycle
 };
 #define numberOfPID  3
 
@@ -46,23 +44,23 @@ class RobotControlCenter {
 private:
 	HBridgeEncoderPIDMotor motor1;  // PID controlled motor object
 	HBridgeEncoderPIDMotor motor2; // PID controlled motor object
-	ServoEncoderPIDMotor   motor3; // PID controlled motor object
+	ServoEncoderPIDMotor motor3; // PID controlled motor object
 	// Servo objects
 	Servo servo;
 	// A value to check if enough time has elapsed to tun the sensors and prints
 	int64_t lastPrint = 0;
 	// Change this to set your team name
-	String * name;//
+	String * name;	//
 	// List of PID objects to use with PID server
-	PIDMotor * pidList[numberOfPID];// = { &motor1.myPID, &motor2.myPID };
+	PIDMotor * pidList[numberOfPID];	// = { &motor1.myPID, &motor2.myPID };
 
-	#if defined(USE_WIFI)
+#if defined(USE_WIFI)
 	// SImple packet coms implementation useing WiFi
 	UDPSimplePacket coms;
 	// WIfi stack managment state machine
 	WifiManager manager;
 
-	#endif
+#endif
 
 	// The fast loop actions
 	// This should be run every loop and is internally gated for fast opperation
@@ -72,10 +70,11 @@ private:
 	//attach the PID servers
 	void setupPIDServers();
 	// State machine state
-	state_t state=Startup;
+	state_t state = Startup;
 public:
 	RobotControlCenter(String * name);
-	 ~RobotControlCenter(){}
+	~RobotControlCenter() {
+	}
 	// Pulse the loop function from the main thread
 	void loop();
 	StudentsRobot * robot;

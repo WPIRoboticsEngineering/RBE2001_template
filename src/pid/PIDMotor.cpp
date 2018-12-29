@@ -64,8 +64,9 @@ void PIDMotor::loop() {
 	}
 }
 void PIDMotor::velocityLoop() {
-	double openLoopTerm = myFmap(targetDegreesPerSecond, -getFreeSpinMaxDegreesPerSecond(), getFreeSpinMaxDegreesPerSecond(),
-				-1, 1);
+	double openLoopTerm = myFmap(targetDegreesPerSecond,
+			-getFreeSpinMaxDegreesPerSecond(), getFreeSpinMaxDegreesPerSecond(),
+			-1, 1);
 	// TODO Apply PD velocity terms here
 	setOutputUnitVector(openLoopTerm);
 }
@@ -76,10 +77,10 @@ void PIDMotor::SetTuningsVelocity(double Kp, double Kd) {
 }
 void PIDMotor::setVelocityDegreesPerSecond(float degreesPerSecond) {
 	if (abs(degreesPerSecond) > 0) {
-		if(degreesPerSecond>getFreeSpinMaxDegreesPerSecond())
-			degreesPerSecond=getFreeSpinMaxDegreesPerSecond();
-		if(degreesPerSecond<-getFreeSpinMaxDegreesPerSecond())
-					degreesPerSecond=-getFreeSpinMaxDegreesPerSecond();
+		if (degreesPerSecond > getFreeSpinMaxDegreesPerSecond())
+			degreesPerSecond = getFreeSpinMaxDegreesPerSecond();
+		if (degreesPerSecond < -getFreeSpinMaxDegreesPerSecond())
+			degreesPerSecond = -getFreeSpinMaxDegreesPerSecond();
 		targetDegreesPerSecond = degreesPerSecond;
 		mode = VEL;
 	} else {

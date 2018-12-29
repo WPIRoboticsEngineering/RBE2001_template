@@ -7,7 +7,7 @@
 
 #include "EStop.h"
 
-void EStop::event(float * buffer){
+void EStop::event(float * buffer) {
 	robotPointer->EStop(buffer);
 
 }

@@ -13,7 +13,7 @@ class GetPIDConstants: public PacketEventAbstract {
 	PIDMotor ** pidlist;
 	int numPID;
 public:
-	GetPIDConstants(int num,PIDMotor ** list);
+	GetPIDConstants(int num, PIDMotor ** list);
 	void event(float * buffer);
 
 };

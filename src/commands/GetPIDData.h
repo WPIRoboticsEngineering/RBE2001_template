@@ -14,7 +14,7 @@ private:
 	PIDMotor ** pidlist;
 	int numPID;
 public:
-	GetPIDData(int num,PIDMotor ** list);
+	GetPIDData(int num, PIDMotor ** list);
 	virtual ~GetPIDData();
 	void event(float * buffer);
 };

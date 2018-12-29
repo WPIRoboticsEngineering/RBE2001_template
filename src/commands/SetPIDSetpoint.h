@@ -9,7 +9,7 @@
 #define SRC_COMMANDS_SETPIDSETPOINT_H_
 #include <SimplePacketComs.h>
 #include "../pid/PIDMotor.h"
-class SetPIDSetpoint : public PacketEventAbstract {
+class SetPIDSetpoint: public PacketEventAbstract {
 	PIDMotor ** pidlist;
 	int numPID;
 public:

@@ -11,7 +11,6 @@
 #include <SimplePacketComs.h>
 #include "../../StudentsRobot.h"
 
-
 class GetStatus: public PacketEventAbstract {
 	StudentsRobot* robotPointer;
 

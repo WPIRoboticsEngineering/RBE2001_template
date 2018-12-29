@@ -19,8 +19,8 @@ GetPIDData::GetPIDData(int num, PIDMotor ** list) :
 }
 
 void GetPIDData::event(float * buffer) {
-	buffer[0] = (float)numPID;
-	for (int i = 0; i < numPID&& i<7; i++) {
+	buffer[0] = (float) numPID;
+	for (int i = 0; i < numPID && i < 7; i++) {
 		PIDMotor * current = pidlist[i];
 		buffer[i * 2 + 1 + 0] = current->getSetPoint();
 		buffer[i * 2 + 1 + 1] = current->getPosition();
