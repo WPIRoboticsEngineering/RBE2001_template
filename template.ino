@@ -9,11 +9,11 @@
 
 #include "src/RobotControlCenter.h"
 
-RobotControlCenter * exampleRobot;
+RobotControlCenter * controlCenter;
 void setup() {
-	exampleRobot = new RobotControlCenter(new String("IMU-Team21"));
+	controlCenter = new RobotControlCenter(new String("IMU-Team21"));
 }
 
 void loop() {
-	exampleRobot->loop(); // run the state machine pulse
+	controlCenter->loop(); // run the state machine pulse
 }

@@ -7,8 +7,13 @@
 
 #include "PIDMotor.h"
 #include <Arduino.h>
-// Custom version of map with bound clamping built in.
-float myFmap(float x, float in_min, float in_max, float out_min,
+
+/**
+ * myFmap local mapping function
+ *
+ *  Custom version of map with bound clamping built in.
+ */
+float PIDMotor::myFmap(float x, float in_min, float in_max, float out_min,
 		float out_max) {
 	if(x>in_max)
 		return out_max;
@@ -97,10 +102,7 @@ void PIDMotor::setVelocityDegreesPerSecond(float degreesPerSecond) {
 	}
 
 }
-// Set the output using a -1.0f to 1.0f unit vector.
-// Zero is stop
-// This creates the dis-continuous signel needed to bypass deadbands in the actuator
-// from a continous signel with range -1.0f to 1.0f.
+
 void PIDMotor::setOutputUnitVector(float out) {
 	// Store the unit vector output set
 	Output = out;
@@ -128,18 +130,24 @@ void PIDMotor::setOutputUnitVector(float out) {
 	// with the hardwre value computed, send to sublcass output set
 	setOutput(hardwareOutput);
 }
-// Set the current position to be the one provided
-// this is for calibrations
+/**
+ * overrideCurrentPosition  Set the current position to be the one provided
+ *
+ * this is for calibrations
+ */
 void PIDMotor::overrideCurrentPosition(int64_t val) {
 	overrideCurrentPositionHardware(val);
 
-	setSetpoint(val);
+	startInterpolation((float) val, 0, LIN);
 	myPID.setpid(Kp, Ki, Kd);
 	myPID.clearIntegralBuffer();
 }
-// Set the desired setpoint for the PID controller
-// the units for the variable is in sensor 'ticks'
-// this will start a linear interpolation of 0 time
+/**
+ * setSetpoint  Set the desired setpoint for the PID controller
+ *
+ * the units for the variable is in sensor 'ticks'
+ * this will start a linear interpolation of 0 time
+ */
 void PIDMotor::setSetpoint(int64_t val) {
 	startInterpolation((float) val, 0, LIN);
 }
@@ -149,9 +157,13 @@ void PIDMotor::setSetpoint(int64_t val) {
 float PIDMotor::getSetPoint() {
 	return Setpoint;
 }
-//
-// Ser the P.I.D. gains for the position controller
-//
+/**
+ * SetTunings Set the P.I.D. gains for the position controller
+ *
+ * @param Kp proportional gain
+ * @param Ki integral gain
+ * @param Kd derrivitive gain
+ */
 void PIDMotor::SetTunings(double Kp, double Ki, double Kd) {
 	this->Kp = Kp;
 	this->Ki = Ki;
@@ -172,7 +184,11 @@ double PIDMotor::getAngleDegrees() {
 	return curPos / ticksToDeg();
 }
 
-// Returns Vel in degress/second
+/**
+ * Returns Vel in degress/second
+ *
+ * @return  Returns Vel in degress/second
+ */
 double PIDMotor::calcVel() {
 	//current positions
 	double curPos = getPosition();
@@ -195,17 +211,28 @@ double PIDMotor::calcVel() {
 	prevTime = curTime;
 	return Vel;
 }
-// Set the PID position to current position and use the position controller to hold pose
+/**
+ * Stop the motion of the motor
+ *
+ * Set the PID position to current position and use the position controller to hold pose
+ */
 void PIDMotor::stop() {
 	setSetpoint(getPosition());
 }
-// Start a linear interpolation of the motor
-// The position setpoint will follow a trajectory over time
-// the setpoint will start where it currently is, and arrive at the desired location after
-// the number of msTimeDuration MS have elapsed.
-// The trajectory can be either linear, with the LIN mode
-// or the trajectory can be either Sinusoidal, with the SIN mode
-// the units for the variable is in sensor 'ticks'
+/**
+ * Start a linear interpolation of the motor
+ *
+ * The position setpoint will follow a trajectory over time
+ * the setpoint will start where it currently is, and arrive at the desired location after
+ * the number of msTimeDuration MS have elapsed.
+ * The trajectory can be either linear, with the LIN mode
+ * or the trajectory can be either Sinusoidal, with the SIN mode
+ * the units for the variable is in sensor 'ticks'
+ *
+ * @param newSetpoint the new setpoint
+ * @param msTimeDuration the time of translation
+ * @param mode The type of interpolation LIN or SIN
+ */
 void PIDMotor::startInterpolation(float newSetpoint, long msTimeDuration,
 		interpolateMode mode) {
 	startSetpoint = Setpoint;

@@ -68,9 +68,7 @@ private:
 	WifiManager manager;
 
 #endif
-	// The fast loop actions
-	// This should be run every loop and is internally gated for fast opperation
-	void fastLoop();
+
 	//attach the PID servers
 	void setupPIDServers();
 	// State machine state
@@ -112,6 +110,12 @@ protected:
 	 * This function is called as part of the state machine by the object
 	 */
 	void setup();
+	/**
+	 * 	The fast loop actions
+	 *
+	 * 	This should be run every loop and is internally gated for fast opperation
+	 */
+	void fastLoop();
 
 };
 
