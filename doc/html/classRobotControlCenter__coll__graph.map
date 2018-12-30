@@ -1,7 +1,7 @@
 <map id="RobotControlCenter" name="RobotControlCenter">
-<area shape="rect" id="node2" href="$classStudentsRobot.html" title="StudentsRobot" alt="" coords="5,185,115,212"/>
-<area shape="rect" id="node3" href="$classHBridgeEncoderPIDMotor.html" title="HBridgeEncoderPIDMotor" alt="" coords="139,185,312,212"/>
-<area shape="rect" id="node4" href="$classPIDMotor.html" title="PIDMotor" alt="" coords="241,109,319,136"/>
-<area shape="rect" id="node6" href="$classServoEncoderPIDMotor.html" title="ServoEncoderPIDMotor" alt="" coords="336,185,496,212"/>
-<area shape="rect" id="node5" href="$classRBEPID.html" title="RBEPID" alt="" coords="243,5,317,32"/>
+<area shape="rect" id="node2" href="$classPIDMotor.html" title="PIDMotor" alt="" coords="114,109,193,136"/>
+<area shape="rect" id="node5" href="$classHBridgeEncoderPIDMotor.html" title="HBridgeEncoderPIDMotor" alt="" coords="67,185,240,212"/>
+<area shape="rect" id="node6" href="$classServoEncoderPIDMotor.html" title="ServoEncoderPIDMotor" alt="" coords="264,185,424,212"/>
+<area shape="rect" id="node3" href="$classRBEPID.html" title="RBEPID" alt="" coords="117,5,190,32"/>
+<area shape="rect" id="node4" href="$classStudentsRobot.html" title="StudentsRobot" alt="" coords="448,185,557,212"/>
 </map>

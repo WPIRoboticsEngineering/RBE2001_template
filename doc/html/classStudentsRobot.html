@@ -91,6 +91,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">StudentsRobot Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="StudentsRobot_8h_source.html">StudentsRobot.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -113,9 +115,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a1fe188b5a6536567701b8285d97ae042"><td class="memItemLeft" align="right" valign="top">ComStackStatusState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStudentsRobot.html#a1fe188b5a6536567701b8285d97ae042">myCommandsStatus</a> = Ready_for_new_task</td></tr>
+<tr class="memitem:a1fe188b5a6536567701b8285d97ae042"><td class="memItemLeft" align="right" valign="top"><a class="el" href="StudentsRobot_8h.html#a1224568eebab348cfd8b7d5418b61620">ComStackStatusState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStudentsRobot.html#a1fe188b5a6536567701b8285d97ae042">myCommandsStatus</a> = <a class="el" href="StudentsRobot_8h.html#a1224568eebab348cfd8b7d5418b61620aad3743bc396b3226b540973fc827ffa3">Ready_for_new_task</a></td></tr>
 <tr class="separator:a1fe188b5a6536567701b8285d97ae042"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c6e1befe94b94bcb56b9ff626a0c410"><td class="memItemLeft" align="right" valign="top">RobotStateMachine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStudentsRobot.html#a7c6e1befe94b94bcb56b9ff626a0c410">status</a> = StartupRobot</td></tr>
+<tr class="memitem:a7c6e1befe94b94bcb56b9ff626a0c410"><td class="memItemLeft" align="right" valign="top"><a class="el" href="StudentsRobot_8h.html#a2fa48347d45a4cb9d5fdbf4f077b5374">RobotStateMachine</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStudentsRobot.html#a7c6e1befe94b94bcb56b9ff626a0c410">status</a> = <a class="el" href="StudentsRobot_8h.html#a2fa48347d45a4cb9d5fdbf4f077b5374ab19938f8c220717fff73f804f4b1f697">StartupRobot</a></td></tr>
 <tr class="separator:a7c6e1befe94b94bcb56b9ff626a0c410"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -166,7 +168,9 @@ Public Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="StudentsRobot_8cpp_source.html#l00065">65</a> of file <a class="el" href="StudentsRobot_8cpp_source.html">StudentsRobot.cpp</a>.</p>
 
-<p>References <a class="el" href="StudentsRobot_8h_source.html#l00055">myCommandsStatus</a>.</p>
+<p>References <a class="el" href="StudentsRobot_8h_source.html#l00055">myCommandsStatus</a>, <a class="el" href="StudentsRobot_8h_source.html#l00027">Ready_for_new_task</a>, <a class="el" href="StudentsRobot_8h_source.html#l00032">Waiting_for_approval_to_dropoff</a>, and <a class="el" href="StudentsRobot_8h_source.html#l00029">Waiting_for_approval_to_pickup</a>.</p>
+
+<p>Referenced by <a class="el" href="Approve_8cpp_source.html#l00006">Approve::event()</a>.</p>
 
 </div>
 </div>
@@ -211,7 +215,7 @@ Public Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="StudentsRobot_8cpp_source.html#l00041">41</a> of file <a class="el" href="StudentsRobot_8cpp_source.html">StudentsRobot.cpp</a>.</p>
 
-<p>References <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00019">ServoEncoderPIDMotor::attach()</a>, <a class="el" href="HBridgeEncoderPIDMotor_8cpp_source.html#l00019">HBridgeEncoderPIDMotor::attach()</a>, <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00025">ServoEncoderPIDMotor::getPosition()</a>, <a class="el" href="HBridgeEncoderPIDMotor_8cpp_source.html#l00028">HBridgeEncoderPIDMotor::getPosition()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00151">PIDMotor::setSetpoint()</a>.</p>
+<p>References <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00019">ServoEncoderPIDMotor::attach()</a>, <a class="el" href="HBridgeEncoderPIDMotor_8cpp_source.html#l00019">HBridgeEncoderPIDMotor::attach()</a>, <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00025">ServoEncoderPIDMotor::getPosition()</a>, <a class="el" href="HBridgeEncoderPIDMotor_8cpp_source.html#l00028">HBridgeEncoderPIDMotor::getPosition()</a>, <a class="el" href="config_8h_source.html#l00018">MOTOR1_DIR</a>, <a class="el" href="config_8h_source.html#l00021">MOTOR1_ENCA</a>, <a class="el" href="config_8h_source.html#l00022">MOTOR1_ENCB</a>, <a class="el" href="config_8h_source.html#l00014">MOTOR1_PWM</a>, <a class="el" href="config_8h_source.html#l00019">MOTOR2_DIR</a>, <a class="el" href="config_8h_source.html#l00024">MOTOR2_ENCA</a>, <a class="el" href="config_8h_source.html#l00025">MOTOR2_ENCB</a>, <a class="el" href="config_8h_source.html#l00015">MOTOR2_PWM</a>, <a class="el" href="config_8h_source.html#l00027">MOTOR3_ENCA</a>, <a class="el" href="config_8h_source.html#l00028">MOTOR3_ENCB</a>, <a class="el" href="config_8h_source.html#l00016">MOTOR3_PWM</a>, <a class="el" href="config_8h_source.html#l00030">SERVO_PIN</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00151">PIDMotor::setSetpoint()</a>.</p>
 
 <p>Referenced by <a class="el" href="RobotControlCenter_8cpp_source.html#l00046">RobotControlCenter::setup()</a>.</p>
 
@@ -260,7 +264,9 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="StudentsRobot_8cpp_source.html#l00075">75</a> of file <a class="el" href="StudentsRobot_8cpp_source.html">StudentsRobot.cpp</a>.</p>
 
-<p>References <a class="el" href="StudentsRobot_8h_source.html#l00055">myCommandsStatus</a>, and <a class="el" href="StudentsRobot_8h_source.html#l00059">status</a>.</p>
+<p>References <a class="el" href="StudentsRobot_8h_source.html#l00055">myCommandsStatus</a>, <a class="el" href="StudentsRobot_8h_source.html#l00027">Ready_for_new_task</a>, <a class="el" href="StudentsRobot_8h_source.html#l00020">StartRunning</a>, and <a class="el" href="StudentsRobot_8h_source.html#l00059">status</a>.</p>
+
+<p>Referenced by <a class="el" href="ClearFaults_8cpp_source.html#l00006">ClearFaults::event()</a>.</p>
 
 </div>
 </div>
@@ -289,7 +295,9 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="StudentsRobot_8cpp_source.html#l00081">81</a> of file <a class="el" href="StudentsRobot_8cpp_source.html">StudentsRobot.cpp</a>.</p>
 
-<p>References <a class="el" href="StudentsRobot_8h_source.html#l00055">myCommandsStatus</a>, and <a class="el" href="StudentsRobot_8h_source.html#l00059">status</a>.</p>
+<p>References <a class="el" href="StudentsRobot_8h_source.html#l00039">Fault_E_Stop_pressed</a>, <a class="el" href="StudentsRobot_8h_source.html#l00020">Halting</a>, <a class="el" href="StudentsRobot_8h_source.html#l00055">myCommandsStatus</a>, and <a class="el" href="StudentsRobot_8h_source.html#l00059">status</a>.</p>
+
+<p>Referenced by <a class="el" href="EStop_8cpp_source.html#l00010">EStop::event()</a>.</p>
 
 </div>
 </div>
@@ -317,7 +325,9 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="StudentsRobot_8cpp_source.html#l00088">88</a> of file <a class="el" href="StudentsRobot_8cpp_source.html">StudentsRobot.cpp</a>.</p>
 
-<p>References <a class="el" href="StudentsRobot_8h_source.html#l00055">myCommandsStatus</a>.</p>
+<p>References <a class="el" href="StudentsRobot_8h_source.html#l00055">myCommandsStatus</a>, and <a class="el" href="StudentsRobot_8h_source.html#l00029">Waiting_for_approval_to_pickup</a>.</p>
+
+<p>Referenced by <a class="el" href="PickOrder_8cpp_source.html#l00006">PickOrder::event()</a>.</p>
 
 </div>
 </div>
@@ -426,7 +436,7 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="StudentsRobot_8cpp_source.html#l00014">14</a> of file <a class="el" href="StudentsRobot_8cpp_source.html">StudentsRobot.cpp</a>.</p>
 
-<p>References <a class="el" href="StudentsRobot_8h_source.html#l00059">status</a>.</p>
+<p>References <a class="el" href="StudentsRobot_8h_source.html#l00020">Halt</a>, <a class="el" href="StudentsRobot_8h_source.html#l00020">Halting</a>, <a class="el" href="StudentsRobot_8h_source.html#l00020">Running</a>, <a class="el" href="StudentsRobot_8h_source.html#l00020">StartRunning</a>, <a class="el" href="StudentsRobot_8h_source.html#l00020">StartupRobot</a>, and <a class="el" href="StudentsRobot_8h_source.html#l00059">status</a>.</p>
 
 <p>Referenced by <a class="el" href="RobotControlCenter_8cpp_source.html#l00080">RobotControlCenter::fastLoop()</a>.</p>
 
@@ -438,7 +448,7 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ComStackStatusState StudentsRobot::myCommandsStatus = Ready_for_new_task</td>
+          <td class="memname"><a class="el" href="StudentsRobot_8h.html#a1224568eebab348cfd8b7d5418b61620">ComStackStatusState</a> StudentsRobot::myCommandsStatus = <a class="el" href="StudentsRobot_8h.html#a1224568eebab348cfd8b7d5418b61620aad3743bc396b3226b540973fc827ffa3">Ready_for_new_task</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -447,7 +457,7 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="StudentsRobot_8h_source.html#l00055">55</a> of file <a class="el" href="StudentsRobot_8h_source.html">StudentsRobot.h</a>.</p>
 
-<p>Referenced by <a class="el" href="StudentsRobot_8cpp_source.html#l00065">Approve()</a>, <a class="el" href="StudentsRobot_8cpp_source.html#l00075">ClearFaults()</a>, <a class="el" href="StudentsRobot_8cpp_source.html#l00081">EStop()</a>, and <a class="el" href="StudentsRobot_8cpp_source.html#l00088">PickOrder()</a>.</p>
+<p>Referenced by <a class="el" href="StudentsRobot_8cpp_source.html#l00065">Approve()</a>, <a class="el" href="StudentsRobot_8cpp_source.html#l00075">ClearFaults()</a>, <a class="el" href="StudentsRobot_8cpp_source.html#l00081">EStop()</a>, <a class="el" href="GetStatus_8cpp_source.html#l00003">GetStatus::event()</a>, and <a class="el" href="StudentsRobot_8cpp_source.html#l00088">PickOrder()</a>.</p>
 
 </div>
 </div>
@@ -456,7 +466,7 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">RobotStateMachine StudentsRobot::status = StartupRobot</td>
+          <td class="memname"><a class="el" href="StudentsRobot_8h.html#a2fa48347d45a4cb9d5fdbf4f077b5374">RobotStateMachine</a> StudentsRobot::status = <a class="el" href="StudentsRobot_8h.html#a2fa48347d45a4cb9d5fdbf4f077b5374ab19938f8c220717fff73f804f4b1f697">StartupRobot</a></td>
         </tr>
       </table>
 </div><div class="memdoc">

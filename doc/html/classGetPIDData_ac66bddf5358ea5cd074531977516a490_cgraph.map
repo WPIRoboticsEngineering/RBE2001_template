@@ -1,0 +1,4 @@
+<map id="GetPIDData::event" name="GetPIDData::event">
+<area shape="rect" id="node2" href="$classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809" title="PIDMotor::getPosition" alt="" coords="190,5,341,32"/>
+<area shape="rect" id="node3" href="$classPIDMotor.html#ab4fc140e1212fa3c192feca5bcbd7acc" title="PIDMotor::getSetPoint" alt="" coords="188,56,343,83"/>
+</map>

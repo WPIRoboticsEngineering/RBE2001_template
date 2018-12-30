@@ -85,11 +85,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classGetPIDConstants-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">GetPIDConstants Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="GetPIDConstants_8h_source.html">GetPIDConstants.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for GetPIDConstants:</div>
 <div class="dyncontent">
@@ -99,21 +102,131 @@ Inheritance diagram for GetPIDConstants:</div>
 Collaboration diagram for GetPIDConstants:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGetPIDConstants__coll__graph.png" border="0" usemap="#GetPIDConstants_coll__map" alt="Collaboration graph"/></div>
+<map name="GetPIDConstants_coll__map" id="GetPIDConstants_coll__map">
+<area shape="rect" id="node3" href="classPIDMotor.html" title="PIDMotor" alt="" coords="177,109,255,136"/>
+<area shape="rect" id="node4" href="classRBEPID.html" title="RBEPID" alt="" coords="179,5,253,32"/>
+</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9346f1835bc690fa1eb0bdd333ad7457"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9346f1835bc690fa1eb0bdd333ad7457"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>GetPIDConstants</b> (int num, <a class="el" href="classPIDMotor.html">PIDMotor</a> **list)</td></tr>
+<tr class="memitem:a9346f1835bc690fa1eb0bdd333ad7457"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetPIDConstants.html#a9346f1835bc690fa1eb0bdd333ad7457">GetPIDConstants</a> (int num, <a class="el" href="classPIDMotor.html">PIDMotor</a> **list)</td></tr>
 <tr class="separator:a9346f1835bc690fa1eb0bdd333ad7457"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af33caf04bee1be6e31b2216de82c0982"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af33caf04bee1be6e31b2216de82c0982"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>event</b> (float *buffer)</td></tr>
+<tr class="memitem:af33caf04bee1be6e31b2216de82c0982"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetPIDConstants.html#af33caf04bee1be6e31b2216de82c0982">event</a> (float *buffer)</td></tr>
 <tr class="separator:af33caf04bee1be6e31b2216de82c0982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:afab58ca090e97aa706037c8183073c84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPIDMotor.html">PIDMotor</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetPIDConstants.html#afab58ca090e97aa706037c8183073c84">pidlist</a></td></tr>
+<tr class="separator:afab58ca090e97aa706037c8183073c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb7a168384e03e5263729959b5748ada"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetPIDConstants.html#aeb7a168384e03e5263729959b5748ada">numPID</a></td></tr>
+<tr class="separator:aeb7a168384e03e5263729959b5748ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="GetPIDConstants_8h_source.html#l00012">12</a> of file <a class="el" href="GetPIDConstants_8h_source.html">GetPIDConstants.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a9346f1835bc690fa1eb0bdd333ad7457"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GetPIDConstants::GetPIDConstants </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPIDMotor.html">PIDMotor</a> **&#160;</td>
+          <td class="paramname"><em>list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="GetPIDConstants_8cpp_source.html#l00010">10</a> of file <a class="el" href="GetPIDConstants_8cpp_source.html">GetPIDConstants.cpp</a>.</p>
+
+<p>References <a class="el" href="GetPIDConstants_8h_source.html#l00014">numPID</a>, and <a class="el" href="GetPIDConstants_8h_source.html#l00013">pidlist</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af33caf04bee1be6e31b2216de82c0982"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetPIDConstants::event </td>
+          <td>(</td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="GetPIDConstants_8cpp_source.html#l00017">17</a> of file <a class="el" href="GetPIDConstants_8cpp_source.html">GetPIDConstants.cpp</a>.</p>
+
+<p>References <a class="el" href="RBEPID_8h_source.html#l00017">RBEPID::kd</a>, <a class="el" href="RBEPID_8h_source.html#l00016">RBEPID::ki</a>, <a class="el" href="RBEPID_8h_source.html#l00015">RBEPID::kp</a>, <a class="el" href="PIDMotor_8h_source.html#l00062">PIDMotor::myPID</a>, <a class="el" href="GetPIDConstants_8h_source.html#l00014">numPID</a>, and <a class="el" href="GetPIDConstants_8h_source.html#l00013">pidlist</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="aeb7a168384e03e5263729959b5748ada"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetPIDConstants::numPID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="GetPIDConstants_8h_source.html#l00014">14</a> of file <a class="el" href="GetPIDConstants_8h_source.html">GetPIDConstants.h</a>.</p>
+
+<p>Referenced by <a class="el" href="GetPIDConstants_8cpp_source.html#l00017">event()</a>, and <a class="el" href="GetPIDConstants_8cpp_source.html#l00010">GetPIDConstants()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afab58ca090e97aa706037c8183073c84"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPIDMotor.html">PIDMotor</a>** GetPIDConstants::pidlist</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="GetPIDConstants_8h_source.html#l00013">13</a> of file <a class="el" href="GetPIDConstants_8h_source.html">GetPIDConstants.h</a>.</p>
+
+<p>Referenced by <a class="el" href="GetPIDConstants_8cpp_source.html#l00017">event()</a>, and <a class="el" href="GetPIDConstants_8cpp_source.html#l00010">GetPIDConstants()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/commands/<a class="el" href="GetPIDConstants_8h_source.html">GetPIDConstants.h</a></li>
 <li>src/commands/<a class="el" href="GetPIDConstants_8cpp_source.html">GetPIDConstants.cpp</a></li>
 </ul>

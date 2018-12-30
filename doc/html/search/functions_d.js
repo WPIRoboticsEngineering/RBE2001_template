@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['velocityloop',['velocityLoop',['../classPIDMotor.html#af5a516cd4dc617063b61632ce9968df1',1,'PIDMotor']]]
+  ['updatestatemachine',['updateStateMachine',['../classStudentsRobot.html#a87121369d24a9316459b43047fe77492',1,'StudentsRobot']]]
 ];

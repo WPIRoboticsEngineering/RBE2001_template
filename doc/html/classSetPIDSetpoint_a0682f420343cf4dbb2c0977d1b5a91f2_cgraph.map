@@ -1,0 +1,4 @@
+<map id="SetPIDSetpoint::event" name="SetPIDSetpoint::event">
+<area shape="rect" id="node2" href="$classPIDMotor.html#a45fa4f564edfd6ae7f08bfb635c4d368" title="PIDMotor::setSetpoint" alt="" coords="207,5,359,32"/>
+<area shape="rect" id="node3" href="$classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b" title="PIDMotor::startInterpolation" alt="" coords="407,5,589,32"/>
+</map>

@@ -85,11 +85,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classSetPIDSetpoint-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SetPIDSetpoint Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="SetPIDSetpoint_8h_source.html">SetPIDSetpoint.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for SetPIDSetpoint:</div>
 <div class="dyncontent">
@@ -99,21 +102,142 @@ Inheritance diagram for SetPIDSetpoint:</div>
 Collaboration diagram for SetPIDSetpoint:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSetPIDSetpoint__coll__graph.png" border="0" usemap="#SetPIDSetpoint_coll__map" alt="Collaboration graph"/></div>
+<map name="SetPIDSetpoint_coll__map" id="SetPIDSetpoint_coll__map">
+<area shape="rect" id="node3" href="classPIDMotor.html" title="PIDMotor" alt="" coords="177,109,255,136"/>
+<area shape="rect" id="node4" href="classRBEPID.html" title="RBEPID" alt="" coords="179,5,253,32"/>
+</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0c8e59c599c08a39198ae492759a648f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c8e59c599c08a39198ae492759a648f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SetPIDSetpoint</b> (int num, <a class="el" href="classPIDMotor.html">PIDMotor</a> **list)</td></tr>
+<tr class="memitem:a0c8e59c599c08a39198ae492759a648f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetPIDSetpoint.html#a0c8e59c599c08a39198ae492759a648f">SetPIDSetpoint</a> (int num, <a class="el" href="classPIDMotor.html">PIDMotor</a> **list)</td></tr>
 <tr class="separator:a0c8e59c599c08a39198ae492759a648f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0682f420343cf4dbb2c0977d1b5a91f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0682f420343cf4dbb2c0977d1b5a91f2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>event</b> (float *buffer)</td></tr>
+<tr class="memitem:a0682f420343cf4dbb2c0977d1b5a91f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetPIDSetpoint.html#a0682f420343cf4dbb2c0977d1b5a91f2">event</a> (float *buffer)</td></tr>
 <tr class="separator:a0682f420343cf4dbb2c0977d1b5a91f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a3e8065ca4727ea06a52f1f0093b5c1c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPIDMotor.html">PIDMotor</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetPIDSetpoint.html#a3e8065ca4727ea06a52f1f0093b5c1c0">pidlist</a></td></tr>
+<tr class="separator:a3e8065ca4727ea06a52f1f0093b5c1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a9f3cbb649a6573c4515e49bc80d332"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetPIDSetpoint.html#a5a9f3cbb649a6573c4515e49bc80d332">numPID</a></td></tr>
+<tr class="separator:a5a9f3cbb649a6573c4515e49bc80d332"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="SetPIDSetpoint_8h_source.html#l00012">12</a> of file <a class="el" href="SetPIDSetpoint_8h_source.html">SetPIDSetpoint.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a0c8e59c599c08a39198ae492759a648f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SetPIDSetpoint::SetPIDSetpoint </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPIDMotor.html">PIDMotor</a> **&#160;</td>
+          <td class="paramname"><em>list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="SetPIDSetpoint_8cpp_source.html#l00010">10</a> of file <a class="el" href="SetPIDSetpoint_8cpp_source.html">SetPIDSetpoint.cpp</a>.</p>
+
+<p>References <a class="el" href="SetPIDSetpoint_8h_source.html#l00014">numPID</a>, and <a class="el" href="SetPIDSetpoint_8h_source.html#l00013">pidlist</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a0682f420343cf4dbb2c0977d1b5a91f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPIDSetpoint::event </td>
+          <td>(</td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="SetPIDSetpoint_8cpp_source.html#l00017">17</a> of file <a class="el" href="SetPIDSetpoint_8cpp_source.html">SetPIDSetpoint.cpp</a>.</p>
+
+<p>References <a class="el" href="SetPIDSetpoint_8h_source.html#l00014">numPID</a>, <a class="el" href="SetPIDSetpoint_8h_source.html#l00013">pidlist</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00151">PIDMotor::setSetpoint()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSetPIDSetpoint_a0682f420343cf4dbb2c0977d1b5a91f2_cgraph.png" border="0" usemap="#classSetPIDSetpoint_a0682f420343cf4dbb2c0977d1b5a91f2_cgraph" alt=""/></div>
+<map name="classSetPIDSetpoint_a0682f420343cf4dbb2c0977d1b5a91f2_cgraph" id="classSetPIDSetpoint_a0682f420343cf4dbb2c0977d1b5a91f2_cgraph">
+<area shape="rect" id="node2" href="classPIDMotor.html#a45fa4f564edfd6ae7f08bfb635c4d368" title="PIDMotor::setSetpoint" alt="" coords="207,5,359,32"/>
+<area shape="rect" id="node3" href="classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b" title="PIDMotor::startInterpolation" alt="" coords="407,5,589,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a5a9f3cbb649a6573c4515e49bc80d332"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SetPIDSetpoint::numPID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="SetPIDSetpoint_8h_source.html#l00014">14</a> of file <a class="el" href="SetPIDSetpoint_8h_source.html">SetPIDSetpoint.h</a>.</p>
+
+<p>Referenced by <a class="el" href="SetPIDSetpoint_8cpp_source.html#l00017">event()</a>, and <a class="el" href="SetPIDSetpoint_8cpp_source.html#l00010">SetPIDSetpoint()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3e8065ca4727ea06a52f1f0093b5c1c0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPIDMotor.html">PIDMotor</a>** SetPIDSetpoint::pidlist</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="SetPIDSetpoint_8h_source.html#l00013">13</a> of file <a class="el" href="SetPIDSetpoint_8h_source.html">SetPIDSetpoint.h</a>.</p>
+
+<p>Referenced by <a class="el" href="SetPIDSetpoint_8cpp_source.html#l00017">event()</a>, and <a class="el" href="SetPIDSetpoint_8cpp_source.html#l00010">SetPIDSetpoint()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/commands/<a class="el" href="SetPIDSetpoint_8h_source.html">SetPIDSetpoint.h</a></li>
 <li>src/commands/<a class="el" href="SetPIDSetpoint_8cpp_source.html">SetPIDSetpoint.cpp</a></li>
 </ul>

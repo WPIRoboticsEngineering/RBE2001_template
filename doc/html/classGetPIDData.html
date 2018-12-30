@@ -85,11 +85,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classGetPIDData-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">GetPIDData Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="GetPIDData_8h_source.html">GetPIDData.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for GetPIDData:</div>
 <div class="dyncontent">
@@ -99,21 +102,169 @@ Inheritance diagram for GetPIDData:</div>
 Collaboration diagram for GetPIDData:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGetPIDData__coll__graph.png" border="0" usemap="#GetPIDData_coll__map" alt="Collaboration graph"/></div>
+<map name="GetPIDData_coll__map" id="GetPIDData_coll__map">
+<area shape="rect" id="node3" href="classPIDMotor.html" title="PIDMotor" alt="" coords="177,109,255,136"/>
+<area shape="rect" id="node4" href="classRBEPID.html" title="RBEPID" alt="" coords="179,5,253,32"/>
+</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a90dd17043e291437f2db1d0ac4dfccda"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90dd17043e291437f2db1d0ac4dfccda"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>GetPIDData</b> (int num, <a class="el" href="classPIDMotor.html">PIDMotor</a> **list)</td></tr>
+<tr class="memitem:a90dd17043e291437f2db1d0ac4dfccda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetPIDData.html#a90dd17043e291437f2db1d0ac4dfccda">GetPIDData</a> (int num, <a class="el" href="classPIDMotor.html">PIDMotor</a> **list)</td></tr>
 <tr class="separator:a90dd17043e291437f2db1d0ac4dfccda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac66bddf5358ea5cd074531977516a490"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac66bddf5358ea5cd074531977516a490"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>event</b> (float *buffer)</td></tr>
+<tr class="memitem:a65141e6b104c839be09d42a78078ee2a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetPIDData.html#a65141e6b104c839be09d42a78078ee2a">~GetPIDData</a> ()</td></tr>
+<tr class="separator:a65141e6b104c839be09d42a78078ee2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac66bddf5358ea5cd074531977516a490"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetPIDData.html#ac66bddf5358ea5cd074531977516a490">event</a> (float *buffer)</td></tr>
 <tr class="separator:ac66bddf5358ea5cd074531977516a490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa18e670e5b49e90b3a1e2ecd7d3f3f4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPIDMotor.html">PIDMotor</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetPIDData.html#aa18e670e5b49e90b3a1e2ecd7d3f3f4d">pidlist</a></td></tr>
+<tr class="separator:aa18e670e5b49e90b3a1e2ecd7d3f3f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade61350e75f7bc96b00b62ab979a557c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGetPIDData.html#ade61350e75f7bc96b00b62ab979a557c">numPID</a></td></tr>
+<tr class="separator:ade61350e75f7bc96b00b62ab979a557c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="GetPIDData_8h_source.html#l00012">12</a> of file <a class="el" href="GetPIDData_8h_source.html">GetPIDData.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a90dd17043e291437f2db1d0ac4dfccda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GetPIDData::GetPIDData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPIDMotor.html">PIDMotor</a> **&#160;</td>
+          <td class="paramname"><em>list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="GetPIDData_8cpp_source.html#l00014">14</a> of file <a class="el" href="GetPIDData_8cpp_source.html">GetPIDData.cpp</a>.</p>
+
+<p>References <a class="el" href="GetPIDData_8h_source.html#l00015">numPID</a>, and <a class="el" href="GetPIDData_8h_source.html#l00014">pidlist</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a65141e6b104c839be09d42a78078ee2a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GetPIDData::~GetPIDData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="GetPIDData_8cpp_source.html#l00010">10</a> of file <a class="el" href="GetPIDData_8cpp_source.html">GetPIDData.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ac66bddf5358ea5cd074531977516a490"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetPIDData::event </td>
+          <td>(</td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="GetPIDData_8cpp_source.html#l00021">21</a> of file <a class="el" href="GetPIDData_8cpp_source.html">GetPIDData.cpp</a>.</p>
+
+<p>References <a class="el" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809">PIDMotor::getPosition()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00157">PIDMotor::getSetPoint()</a>, <a class="el" href="GetPIDData_8h_source.html#l00015">numPID</a>, and <a class="el" href="GetPIDData_8h_source.html#l00014">pidlist</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGetPIDData_ac66bddf5358ea5cd074531977516a490_cgraph.png" border="0" usemap="#classGetPIDData_ac66bddf5358ea5cd074531977516a490_cgraph" alt=""/></div>
+<map name="classGetPIDData_ac66bddf5358ea5cd074531977516a490_cgraph" id="classGetPIDData_ac66bddf5358ea5cd074531977516a490_cgraph">
+<area shape="rect" id="node2" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809" title="PIDMotor::getPosition" alt="" coords="190,5,341,32"/>
+<area shape="rect" id="node3" href="classPIDMotor.html#ab4fc140e1212fa3c192feca5bcbd7acc" title="PIDMotor::getSetPoint" alt="" coords="188,56,343,83"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ade61350e75f7bc96b00b62ab979a557c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetPIDData::numPID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="GetPIDData_8h_source.html#l00015">15</a> of file <a class="el" href="GetPIDData_8h_source.html">GetPIDData.h</a>.</p>
+
+<p>Referenced by <a class="el" href="GetPIDData_8cpp_source.html#l00021">event()</a>, and <a class="el" href="GetPIDData_8cpp_source.html#l00014">GetPIDData()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa18e670e5b49e90b3a1e2ecd7d3f3f4d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPIDMotor.html">PIDMotor</a>** GetPIDData::pidlist</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="GetPIDData_8h_source.html#l00014">14</a> of file <a class="el" href="GetPIDData_8h_source.html">GetPIDData.h</a>.</p>
+
+<p>Referenced by <a class="el" href="GetPIDData_8cpp_source.html#l00021">event()</a>, and <a class="el" href="GetPIDData_8cpp_source.html#l00014">GetPIDData()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/commands/<a class="el" href="GetPIDData_8h_source.html">GetPIDData.h</a></li>
 <li>src/commands/<a class="el" href="GetPIDData_8cpp_source.html">GetPIDData.cpp</a></li>
 </ul>

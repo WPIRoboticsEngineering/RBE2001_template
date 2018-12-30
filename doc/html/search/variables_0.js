@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['hardwareoutput',['hardwareOutput',['../classPIDMotor.html#abe2807f8d13938c34046998f85865b95',1,'PIDMotor']]]
+  ['coms',['coms',['../classRobotControlCenter.html#aa876ebd7124ef14f19b7f5fc95a11767',1,'RobotControlCenter']]],
+  ['curtime',['curTime',['../classPIDMotor.html#af66ab48703c2f0ea5a60e63529417709',1,'PIDMotor']]]
 ];
