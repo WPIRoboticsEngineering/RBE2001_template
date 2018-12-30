@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['status',['status',['../classStudentsRobot.html#a7c6e1befe94b94bcb56b9ff626a0c410',1,'StudentsRobot']]]
+  ['robot',['robot',['../classRobotControlCenter.html#a718ba66815a4864e7ce479270c046176',1,'RobotControlCenter']]]
 ];

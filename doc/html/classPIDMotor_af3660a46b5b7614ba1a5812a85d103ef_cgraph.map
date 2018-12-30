@@ -5,6 +5,5 @@
 <area shape="rect" id="node5" href="$classPIDMotor.html#a59430df840fafb87e734ecfbed9fce78" title="PIDMotor::getOutputMinDeadbad" alt="" coords="261,157,477,184"/>
 <area shape="rect" id="node6" href="$classPIDMotor.html#a81a7e9b5bdcdf4291a22e70b1a540ee8" title="PIDMotor::getOutputStop" alt="" coords="283,208,454,235"/>
 <area shape="rect" id="node7" href="$classPIDMotor.html#a4f30d949a3c41afb995caef9fb207e05" title="PIDMotor::myFmap" alt="" coords="300,259,437,285"/>
-<area shape="rect" id="node9" href="$classPIDMotor.html#af1c954ea7fa21d4685a67b06f66c1982" title="PIDMotor::setOutput" alt="" coords="297,309,440,336"/>
-<area shape="rect" id="node8" href="$classRBEPID.html#adc6954f2aaa12295fc58ca1dcfca3dc1" title="RBEPID::clearIntegralBuffer" alt="" coords="527,259,713,285"/>
+<area shape="rect" id="node8" href="$classPIDMotor.html#af1c954ea7fa21d4685a67b06f66c1982" title="PIDMotor::setOutput" alt="" coords="297,309,440,336"/>
 </map>

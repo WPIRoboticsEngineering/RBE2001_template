@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['robot',['robot',['../classRobotControlCenter.html#a718ba66815a4864e7ce479270c046176',1,'RobotControlCenter']]]
+  ['mycommandsstatus',['myCommandsStatus',['../classStudentsRobot.html#a1fe188b5a6536567701b8285d97ae042',1,'StudentsRobot']]],
+  ['mypid',['myPID',['../classPIDMotor.html#a0882b047a418b1b4ba6ecd02e07d32bf',1,'PIDMotor']]]
 ];
