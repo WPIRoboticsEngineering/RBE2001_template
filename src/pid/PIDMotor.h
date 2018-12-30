@@ -56,9 +56,20 @@ protected:
 	 */
 	float myFmap(float x, float in_min, float in_max, float out_min,float out_max);
 public:
-
+	/**
+	 * The PID object for the position controller
+	 */
 	RBEPID myPID;
+	/**
+	 * THe PID object for the velocity controller (UNIMPLEMENTED)
+	 */
 	RBEPID velocityPID;
+	/**
+	 * The value that is being sent to the hardware
+	 *
+	 * View this variable in order to see what value is being sent to the motor directly
+	 *
+	 */
 	int64_t hardwareOutput = 0;
 	PIDMotor();
 	virtual ~PIDMotor();
@@ -91,11 +102,43 @@ public:
 	 * @param Kd derrivitive gain
 	 */
 	void SetTunings(double Kp, double Ki, double Kd);
+	/**
+	 * SetTunings Set the P.I.D. gains for the velocity controller
+	 *
+	 * @param Kp proportional gain
+	 * @param Kd derrivitive gain
+	 *
+	 * @note KI must be 0 for velocity
+	 */
 	void SetTuningsVelocity(double Kp, double Kd);
+	/**
+	 * Set the velocity of the motor
+	 *
+	 * This function defaults to open-loop estimation of velocity
+	 * @param degreesPerSecond the motor speed in degrees Per Second
+	 */
 	void setVelocityDegreesPerSecond(float degreesPerSecond);
+	/**
+	 * Reset and clear the PID controller
+	 */
 	void pidinit();
+	/**
+	 * Get the setpoint
+	 *
+	 * @return the setpoint in sensor "Ticks"
+	 */
 	float getSetPoint();
+	/**
+	 * Get the velocity of the plant
+	 *
+	 * @return the velocity in DegreesPerSecond
+	 */
 	double getVelocityDegreesPerSecond();
+	/**
+	 * Get the current position of the motor converted to Degrees
+	 *
+	 * @return teh position in degrees
+	 */
 	double getAngleDegrees();
 	/**
 	 * setOutputUnitVector Set the output using a -1.0f to 1.0f unit vector.
