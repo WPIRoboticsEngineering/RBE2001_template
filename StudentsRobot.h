@@ -63,6 +63,9 @@ public:
 	 * @param buffer A buffer of floats containing nothing
 	 *
 	 * the is the event of the Approve button pressed in the GUI
+	 *
+	 * This function is called via coms.server() in:
+	 * @see RobotControlCenter::fastLoop
 	 */
 	void Approve(float * data);
 	/**
@@ -71,6 +74,9 @@ public:
 	 * @param buffer A buffer of floats containing nothing
 	 *
 	 * this represents the event of the clear faults button press in the gui
+	 *
+	 * This function is called via coms.server() in:
+	 * @see RobotControlCenter::fastLoop
 	 */
 	void ClearFaults(float * data);
 	/**
@@ -79,12 +85,18 @@ public:
 	 * @param buffer A buffer of floats containing nothing
 	 *
 	 * this represents the event of the EStop button press in the gui
+	 *
+	 * This function is called via coms.server() in:
+	 * @see RobotControlCenter::fastLoop
 	 */
 	void EStop(float * buffer);
 	/**
 	 * PickOrder
 	 *
 	 * @param buffer A buffer of floats containing the pick order data
+	 *
+	 * This function is called via coms.server() in:
+	 * @see RobotControlCenter::fastLoop
 	 */
 	void PickOrder(float * buffer);
 	/**
@@ -93,6 +105,9 @@ public:
 	 * these are the 4 actuators you need to use for this lab
 	 * all 4 must be attached at this time
 	 * DO NOT reuse pins or fail to attach any of the objects
+	 *
+	 * This function is called via coms.server() in:
+	 * @see RobotControlCenter::fastLoop
 	 */
 	void attach(HBridgeEncoderPIDMotor * motor1,
 			HBridgeEncoderPIDMotor * motor2, ServoEncoderPIDMotor * motor3,
