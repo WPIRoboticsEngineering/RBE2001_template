@@ -53,11 +53,7 @@ enum state_t {
  */
 class RobotControlCenter {
 private:
-	HBridgeEncoderPIDMotor motor1;  // PID controlled motor object
-	HBridgeEncoderPIDMotor motor2; // PID controlled motor object
-	ServoEncoderPIDMotor motor3; // PID controlled motor object
-	// Servo objects
-	Servo servo;
+
 	// A value to check if enough time has elapsed to tun the sensors and prints
 	int64_t lastPrint = 0;
 	// Change this to set your team name
@@ -72,12 +68,9 @@ private:
 	WifiManager manager;
 
 #endif
-
 	// The fast loop actions
 	// This should be run every loop and is internally gated for fast opperation
 	void fastLoop();
-	// Internal setup function. set up all objects
-	void setup();
 	//attach the PID servers
 	void setupPIDServers();
 	// State machine state
@@ -86,7 +79,7 @@ public:
 	/**
 	 * RobotControlCenter constructor
 	 *
-	 * The name is used bt the SimplePacketComs stack to locate your specific
+	 * The name is used by the SimplePacketComs stack to locate your specific
 	 * robot on the network.
 	 */
 	RobotControlCenter(String * name);
@@ -102,8 +95,23 @@ public:
 	 * A pointer to the students robot
 	 *
 	 * NULL at startup, this is instantiated by the RobotControlCenter state machine.
+	 * This variable is set as part of @see RobotControlCenter::setup
 	 */
 	StudentsRobot * robot;
+protected:
+	HBridgeEncoderPIDMotor motor1;  // PID controlled motor object
+	HBridgeEncoderPIDMotor motor2; // PID controlled motor object
+	ServoEncoderPIDMotor motor3; // PID controlled motor object
+	// Servo objects
+	Servo servo;
+
+	//
+	/**
+	 * Internal setup function to set up all objects
+	 *
+	 * This function is called as part of the state machine by the object
+	 */
+	void setup();
 
 };
 
