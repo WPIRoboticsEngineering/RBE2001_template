@@ -18,7 +18,7 @@ You and your team members should find your repository made with the template cod
 
 # Develop Code for your project
 
-## Install Eclips on Personal Machine
+## Install Eclipse on Personal Machine
 
  [See Eclipse install instructions in InstallEclipse.md](InstallEclipse.md)
 
