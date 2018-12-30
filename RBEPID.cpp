@@ -21,8 +21,14 @@ void RBEPID::setpid(float P, float I, float D) {
 	kd = D;
 }
 
-//Write this function to calculate a control signal from the set point
-//and the current position
+/**
+ * calc the PID control signel
+ *
+ * @param setPoint is the setpoint of the PID system
+ * @param curPosition the current position of the plan
+ * @return a value from -1.0 to 1.0 representing the PID control signel
+ * @see clearIntegralBuffer for how the integral is cleared
+ */
 float RBEPID::calc(double set, double cur) {
 
 	// calculate error
@@ -43,7 +49,10 @@ float RBEPID::calc(double set, double cur) {
 	return 0;
 }
 
-// Clear the integral accumulator
+/**
+ * Clear the internal representation fo the integral term.
+ *
+ */
 void RBEPID::clearIntegralBuffer() {
-	//TODO
+	//TODO implement this when implementing the integral term
 }

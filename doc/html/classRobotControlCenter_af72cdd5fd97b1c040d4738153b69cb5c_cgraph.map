@@ -1,0 +1,10 @@
+<map id="RobotControlCenter::setup" name="RobotControlCenter::setup">
+<area shape="rect" id="node2" href="$classStudentsRobot.html#a0acd4de6b0391becfd40a253b2e883fd" title="StudentsRobot::attach" alt="" coords="192,137,345,163"/>
+<area shape="rect" id="node3" href="$classHBridgeEncoderPIDMotor.html#ad971f5e3e4932ac465135018d976defc" title="HBridgeEncoderPIDMotor\l::attach" alt="" coords="393,5,567,47"/>
+<area shape="rect" id="node5" href="$classServoEncoderPIDMotor.html#ae91dbba63a742e6c173e6e1f339406c8" title="ServoEncoderPIDMotor\l::attach" alt="" coords="400,71,560,112"/>
+<area shape="rect" id="node6" href="$classPIDMotor.html#a45fa4f564edfd6ae7f08bfb635c4d368" title="PIDMotor::setSetpoint" alt="" coords="404,137,556,163"/>
+<area shape="rect" id="node8" href="$classHBridgeEncoderPIDMotor.html#aaf50960b179c4d9b0a059b3b4b41b14d" title="HBridgeEncoderPIDMotor\l::getPosition" alt="" coords="393,188,567,229"/>
+<area shape="rect" id="node9" href="$classServoEncoderPIDMotor.html#ace3748b0fc47372137067424ce7c664f" title="ServoEncoderPIDMotor\l::getPosition" alt="" coords="400,253,560,295"/>
+<area shape="rect" id="node4" href="$classHBridgeEncoderPIDMotor.html#a26e55b549bf8cf6b096d9379e555adf8" title="HBridgeEncoderPIDMotor\l::setOutput" alt="" coords="619,5,793,47"/>
+<area shape="rect" id="node7" href="$classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b" title="PIDMotor::startInterpolation" alt="" coords="615,137,797,163"/>
+</map>

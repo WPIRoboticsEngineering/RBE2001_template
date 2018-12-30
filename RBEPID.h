@@ -18,11 +18,22 @@ public:
 	float last_error = 0;
 	float sum_error = 0;
 	int sampleRateMs = 5;
-//set PID constants
+	/**
+	 * setpid set PID constants
+	 */
 	void setpid(float P, float I, float D);
-//calculate the output control signal
-	float calc(double setVel, double curVel);
-	//Clear the internal representation fo the integral term.
+	/**
+	 * calc the PID control signel
+	 *
+	 * @param setPoint is the setpoint of the PID system
+	 * @param curPosition the current position of the plan
+	 * @return a value from -1.0 to 1.0 representing the PID control signel
+	 */
+	float calc(double setPoint, double curPosition);
+	/**
+	 * Clear the internal representation fo the integral term.
+	 *
+	 */
 	void clearIntegralBuffer();
 private:
 

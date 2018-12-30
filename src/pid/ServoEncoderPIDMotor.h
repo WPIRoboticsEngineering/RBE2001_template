@@ -18,6 +18,13 @@ private:
 public:
 	ServoEncoderPIDMotor();
 	virtual ~ServoEncoderPIDMotor();
+	/**
+	 * Attach the hardware
+	 *
+	 * @param servoPin the pin number of the Servo PWM
+	 * @param encoderA the A channel of the encoder
+	 * @param encoderB the B channel of the encoder
+	 */
 	void attach(int servoPin, int encoderA, int encoderB);
 	int64_t getPosition();
 	int64_t getOutputMin();

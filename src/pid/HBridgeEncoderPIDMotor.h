@@ -19,6 +19,14 @@ private:
 public:
 	HBridgeEncoderPIDMotor();
 	virtual ~HBridgeEncoderPIDMotor();
+	/**
+	 * Attach the hardware
+	 *
+	 * @param pwmPin the pin number of the 10 khz PWM
+	 * @param directionPin the pin number of the pin used for direction of the H-Bridge
+	 * @param encoderA the A channel of the encoder
+	 * @param encoderB the B channel of the encoder
+	 */
 	void attach(int pwmPin, int directionPin, int encoderA, int encoderB);
 	int64_t getPosition();
 	int64_t getOutputMin();
