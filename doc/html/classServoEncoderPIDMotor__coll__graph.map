@@ -1,4 +1,0 @@
-<map id="ServoEncoderPIDMotor" name="ServoEncoderPIDMotor">
-<area shape="rect" id="node2" href="$classPIDMotor.html" title="PIDMotor" alt="" coords="46,109,125,136"/>
-<area shape="rect" id="node3" href="$classRBEPID.html" title="RBEPID" alt="" coords="49,5,122,32"/>
-</map>

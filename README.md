@@ -128,6 +128,10 @@ Insights->Network
 ```
 and verify your changes are there. 
 
+# Code Documentation Doxygen
+
+In you checked out code, open doc/html/annotated.html to see the Doxygen documentation. 
+
 # Troubleshooting
 
 ## arduinoPlugin\tools\make\make not found in PATH

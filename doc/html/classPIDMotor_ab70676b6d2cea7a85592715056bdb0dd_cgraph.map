@@ -1,5 +1,0 @@
-<map id="PIDMotor::stop" name="PIDMotor::stop">
-<area shape="rect" id="node2" href="$classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809" title="PIDMotor::getPosition" alt="" coords="165,5,315,32"/>
-<area shape="rect" id="node3" href="$classPIDMotor.html#a45fa4f564edfd6ae7f08bfb635c4d368" title="PIDMotor::setSetpoint" alt="" coords="164,56,316,83"/>
-<area shape="rect" id="node4" href="$classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b" title="PIDMotor::startInterpolation" alt="" coords="364,56,547,83"/>
-</map>
