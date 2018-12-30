@@ -39,7 +39,18 @@ enum state_t {
 // Add more states here and be sure to add them to the cycle
 };
 #define numberOfPID  3
-
+/**
+ * RobotControlCenter is the main class for the 2000 level student code
+ *
+ * This class is the starting point for all the code. Student code is
+ * housed in StudentsRobot class
+ * @see StudentsRobot
+ *
+ * This class managed the overall state machine for dealing with connecting and
+ * maintaining connection to the WiFi, constructing the StudentsRobot class, and managing
+ * the StudentsRobot calls to updates its state machine as well as its PID loops.
+ *
+ */
 class RobotControlCenter {
 private:
 	HBridgeEncoderPIDMotor motor1;  // PID controlled motor object
@@ -72,11 +83,26 @@ private:
 	// State machine state
 	state_t state = Startup;
 public:
+	/**
+	 * RobotControlCenter constructor
+	 *
+	 * The name is used bt the SimplePacketComs stack to locate your specific
+	 * robot on the network.
+	 */
 	RobotControlCenter(String * name);
 	~RobotControlCenter() {
 	}
-	// Pulse the loop function from the main thread
+	/**
+	 * Pulse the loop function from the main thread
+	 *
+	 * This function is callled over and over by the INO loop()
+	 */
 	void loop();
+	/**
+	 * A pointer to the students robot
+	 *
+	 * NULL at startup, this is instantiated by the RobotControlCenter state machine.
+	 */
 	StudentsRobot * robot;
 
 };

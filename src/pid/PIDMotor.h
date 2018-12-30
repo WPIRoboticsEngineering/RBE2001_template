@@ -38,14 +38,19 @@ protected:
 	interpolateMode mode = LIN;
 	float targetDegreesPerSecond = 0;
 public:
+
 	RBEPID myPID;
 	RBEPID velocityPID;
 	int64_t hardwareOutput = 0;
 	PIDMotor();
 	virtual ~PIDMotor();
+	/**
+	 * Perform the PID calculations and apply the result to the actuators
+	 */
 	void loop();
 	void velocityLoop();
 	void overrideCurrentPosition(int64_t val);
+
 	void setSetpoint(int64_t val);
 	void SetTunings(double Kp, double Ki, double Kd);
 	void SetTuningsVelocity(double Kp, double Kd);
@@ -56,8 +61,21 @@ public:
 	double getAngleDegrees();
 	void setOutputUnitVector(float out);
 	void stop();
-	void startInterpolation(float newSetpoint, long msTimeDuration,
-			interpolateMode mode);
+	/**
+	 * Start a linear interpolation of the motor
+	 *
+	 * The position setpoint will follow a trajectory over time
+	 * the setpoint will start where it currently is, and arrive at the desired location after
+	 * the number of msTimeDuration MS have elapsed.
+	 * The trajectory can be either linear, with the LIN mode
+	 * or the trajectory can be either Sinusoidal, with the SIN mode
+	 * the units for the variable is in sensor 'ticks'
+	 *
+	 * @param newSetpoint the new setpoint
+	 * @param msTimeDuration the time of translation
+	 * @param mode The type of interpolation LIN or SIN
+	 */
+	void startInterpolation(float newSetpoint, long msTimeDuration,interpolateMode mode);
 
 	virtual int64_t getPosition()=0;
 	virtual int64_t getOutputMin()=0;

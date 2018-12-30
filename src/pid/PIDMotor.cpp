@@ -149,16 +149,19 @@ void PIDMotor::setSetpoint(int64_t val) {
 float PIDMotor::getSetPoint() {
 	return Setpoint;
 }
-
+//
 // Ser the P.I.D. gains for the position controller
+//
 void PIDMotor::SetTunings(double Kp, double Ki, double Kd) {
 	this->Kp = Kp;
 	this->Ki = Ki;
 	this->Kd = Kd;
 	overrideCurrentPosition(getPosition());
 }
+//
 // Get the angular velocity of the shaft
 // units are in degrees per second
+//
 double PIDMotor::getVelocityDegreesPerSecond() {
 	return calcVel();
 }
