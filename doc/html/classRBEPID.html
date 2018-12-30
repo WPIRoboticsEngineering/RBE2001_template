@@ -122,7 +122,10 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>sum_error</b> = 0</t
 int&#160;</td><td class="memItemRight" valign="bottom"><b>sampleRateMs</b> = 5</td></tr>
 <tr class="separator:ad884404bd9dce8ebfd01b0faae6e8d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p>Definition at line <a class="el" href="RBEPID_8h_source.html#l00011">11</a> of file <a class="el" href="RBEPID_8h_source.html">RBEPID.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a74256fe09d111f68c97f7fcfaa858960"></a>
 <div class="memitem">
 <div class="memproto">
@@ -166,6 +169,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>sampleRateMs</b> = 5</
 <dl class="section return"><dt>Returns</dt><dd>a value from -1.0 to 1.0 representing the PID control signel </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classRBEPID.html#adc6954f2aaa12295fc58ca1dcfca3dc1">clearIntegralBuffer</a> for how the integral is cleared </dd></dl>
 
+<p>Definition at line <a class="el" href="RBEPID_8cpp_source.html#l00032">32</a> of file <a class="el" href="RBEPID_8cpp_source.html">RBEPID.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00037">PIDMotor::loop()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="adc6954f2aaa12295fc58ca1dcfca3dc1"></a>
@@ -181,6 +188,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>sampleRateMs</b> = 5</
       </table>
 </div><div class="memdoc">
 <p>Clear the internal representation fo the integral term. </p>
+
+<p>Definition at line <a class="el" href="RBEPID_8cpp_source.html#l00056">56</a> of file <a class="el" href="RBEPID_8cpp_source.html">RBEPID.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00037">PIDMotor::loop()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00016">PIDMotor::myFmap()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00138">PIDMotor::overrideCurrentPosition()</a>.</p>
 
 </div>
 </div>
@@ -215,11 +226,15 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>sampleRateMs</b> = 5</
 </div><div class="memdoc">
 <p>setpid set PID constants </p>
 
+<p>Definition at line <a class="el" href="RBEPID_8cpp_source.html#l00018">18</a> of file <a class="el" href="RBEPID_8cpp_source.html">RBEPID.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00138">PIDMotor::overrideCurrentPosition()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00080">PIDMotor::velocityLoop()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="RBEPID_8h_source.html">RBEPID.h</a></li>
-<li>RBEPID.cpp</li>
+<li><a class="el" href="RBEPID_8cpp_source.html">RBEPID.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

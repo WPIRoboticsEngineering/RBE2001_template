@@ -1,10 +1,10 @@
 <map id="PIDMotor::SetTunings" name="PIDMotor::SetTunings">
-<area shape="rect" id="node2" href="$classPIDMotor.html#a5de9794349b06acb6e94076064508fe5" title="PIDMotor::overrideCurrent\lPosition" alt="" coords="205,112,380,153"/>
-<area shape="rect" id="node7" href="$classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809" title="PIDMotor::getPosition" alt="" coords="446,225,597,251"/>
-<area shape="rect" id="node8" href="$classPIDMotor.html#a7f73964441f27c0eb1247604dae09bd0" title="PIDMotor::calcVel" alt="" coords="228,229,357,255"/>
-<area shape="rect" id="node9" href="$classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374" title="PIDMotor::ticksToDeg" alt="" coords="445,277,598,303"/>
-<area shape="rect" id="node3" href="$classPIDMotor.html#a6a1452c87f6abd3729ec12824a74abca" title="PIDMotor::overrideCurrent\lPositionHardware" alt="" coords="434,5,609,47"/>
-<area shape="rect" id="node4" href="$classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b" title="PIDMotor::startInterpolation" alt="" coords="430,71,613,98"/>
-<area shape="rect" id="node5" href="$classRBEPID.html#a38127aaf2918707921b3e8e6c27692f5" title="RBEPID::setpid" alt="" coords="463,122,579,149"/>
-<area shape="rect" id="node6" href="$classRBEPID.html#adc6954f2aaa12295fc58ca1dcfca3dc1" title="RBEPID::clearIntegralBuffer" alt="" coords="428,173,615,199"/>
+<area shape="rect" id="node2" href="$classPIDMotor.html#a7f73964441f27c0eb1247604dae09bd0" title="PIDMotor::calcVel" alt="" coords="228,56,357,83"/>
+<area shape="rect" id="node3" href="$classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809" title="PIDMotor::getPosition" alt="" coords="446,5,597,32"/>
+<area shape="rect" id="node4" href="$classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374" title="PIDMotor::ticksToDeg" alt="" coords="445,56,598,83"/>
+<area shape="rect" id="node5" href="$classPIDMotor.html#a5de9794349b06acb6e94076064508fe5" title="PIDMotor::overrideCurrent\lPosition" alt="" coords="205,158,380,199"/>
+<area shape="rect" id="node6" href="$classRBEPID.html#adc6954f2aaa12295fc58ca1dcfca3dc1" title="RBEPID::clearIntegralBuffer" alt="" coords="428,107,615,133"/>
+<area shape="rect" id="node7" href="$classPIDMotor.html#a6a1452c87f6abd3729ec12824a74abca" title="PIDMotor::overrideCurrent\lPositionHardware" alt="" coords="434,158,609,199"/>
+<area shape="rect" id="node8" href="$classRBEPID.html#a38127aaf2918707921b3e8e6c27692f5" title="RBEPID::setpid" alt="" coords="463,224,579,251"/>
+<area shape="rect" id="node9" href="$classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b" title="PIDMotor::startInterpolation" alt="" coords="430,275,613,301"/>
 </map>
