@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['_7eapprove',['~Approve',['../classApprove.html#aa97346f892e72c480084b179aa93949f',1,'Approve']]],
   ['_7eestop',['~EStop',['../classEStop.html#a9d13e39d2e9ecaf9610b505925df44b4',1,'EStop']]],
   ['_7egetpiddata',['~GetPIDData',['../classGetPIDData.html#a65141e6b104c839be09d42a78078ee2a',1,'GetPIDData']]],
   ['_7ehbridgeencoderpidmotor',['~HBridgeEncoderPIDMotor',['../classHBridgeEncoderPIDMotor.html#aad2579f713ce0f24225c804f1ae72a6e',1,'HBridgeEncoderPIDMotor']]],

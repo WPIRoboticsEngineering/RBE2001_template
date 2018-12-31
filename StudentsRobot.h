@@ -67,7 +67,7 @@ public:
 	 * This function is called via coms.server() in:
 	 * @see RobotControlCenter::fastLoop
 	 */
-	void Approve(float * data);
+	void Approve(float * buffer);
 	/**
 	 * ClearFaults
 	 *
@@ -78,7 +78,7 @@ public:
 	 * This function is called via coms.server() in:
 	 * @see RobotControlCenter::fastLoop
 	 */
-	void ClearFaults(float * data);
+	void ClearFaults(float * buffer);
 	/**
 	 * EStop
 	 *
