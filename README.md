@@ -1,6 +1,11 @@
 # RBE2002_template
 Template code for the RBE 2002 final project
 
+# Code Documentation Doxygen
+
+In you checked out code, open doc/html/annotated.html to see the Doxygen documentation. The best way to understand this code is to start in the Files section of the documentation, and look at the .ino file. Look at the setup and loop call graphs.
+
+
 # Hardware
 
 See: https://github.com/WPIRoboticsEngineering/RobotInterfaceBoard
@@ -62,7 +67,7 @@ New->Arduino Sketch
 Un-check the default location, and seclect where you just cloned your code. Mine looks like: 
 
 ```
-C:\Users\harrington\git\RBE2002Code21
+R:\git\RBE2002Code21
 ```
 
 Give it the name:
@@ -97,6 +102,19 @@ Once the project shows up in Project Explorer tab, build index:
 
 ![alt text](/doc/rebuildIndexToAddLibs.png)
 
+# Code theory and structure and what to edit
+
+If find yourself saying:
+ 
+```
+Geez, thats a lot of code :/ I dont even know where to begin...
+```
+then start here.
+
+[The first thing to dig into is not the code, but the documentation. The template code that you all got copies of is documented using Doxygen](https://mesos.readthedocs.io/en/latest/c++-style-guide/) a code auto-documentation tool. It generates a rather nice website of hyperlinked documentation of all the code in this repository. Besides the normal text based documentation, it also will generate very nice [include graphs](/doc/html/StudentsRobot_8h__incl.png) and [function call graphs](/doc/html/template_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.png). 
+
+
+
 
 # Commit your changes
 
@@ -128,9 +146,7 @@ Insights->Network
 ```
 and verify your changes are there. 
 
-# Code Documentation Doxygen
 
-In you checked out code, open doc/html/annotated.html to see the Doxygen documentation. 
 
 # Troubleshooting
 
