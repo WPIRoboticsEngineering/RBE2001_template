@@ -107,6 +107,7 @@ public:
 	 * @param newSetpoint the new setpoint
 	 * @param msTimeDuration the time of translation
 	 * @param mode The type of interpolation LIN or SIN
+	 * @note To get immediate action set msTimeDuration to 0
 	 */
 	void startInterpolation(float newSetpoint, long msTimeDuration,interpolateMode mode);
 	/**
@@ -129,6 +130,7 @@ public:
 	 * @param newSetpoint the new setpoint
 	 * @param msTimeDuration the time of translation
 	 * @param mode The type of interpolation LIN or SIN
+	 * @note To get immediate action set msTimeDuration to 0
 	 */
 	void startInterpolationDegrees(float newSetpoint, long msTimeDuration,interpolateMode mode);
 

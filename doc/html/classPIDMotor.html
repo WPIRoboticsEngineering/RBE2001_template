@@ -1184,6 +1184,17 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>To get immediate action set msTimeDuration to 0</dd></dl>
+<p>Start a linear interpolation of the motor</p>
+<p>The position setpoint will follow a trajectory over time the setpoint will start where it currently is, and arrive at the desired location after the number of msTimeDuration MS have elapsed. The trajectory can be either linear, with the LIN mode or the trajectory can be either Sinusoidal, with the SIN mode the units for the variable is in sensor 'ticks'</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newSetpoint</td><td>the new setpoint </td></tr>
+    <tr><td class="paramname">msTimeDuration</td><td>the time of translation </td></tr>
+    <tr><td class="paramname">mode</td><td>The type of interpolation LIN or SIN </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00236">236</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
@@ -1228,10 +1239,11 @@ Here is the call graph for this function:</div>
   <table class="params">
     <tr><td class="paramname">newSetpoint</td><td>the new setpoint </td></tr>
     <tr><td class="paramname">msTimeDuration</td><td>the time of translation </td></tr>
-    <tr><td class="paramname">mode</td><td>The type of interpolation LIN or SIN</td></tr>
+    <tr><td class="paramname">mode</td><td>The type of interpolation LIN or SIN </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>To get immediate action set msTimeDuration to 0</dd></dl>
 <p>Start a linear interpolation of the motor</p>
 <p>The position setpoint will follow a trajectory over time the setpoint will start where it currently is, and arrive at the desired location after the number of msTimeDuration MS have elapsed. The trajectory can be either linear, with the LIN mode or the trajectory can be either Sinusoidal, with the SIN mode the units for the variable is in Degrees</p>
 <dl class="params"><dt>Parameters</dt><dd>
