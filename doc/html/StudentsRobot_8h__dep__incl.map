@@ -1,15 +1,16 @@
 <map id="StudentsRobot.h" name="StudentsRobot.h">
 <area shape="rect" id="node2" href="$Approve_8h.html" title="src/commands/Approve.h" alt="" coords="105,80,275,107"/>
 <area shape="rect" id="node4" href="$RobotControlCenter_8h.html" title="src/RobotControlCenter.h" alt="" coords="443,155,614,181"/>
-<area shape="rect" id="node6" href="$ClearFaults_8h.html" title="src/commands/ClearFaults.h" alt="" coords="300,80,491,107"/>
-<area shape="rect" id="node8" href="$EStop_8h.html" title="src/commands/EStop.h" alt="" coords="567,80,725,107"/>
-<area shape="rect" id="node10" href="$GetStatus_8h.html" title="src/commands/GetStatus.h" alt="" coords="749,80,932,107"/>
-<area shape="rect" id="node12" href="$PickOrder_8h.html" title="src/commands/PickOrder.h" alt="" coords="957,80,1138,107"/>
-<area shape="rect" id="node14" href="$StudentsRobot_8cpp.html" title="StudentsRobot.cpp" alt="" coords="1163,80,1297,107"/>
+<area shape="rect" id="node7" href="$ClearFaults_8h.html" title="src/commands/ClearFaults.h" alt="" coords="300,80,491,107"/>
+<area shape="rect" id="node9" href="$EStop_8h.html" title="src/commands/EStop.h" alt="" coords="567,80,725,107"/>
+<area shape="rect" id="node11" href="$GetStatus_8h.html" title="src/commands/GetStatus.h" alt="" coords="749,80,932,107"/>
+<area shape="rect" id="node13" href="$PickOrder_8h.html" title="src/commands/PickOrder.h" alt="" coords="957,80,1138,107"/>
+<area shape="rect" id="node15" href="$StudentsRobot_8cpp.html" title="StudentsRobot.cpp" alt="" coords="1163,80,1297,107"/>
 <area shape="rect" id="node3" href="$Approve_8cpp.html" title="src/commands/Approve.cpp" alt="" coords="5,155,191,181"/>
-<area shape="rect" id="node5" href="$RobotControlCenter_8cpp.html" title="src/RobotControlCenter.cpp" alt="" coords="436,229,621,256"/>
-<area shape="rect" id="node7" href="$ClearFaults_8cpp.html" title="src/commands/ClearFaults.cpp" alt="" coords="215,155,419,181"/>
-<area shape="rect" id="node9" href="$EStop_8cpp.html" title="src/commands/EStop.cpp" alt="" coords="638,155,811,181"/>
-<area shape="rect" id="node11" href="$GetStatus_8cpp.html" title="src/commands/GetStatus.cpp" alt="" coords="836,155,1032,181"/>
-<area shape="rect" id="node13" href="$PickOrder_8cpp.html" title="src/commands/PickOrder.cpp" alt="" coords="1057,155,1251,181"/>
+<area shape="rect" id="node5" href="$RobotControlCenter_8cpp.html" title="src/RobotControlCenter.cpp" alt="" coords="353,229,539,256"/>
+<area shape="rect" id="node6" href="$template_8ino.html" title="template.ino" alt="" coords="563,229,657,256"/>
+<area shape="rect" id="node8" href="$ClearFaults_8cpp.html" title="src/commands/ClearFaults.cpp" alt="" coords="215,155,419,181"/>
+<area shape="rect" id="node10" href="$EStop_8cpp.html" title="src/commands/EStop.cpp" alt="" coords="638,155,811,181"/>
+<area shape="rect" id="node12" href="$GetStatus_8cpp.html" title="src/commands/GetStatus.cpp" alt="" coords="836,155,1032,181"/>
+<area shape="rect" id="node14" href="$PickOrder_8cpp.html" title="src/commands/PickOrder.cpp" alt="" coords="1057,155,1251,181"/>
 </map>

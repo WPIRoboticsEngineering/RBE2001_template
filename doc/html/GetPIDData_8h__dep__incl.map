@@ -1,5 +1,6 @@
 <map id="src/commands/GetPIDData.h" name="src/commands/GetPIDData.h">
 <area shape="rect" id="node2" href="$GetPIDData_8cpp.html" title="src/commands/GetPIDData.cpp" alt="" coords="5,80,215,107"/>
 <area shape="rect" id="node3" href="$RobotControlCenter_8h.html" title="src/RobotControlCenter.h" alt="" coords="239,80,410,107"/>
-<area shape="rect" id="node4" href="$RobotControlCenter_8cpp.html" title="src/RobotControlCenter.cpp" alt="" coords="232,155,417,181"/>
+<area shape="rect" id="node4" href="$RobotControlCenter_8cpp.html" title="src/RobotControlCenter.cpp" alt="" coords="149,155,335,181"/>
+<area shape="rect" id="node5" href="$template_8ino.html" title="template.ino" alt="" coords="359,155,453,181"/>
 </map>

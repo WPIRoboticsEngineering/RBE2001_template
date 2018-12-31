@@ -1,5 +1,6 @@
 <map id="src/commands/PickOrder.h" name="src/commands/PickOrder.h">
 <area shape="rect" id="node2" href="$PickOrder_8cpp.html" title="src/commands/PickOrder.cpp" alt="" coords="5,80,200,107"/>
 <area shape="rect" id="node3" href="$RobotControlCenter_8h.html" title="src/RobotControlCenter.h" alt="" coords="224,80,395,107"/>
-<area shape="rect" id="node4" href="$RobotControlCenter_8cpp.html" title="src/RobotControlCenter.cpp" alt="" coords="217,155,402,181"/>
+<area shape="rect" id="node4" href="$RobotControlCenter_8cpp.html" title="src/RobotControlCenter.cpp" alt="" coords="134,155,319,181"/>
+<area shape="rect" id="node5" href="$template_8ino.html" title="template.ino" alt="" coords="344,155,437,181"/>
 </map>

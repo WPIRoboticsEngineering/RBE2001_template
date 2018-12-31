@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['rbe2002_5ftemplate',['RBE2002_template',['../md_README.html',1,'']]],
   ['rbepid',['RBEPID',['../classRBEPID.html',1,'RBEPID'],['../classRBEPID.html#a7056f567b1486cd57861ca3c2facc8f1',1,'RBEPID::RBEPID()']]],
   ['rbepid_2ecpp',['RBEPID.cpp',['../RBEPID_8cpp.html',1,'']]],
   ['rbepid_2eh',['RBEPID.h',['../RBEPID_8h.html',1,'']]],
-  ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
   ['ready_5ffor_5fnew_5ftask',['Ready_for_new_task',['../StudentsRobot_8h.html#a1224568eebab348cfd8b7d5418b61620aad3743bc396b3226b540973fc827ffa3',1,'StudentsRobot.h']]],
   ['robot',['robot',['../classRobotControlCenter.html#a718ba66815a4864e7ce479270c046176',1,'RobotControlCenter']]],
   ['robotcontrolcenter',['RobotControlCenter',['../classRobotControlCenter.html',1,'RobotControlCenter'],['../classRobotControlCenter.html#a5e116295bc4dd976de2380e128676986',1,'RobotControlCenter::RobotControlCenter()']]],

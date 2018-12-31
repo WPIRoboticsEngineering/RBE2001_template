@@ -1,5 +1,11 @@
 var searchData=
 [
-  ['robot',['robot',['../classRobotControlCenter.html#a718ba66815a4864e7ce479270c046176',1,'RobotControlCenter']]],
-  ['robotpointer',['robotPointer',['../classApprove.html#a42d63c404b261de1b51a318991e8feb0',1,'Approve::robotPointer()'],['../classClearFaults.html#a19a4e4af8aa9cb763f982d6d8ec9f470',1,'ClearFaults::robotPointer()'],['../classEStop.html#ac312938499766b0ba543aa545a82a7a9',1,'EStop::robotPointer()'],['../classGetStatus.html#a37d71590c59d6b25e2dcef49e3c01e4d',1,'GetStatus::robotPointer()'],['../classPickOrder.html#abaa7d2e7e28c674a7e3c1c19fcb59435',1,'PickOrder::robotPointer()']]]
+  ['sampleratems',['sampleRateMs',['../classRBEPID.html#ad884404bd9dce8ebfd01b0faae6e8d33',1,'RBEPID']]],
+  ['servo',['servo',['../classRobotControlCenter.html#a17e59a8cada1acea62bc45fb12af7630',1,'RobotControlCenter']]],
+  ['setpoint',['Setpoint',['../classPIDMotor.html#a59307dcd586e604116a91a8ad5cbdf9b',1,'PIDMotor']]],
+  ['startsetpoint',['startSetpoint',['../classPIDMotor.html#a7219035b6b90180675544436239a660f',1,'PIDMotor']]],
+  ['starttime',['startTime',['../classPIDMotor.html#a54664c4546c0482cd93d404568e5151c',1,'PIDMotor']]],
+  ['state',['state',['../classRobotControlCenter.html#aa54657543efa90ee1d5265afd21fa0f2',1,'RobotControlCenter']]],
+  ['status',['status',['../classStudentsRobot.html#a7c6e1befe94b94bcb56b9ff626a0c410',1,'StudentsRobot']]],
+  ['sum_5ferror',['sum_error',['../classRBEPID.html#a79854885c86b4780028af1678dc2b514',1,'RBEPID']]]
 ];

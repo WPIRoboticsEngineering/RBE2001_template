@@ -1,0 +1,18 @@
+<map id="template.ino" name="template.ino">
+<area shape="rect" id="node10" href="$RobotControlCenter_8h.html" title="src/RobotControlCenter.h" alt="" coords="1547,80,1718,107"/>
+<area shape="rect" id="node11" href="$config_8h.html" title="../config.h" alt="" coords="1967,304,2047,331"/>
+<area shape="rect" id="node12" href="$RBEPID_8h.html" title="../RBEPID.h" alt="" coords="50,453,146,480"/>
+<area shape="rect" id="node13" href="$PIDMotor_8h.html" title="pid/PIDMotor.h" alt="" coords="429,379,540,405"/>
+<area shape="rect" id="node16" href="$ServoEncoderPIDMotor_8h.html" title="pid/ServoEncoderPIDMotor.h" alt="" coords="1606,304,1798,331"/>
+<area shape="rect" id="node17" href="$HBridgeEncoderPIDMotor_8h.html" title="pid/HBridgeEncoderPIDMotor.h" alt="" coords="547,304,752,331"/>
+<area shape="rect" id="node18" href="$GetPIDConstants_8h.html" title="commands/GetPIDConstants.h" alt="" coords="92,155,298,181"/>
+<area shape="rect" id="node19" href="$GetPIDData_8h.html" title="commands/GetPIDData.h" alt="" coords="372,155,546,181"/>
+<area shape="rect" id="node20" href="$SetPIDConstants_8h.html" title="commands/SetPIDConstants.h" alt="" coords="570,155,774,181"/>
+<area shape="rect" id="node21" href="$SetPIDSetpoint_8h.html" title="commands/SetPIDSetpoint.h" alt="" coords="850,155,1042,181"/>
+<area shape="rect" id="node22" href="$Approve_8h.html" title="commands/Approve.h" alt="" coords="1647,155,1796,181"/>
+<area shape="rect" id="node23" href="$StudentsRobot_8h.html" title="../../StudentsRobot.h" alt="" coords="1630,229,1774,256"/>
+<area shape="rect" id="node25" href="$ClearFaults_8h.html" title="commands/ClearFaults.h" alt="" coords="1820,155,1988,181"/>
+<area shape="rect" id="node26" href="$EStop_8h.html" title="commands/EStop.h" alt="" coords="1117,155,1254,181"/>
+<area shape="rect" id="node27" href="$GetStatus_8h.html" title="commands/GetStatus.h" alt="" coords="1279,155,1439,181"/>
+<area shape="rect" id="node28" href="$PickOrder_8h.html" title="commands/PickOrder.h" alt="" coords="1464,155,1622,181"/>
+</map>

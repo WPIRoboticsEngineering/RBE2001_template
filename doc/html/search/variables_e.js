@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['targetdegreespersecond',['targetDegreesPerSecond',['../classPIDMotor.html#aae65b1fb2b94080453fdf7a486c9dc89',1,'PIDMotor']]],
-  ['timeinterval',['timeInterval',['../classPIDMotor.html#ab547780109f04c9477253919c5fd64ae',1,'PIDMotor']]],
-  ['torquearray',['torqueArray',['../LookupTable_8cpp.html#a837c2a2b7a5b1a0669424c161e31b62e',1,'LookupTable.cpp']]]
+  ['vel',['Vel',['../classPIDMotor.html#a3b1ad2b34978914a743f1530bd95bbb2',1,'PIDMotor']]],
+  ['velocitypid',['velocityPID',['../classPIDMotor.html#a4289fc0e98150a03b5df1ca2c1b37623',1,'PIDMotor']]]
 ];
