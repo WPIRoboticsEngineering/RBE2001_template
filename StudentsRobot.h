@@ -95,6 +95,10 @@ public:
 	 *
 	 * @param buffer A buffer of floats containing the pick order data
 	 *
+	 * buffer[0]  is the material, aluminum or plastic.
+	 * buffer[1]  is the drop off angle 25 or 45 degrees
+	 * buffer[2]  is the drop off position 1, or 2
+	 *
 	 * This function is called via coms.server() in:
 	 * @see RobotControlCenter::fastLoop
 	 */
