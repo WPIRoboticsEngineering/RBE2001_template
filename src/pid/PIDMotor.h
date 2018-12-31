@@ -95,6 +95,44 @@ public:
 	 */
 	void setSetpoint(int64_t val);
 	/**
+	 * Start a linear interpolation of the motor
+	 *
+	 * The position setpoint will follow a trajectory over time
+	 * the setpoint will start where it currently is, and arrive at the desired location after
+	 * the number of msTimeDuration MS have elapsed.
+	 * The trajectory can be either linear, with the LIN mode
+	 * or the trajectory can be either Sinusoidal, with the SIN mode
+	 * the units for the variable is in sensor 'ticks'
+	 *
+	 * @param newSetpoint the new setpoint
+	 * @param msTimeDuration the time of translation
+	 * @param mode The type of interpolation LIN or SIN
+	 */
+	void startInterpolation(float newSetpoint, long msTimeDuration,interpolateMode mode);
+	/**
+	 * setSetpointDegrees  Set the desired setpoint for the PID controller
+	 *
+	 * the units for the variable is in Degrees
+	 * this will start a linear interpolation of 0 time
+	 */
+	void setSetpointDegrees(float val);
+	/**
+	 * Start a linear interpolation of the motor
+	 *
+	 * The position setpoint will follow a trajectory over time
+	 * the setpoint will start where it currently is, and arrive at the desired location after
+	 * the number of msTimeDuration MS have elapsed.
+	 * The trajectory can be either linear, with the LIN mode
+	 * or the trajectory can be either Sinusoidal, with the SIN mode
+	 * the units for the variable is in Degrees
+	 *
+	 * @param newSetpoint the new setpoint
+	 * @param msTimeDuration the time of translation
+	 * @param mode The type of interpolation LIN or SIN
+	 */
+	void startInterpolationDegrees(float newSetpoint, long msTimeDuration,interpolateMode mode);
+
+	/**
 	 * SetTunings Set the P.I.D. gains for the position controller
 	 *
 	 * @param Kp proportional gain
@@ -155,21 +193,6 @@ public:
 	 * Set the PID position to current position and use the position controller to hold pose
 	 */
 	void stop();
-	/**
-	 * Start a linear interpolation of the motor
-	 *
-	 * The position setpoint will follow a trajectory over time
-	 * the setpoint will start where it currently is, and arrive at the desired location after
-	 * the number of msTimeDuration MS have elapsed.
-	 * The trajectory can be either linear, with the LIN mode
-	 * or the trajectory can be either Sinusoidal, with the SIN mode
-	 * the units for the variable is in sensor 'ticks'
-	 *
-	 * @param newSetpoint the new setpoint
-	 * @param msTimeDuration the time of translation
-	 * @param mode The type of interpolation LIN or SIN
-	 */
-	void startInterpolation(float newSetpoint, long msTimeDuration,interpolateMode mode);
 	/**
 	 * getPosition
 	 *

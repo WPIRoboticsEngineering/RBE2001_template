@@ -1,0 +1,5 @@
+<map id="PIDMotor::setSetpointDegrees" name="PIDMotor::setSetpointDegrees">
+<area shape="rect" id="node2" href="$classPIDMotor.html#a45fa4f564edfd6ae7f08bfb635c4d368" title="PIDMotor::setSetpoint" alt="" coords="255,5,407,32"/>
+<area shape="rect" id="node4" href="$classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374" title="PIDMotor::ticksToDeg" alt="" coords="255,56,408,83"/>
+<area shape="rect" id="node3" href="$classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b" title="PIDMotor::startInterpolation" alt="" coords="456,5,639,32"/>
+</map>

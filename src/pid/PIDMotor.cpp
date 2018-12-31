@@ -241,3 +241,30 @@ void PIDMotor::startInterpolation(float newSetpoint, long msTimeDuration,
 	duration = msTimeDuration;
 	this->mode = mode;
 }
+
+/**
+ * setSetpointDegrees  Set the desired setpoint for the PID controller
+ *
+ * the units for the variable is in Degrees
+ * this will start a linear interpolation of 0 time
+ */
+void PIDMotor::setSetpointDegrees(float val){
+	setSetpoint((int64_t)(val*ticksToDeg()));
+}
+/**
+ * Start a linear interpolation of the motor
+ *
+ * The position setpoint will follow a trajectory over time
+ * the setpoint will start where it currently is, and arrive at the desired location after
+ * the number of msTimeDuration MS have elapsed.
+ * The trajectory can be either linear, with the LIN mode
+ * or the trajectory can be either Sinusoidal, with the SIN mode
+ * the units for the variable is in Degrees
+ *
+ * @param newSetpoint the new setpoint in Degrees
+ * @param msTimeDuration the time of translation
+ * @param mode The type of interpolation LIN or SIN
+ */
+void PIDMotor::startInterpolationDegrees(float newSetpoint, long msTimeDuration,interpolateMode mode){
+	startInterpolation( newSetpoint*ticksToDeg(),  msTimeDuration, mode);
+}
