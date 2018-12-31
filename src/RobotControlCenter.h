@@ -114,6 +114,11 @@ protected:
 	 * 	The fast loop actions
 	 *
 	 * 	This should be run every loop and is internally gated for fast opperation
+	 *
+	 * 	@see StudentsRobot::Approve
+	 * 	@see StudentsRobot::ClearFaults
+	 * 	@see StudentsRobot::EStop
+	 * 	@see StudentsRobot::PickOrder
 	 */
 	void fastLoop();
 
