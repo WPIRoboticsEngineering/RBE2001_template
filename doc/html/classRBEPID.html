@@ -150,13 +150,13 @@ Data Fields</h2></td></tr>
           <td class="memname">float RBEPID::calc </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>set</em>, </td>
+          <td class="paramname"><em>setPoint</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>cur</em>&#160;</td>
+          <td class="paramname"><em>curPosition</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -173,19 +173,9 @@ Data Fields</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a value from -1.0 to 1.0 representing the PID control signel</dd></dl>
-<p>calc the PID control signel</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">setPoint</td><td>is the setpoint of the PID system </td></tr>
-    <tr><td class="paramname">curPosition</td><td>the current position of the plan </td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>a value from -1.0 to 1.0 representing the PID control signel </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classRBEPID.html#adc6954f2aaa12295fc58ca1dcfca3dc1">clearIntegralBuffer</a> for how the integral is cleared </dd></dl>
 
-<p>Definition at line <a class="el" href="RBEPID_8cpp_source.html#l00032">32</a> of file <a class="el" href="RBEPID_8cpp_source.html">RBEPID.cpp</a>.</p>
+<p>Definition at line <a class="el" href="RBEPID_8cpp_source.html#l00031">31</a> of file <a class="el" href="RBEPID_8cpp_source.html">RBEPID.cpp</a>.</p>
 
 <p>References <a class="el" href="RBEPID_8h_source.html#l00015">kp</a>.</p>
 
@@ -207,7 +197,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Clear the internal representation fo the integral term. </p>
 
-<p>Definition at line <a class="el" href="RBEPID_8cpp_source.html#l00056">56</a> of file <a class="el" href="RBEPID_8cpp_source.html">RBEPID.cpp</a>.</p>
+<p>Definition at line <a class="el" href="RBEPID_8cpp_source.html#l00055">55</a> of file <a class="el" href="RBEPID_8cpp_source.html">RBEPID.cpp</a>.</p>
 
 <p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00037">PIDMotor::loop()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00138">PIDMotor::overrideCurrentPosition()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00033">PIDMotor::pidinit()</a>.</p>
 
@@ -297,7 +287,7 @@ Data Fields</h2></td></tr>
 
 <p>Definition at line <a class="el" href="RBEPID_8h_source.html#l00015">15</a> of file <a class="el" href="RBEPID_8h_source.html">RBEPID.h</a>.</p>
 
-<p>Referenced by <a class="el" href="RBEPID_8cpp_source.html#l00032">calc()</a>, <a class="el" href="GetPIDConstants_8cpp_source.html#l00017">GetPIDConstants::event()</a>, <a class="el" href="RBEPID_8cpp_source.html#l00011">RBEPID()</a>, and <a class="el" href="RBEPID_8cpp_source.html#l00018">setpid()</a>.</p>
+<p>Referenced by <a class="el" href="RBEPID_8cpp_source.html#l00031">calc()</a>, <a class="el" href="GetPIDConstants_8cpp_source.html#l00017">GetPIDConstants::event()</a>, <a class="el" href="RBEPID_8cpp_source.html#l00011">RBEPID()</a>, and <a class="el" href="RBEPID_8cpp_source.html#l00018">setpid()</a>.</p>
 
 </div>
 </div>

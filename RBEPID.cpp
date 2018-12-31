@@ -27,12 +27,11 @@ void RBEPID::setpid(float P, float I, float D) {
  * @param setPoint is the setpoint of the PID system
  * @param curPosition the current position of the plan
  * @return a value from -1.0 to 1.0 representing the PID control signel
- * @see clearIntegralBuffer for how the integral is cleared
  */
-float RBEPID::calc(double set, double cur) {
+float RBEPID::calc(double setPoint, double curPosition) {
 
 	// calculate error
-	float err = set - cur;
+	float err = setPoint - curPosition;
 	// calculate derivative of error
 	//TODO
 	// calculate integral error. Running average is best but hard to implement
