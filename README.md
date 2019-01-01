@@ -117,9 +117,13 @@ Include graphs:
 
 ![include graphs](/doc/html/StudentsRobot_8h__incl.png) 
 
-And function call graphs:
+function call graphs:
 
-![function call graphs](/doc/html/template_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.png). 
+![function call graphs](/doc/html/template_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.png)
+
+and collaboration graphs:
+
+![collaboration graphs](doc/html/classRobotControlCenter__coll__graph.png)
 
 To access the full documentation, after cloning the code to your disk, open the doc/html/annotated.html file to start. Opening any of the .html files will get you into the mini website as well. This web site is all the code you will have access to while working on your robot. 
 
