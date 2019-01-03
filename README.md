@@ -1,5 +1,5 @@
-# RBE2002_template
-Template code for the RBE 2002 final project
+# RBE2001_template
+Template code for the RBE 2001 final project
 
 # Code Documentation Doxygen
 
