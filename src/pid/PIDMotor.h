@@ -20,7 +20,7 @@ class PIDMotor {
 protected:
 
 	long lastTimeRunPID = 0;
-	float Kp = 5, Ki = 1.5, Kd = 0.1;
+
 	double Setpoint = 0, Input = 0, Output = 0;
 	bool lastErrPositive = false;
 	double curTime = 0;
@@ -29,6 +29,7 @@ protected:
 	double movement = 0;
 	double prevPos = 0;
 	double Vel = 0;
+
 	/**
 	 * virtual setOutput Set the motor in raw motor units
 	 *
@@ -55,7 +56,17 @@ protected:
 	 *  Custom version of map with bound clamping built in.
 	 */
 	float myFmap(float x, float in_min, float in_max, float out_min,float out_max);
+	/**
+	 * Get the setpoint
+	 *
+	 * @return the setpoint in sensor "Ticks"
+	 */
+	float getSetPoint();
 public:
+	/**
+	 * Duration of the interpolation mode, 1 equals done, 0 starting
+	 */
+	float unitDuration=1;
 	/**
 	 * The PID object for the position controller
 	 */
@@ -162,12 +173,13 @@ public:
 	 * Reset and clear the PID controller
 	 */
 	void pidinit();
+
 	/**
 	 * Get the setpoint
 	 *
-	 * @return the setpoint in sensor "Ticks"
+	 * @return the setpoint in degrees
 	 */
-	float getSetPoint();
+	float getSetPointDegrees();
 	/**
 	 * Get the velocity of the plant
 	 *

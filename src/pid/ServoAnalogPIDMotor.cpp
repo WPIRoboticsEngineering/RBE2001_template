@@ -63,8 +63,8 @@ void ServoAnalogPIDMotor::overrideCurrentPositionHardware(int64_t val) {
 	offset = val-(getPosition()-offset);
 }
 double ServoAnalogPIDMotor::ticksToDeg() {
-	return 270.0/ //degrees in range
-			(3.3/4096.0); // ticks to volts
+	return 1.0/(270.0/ //degrees in range
+			(4096.0)); // ticks in range
 
 }
 double ServoAnalogPIDMotor::calcCur(void) {

@@ -44,7 +44,7 @@ void PIDMotor::loop() {
 	float interpElapsed = (float) (millis() - startTime);
 	if (interpElapsed < duration && duration > 0) {
 		// linear elapsed duration
-		float unitDuration = interpElapsed / duration;
+		unitDuration = interpElapsed / duration;
 		if (mode == SIN) {
 			// sinusoidal ramp up and ramp down
 			float sinPortion = (cos(-PI * unitDuration) / 2) + 0.5;
@@ -139,7 +139,7 @@ void PIDMotor::overrideCurrentPosition(int64_t val) {
 	overrideCurrentPositionHardware(val);
 
 	startInterpolation((float) val, 0, LIN);
-	myPID.setpid(Kp, Ki, Kd);
+
 	myPID.clearIntegralBuffer();
 }
 /**
@@ -157,6 +157,10 @@ void PIDMotor::setSetpoint(int64_t val) {
 float PIDMotor::getSetPoint() {
 	return Setpoint;
 }
+
+float PIDMotor::getSetPointDegrees(){
+	return getSetPoint()/ticksToDeg();
+}
 /**
  * SetTunings Set the P.I.D. gains for the position controller
  *
@@ -165,9 +169,7 @@ float PIDMotor::getSetPoint() {
  * @param Kd derrivitive gain
  */
 void PIDMotor::SetTunings(double Kp, double Ki, double Kd) {
-	this->Kp = Kp;
-	this->Ki = Ki;
-	this->Kd = Kd;
+	myPID.setpid(Kp, Ki, Kd);
 	overrideCurrentPosition(getPosition());
 }
 //

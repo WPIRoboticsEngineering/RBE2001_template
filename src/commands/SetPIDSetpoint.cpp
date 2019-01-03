@@ -15,8 +15,10 @@ SetPIDSetpoint::SetPIDSetpoint(int num, PIDMotor ** list) :
 }
 
 void SetPIDSetpoint::event(float * buffer) {
+	float duration = buffer[0];
+	interpolateMode type = buffer[1]<1?LIN:SIN;
 	for (int i = 0; i < numPID; i++) {
-		pidlist[i]->setSetpoint(buffer[i]);
+		pidlist[i]->startInterpolationDegrees(buffer[i+2], duration, type);
 	}
 
 }
