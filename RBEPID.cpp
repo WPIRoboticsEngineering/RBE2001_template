@@ -45,7 +45,7 @@ float RBEPID::calc(double setPoint, double curPosition) {
 		out = 1;
 	if (out < -1)
 		out = -1;
-	return 0;
+	return out;
 }
 
 /**
