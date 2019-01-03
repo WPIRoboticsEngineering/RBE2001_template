@@ -13,8 +13,8 @@ ServoAnalogPIDMotor::ServoAnalogPIDMotor() {
 }
 
 void ServoAnalogPIDMotor::attach(int servoPin, int analogPin) {
-	if(digitalPinToAnalogChannel(servoPin)<1){
-		Serial.println("Pin can not be ADC! "+String(servoPin));
+	if(digitalPinToAnalogChannel(analogPin)<1){
+		Serial.println("Pin can not be ADC! "+String(analogPin));
 		while (1);
 	}
 	adcPin=analogPin;
