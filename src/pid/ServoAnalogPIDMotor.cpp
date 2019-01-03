@@ -6,13 +6,17 @@
  */
 
 #include "ServoAnalogPIDMotor.h"
-
+#include <esp32-hal-gpio.h>
 ServoAnalogPIDMotor::ServoAnalogPIDMotor() {
 	// TODO Auto-generated constructor stub
 
 }
 
 void ServoAnalogPIDMotor::attach(int servoPin, int analogPin) {
+	if(digitalPinToAnalogChannel(servoPin)<1){
+		Serial.println("Pin can not be ADC! "+String(servoPin));
+		while (1);
+	}
 	adcPin=analogPin;
 	motor.setPeriodHertz(330);
 	motor.attach(servoPin, 1000, 2000);
