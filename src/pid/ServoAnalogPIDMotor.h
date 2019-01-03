@@ -14,7 +14,7 @@
 class ServoAnalogPIDMotor: public PIDMotor {
 private:
 	Servo motor;
-	int adcPin;
+	int adcPin=0;
 	int64_t offset=0;
 public:
 	ServoAnalogPIDMotor();
