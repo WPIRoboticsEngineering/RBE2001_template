@@ -11,6 +11,7 @@
 #include <Arduino.h>
 #include "src/pid/ServoEncoderPIDMotor.h"
 #include "src/pid/HBridgeEncoderPIDMotor.h"
+#include "src/pid/ServoAnalogPIDMotor.h"
 #include <ESP32Servo.h>
 /**
  * @enum RobotStateMachine
@@ -116,7 +117,7 @@ public:
 	 * @see RobotControlCenter::fastLoop
 	 */
 	void attach(HBridgeEncoderPIDMotor * motor1,
-			HBridgeEncoderPIDMotor * motor2, ServoEncoderPIDMotor * motor3,
+			HBridgeEncoderPIDMotor * motor2, ServoAnalogPIDMotor * motor3,
 			Servo * servo);
 	/**
 	 * pidLoop This functoion is called to let the StudentsRobot controll the running of the PID loop functions

@@ -18,6 +18,7 @@
 #include "pid/PIDMotor.h"
 #include "pid/ServoEncoderPIDMotor.h"
 #include "pid/HBridgeEncoderPIDMotor.h"
+#include "pid/ServoAnalogPIDMotor.h"
 #include <Preferences.h>
 #include <WiFi.h>
 #include <SimplePacketComs.h>
@@ -99,7 +100,7 @@ public:
 protected:
 	HBridgeEncoderPIDMotor motor1;  // PID controlled motor object
 	HBridgeEncoderPIDMotor motor2; // PID controlled motor object
-	ServoEncoderPIDMotor motor3; // PID controlled motor object
+	ServoAnalogPIDMotor motor3; // PID controlled motor object
 	// Servo objects
 	Servo servo;
 

@@ -39,11 +39,12 @@ void StudentsRobot::updateStateMachine(PIDMotor * motor1, PIDMotor * motor2,
 }
 
 void StudentsRobot::attach(HBridgeEncoderPIDMotor * motor1,
-		HBridgeEncoderPIDMotor * motor2, ServoEncoderPIDMotor * motor3,
+		HBridgeEncoderPIDMotor * motor2, ServoAnalogPIDMotor * motor3,
 		Servo * servo) {
 	motor1->attach(MOTOR1_PWM, MOTOR1_DIR, MOTOR1_ENCA, MOTOR1_ENCB);
 	motor2->attach(MOTOR2_PWM, MOTOR2_DIR, MOTOR2_ENCA, MOTOR2_ENCB);
-	motor3->attach(MOTOR3_PWM, MOTOR3_ENCA, MOTOR3_ENCB);
+	//motor3->attach(MOTOR3_PWM, MOTOR3_ENCA, MOTOR3_ENCB);
+	motor3->attach(MOTOR3_PWM, MOTOR3_ENCA);
 
 	motor1->setSetpoint(motor1->getPosition());
 	motor2->setSetpoint(motor2->getPosition());
