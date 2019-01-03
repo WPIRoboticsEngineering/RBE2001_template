@@ -10,12 +10,16 @@
 
 #include "PIDMotor.h"
 #include <ESP32Servo.h>
-
+#define filterSize 10
 class ServoAnalogPIDMotor: public PIDMotor {
 private:
 	Servo motor;
 	int adcPin=0;
 	int64_t offset=0;
+	float filterBuffer[filterSize] ;
+	int filterIndex=0;
+	float filterSum=0;
+
 public:
 	ServoAnalogPIDMotor();
 	/**

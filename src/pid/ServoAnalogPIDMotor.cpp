@@ -21,10 +21,25 @@ void ServoAnalogPIDMotor::attach(int servoPin, int analogPin) {
 	motor.setPeriodHertz(330);
 	motor.attach(servoPin, 1000, 2000);
 	pidinit();
+	pinMode(adcPin, ANALOG);
+	filterSum=(float)analogRead(adcPin)*filterSize;
+	for(int i=0;i<filterSize;i++){
+		filterBuffer[filterIndex]=(float)analogRead(adcPin);
+		getPosition();
+	}
 }
 int64_t ServoAnalogPIDMotor::getPosition() {
+	pinMode(adcPin, ANALOG);
+	float current =  (float)analogRead(adcPin);
+	filterSum-=filterBuffer[filterIndex];
+	filterBuffer[filterIndex]= current;
+	filterSum+=filterBuffer[filterIndex];
+	filterIndex++;
+	if(filterIndex==filterSize)
+		filterIndex=0;
+	int64_t computedAvg =(int64_t) (filterSum/((float)filterSize));
 
-	return analogRead(adcPin)+offset;
+	return computedAvg+offset;
 }
 int64_t ServoAnalogPIDMotor::getOutputMin() {
 	return 0;
@@ -45,7 +60,7 @@ void ServoAnalogPIDMotor::setOutput(int64_t out) {
 	motor.write(out);
 }
 void ServoAnalogPIDMotor::overrideCurrentPositionHardware(int64_t val) {
-	offset = val-analogRead(adcPin);
+	offset = val-(getPosition()-offset);
 }
 double ServoAnalogPIDMotor::ticksToDeg() {
 	return 270.0/ //degrees in range

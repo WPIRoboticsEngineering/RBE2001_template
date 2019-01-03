@@ -24,7 +24,7 @@
 #define MOTOR2_ENCA 34
 #define MOTOR2_ENCB 35
 
-#define MOTOR3_ENCA 25
+#define MOTOR3_ENCA 33
 #define MOTOR3_ENCB 26
 
 #define SERVO_PIN 27
