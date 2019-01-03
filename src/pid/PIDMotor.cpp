@@ -48,7 +48,7 @@ void PIDMotor::loop() {
 		if (mode == SIN) {
 			// sinusoidal ramp up and ramp down
 			float sinPortion = (cos(-PI * unitDuration) / 2) + 0.5;
-			unitDuration = sinPortion;
+			unitDuration = 1-sinPortion;
 		}
 		float setpointDiff = endSetpoint - startSetpoint;
 		float newSetpoint = startSetpoint + (setpointDiff * unitDuration);
