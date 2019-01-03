@@ -1,0 +1,11 @@
+<map id="StudentsRobot::attach" name="StudentsRobot::attach">
+<area shape="rect" id="node2" href="$classServoAnalogPIDMotor.html#a7b16e4ba6bfe610303c93783deefa3c1" title="ServoAnalogPIDMotor\l::attach" alt="" coords="217,5,369,47"/>
+<area shape="rect" id="node5" href="$classHBridgeEncoderPIDMotor.html#ad971f5e3e4932ac465135018d976defc" title="HBridgeEncoderPIDMotor\l::attach" alt="" coords="207,71,380,112"/>
+<area shape="rect" id="node7" href="$classServoAnalogPIDMotor.html#ad6ea5e73f0ee9edf35ae1a3c59eee467" title="ServoAnalogPIDMotor\l::getPosition" alt="" coords="217,136,369,177"/>
+<area shape="rect" id="node8" href="$classHBridgeEncoderPIDMotor.html#aaf50960b179c4d9b0a059b3b4b41b14d" title="HBridgeEncoderPIDMotor\l::getPosition" alt="" coords="207,201,380,243"/>
+<area shape="rect" id="node9" href="$classPIDMotor.html#a45fa4f564edfd6ae7f08bfb635c4d368" title="PIDMotor::setSetpoint" alt="" coords="217,267,369,294"/>
+<area shape="rect" id="node3" href="$classPIDMotor.html#a32adc7f86caa0f3c97161d945ccc1c5c" title="PIDMotor::pidinit" alt="" coords="459,17,579,43"/>
+<area shape="rect" id="node4" href="$classRBEPID.html#adc6954f2aaa12295fc58ca1dcfca3dc1" title="RBEPID::clearIntegralBuffer" alt="" coords="659,17,845,43"/>
+<area shape="rect" id="node6" href="$classHBridgeEncoderPIDMotor.html#a26e55b549bf8cf6b096d9379e555adf8" title="HBridgeEncoderPIDMotor\l::setOutput" alt="" coords="433,71,606,112"/>
+<area shape="rect" id="node10" href="$classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b" title="PIDMotor::startInterpolation" alt="" coords="428,267,611,294"/>
+</map>

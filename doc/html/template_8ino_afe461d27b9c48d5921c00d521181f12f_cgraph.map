@@ -2,12 +2,12 @@
 <area shape="rect" id="node2" href="$classRobotControlCenter.html#a00afedc1bdee1413ea207d528c05d791" title="RobotControlCenter\l::loop" alt="" coords="100,247,239,288"/>
 <area shape="rect" id="node3" href="$classRobotControlCenter.html#af72cdd5fd97b1c040d4738153b69cb5c" title="RobotControlCenter\l::setup" alt="" coords="287,203,425,244"/>
 <area shape="rect" id="node14" href="$classRobotControlCenter.html#a989d4ee3cb480dc2edb79fb7e4893660" title="RobotControlCenter\l::fastLoop" alt="" coords="287,289,425,331"/>
-<area shape="rect" id="node4" href="$classStudentsRobot.html#a0acd4de6b0391becfd40a253b2e883fd" title="StudentsRobot::attach" alt="" coords="490,166,643,193"/>
+<area shape="rect" id="node4" href="$classStudentsRobot.html#a92a7e22963123f5fbcc619e9333c3a6c" title="StudentsRobot::attach" alt="" coords="490,166,643,193"/>
 <area shape="rect" id="node5" href="$classHBridgeEncoderPIDMotor.html#ad971f5e3e4932ac465135018d976defc" title="HBridgeEncoderPIDMotor\l::attach" alt="" coords="708,71,881,112"/>
-<area shape="rect" id="node9" href="$classServoEncoderPIDMotor.html#ae91dbba63a742e6c173e6e1f339406c8" title="ServoEncoderPIDMotor\l::attach" alt="" coords="715,5,875,47"/>
+<area shape="rect" id="node9" href="$classServoAnalogPIDMotor.html#a7b16e4ba6bfe610303c93783deefa3c1" title="ServoAnalogPIDMotor\l::attach" alt="" coords="719,5,871,47"/>
 <area shape="rect" id="node10" href="$classPIDMotor.html#a45fa4f564edfd6ae7f08bfb635c4d368" title="PIDMotor::setSetpoint" alt="" coords="719,137,871,163"/>
 <area shape="rect" id="node12" href="$classHBridgeEncoderPIDMotor.html#aaf50960b179c4d9b0a059b3b4b41b14d" title="HBridgeEncoderPIDMotor\l::getPosition" alt="" coords="708,188,881,229"/>
-<area shape="rect" id="node13" href="$classServoEncoderPIDMotor.html#ace3748b0fc47372137067424ce7c664f" title="ServoEncoderPIDMotor\l::getPosition" alt="" coords="715,253,875,295"/>
+<area shape="rect" id="node13" href="$classServoAnalogPIDMotor.html#ad6ea5e73f0ee9edf35ae1a3c59eee467" title="ServoAnalogPIDMotor\l::getPosition" alt="" coords="719,253,871,295"/>
 <area shape="rect" id="node6" href="$classPIDMotor.html#a32adc7f86caa0f3c97161d945ccc1c5c" title="PIDMotor::pidinit" alt="" coords="961,19,1081,46"/>
 <area shape="rect" id="node8" href="$classHBridgeEncoderPIDMotor.html#a26e55b549bf8cf6b096d9379e555adf8" title="HBridgeEncoderPIDMotor\l::setOutput" alt="" coords="934,71,1107,112"/>
 <area shape="rect" id="node7" href="$classRBEPID.html#adc6954f2aaa12295fc58ca1dcfca3dc1" title="RBEPID::clearIntegralBuffer" alt="" coords="1169,103,1356,130"/>

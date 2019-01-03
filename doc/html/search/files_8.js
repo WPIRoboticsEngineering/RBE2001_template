@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['servoanalogpidmotor_2ecpp',['ServoAnalogPIDMotor.cpp',['../ServoAnalogPIDMotor_8cpp.html',1,'']]],
+  ['servoanalogpidmotor_2eh',['ServoAnalogPIDMotor.h',['../ServoAnalogPIDMotor_8h.html',1,'']]],
   ['servoencoderpidmotor_2ecpp',['ServoEncoderPIDMotor.cpp',['../ServoEncoderPIDMotor_8cpp.html',1,'']]],
   ['servoencoderpidmotor_2eh',['ServoEncoderPIDMotor.h',['../ServoEncoderPIDMotor_8h.html',1,'']]],
   ['setpidconstants_2ecpp',['SetPIDConstants.cpp',['../SetPIDConstants_8cpp.html',1,'']]],

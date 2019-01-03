@@ -1,9 +1,10 @@
 <map id="src/commands/Approve.cpp" name="src/commands/Approve.cpp">
-<area shape="rect" id="node2" href="$Approve_8h.html" title="Approve.h" alt="" coords="187,80,268,107"/>
-<area shape="rect" id="node4" href="$StudentsRobot_8h.html" title="../../StudentsRobot.h" alt="" coords="241,155,385,181"/>
+<area shape="rect" id="node2" href="$Approve_8h.html" title="Approve.h" alt="" coords="304,80,385,107"/>
+<area shape="rect" id="node4" href="$StudentsRobot_8h.html" title="../../StudentsRobot.h" alt="" coords="358,155,502,181"/>
 <area shape="rect" id="node5" href="$config_8h.html" title="config.h" alt="" coords="5,229,73,256"/>
-<area shape="rect" id="node7" href="$ServoEncoderPIDMotor_8h.html" title="src/pid/ServoEncoderPIDMotor.h" alt="" coords="451,229,665,256"/>
-<area shape="rect" id="node14" href="$HBridgeEncoderPIDMotor_8h.html" title="src/pid/HBridgeEncoderPIDMotor.h" alt="" coords="199,229,426,256"/>
-<area shape="rect" id="node8" href="$PIDMotor_8h.html" title="PIDMotor.h" alt="" coords="399,304,488,331"/>
-<area shape="rect" id="node10" href="$RBEPID_8h.html" title="../../RBEPID.h" alt="" coords="389,379,497,405"/>
+<area shape="rect" id="node7" href="$ServoEncoderPIDMotor_8h.html" title="src/pid/ServoEncoderPIDMotor.h" alt="" coords="200,229,415,256"/>
+<area shape="rect" id="node14" href="$HBridgeEncoderPIDMotor_8h.html" title="src/pid/HBridgeEncoderPIDMotor.h" alt="" coords="439,229,666,256"/>
+<area shape="rect" id="node15" href="$ServoAnalogPIDMotor_8h.html" title="src/pid/ServoAnalogPIDMotor.h" alt="" coords="691,229,897,256"/>
+<area shape="rect" id="node8" href="$PIDMotor_8h.html" title="PIDMotor.h" alt="" coords="508,304,597,331"/>
+<area shape="rect" id="node10" href="$RBEPID_8h.html" title="../../RBEPID.h" alt="" coords="499,379,607,405"/>
 </map>

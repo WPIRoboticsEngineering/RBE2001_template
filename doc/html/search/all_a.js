@@ -2,7 +2,7 @@ var searchData=
 [
   ['manager',['manager',['../classRobotControlCenter.html#a861c369e3fc1ddfeddee859b8a1d489d',1,'RobotControlCenter']]],
   ['mode',['mode',['../classPIDMotor.html#a9a701288ddcc758e51ecdc4ed15180cb',1,'PIDMotor']]],
-  ['motor',['motor',['../classHBridgeEncoderPIDMotor.html#a73fd724b7d66a85cd2d50218f20605cd',1,'HBridgeEncoderPIDMotor::motor()'],['../classServoEncoderPIDMotor.html#acee23a13c3d325abaa2faa2822215163',1,'ServoEncoderPIDMotor::motor()']]],
+  ['motor',['motor',['../classHBridgeEncoderPIDMotor.html#a73fd724b7d66a85cd2d50218f20605cd',1,'HBridgeEncoderPIDMotor::motor()'],['../classServoAnalogPIDMotor.html#ad87d43052b6d9ba47f0e8aa20b8a679d',1,'ServoAnalogPIDMotor::motor()'],['../classServoEncoderPIDMotor.html#acee23a13c3d325abaa2faa2822215163',1,'ServoEncoderPIDMotor::motor()']]],
   ['motor1',['motor1',['../classRobotControlCenter.html#a44975384b49a949e166a0bc72a1c4904',1,'RobotControlCenter']]],
   ['motor1_5fdir',['MOTOR1_DIR',['../config_8h.html#a81e59bddb13c0a7898a9eb4cdd811bc7',1,'config.h']]],
   ['motor1_5fenca',['MOTOR1_ENCA',['../config_8h.html#a9f12153c6504f8b51c1222535569bfbb',1,'config.h']]],
@@ -13,7 +13,7 @@ var searchData=
   ['motor2_5fenca',['MOTOR2_ENCA',['../config_8h.html#a3aa022b36607610f62a335396304f259',1,'config.h']]],
   ['motor2_5fencb',['MOTOR2_ENCB',['../config_8h.html#ae2f3b885fe2414e1e47544678512b28e',1,'config.h']]],
   ['motor2_5fpwm',['MOTOR2_PWM',['../config_8h.html#a0fcb1011ecb6d47a95a3ef79cd288b7d',1,'config.h']]],
-  ['motor3',['motor3',['../classRobotControlCenter.html#a73e3b574a39f1cb579be5f0cc953f5cd',1,'RobotControlCenter']]],
+  ['motor3',['motor3',['../classRobotControlCenter.html#aa7f8fe1b1b873aa150265f44f0db3fb3',1,'RobotControlCenter']]],
   ['motor3_5fenca',['MOTOR3_ENCA',['../config_8h.html#a56d41a72ee8822eaeedd261322852c74',1,'config.h']]],
   ['motor3_5fencb',['MOTOR3_ENCB',['../config_8h.html#a1ac3f6719a75774622e976e9e5c8f936',1,'config.h']]],
   ['motor3_5fpwm',['MOTOR3_PWM',['../config_8h.html#ac7f7e92837151680913467070302078e',1,'config.h']]],

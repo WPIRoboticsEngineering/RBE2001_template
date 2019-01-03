@@ -1,0 +1,18 @@
+<map id="src/pid/ServoAnalogPIDMotor.h" name="src/pid/ServoAnalogPIDMotor.h">
+<area shape="rect" id="node2" href="$StudentsRobot_8h.html" title="StudentsRobot.h" alt="" coords="481,80,601,107"/>
+<area shape="rect" id="node5" href="$RobotControlCenter_8h.html" title="src/RobotControlCenter.h" alt="" coords="457,229,627,256"/>
+<area shape="rect" id="node17" href="$ServoAnalogPIDMotor_8cpp.html" title="src/pid/ServoAnalogPIDMotor.cpp" alt="" coords="625,80,845,107"/>
+<area shape="rect" id="node3" href="$Approve_8h.html" title="src/commands/Approve.h" alt="" coords="686,155,857,181"/>
+<area shape="rect" id="node8" href="$ClearFaults_8h.html" title="src/commands/ClearFaults.h" alt="" coords="881,155,1072,181"/>
+<area shape="rect" id="node10" href="$EStop_8h.html" title="src/commands/EStop.h" alt="" coords="1096,155,1255,181"/>
+<area shape="rect" id="node12" href="$GetStatus_8h.html" title="src/commands/GetStatus.h" alt="" coords="12,155,195,181"/>
+<area shape="rect" id="node14" href="$PickOrder_8h.html" title="src/commands/PickOrder.h" alt="" coords="270,155,451,181"/>
+<area shape="rect" id="node16" href="$StudentsRobot_8cpp.html" title="StudentsRobot.cpp" alt="" coords="527,155,661,181"/>
+<area shape="rect" id="node4" href="$Approve_8cpp.html" title="src/commands/Approve.cpp" alt="" coords="665,229,851,256"/>
+<area shape="rect" id="node6" href="$RobotControlCenter_8cpp.html" title="src/RobotControlCenter.cpp" alt="" coords="368,304,553,331"/>
+<area shape="rect" id="node7" href="$template_8ino.html" title="template.ino" alt="" coords="578,304,671,331"/>
+<area shape="rect" id="node9" href="$ClearFaults_8cpp.html" title="src/commands/ClearFaults.cpp" alt="" coords="875,229,1079,256"/>
+<area shape="rect" id="node11" href="$EStop_8cpp.html" title="src/commands/EStop.cpp" alt="" coords="1103,229,1277,256"/>
+<area shape="rect" id="node13" href="$GetStatus_8cpp.html" title="src/commands/GetStatus.cpp" alt="" coords="5,229,201,256"/>
+<area shape="rect" id="node15" href="$PickOrder_8cpp.html" title="src/commands/PickOrder.cpp" alt="" coords="238,229,433,256"/>
+</map>

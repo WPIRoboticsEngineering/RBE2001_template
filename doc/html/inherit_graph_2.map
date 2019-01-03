@@ -1,5 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classPIDMotor.html" title="PIDMotor" alt="" coords="5,31,84,57"/>
+<area shape="rect" id="node1" href="$classPIDMotor.html" title="PIDMotor" alt="" coords="5,56,84,83"/>
 <area shape="rect" id="node2" href="$classHBridgeEncoderPIDMotor.html" title="HBridgeEncoderPIDMotor" alt="" coords="132,5,305,32"/>
-<area shape="rect" id="node3" href="$classServoEncoderPIDMotor.html" title="ServoEncoderPIDMotor" alt="" coords="139,56,299,83"/>
+<area shape="rect" id="node3" href="$classServoAnalogPIDMotor.html" title="ServoAnalogPIDMotor" alt="" coords="143,56,295,83"/>
+<area shape="rect" id="node4" href="$classServoEncoderPIDMotor.html" title="ServoEncoderPIDMotor" alt="" coords="139,107,299,133"/>
 </map>

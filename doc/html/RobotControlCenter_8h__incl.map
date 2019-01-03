@@ -1,17 +1,18 @@
 <map id="src/RobotControlCenter.h" name="src/RobotControlCenter.h">
 <area shape="rect" id="node2" href="$config_8h.html" title="../config.h" alt="" coords="273,229,353,256"/>
-<area shape="rect" id="node5" href="$RBEPID_8h.html" title="../RBEPID.h" alt="" coords="1946,379,2042,405"/>
-<area shape="rect" id="node6" href="$PIDMotor_8h.html" title="pid/PIDMotor.h" alt="" coords="1553,304,1664,331"/>
+<area shape="rect" id="node5" href="$RBEPID_8h.html" title="../RBEPID.h" alt="" coords="2009,379,2105,405"/>
+<area shape="rect" id="node6" href="$PIDMotor_8h.html" title="pid/PIDMotor.h" alt="" coords="1673,304,1784,331"/>
 <area shape="rect" id="node9" href="$ServoEncoderPIDMotor_8h.html" title="pid/ServoEncoderPIDMotor.h" alt="" coords="57,229,249,256"/>
-<area shape="rect" id="node10" href="$HBridgeEncoderPIDMotor_8h.html" title="pid/HBridgeEncoderPIDMotor.h" alt="" coords="529,229,734,256"/>
-<area shape="rect" id="node17" href="$GetPIDConstants_8h.html" title="commands/GetPIDConstants.h" alt="" coords="1206,80,1411,107"/>
-<area shape="rect" id="node18" href="$GetPIDData_8h.html" title="commands/GetPIDData.h" alt="" coords="1435,80,1609,107"/>
-<area shape="rect" id="node19" href="$SetPIDConstants_8h.html" title="commands/SetPIDConstants.h" alt="" coords="1633,80,1837,107"/>
-<area shape="rect" id="node20" href="$SetPIDSetpoint_8h.html" title="commands/SetPIDSetpoint.h" alt="" coords="1862,80,2054,107"/>
-<area shape="rect" id="node21" href="$Approve_8h.html" title="commands/Approve.h" alt="" coords="577,80,726,107"/>
-<area shape="rect" id="node22" href="$StudentsRobot_8h.html" title="../../StudentsRobot.h" alt="" coords="401,155,545,181"/>
-<area shape="rect" id="node24" href="$ClearFaults_8h.html" title="commands/ClearFaults.h" alt="" coords="750,80,918,107"/>
-<area shape="rect" id="node25" href="$EStop_8h.html" title="commands/EStop.h" alt="" coords="943,80,1080,107"/>
-<area shape="rect" id="node26" href="$GetStatus_8h.html" title="commands/GetStatus.h" alt="" coords="393,80,553,107"/>
-<area shape="rect" id="node27" href="$PickOrder_8h.html" title="commands/PickOrder.h" alt="" coords="209,80,368,107"/>
+<area shape="rect" id="node10" href="$HBridgeEncoderPIDMotor_8h.html" title="pid/HBridgeEncoderPIDMotor.h" alt="" coords="377,229,582,256"/>
+<area shape="rect" id="node11" href="$ServoAnalogPIDMotor_8h.html" title="pid/ServoAnalogPIDMotor.h" alt="" coords="971,229,1155,256"/>
+<area shape="rect" id="node18" href="$GetPIDConstants_8h.html" title="commands/GetPIDConstants.h" alt="" coords="1422,80,1627,107"/>
+<area shape="rect" id="node19" href="$GetPIDData_8h.html" title="commands/GetPIDData.h" alt="" coords="1651,80,1825,107"/>
+<area shape="rect" id="node20" href="$SetPIDConstants_8h.html" title="commands/SetPIDConstants.h" alt="" coords="1849,80,2053,107"/>
+<area shape="rect" id="node21" href="$SetPIDSetpoint_8h.html" title="commands/SetPIDSetpoint.h" alt="" coords="1206,80,1398,107"/>
+<area shape="rect" id="node22" href="$Approve_8h.html" title="commands/Approve.h" alt="" coords="982,80,1131,107"/>
+<area shape="rect" id="node23" href="$StudentsRobot_8h.html" title="../../StudentsRobot.h" alt="" coords="506,155,650,181"/>
+<area shape="rect" id="node25" href="$ClearFaults_8h.html" title="commands/ClearFaults.h" alt="" coords="790,80,958,107"/>
+<area shape="rect" id="node26" href="$EStop_8h.html" title="commands/EStop.h" alt="" coords="444,80,581,107"/>
+<area shape="rect" id="node27" href="$GetStatus_8h.html" title="commands/GetStatus.h" alt="" coords="606,80,766,107"/>
+<area shape="rect" id="node28" href="$PickOrder_8h.html" title="commands/PickOrder.h" alt="" coords="209,80,368,107"/>
 </map>

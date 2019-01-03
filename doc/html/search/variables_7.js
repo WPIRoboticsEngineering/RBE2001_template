@@ -1,12 +1,7 @@
 var searchData=
 [
-  ['manager',['manager',['../classRobotControlCenter.html#a861c369e3fc1ddfeddee859b8a1d489d',1,'RobotControlCenter']]],
-  ['mode',['mode',['../classPIDMotor.html#a9a701288ddcc758e51ecdc4ed15180cb',1,'PIDMotor']]],
-  ['motor',['motor',['../classHBridgeEncoderPIDMotor.html#a73fd724b7d66a85cd2d50218f20605cd',1,'HBridgeEncoderPIDMotor::motor()'],['../classServoEncoderPIDMotor.html#acee23a13c3d325abaa2faa2822215163',1,'ServoEncoderPIDMotor::motor()']]],
-  ['motor1',['motor1',['../classRobotControlCenter.html#a44975384b49a949e166a0bc72a1c4904',1,'RobotControlCenter']]],
-  ['motor2',['motor2',['../classRobotControlCenter.html#a1f71490d40e93b72d37fd1e1ab248336',1,'RobotControlCenter']]],
-  ['motor3',['motor3',['../classRobotControlCenter.html#a73e3b574a39f1cb579be5f0cc953f5cd',1,'RobotControlCenter']]],
-  ['movement',['movement',['../classPIDMotor.html#aa47150f58fa737aa67ae77533f38ae18',1,'PIDMotor']]],
-  ['mycommandsstatus',['myCommandsStatus',['../classStudentsRobot.html#a1fe188b5a6536567701b8285d97ae042',1,'StudentsRobot']]],
-  ['mypid',['myPID',['../classPIDMotor.html#a0882b047a418b1b4ba6ecd02e07d32bf',1,'PIDMotor']]]
+  ['last_5ferror',['last_error',['../classRBEPID.html#a4c808d4c33889e4a9cf47e9c6d8839db',1,'RBEPID']]],
+  ['lasterrpositive',['lastErrPositive',['../classPIDMotor.html#a85081ed59ecc29eff6e8dcca784cf4b1',1,'PIDMotor']]],
+  ['lastprint',['lastPrint',['../classRobotControlCenter.html#a294758d4de8713afbf911f497fea24c3',1,'RobotControlCenter']]],
+  ['lasttimerunpid',['lastTimeRunPID',['../classPIDMotor.html#ac2922051312bebdeb590901df8ac3214',1,'PIDMotor']]]
 ];

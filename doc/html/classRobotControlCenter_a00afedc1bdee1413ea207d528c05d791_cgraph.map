@@ -19,12 +19,12 @@
 <area shape="rect" id="node16" href="$classPIDMotor.html#a4f30d949a3c41afb995caef9fb207e05" title="PIDMotor::myFmap" alt="" coords="1360,309,1497,336"/>
 <area shape="rect" id="node17" href="$classPIDMotor.html#af1c954ea7fa21d4685a67b06f66c1982" title="PIDMotor::setOutput" alt="" coords="1357,107,1500,133"/>
 <area shape="rect" id="node19" href="$classPIDMotor.html#a0b1db2bd137a8667ed39d82bc671d1b7" title="PIDMotor::getFreeSpinMax\lDegreesPerSecond" alt="" coords="1077,226,1259,267"/>
-<area shape="rect" id="node22" href="$classStudentsRobot.html#a0acd4de6b0391becfd40a253b2e883fd" title="StudentsRobot::attach" alt="" coords="395,481,549,508"/>
+<area shape="rect" id="node22" href="$classStudentsRobot.html#a92a7e22963123f5fbcc619e9333c3a6c" title="StudentsRobot::attach" alt="" coords="395,481,549,508"/>
 <area shape="rect" id="node23" href="$classHBridgeEncoderPIDMotor.html#ad971f5e3e4932ac465135018d976defc" title="HBridgeEncoderPIDMotor\l::attach" alt="" coords="613,637,787,678"/>
-<area shape="rect" id="node26" href="$classServoEncoderPIDMotor.html#ae91dbba63a742e6c173e6e1f339406c8" title="ServoEncoderPIDMotor\l::attach" alt="" coords="620,441,780,482"/>
+<area shape="rect" id="node26" href="$classServoAnalogPIDMotor.html#a7b16e4ba6bfe610303c93783deefa3c1" title="ServoAnalogPIDMotor\l::attach" alt="" coords="624,441,776,482"/>
 <area shape="rect" id="node27" href="$classPIDMotor.html#a45fa4f564edfd6ae7f08bfb635c4d368" title="PIDMotor::setSetpoint" alt="" coords="624,389,776,416"/>
 <area shape="rect" id="node29" href="$classHBridgeEncoderPIDMotor.html#aaf50960b179c4d9b0a059b3b4b41b14d" title="HBridgeEncoderPIDMotor\l::getPosition" alt="" coords="613,506,787,547"/>
-<area shape="rect" id="node30" href="$classServoEncoderPIDMotor.html#ace3748b0fc47372137067424ce7c664f" title="ServoEncoderPIDMotor\l::getPosition" alt="" coords="620,571,780,613"/>
+<area shape="rect" id="node30" href="$classServoAnalogPIDMotor.html#ad6ea5e73f0ee9edf35ae1a3c59eee467" title="ServoAnalogPIDMotor\l::getPosition" alt="" coords="624,571,776,613"/>
 <area shape="rect" id="node24" href="$classPIDMotor.html#a32adc7f86caa0f3c97161d945ccc1c5c" title="PIDMotor::pidinit" alt="" coords="866,495,986,521"/>
 <area shape="rect" id="node25" href="$classHBridgeEncoderPIDMotor.html#a26e55b549bf8cf6b096d9379e555adf8" title="HBridgeEncoderPIDMotor\l::setOutput" alt="" coords="839,637,1013,678"/>
 <area shape="rect" id="node28" href="$classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b" title="PIDMotor::startInterpolation" alt="" coords="835,444,1017,471"/>
