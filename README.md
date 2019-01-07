@@ -6,15 +6,15 @@ Template code for the RBE 2001 final project
 In you checked out code, open doc/html/annotated.html to see the Doxygen documentation. The best way to understand this code is to start in the Files section of the documentation, and look at the .ino file. Look at the setup and loop call graphs.
 
 
-# Hardware
+# Hardware Electrical Documentation
 
 See: https://github.com/WPIRoboticsEngineering/RobotInterfaceBoard
 
 # Arduino Setup and Development Computer Options 
 
-See: https://github.com/WPIRoboticsEngineering/RobotInterfaceBoard#development-computer-options
+See: [Development Computer Options](https://github.com/WPIRoboticsEngineering/RobotInterfaceBoard#development-computer-options)
 
-# Set up your project
+# Where Is My Code?
 
 Your privete Repository has been created for you here: https://github.com/RBE200x-lab
 
@@ -23,7 +23,7 @@ You and your team members should find your repository made with the template cod
 
 # Develop Code for your project
 
-## Install Eclipse on Personal Machine
+## (Optional) Install Eclipse on Personal Machine
 
  [See Eclipse install instructions in InstallEclipse.md](InstallEclipse.md)
 
@@ -34,9 +34,9 @@ Use [Arduino IDE and Github Desktop](UseArduinoGithubDesktop.md)
 
 or
  
-Use Eclipse [using the Eclipse instructions](UseEclipse.md)
+(Optional) Use Eclipse [using the Eclipse instructions](UseEclipse.md)
 
-# Code theory and structure and what to edit
+# Code theory, structure and what to edit
 
 If find yourself saying:
  
