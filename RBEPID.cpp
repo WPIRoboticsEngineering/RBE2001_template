@@ -9,7 +9,7 @@
 
 //Class constructor
 RBEPID::RBEPID() {
-	kp = 1;
+	kp = 0.01;
 	ki = 0;
 	kd = 0;
 }
