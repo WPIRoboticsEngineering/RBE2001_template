@@ -14,6 +14,7 @@ class SetPIDSetpoint: public PacketEventAbstract {
 	int numPID;
 public:
 	SetPIDSetpoint(int num, PIDMotor ** list);
+	virtual ~SetPIDSetpoint(){}
 	void event(float * buffer);
 };
 

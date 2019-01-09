@@ -106,6 +106,10 @@ public:
 	 *
 	 * this represents the event of the EStop button press in the gui
 	 *
+	 * This is called whrn the estop in the GUI is pressed
+	 * All motors shuld hault and lock in position
+	 * Motors should not go idle and drop the plate
+	 *
 	 * This function is called via coms.server() in:
 	 * @see RobotControlCenter::fastLoop
 	 */

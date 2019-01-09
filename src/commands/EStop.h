@@ -18,7 +18,7 @@ public:
 	{
 		robotPointer = robot;
 	}
-	~EStop() {
+	virtual ~EStop() {
 	}
 	//User function to be called when a packet comes in
 	// Buffer contains data from the packet coming in at the start of the function

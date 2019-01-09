@@ -220,7 +220,7 @@ Here is the call graph for this function:</div>
           <td class="memname">void StudentsRobot::Approve </td>
           <td>(</td>
           <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -233,10 +233,9 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <p>the is the event of the <a class="el" href="classApprove.html">Approve</a> button pressed in the GUI</p>
-<p>This function is called via coms.server() in: </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classRobotControlCenter.html#a989d4ee3cb480dc2edb79fb7e4893660">RobotControlCenter::fastLoop</a></dd></dl>
-<p>This is called when the approve button is pressed in the GUI </p>
+<p>This function is called via coms.server() in: </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classRobotControlCenter.html#a989d4ee3cb480dc2edb79fb7e4893660">RobotControlCenter::fastLoop</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="StudentsRobot_8cpp_source.html#l00117">117</a> of file <a class="el" href="StudentsRobot_8cpp_source.html">StudentsRobot.cpp</a>.</p>
+<p>Definition at line <a class="el" href="StudentsRobot_8cpp_source.html#l00124">124</a> of file <a class="el" href="StudentsRobot_8cpp_source.html">StudentsRobot.cpp</a>.</p>
 
 <p>References <a class="el" href="StudentsRobot_8h_source.html#l00075">myCommandsStatus</a>, <a class="el" href="StudentsRobot_8h_source.html#l00032">Ready_for_new_task</a>, <a class="el" href="StudentsRobot_8h_source.html#l00037">Waiting_for_approval_to_dropoff</a>, and <a class="el" href="StudentsRobot_8h_source.html#l00034">Waiting_for_approval_to_pickup</a>.</p>
 
@@ -252,7 +251,7 @@ Here is the call graph for this function:</div>
           <td class="memname">void StudentsRobot::ClearFaults </td>
           <td>(</td>
           <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -265,10 +264,9 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <p>this represents the event of the clear faults button press in the gui</p>
-<p>This function is called via coms.server() in: </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classRobotControlCenter.html#a989d4ee3cb480dc2edb79fb7e4893660">RobotControlCenter::fastLoop</a></dd></dl>
-<p>this is called when the Clear Faults button in the GUI is called. </p>
+<p>This function is called via coms.server() in: </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classRobotControlCenter.html#a989d4ee3cb480dc2edb79fb7e4893660">RobotControlCenter::fastLoop</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="StudentsRobot_8cpp_source.html#l00130">130</a> of file <a class="el" href="StudentsRobot_8cpp_source.html">StudentsRobot.cpp</a>.</p>
+<p>Definition at line <a class="el" href="StudentsRobot_8cpp_source.html#l00144">144</a> of file <a class="el" href="StudentsRobot_8cpp_source.html">StudentsRobot.cpp</a>.</p>
 
 <p>References <a class="el" href="StudentsRobot_8h_source.html#l00075">myCommandsStatus</a>, <a class="el" href="StudentsRobot_8h_source.html#l00032">Ready_for_new_task</a>, <a class="el" href="StudentsRobot_8h_source.html#l00022">StartRunning</a>, and <a class="el" href="StudentsRobot_8h_source.html#l00079">status</a>.</p>
 
@@ -297,10 +295,10 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <p>this represents the event of the <a class="el" href="classEStop.html">EStop</a> button press in the gui</p>
-<p>This function is called via coms.server() in: </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classRobotControlCenter.html#a989d4ee3cb480dc2edb79fb7e4893660">RobotControlCenter::fastLoop</a></dd></dl>
-<p>This is called whrn the estop in the GUI is pressed All motors shuld hault and lock in position Motors should not go idle and drop the plate </p>
+<p>This is called whrn the estop in the GUI is pressed All motors shuld hault and lock in position Motors should not go idle and drop the plate</p>
+<p>This function is called via coms.server() in: </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classRobotControlCenter.html#a989d4ee3cb480dc2edb79fb7e4893660">RobotControlCenter::fastLoop</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="StudentsRobot_8cpp_source.html#l00141">141</a> of file <a class="el" href="StudentsRobot_8cpp_source.html">StudentsRobot.cpp</a>.</p>
+<p>Definition at line <a class="el" href="StudentsRobot_8cpp_source.html#l00165">165</a> of file <a class="el" href="StudentsRobot_8cpp_source.html">StudentsRobot.cpp</a>.</p>
 
 <p>References <a class="el" href="StudentsRobot_8h_source.html#l00044">Fault_E_Stop_pressed</a>, <a class="el" href="StudentsRobot_8h_source.html#l00022">Halting</a>, <a class="el" href="StudentsRobot_8h_source.html#l00075">myCommandsStatus</a>, and <a class="el" href="StudentsRobot_8h_source.html#l00079">status</a>.</p>
 
@@ -333,7 +331,7 @@ Here is the call graph for this function:</div>
 <p>buffer[2] is the drop off position 1, or 2</p>
 <p>This function is called via coms.server() in: </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classRobotControlCenter.html#a989d4ee3cb480dc2edb79fb7e4893660">RobotControlCenter::fastLoop</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="StudentsRobot_8cpp_source.html#l00160">160</a> of file <a class="el" href="StudentsRobot_8cpp_source.html">StudentsRobot.cpp</a>.</p>
+<p>Definition at line <a class="el" href="StudentsRobot_8cpp_source.html#l00184">184</a> of file <a class="el" href="StudentsRobot_8cpp_source.html">StudentsRobot.cpp</a>.</p>
 
 <p>References <a class="el" href="StudentsRobot_8h_source.html#l00075">myCommandsStatus</a>, and <a class="el" href="StudentsRobot_8h_source.html#l00034">Waiting_for_approval_to_pickup</a>.</p>
 
@@ -503,7 +501,7 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="StudentsRobot_8h_source.html#l00075">75</a> of file <a class="el" href="StudentsRobot_8h_source.html">StudentsRobot.h</a>.</p>
 
-<p>Referenced by <a class="el" href="StudentsRobot_8cpp_source.html#l00117">Approve()</a>, <a class="el" href="StudentsRobot_8cpp_source.html#l00130">ClearFaults()</a>, <a class="el" href="StudentsRobot_8cpp_source.html#l00141">EStop()</a>, <a class="el" href="GetStatus_8cpp_source.html#l00003">GetStatus::event()</a>, and <a class="el" href="StudentsRobot_8cpp_source.html#l00160">PickOrder()</a>.</p>
+<p>Referenced by <a class="el" href="StudentsRobot_8cpp_source.html#l00124">Approve()</a>, <a class="el" href="StudentsRobot_8cpp_source.html#l00144">ClearFaults()</a>, <a class="el" href="StudentsRobot_8cpp_source.html#l00165">EStop()</a>, <a class="el" href="GetStatus_8cpp_source.html#l00003">GetStatus::event()</a>, and <a class="el" href="StudentsRobot_8cpp_source.html#l00184">PickOrder()</a>.</p>
 
 </div>
 </div>
@@ -544,7 +542,7 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="StudentsRobot_8h_source.html#l00079">79</a> of file <a class="el" href="StudentsRobot_8h_source.html">StudentsRobot.h</a>.</p>
 
-<p>Referenced by <a class="el" href="StudentsRobot_8cpp_source.html#l00130">ClearFaults()</a>, <a class="el" href="StudentsRobot_8cpp_source.html#l00141">EStop()</a>, and <a class="el" href="StudentsRobot_8cpp_source.html#l00076">updateStateMachine()</a>.</p>
+<p>Referenced by <a class="el" href="StudentsRobot_8cpp_source.html#l00144">ClearFaults()</a>, <a class="el" href="StudentsRobot_8cpp_source.html#l00165">EStop()</a>, and <a class="el" href="StudentsRobot_8cpp_source.html#l00076">updateStateMachine()</a>.</p>
 
 </div>
 </div>

@@ -112,9 +112,16 @@ void StudentsRobot::pidLoop() {
 	motor3->loop();
 }
 /**
- * This is called when the approve button is pressed in the GUI
+ * Approve
+ *
+ * @param buffer A buffer of floats containing nothing
+ *
+ * the is the event of the Approve button pressed in the GUI
+ *
+ * This function is called via coms.server() in:
+ * @see RobotControlCenter::fastLoop
  */
-void StudentsRobot::Approve(float * data) {
+void StudentsRobot::Approve(float * buffer) {
 	// approve the procession to new state
 	Serial.println("StudentsRobot::Approve");
 
@@ -125,18 +132,35 @@ void StudentsRobot::Approve(float * data) {
 	}
 }
 /**
- * this is called when the Clear Faults button in the GUI is called.
+ * ClearFaults
+ *
+ * @param buffer A buffer of floats containing nothing
+ *
+ * this represents the event of the clear faults button press in the gui
+ *
+ * This function is called via coms.server() in:
+ * @see RobotControlCenter::fastLoop
  */
-void StudentsRobot::ClearFaults(float * data) {
+void StudentsRobot::ClearFaults(float * buffer) {
 	// clear the faults somehow
 	Serial.println("StudentsRobot::ClearFaults");
 	myCommandsStatus = Ready_for_new_task;
 	status = StartRunning;
 }
+
 /**
+ * EStop
+ *
+ * @param buffer A buffer of floats containing nothing
+ *
+ * this represents the event of the EStop button press in the gui
+ *
  * This is called whrn the estop in the GUI is pressed
  * All motors shuld hault and lock in position
  * Motors should not go idle and drop the plate
+ *
+ * This function is called via coms.server() in:
+ * @see RobotControlCenter::fastLoop
  */
 void StudentsRobot::EStop(float * buffer) {
 	// Stop the robot immediatly

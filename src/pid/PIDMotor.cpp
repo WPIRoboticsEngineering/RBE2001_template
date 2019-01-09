@@ -302,8 +302,8 @@ void PIDMotor::startInterpolationDegrees(float newSetpoint, long msTimeDuration,
  * @param outputStop the value of the output to stop moving
  * @param outputMinDeadbad a positive value added to the stop value to creep backward
  * @param outputMaxDeadbad a positive value subtracted from stop value to creep forwards
- * @param a value to convert from degrees to motor units. This number times degrees equals ticks;
- * @param getFreeSpinMaxDegreesPerSecond a value in degrees per second that represents the maximum
+ * @param ticksToDeg a value to convert from degrees to motor units. This number times degrees equals ticks;
+ * @param freeSpinMaxDegreesPerSecond a value in degrees per second that represents the maximum
  * 		freespinning speed of the motor running at 'outputMax'.
  */
 void PIDMotor::setOutputBoundingValues(int64_t outputMin, int64_t outputMax,

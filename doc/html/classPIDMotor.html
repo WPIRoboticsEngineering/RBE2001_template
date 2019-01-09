@@ -249,9 +249,9 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a8fd9eb49a0999da0cc6a3d799ed9845a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa606a607e25953aaae2be040a659b2e5"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#aa606a607e25953aaae2be040a659b2e5">outputStop</a> = 0</td></tr>
 <tr class="separator:aa606a607e25953aaae2be040a659b2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6fc02702cf51681bdfe09c209c2e0fd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#af6fc02702cf51681bdfe09c209c2e0fd">myTicksToDeg</a></td></tr>
+<tr class="memitem:af6fc02702cf51681bdfe09c209c2e0fd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#af6fc02702cf51681bdfe09c209c2e0fd">myTicksToDeg</a> =1</td></tr>
 <tr class="separator:af6fc02702cf51681bdfe09c209c2e0fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22cea5bee979882d49c1e9ae179a244e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a22cea5bee979882d49c1e9ae179a244e">freeSpinMaxDegreesPerSecond</a></td></tr>
+<tr class="memitem:a22cea5bee979882d49c1e9ae179a244e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a22cea5bee979882d49c1e9ae179a244e">freeSpinMaxDegreesPerSecond</a> =1000</td></tr>
 <tr class="separator:a22cea5bee979882d49c1e9ae179a244e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -1024,8 +1024,8 @@ Here is the call graph for this function:</div>
     <tr><td class="paramname">outputStop</td><td>the value of the output to stop moving </td></tr>
     <tr><td class="paramname">outputMinDeadbad</td><td>a positive value added to the stop value to creep backward </td></tr>
     <tr><td class="paramname">outputMaxDeadbad</td><td>a positive value subtracted from stop value to creep forwards </td></tr>
-    <tr><td class="paramname">a</td><td>value to convert from degrees to motor units. This number times degrees equals ticks; </td></tr>
-    <tr><td class="paramname">getFreeSpinMaxDegreesPerSecond</td><td>a value in degrees per second that represents the maximum freespinning speed of the motor running at 'outputMax'. </td></tr>
+    <tr><td class="paramname">ticksToDeg</td><td>a value to convert from degrees to motor units. This number times degrees equals ticks; </td></tr>
+    <tr><td class="paramname">freeSpinMaxDegreesPerSecond</td><td>a value in degrees per second that represents the maximum freespinning speed of the motor running at 'outputMax'. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1621,7 +1621,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double PIDMotor::freeSpinMaxDegreesPerSecond</td>
+          <td class="memname">double PIDMotor::freeSpinMaxDegreesPerSecond =1000</td>
         </tr>
       </table>
   </td>
@@ -1800,7 +1800,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double PIDMotor::myTicksToDeg</td>
+          <td class="memname">double PIDMotor::myTicksToDeg =1</td>
         </tr>
       </table>
   </td>

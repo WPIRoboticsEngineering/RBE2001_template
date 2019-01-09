@@ -110,6 +110,8 @@ Collaboration diagram for SetPIDSetpoint:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0c8e59c599c08a39198ae492759a648f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetPIDSetpoint.html#a0c8e59c599c08a39198ae492759a648f">SetPIDSetpoint</a> (int num, <a class="el" href="classPIDMotor.html">PIDMotor</a> **list)</td></tr>
 <tr class="separator:a0c8e59c599c08a39198ae492759a648f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac88124d7149a1d534a7ea7ea1d50090f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetPIDSetpoint.html#ac88124d7149a1d534a7ea7ea1d50090f">~SetPIDSetpoint</a> ()</td></tr>
+<tr class="separator:ac88124d7149a1d534a7ea7ea1d50090f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0682f420343cf4dbb2c0977d1b5a91f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetPIDSetpoint.html#a0682f420343cf4dbb2c0977d1b5a91f2">event</a> (float *buffer)</td></tr>
 <tr class="separator:a0682f420343cf4dbb2c0977d1b5a91f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -154,6 +156,46 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ac88124d7149a1d534a7ea7ea1d50090f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual SetPIDSetpoint::~SetPIDSetpoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="SetPIDSetpoint_8h_source.html#l00017">17</a> of file <a class="el" href="SetPIDSetpoint_8h_source.html">SetPIDSetpoint.h</a>.</p>
+
+<p>References <a class="el" href="SetPIDSetpoint_8cpp_source.html#l00017">event()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSetPIDSetpoint_ac88124d7149a1d534a7ea7ea1d50090f_cgraph.png" border="0" usemap="#classSetPIDSetpoint_ac88124d7149a1d534a7ea7ea1d50090f_cgraph" alt=""/></div>
+<map name="classSetPIDSetpoint_ac88124d7149a1d534a7ea7ea1d50090f_cgraph" id="classSetPIDSetpoint_ac88124d7149a1d534a7ea7ea1d50090f_cgraph">
+<area shape="rect" id="node2" href="classSetPIDSetpoint.html#a0682f420343cf4dbb2c0977d1b5a91f2" title="SetPIDSetpoint::event" alt="" coords="273,31,427,57"/>
+<area shape="rect" id="node3" href="classPIDMotor.html#a59a361f6877ad6dd4504273646e433fd" title="PIDMotor::startInterpolation\lDegrees" alt="" coords="475,23,657,65"/>
+<area shape="rect" id="node4" href="classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b" title="PIDMotor::startInterpolation" alt="" coords="705,5,888,32"/>
+<area shape="rect" id="node5" href="classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33" title="PIDMotor::ticksToDeg" alt="" coords="720,56,873,83"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a0682f420343cf4dbb2c0977d1b5a91f2"></a>
 <div class="memitem">
@@ -172,6 +214,8 @@ Private Attributes</h2></td></tr>
 <p>Definition at line <a class="el" href="SetPIDSetpoint_8cpp_source.html#l00017">17</a> of file <a class="el" href="SetPIDSetpoint_8cpp_source.html">SetPIDSetpoint.cpp</a>.</p>
 
 <p>References <a class="el" href="PIDMotor_8h_source.html#l00016">LIN</a>, <a class="el" href="SetPIDSetpoint_8h_source.html#l00014">numPID</a>, <a class="el" href="SetPIDSetpoint_8h_source.html#l00013">pidlist</a>, <a class="el" href="PIDMotor_8h_source.html#l00016">SIN</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00290">PIDMotor::startInterpolationDegrees()</a>.</p>
+
+<p>Referenced by <a class="el" href="SetPIDSetpoint_8h_source.html#l00017">~SetPIDSetpoint()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>

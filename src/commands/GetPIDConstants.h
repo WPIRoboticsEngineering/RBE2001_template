@@ -14,6 +14,7 @@ class GetPIDConstants: public PacketEventAbstract {
 	int numPID;
 public:
 	GetPIDConstants(int num, PIDMotor ** list);
+	virtual ~GetPIDConstants(){}
 	void event(float * buffer);
 
 };
