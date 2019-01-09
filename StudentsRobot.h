@@ -15,7 +15,8 @@
 #include <ESP32Servo.h>
 /**
  * @enum RobotStateMachine
- *
+ * These are sample values for a sample state machine.
+ * Feel free to add ot remove values from here
  */
 enum RobotStateMachine {
 	StartupRobot = 0, StartRunning = 1, Running = 2, Halting = 3, Halt = 4
@@ -23,6 +24,9 @@ enum RobotStateMachine {
 };
 /**
  * @enum ComStackStatusState
+ * These are values for the communications stack
+ * Don't add any more or change these. This is how you tell the GUI
+ * what state your robot is in.
  */
 enum ComStackStatusState {
 	Ready_for_new_task = 0,
@@ -43,11 +47,26 @@ enum ComStackStatusState {
  * @class StudentsRobot
  */
 class StudentsRobot {
+private:
+	ServoEncoderPIDMotor * motor1;
+	ServoEncoderPIDMotor * motor2;
+	HBridgeEncoderPIDMotor * motor3;
+	Servo * servo;
+
 public:
 	/**
 	 * Constructor for StudentsRobot
+	 *
+	 * attach the 4 actuators
+	 *
+	 * these are the 4 actuators you need to use for this lab
+	 * all 4 must be attached at this time
+	 * DO NOT reuse pins or fail to attach any of the objects
+	 *
 	 */
-	StudentsRobot();
+	StudentsRobot(ServoEncoderPIDMotor * motor1,
+			ServoEncoderPIDMotor * motor2, HBridgeEncoderPIDMotor * motor3,
+			Servo * servo);
 	/**
 	 * Command status
 	 *
@@ -106,32 +125,19 @@ public:
 	 * @see RobotControlCenter::fastLoop
 	 */
 	void PickOrder(float * buffer);
-	/**
-	 * attach the 4 actuators
-	 *
-	 * these are the 4 actuators you need to use for this lab
-	 * all 4 must be attached at this time
-	 * DO NOT reuse pins or fail to attach any of the objects
-	 *
-	 * This function is called via coms.server() in:
-	 * @see RobotControlCenter::fastLoop
-	 */
-	void attach(HBridgeEncoderPIDMotor * motor1,
-			HBridgeEncoderPIDMotor * motor2, ServoAnalogPIDMotor * motor3,
-			Servo * servo);
+
 	/**
 	 * pidLoop This functoion is called to let the StudentsRobot controll the running of the PID loop functions
 	 *
 	 * The loop function on all motors needs to be run when this function is called and return fast
 	 */
-	void pidLoop(PIDMotor * motor1, PIDMotor * motor2, PIDMotor * motor3);
+	void pidLoop();
 	/**
 	 * updateStateMachine use the stub state machine as a starting point.
 	 *
 	 * the students state machine can be updated with this function
 	 */
-	void updateStateMachine(PIDMotor * motor1, PIDMotor * motor2,
-			PIDMotor * motor3, Servo * servo);
+	void updateStateMachine();
 };
 
 #endif /* STUDENTSROBOT_H_ */

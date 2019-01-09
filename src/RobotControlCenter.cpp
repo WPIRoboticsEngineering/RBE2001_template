@@ -52,9 +52,8 @@ void RobotControlCenter::setup() {
 #else
 	Serial.begin(115200);
 #endif
-	robot = new StudentsRobot();
+	robot = new StudentsRobot(&motor1, &motor2, &motor3, &servo);
 
-	robot->attach(&motor1, &motor2, &motor3, &servo);
 
 #if defined(USE_WIFI)
 	// Attach coms
@@ -88,7 +87,7 @@ void RobotControlCenter::fastLoop() {
 		return;
 	}
 #endif
-	robot->pidLoop(&motor1, &motor2, &motor3);
-	robot->updateStateMachine(&motor1, &motor2, &motor3, &servo);
+	robot->pidLoop();
+	robot->updateStateMachine();
 
 }
