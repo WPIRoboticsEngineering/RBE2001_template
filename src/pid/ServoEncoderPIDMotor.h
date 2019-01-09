@@ -12,9 +12,7 @@
 #include <ESP32Encoder.h>
 
 class ServoEncoderPIDMotor: public PIDMotor {
-private:
-	ESP32Encoder encoder;
-	Servo motor;
+
 public:
 	ServoEncoderPIDMotor();
 	virtual ~ServoEncoderPIDMotor();
@@ -26,12 +24,15 @@ public:
 	 * @param encoderB the B channel of the encoder
 	 */
 	void attach(int servoPin, int encoderA, int encoderB);
+	int64_t getPosition();
 
 	void setOutput(int64_t out);
 	void overrideCurrentPositionHardware(int64_t val);
 	double calcCur(void);
 	double ticksToDeg();
 	double getFreeSpinMaxDegreesPerSecond();
+	ESP32Encoder encoder;
+	Servo motor;
 };
 
 #endif /* SRC_SERVOENCODERPIDMOTOR_H_ */

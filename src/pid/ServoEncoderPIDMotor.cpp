@@ -36,4 +36,6 @@ void ServoEncoderPIDMotor::overrideCurrentPositionHardware(int64_t val) {
 double ServoEncoderPIDMotor::calcCur(void) {
 	return 0;
 }
-
+int64_t ServoEncoderPIDMotor::getPosition() {
+	return encoder.getCount();
+}

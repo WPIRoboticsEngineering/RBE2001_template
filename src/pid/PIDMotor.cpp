@@ -288,14 +288,14 @@ void PIDMotor::startInterpolationDegrees(float newSetpoint, long msTimeDuration,
 void PIDMotor::setOutputBoundingValues(int64_t outputMin, int64_t outputMax,
 		int64_t outputStop, int64_t outputMinDeadbad,
 		int64_t outputMaxDeadbad, double ticksToDeg,
-		double getFreeSpinMaxDegreesPerSecond){
+		double freeSpinMaxDegreesPerSecond){
 	this->outputMin=outputMin;
 	this->outputMax=outputMax;
 	this->outputStop=outputStop;
 	this->outputMinDeadbad=outputMinDeadbad;
 	this->outputMaxDeadbad=outputMaxDeadbad;
-	this->ticksToDeg=ticksToDeg;
-	this->getFreeSpinMaxDegreesPerSecond=getFreeSpinMaxDegreesPerSecond;
+	this->myTicksToDeg=ticksToDeg;
+	this->freeSpinMaxDegreesPerSecond=freeSpinMaxDegreesPerSecond;
 }
 /**
  * getOutputMin

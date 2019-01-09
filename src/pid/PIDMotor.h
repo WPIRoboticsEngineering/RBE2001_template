@@ -320,12 +320,6 @@ public:
 	virtual int64_t getPosition()=0;
 
 	/**
-	 * ticksToDeg
-	 *
-	 * @return ticksToDeg
-	 */
-	virtual double ticksToDeg()=0;
-	/**
 	 * overrideCurrentPositionHardware
 	 *
 	 * forces the hardware provider to return this value
