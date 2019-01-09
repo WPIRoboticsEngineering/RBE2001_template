@@ -7,7 +7,6 @@ var searchData=
   ['clearfaults_2ecpp',['ClearFaults.cpp',['../ClearFaults_8cpp.html',1,'']]],
   ['clearfaults_2eh',['ClearFaults.h',['../ClearFaults_8h.html',1,'']]],
   ['clearintegralbuffer',['clearIntegralBuffer',['../classRBEPID.html#adc6954f2aaa12295fc58ca1dcfca3dc1',1,'RBEPID']]],
-  ['coms',['coms',['../classRobotControlCenter.html#aa876ebd7124ef14f19b7f5fc95a11767',1,'RobotControlCenter']]],
   ['comstackstatusstate',['ComStackStatusState',['../StudentsRobot_8h.html#a1224568eebab348cfd8b7d5418b61620',1,'StudentsRobot.h']]],
   ['config_2eh',['config.h',['../config_8h.html',1,'']]],
   ['controlcenter',['controlCenter',['../template_8ino.html#a2751c414491aab0297e50ed77db08aeb',1,'template.ino']]],

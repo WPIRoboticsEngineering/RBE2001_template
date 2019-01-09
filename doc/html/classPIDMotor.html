@@ -86,7 +86,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Data Fields</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a>  </div>
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">PIDMotor Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
@@ -128,6 +129,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a45fa4f564edfd6ae7f08bfb635c4d368"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0aba3994cd6722646cce3f62a5cc056b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b">startInterpolation</a> (float newSetpoint, long msTimeDuration, <a class="el" href="PIDMotor_8h.html#a5f2bed26bc3981591ee546627fdbbef4">interpolateMode</a> <a class="el" href="classPIDMotor.html#a9a701288ddcc758e51ecdc4ed15180cb">mode</a>)</td></tr>
 <tr class="separator:a0aba3994cd6722646cce3f62a5cc056b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7a8cb2fcf9c941cedd10864b9463fb7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#ac7a8cb2fcf9c941cedd10864b9463fb7">isInterpolationDone</a> ()</td></tr>
+<tr class="separator:ac7a8cb2fcf9c941cedd10864b9463fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b178659f339c95aa78bfb1a9e77c338"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a4b178659f339c95aa78bfb1a9e77c338">getInterpolationUnitIncrement</a> ()</td></tr>
+<tr class="separator:a4b178659f339c95aa78bfb1a9e77c338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a707369b2535319b2d2cd7c6c2287926f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a707369b2535319b2d2cd7c6c2287926f">setSetpointDegrees</a> (float val)</td></tr>
 <tr class="separator:a707369b2535319b2d2cd7c6c2287926f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59a361f6877ad6dd4504273646e433fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a59a361f6877ad6dd4504273646e433fd">startInterpolationDegrees</a> (float newSetpoint, long msTimeDuration, <a class="el" href="PIDMotor_8h.html#a5f2bed26bc3981591ee546627fdbbef4">interpolateMode</a> <a class="el" href="classPIDMotor.html#a9a701288ddcc758e51ecdc4ed15180cb">mode</a>)</td></tr>
@@ -150,30 +155,32 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af3660a46b5b7614ba1a5812a85d103ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab70676b6d2cea7a85592715056bdb0dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#ab70676b6d2cea7a85592715056bdb0dd">stop</a> ()</td></tr>
 <tr class="separator:ab70676b6d2cea7a85592715056bdb0dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a804fb78d6d87e55d96d4b798935c8809"><td class="memItemLeft" align="right" valign="top">virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809">getPosition</a> ()=0</td></tr>
-<tr class="separator:a804fb78d6d87e55d96d4b798935c8809"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a937efb0b127059ca11c122f5f823fe71"><td class="memItemLeft" align="right" valign="top">virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a937efb0b127059ca11c122f5f823fe71">getOutputMin</a> ()=0</td></tr>
-<tr class="separator:a937efb0b127059ca11c122f5f823fe71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b887c7979f6c92171a0d261356396cf"><td class="memItemLeft" align="right" valign="top">virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a8b887c7979f6c92171a0d261356396cf">getOutputMax</a> ()=0</td></tr>
-<tr class="separator:a8b887c7979f6c92171a0d261356396cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59430df840fafb87e734ecfbed9fce78"><td class="memItemLeft" align="right" valign="top">virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a59430df840fafb87e734ecfbed9fce78">getOutputMinDeadbad</a> ()=0</td></tr>
-<tr class="separator:a59430df840fafb87e734ecfbed9fce78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4de032edefde7388575a7b54d49c01e0"><td class="memItemLeft" align="right" valign="top">virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a4de032edefde7388575a7b54d49c01e0">getOutputMaxDeadbad</a> ()=0</td></tr>
-<tr class="separator:a4de032edefde7388575a7b54d49c01e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81a7e9b5bdcdf4291a22e70b1a540ee8"><td class="memItemLeft" align="right" valign="top">virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a81a7e9b5bdcdf4291a22e70b1a540ee8">getOutputStop</a> ()=0</td></tr>
-<tr class="separator:a81a7e9b5bdcdf4291a22e70b1a540ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5178fdbeeb39bfbcdced03e0c5ef4374"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374">ticksToDeg</a> ()=0</td></tr>
-<tr class="separator:a5178fdbeeb39bfbcdced03e0c5ef4374"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a1452c87f6abd3729ec12824a74abca"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a6a1452c87f6abd3729ec12824a74abca">overrideCurrentPositionHardware</a> (int64_t val)=0</td></tr>
-<tr class="separator:a6a1452c87f6abd3729ec12824a74abca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54dd9a1ed9fa34f9070e3aa473f47fae"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a54dd9a1ed9fa34f9070e3aa473f47fae">getOutputMin</a> ()</td></tr>
+<tr class="separator:a54dd9a1ed9fa34f9070e3aa473f47fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a743e25e68c808e71bc5724e8130748"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a7a743e25e68c808e71bc5724e8130748">getOutputMax</a> ()</td></tr>
+<tr class="separator:a7a743e25e68c808e71bc5724e8130748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a798b283fb058d321b8627097142a7e6d"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a798b283fb058d321b8627097142a7e6d">getOutputMinDeadbad</a> ()</td></tr>
+<tr class="separator:a798b283fb058d321b8627097142a7e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63aace26cb7ff89d45d7a6abdc79b3e3"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a63aace26cb7ff89d45d7a6abdc79b3e3">getOutputMaxDeadbad</a> ()</td></tr>
+<tr class="separator:a63aace26cb7ff89d45d7a6abdc79b3e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0e60cd163f49aaf5dc34353a6650953"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#ac0e60cd163f49aaf5dc34353a6650953">getOutputStop</a> ()</td></tr>
+<tr class="separator:ac0e60cd163f49aaf5dc34353a6650953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a702890e63da27ace0ec16b30d53e0c9e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a702890e63da27ace0ec16b30d53e0c9e">getFreeSpinMaxDegreesPerSecond</a> ()</td></tr>
+<tr class="separator:a702890e63da27ace0ec16b30d53e0c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a292e9bc7f736e94ee0df376a08efae33"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33">ticksToDeg</a> ()</td></tr>
+<tr class="separator:a292e9bc7f736e94ee0df376a08efae33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13b544dea5b972b67dc9035e2c795416"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a13b544dea5b972b67dc9035e2c795416">setOutputBoundingValues</a> (int64_t <a class="el" href="classPIDMotor.html#a4db4f7580139184e9ec7ee4a5180e1ba">outputMin</a>, int64_t <a class="el" href="classPIDMotor.html#aac3fce8d08e1fe1788326bf7aecccf31">outputMax</a>, int64_t <a class="el" href="classPIDMotor.html#aa606a607e25953aaae2be040a659b2e5">outputStop</a>, int64_t <a class="el" href="classPIDMotor.html#a24697fc6fef8b2564d4e6dc4bde2e970">outputMinDeadbad</a>, int64_t <a class="el" href="classPIDMotor.html#a8fd9eb49a0999da0cc6a3d799ed9845a">outputMaxDeadbad</a>, double <a class="el" href="classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33">ticksToDeg</a>, double <a class="el" href="classPIDMotor.html#a702890e63da27ace0ec16b30d53e0c9e">getFreeSpinMaxDegreesPerSecond</a>)</td></tr>
+<tr class="separator:a13b544dea5b972b67dc9035e2c795416"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a500f91801cf488296530931556151fbc"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a500f91801cf488296530931556151fbc">calcCur</a> (void)=0</td></tr>
 <tr class="separator:a500f91801cf488296530931556151fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b1db2bd137a8667ed39d82bc671d1b7"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a0b1db2bd137a8667ed39d82bc671d1b7">getFreeSpinMaxDegreesPerSecond</a> ()=0</td></tr>
-<tr class="separator:a0b1db2bd137a8667ed39d82bc671d1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a804fb78d6d87e55d96d4b798935c8809"><td class="memItemLeft" align="right" valign="top">virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809">getPosition</a> ()=0</td></tr>
+<tr class="separator:a804fb78d6d87e55d96d4b798935c8809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a1452c87f6abd3729ec12824a74abca"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a6a1452c87f6abd3729ec12824a74abca">overrideCurrentPositionHardware</a> (int64_t val)=0</td></tr>
+<tr class="separator:a6a1452c87f6abd3729ec12824a74abca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:ae9d7514135efe7785de2e12c37596cf3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#ae9d7514135efe7785de2e12c37596cf3">unitDuration</a> =1</td></tr>
+<tr class="memitem:ae9d7514135efe7785de2e12c37596cf3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#ae9d7514135efe7785de2e12c37596cf3">unitDuration</a> = 1</td></tr>
 <tr class="separator:ae9d7514135efe7785de2e12c37596cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0882b047a418b1b4ba6ecd02e07d32bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRBEPID.html">RBEPID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a0882b047a418b1b4ba6ecd02e07d32bf">myPID</a></td></tr>
 <tr class="separator:a0882b047a418b1b4ba6ecd02e07d32bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -229,6 +236,23 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a9a701288ddcc758e51ecdc4ed15180cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae65b1fb2b94080453fdf7a486c9dc89"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#aae65b1fb2b94080453fdf7a486c9dc89">targetDegreesPerSecond</a> = 0</td></tr>
 <tr class="separator:aae65b1fb2b94080453fdf7a486c9dc89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a4db4f7580139184e9ec7ee4a5180e1ba"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a4db4f7580139184e9ec7ee4a5180e1ba">outputMin</a> = -100</td></tr>
+<tr class="separator:a4db4f7580139184e9ec7ee4a5180e1ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac3fce8d08e1fe1788326bf7aecccf31"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#aac3fce8d08e1fe1788326bf7aecccf31">outputMax</a> = 100</td></tr>
+<tr class="separator:aac3fce8d08e1fe1788326bf7aecccf31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24697fc6fef8b2564d4e6dc4bde2e970"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a24697fc6fef8b2564d4e6dc4bde2e970">outputMinDeadbad</a> = 0</td></tr>
+<tr class="separator:a24697fc6fef8b2564d4e6dc4bde2e970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fd9eb49a0999da0cc6a3d799ed9845a"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a8fd9eb49a0999da0cc6a3d799ed9845a">outputMaxDeadbad</a> = 0</td></tr>
+<tr class="separator:a8fd9eb49a0999da0cc6a3d799ed9845a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa606a607e25953aaae2be040a659b2e5"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#aa606a607e25953aaae2be040a659b2e5">outputStop</a> = 0</td></tr>
+<tr class="separator:aa606a607e25953aaae2be040a659b2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6fc02702cf51681bdfe09c209c2e0fd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#af6fc02702cf51681bdfe09c209c2e0fd">myTicksToDeg</a></td></tr>
+<tr class="separator:af6fc02702cf51681bdfe09c209c2e0fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22cea5bee979882d49c1e9ae179a244e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a22cea5bee979882d49c1e9ae179a244e">freeSpinMaxDegreesPerSecond</a></td></tr>
+<tr class="separator:a22cea5bee979882d49c1e9ae179a244e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -249,7 +273,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00025">25</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="PIDMotor_8h_source.html#l00027">prevTime</a>, and <a class="el" href="PIDMotor_8h_source.html#l00031">Vel</a>.</p>
+<p>References <a class="el" href="PIDMotor_8h_source.html#l00063">prevTime</a>, and <a class="el" href="PIDMotor_8h_source.html#l00067">Vel</a>.</p>
 
 </div>
 </div>
@@ -330,11 +354,11 @@ Protected Attributes</h2></td></tr>
 <p>Returns Vel in degress/second</p>
 <dl class="section return"><dt>Returns</dt><dd>Returns Vel in degress/second </dd></dl>
 
-<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00194">194</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00214">214</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="PIDMotor_8h_source.html#l00026">curTime</a>, <a class="el" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809">getPosition()</a>, <a class="el" href="PIDMotor_8h_source.html#l00029">movement</a>, <a class="el" href="PIDMotor_8h_source.html#l00030">prevPos</a>, <a class="el" href="PIDMotor_8h_source.html#l00027">prevTime</a>, <a class="el" href="classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374">ticksToDeg()</a>, <a class="el" href="PIDMotor_8h_source.html#l00028">timeInterval</a>, and <a class="el" href="PIDMotor_8h_source.html#l00031">Vel</a>.</p>
+<p>References <a class="el" href="PIDMotor_8h_source.html#l00062">curTime</a>, <a class="el" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809">getPosition()</a>, <a class="el" href="PIDMotor_8h_source.html#l00065">movement</a>, <a class="el" href="PIDMotor_8h_source.html#l00066">prevPos</a>, <a class="el" href="PIDMotor_8h_source.html#l00063">prevTime</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00377">ticksToDeg()</a>, <a class="el" href="PIDMotor_8h_source.html#l00064">timeInterval</a>, and <a class="el" href="PIDMotor_8h_source.html#l00067">Vel</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00179">getVelocityDegreesPerSecond()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00037">loop()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00199">getVelocityDegreesPerSecond()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00064">loop()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -342,7 +366,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classPIDMotor_a7f73964441f27c0eb1247604dae09bd0_cgraph.png" border="0" usemap="#classPIDMotor_a7f73964441f27c0eb1247604dae09bd0_cgraph" alt=""/></div>
 <map name="classPIDMotor_a7f73964441f27c0eb1247604dae09bd0_cgraph" id="classPIDMotor_a7f73964441f27c0eb1247604dae09bd0_cgraph">
 <area shape="rect" id="node2" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809" title="PIDMotor::getPosition" alt="" coords="184,5,335,32"/>
-<area shape="rect" id="node3" href="classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374" title="PIDMotor::ticksToDeg" alt="" coords="183,56,336,83"/>
+<area shape="rect" id="node3" href="classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33" title="PIDMotor::ticksToDeg" alt="" coords="183,56,336,83"/>
 </map>
 </div>
 </p>
@@ -364,9 +388,9 @@ Here is the call graph for this function:</div>
 <p>Get the current position of the motor converted to Degrees</p>
 <dl class="section return"><dt>Returns</dt><dd>teh position in degrees </dd></dl>
 
-<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00184">184</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00204">204</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809">getPosition()</a>, and <a class="el" href="classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374">ticksToDeg()</a>.</p>
+<p>References <a class="el" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809">getPosition()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00377">ticksToDeg()</a>.</p>
 
 <p>Referenced by <a class="el" href="GetPIDData_8cpp_source.html#l00021">GetPIDData::event()</a>.</p>
 
@@ -376,184 +400,170 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classPIDMotor_a30fafa2f674001af8bf25d771532620b_cgraph.png" border="0" usemap="#classPIDMotor_a30fafa2f674001af8bf25d771532620b_cgraph" alt=""/></div>
 <map name="classPIDMotor_a30fafa2f674001af8bf25d771532620b_cgraph" id="classPIDMotor_a30fafa2f674001af8bf25d771532620b_cgraph">
 <area shape="rect" id="node2" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809" title="PIDMotor::getPosition" alt="" coords="241,5,392,32"/>
-<area shape="rect" id="node3" href="classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374" title="PIDMotor::ticksToDeg" alt="" coords="240,56,393,83"/>
+<area shape="rect" id="node3" href="classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33" title="PIDMotor::ticksToDeg" alt="" coords="240,56,393,83"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a0b1db2bd137a8667ed39d82bc671d1b7"></a>
+<a class="anchor" id="a702890e63da27ace0ec16b30d53e0c9e"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual double PIDMotor::getFreeSpinMaxDegreesPerSecond </td>
+          <td class="memname">double PIDMotor::getFreeSpinMaxDegreesPerSecond </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>getFreeSpinMaxDegreesPerSecond</p>
 <dl class="section return"><dt>Returns</dt><dd>FreeSpinMaxDegreesPerSecond </dd></dl>
 
-<p>Implemented in <a class="el" href="classHBridgeEncoderPIDMotor.html#a6dfe1ce471c4353ddfeb4666d09f0638">HBridgeEncoderPIDMotor</a>, <a class="el" href="classServoAnalogPIDMotor.html#a21ae942ab0187c8ed88ae53267651379">ServoAnalogPIDMotor</a>, and <a class="el" href="classServoEncoderPIDMotor.html#a432c41e432d0c6de092733f8268a010e">ServoEncoderPIDMotor</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00369">369</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00092">setVelocityDegreesPerSecond()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00080">velocityLoop()</a>.</p>
+<p>References <a class="el" href="PIDMotor_8h_source.html#l00054">freeSpinMaxDegreesPerSecond</a>.</p>
+
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00112">setVelocityDegreesPerSecond()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00100">velocityLoop()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8b887c7979f6c92171a0d261356396cf"></a>
+<a class="anchor" id="a4b178659f339c95aa78bfb1a9e77c338"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int64_t PIDMotor::getOutputMax </td>
+          <td class="memname">float PIDMotor::getInterpolationUnitIncrement </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
+</div><div class="memdoc">
+<p>getInterpolationUnitIncrement A unit vector from 0 to 1 representing the state of the interpolation. </p>
+
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00040">40</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+
+<p>References <a class="el" href="PIDMotor_8h_source.html#l00086">duration</a>, <a class="el" href="PIDMotor_8h_source.html#l00087">mode</a>, <a class="el" href="PIDMotor_8h_source.html#l00016">SIN</a>, <a class="el" href="PIDMotor_8h_source.html#l00085">startTime</a>, and <a class="el" href="PIDMotor_8h_source.html#l00106">unitDuration</a>.</p>
+
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00058">isInterpolationDone()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00064">loop()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7a743e25e68c808e71bc5724e8130748"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t PIDMotor::getOutputMax </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 <p>getOutputMax</p>
 <dl class="section return"><dt>Returns</dt><dd>OutputMax </dd></dl>
 
-<p>Implemented in <a class="el" href="classServoAnalogPIDMotor.html#a0424a51ee86b4cd042cf8da816b87422">ServoAnalogPIDMotor</a>, <a class="el" href="classHBridgeEncoderPIDMotor.html#a1b9d76bfa982f87040e92def0306fbcb">HBridgeEncoderPIDMotor</a>, and <a class="el" href="classServoEncoderPIDMotor.html#a9c227ebfeb9056674c8d51285881ee74">ServoEncoderPIDMotor</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00334">334</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00106">setOutputUnitVector()</a>.</p>
+<p>References <a class="el" href="PIDMotor_8h_source.html#l00027">outputMax</a>.</p>
+
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00126">setOutputUnitVector()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4de032edefde7388575a7b54d49c01e0"></a>
+<a class="anchor" id="a63aace26cb7ff89d45d7a6abdc79b3e3"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int64_t PIDMotor::getOutputMaxDeadbad </td>
+          <td class="memname">int64_t PIDMotor::getOutputMaxDeadbad </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>getOutputMaxDeadbad</p>
 <dl class="section return"><dt>Returns</dt><dd>OutputMaxDeadbad </dd></dl>
 
-<p>Implemented in <a class="el" href="classServoAnalogPIDMotor.html#a66995548ef1805c3566446c4cf9b58d9">ServoAnalogPIDMotor</a>, <a class="el" href="classHBridgeEncoderPIDMotor.html#a0329ae4e31a02e0fefdfcc19e29318ba">HBridgeEncoderPIDMotor</a>, and <a class="el" href="classServoEncoderPIDMotor.html#a8a7687d3f24f7a624f5ca04bf1d8739c">ServoEncoderPIDMotor</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00352">352</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00106">setOutputUnitVector()</a>.</p>
+<p>References <a class="el" href="PIDMotor_8h_source.html#l00039">outputMaxDeadbad</a>.</p>
+
+<p>Referenced by <a class="el" href="HBridgeEncoderPIDMotor_8cpp_source.html#l00039">HBridgeEncoderPIDMotor::setOutput()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00126">setOutputUnitVector()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a937efb0b127059ca11c122f5f823fe71"></a>
+<a class="anchor" id="a54dd9a1ed9fa34f9070e3aa473f47fae"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int64_t PIDMotor::getOutputMin </td>
+          <td class="memname">int64_t PIDMotor::getOutputMin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>getOutputMin</p>
 <dl class="section return"><dt>Returns</dt><dd>OutputMin </dd></dl>
 
-<p>Implemented in <a class="el" href="classServoAnalogPIDMotor.html#a921e7ee4dbe077c7aeb1bcfb8e928264">ServoAnalogPIDMotor</a>, <a class="el" href="classHBridgeEncoderPIDMotor.html#a88d612bc761356e48e9e66ed9deb837c">HBridgeEncoderPIDMotor</a>, and <a class="el" href="classServoEncoderPIDMotor.html#aa95daedaf498056cee306844d1e274ee">ServoEncoderPIDMotor</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00325">325</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00106">setOutputUnitVector()</a>.</p>
+<p>References <a class="el" href="PIDMotor_8h_source.html#l00021">outputMin</a>.</p>
+
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00126">setOutputUnitVector()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a59430df840fafb87e734ecfbed9fce78"></a>
+<a class="anchor" id="a798b283fb058d321b8627097142a7e6d"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int64_t PIDMotor::getOutputMinDeadbad </td>
+          <td class="memname">int64_t PIDMotor::getOutputMinDeadbad </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>getOutputMinDeadbad</p>
 <dl class="section return"><dt>Returns</dt><dd>OutputMinDeadbad </dd></dl>
 
-<p>Implemented in <a class="el" href="classServoAnalogPIDMotor.html#acf30d3fa025757a201111dca8161c963">ServoAnalogPIDMotor</a>, <a class="el" href="classHBridgeEncoderPIDMotor.html#a1e6661eaaf4859031fd1dec0850e6f48">HBridgeEncoderPIDMotor</a>, and <a class="el" href="classServoEncoderPIDMotor.html#a98ff26904f028d70530325a20eb00f70">ServoEncoderPIDMotor</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00343">343</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00106">setOutputUnitVector()</a>.</p>
+<p>References <a class="el" href="PIDMotor_8h_source.html#l00033">outputMinDeadbad</a>.</p>
+
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00126">setOutputUnitVector()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a81a7e9b5bdcdf4291a22e70b1a540ee8"></a>
+<a class="anchor" id="ac0e60cd163f49aaf5dc34353a6650953"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int64_t PIDMotor::getOutputStop </td>
+          <td class="memname">int64_t PIDMotor::getOutputStop </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>getOutputStop</p>
 <dl class="section return"><dt>Returns</dt><dd>OutputStop </dd></dl>
 
-<p>Implemented in <a class="el" href="classServoAnalogPIDMotor.html#afb9d23a11b456bd082dc6a31b63fb76b">ServoAnalogPIDMotor</a>, <a class="el" href="classHBridgeEncoderPIDMotor.html#a157ca98515b9012c432cebc3fc2bce92">HBridgeEncoderPIDMotor</a>, and <a class="el" href="classServoEncoderPIDMotor.html#a1d09680e916aac657c18416bef352a1a">ServoEncoderPIDMotor</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00361">361</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00106">setOutputUnitVector()</a>.</p>
+<p>References <a class="el" href="PIDMotor_8h_source.html#l00045">outputStop</a>.</p>
+
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00126">setOutputUnitVector()</a>.</p>
 
 </div>
 </div>
@@ -582,7 +592,7 @@ Here is the call graph for this function:</div>
 
 <p>Implemented in <a class="el" href="classServoAnalogPIDMotor.html#ad6ea5e73f0ee9edf35ae1a3c59eee467">ServoAnalogPIDMotor</a>, <a class="el" href="classHBridgeEncoderPIDMotor.html#aaf50960b179c4d9b0a059b3b4b41b14d">HBridgeEncoderPIDMotor</a>, and <a class="el" href="classServoEncoderPIDMotor.html#ace3748b0fc47372137067424ce7c664f">ServoEncoderPIDMotor</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00194">calcVel()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00184">getAngleDegrees()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00037">loop()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00171">SetTunings()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00221">stop()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00214">calcVel()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00204">getAngleDegrees()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00064">loop()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00191">SetTunings()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00241">stop()</a>.</p>
 
 </div>
 </div>
@@ -609,11 +619,11 @@ Here is the call graph for this function:</div>
 <p>Get the setpoint</p>
 <dl class="section return"><dt>Returns</dt><dd>the setpoint in sensor "Ticks" </dd></dl>
 
-<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00157">157</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00177">177</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="PIDMotor_8h_source.html#l00024">Setpoint</a>.</p>
+<p>References <a class="el" href="PIDMotor_8h_source.html#l00060">Setpoint</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00161">getSetPointDegrees()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00181">getSetPointDegrees()</a>.</p>
 
 </div>
 </div>
@@ -632,9 +642,9 @@ Here is the call graph for this function:</div>
 <p>Get the setpoint</p>
 <dl class="section return"><dt>Returns</dt><dd>the setpoint in degrees </dd></dl>
 
-<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00161">161</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00181">181</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="PIDMotor_8cpp_source.html#l00157">getSetPoint()</a>, and <a class="el" href="classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374">ticksToDeg()</a>.</p>
+<p>References <a class="el" href="PIDMotor_8cpp_source.html#l00177">getSetPoint()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00377">ticksToDeg()</a>.</p>
 
 <p>Referenced by <a class="el" href="GetPIDData_8cpp_source.html#l00021">GetPIDData::event()</a>.</p>
 
@@ -644,7 +654,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classPIDMotor_a3c8496df466934c31b344bd342621d6d_cgraph.png" border="0" usemap="#classPIDMotor_a3c8496df466934c31b344bd342621d6d_cgraph" alt=""/></div>
 <map name="classPIDMotor_a3c8496df466934c31b344bd342621d6d_cgraph" id="classPIDMotor_a3c8496df466934c31b344bd342621d6d_cgraph">
 <area shape="rect" id="node2" href="classPIDMotor.html#ab4fc140e1212fa3c192feca5bcbd7acc" title="PIDMotor::getSetPoint" alt="" coords="256,5,411,32"/>
-<area shape="rect" id="node3" href="classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374" title="PIDMotor::ticksToDeg" alt="" coords="257,56,410,83"/>
+<area shape="rect" id="node3" href="classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33" title="PIDMotor::ticksToDeg" alt="" coords="257,56,410,83"/>
 </map>
 </div>
 </p>
@@ -666,9 +676,9 @@ Here is the call graph for this function:</div>
 <p>Get the velocity of the plant</p>
 <dl class="section return"><dt>Returns</dt><dd>the velocity in DegreesPerSecond </dd></dl>
 
-<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00179">179</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00199">199</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="PIDMotor_8cpp_source.html#l00194">calcVel()</a>.</p>
+<p>References <a class="el" href="PIDMotor_8cpp_source.html#l00214">calcVel()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -677,7 +687,37 @@ Here is the call graph for this function:</div>
 <map name="classPIDMotor_a1e251bea3d32a8b3b8028e0d400ba47f_cgraph" id="classPIDMotor_a1e251bea3d32a8b3b8028e0d400ba47f_cgraph">
 <area shape="rect" id="node2" href="classPIDMotor.html#a7f73964441f27c0eb1247604dae09bd0" title="PIDMotor::calcVel" alt="" coords="253,31,383,57"/>
 <area shape="rect" id="node3" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809" title="PIDMotor::getPosition" alt="" coords="432,5,583,32"/>
-<area shape="rect" id="node4" href="classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374" title="PIDMotor::ticksToDeg" alt="" coords="431,56,584,83"/>
+<area shape="rect" id="node4" href="classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33" title="PIDMotor::ticksToDeg" alt="" coords="431,56,584,83"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac7a8cb2fcf9c941cedd10864b9463fb7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PIDMotor::isInterpolationDone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>isInterpolationDone check if the interpolation is done or not </p><dl class="section return"><dt>Returns</dt><dd>bool is the interpolation done </dd></dl>
+
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00058">58</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+
+<p>References <a class="el" href="PIDMotor_8cpp_source.html#l00040">getInterpolationUnitIncrement()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPIDMotor_ac7a8cb2fcf9c941cedd10864b9463fb7_cgraph.png" border="0" usemap="#classPIDMotor_ac7a8cb2fcf9c941cedd10864b9463fb7_cgraph" alt=""/></div>
+<map name="classPIDMotor_ac7a8cb2fcf9c941cedd10864b9463fb7_cgraph" id="classPIDMotor_ac7a8cb2fcf9c941cedd10864b9463fb7_cgraph">
+<area shape="rect" id="node2" href="classPIDMotor.html#a4b178659f339c95aa78bfb1a9e77c338" title="PIDMotor::getInterpolation\lUnitIncrement" alt="" coords="252,5,427,47"/>
 </map>
 </div>
 </p>
@@ -698,11 +738,11 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Perform the PID calculations and apply the result to the actuators </p>
 
-<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00037">37</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00064">64</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="RBEPID_8cpp_source.html#l00031">RBEPID::calc()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00194">calcVel()</a>, <a class="el" href="RBEPID_8cpp_source.html#l00055">RBEPID::clearIntegralBuffer()</a>, <a class="el" href="PIDMotor_8h_source.html#l00050">duration</a>, <a class="el" href="PIDMotor_8h_source.html#l00048">endSetpoint</a>, <a class="el" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809">getPosition()</a>, <a class="el" href="PIDMotor_8h_source.html#l00024">Input</a>, <a class="el" href="PIDMotor_8h_source.html#l00025">lastErrPositive</a>, <a class="el" href="PIDMotor_8h_source.html#l00022">lastTimeRunPID</a>, <a class="el" href="PIDMotor_8h_source.html#l00051">mode</a>, <a class="el" href="PIDMotor_8h_source.html#l00073">myPID</a>, <a class="el" href="PIDMotor_8h_source.html#l00024">Output</a>, <a class="el" href="RBEPID_8h_source.html#l00020">RBEPID::sampleRateMs</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00106">setOutputUnitVector()</a>, <a class="el" href="PIDMotor_8h_source.html#l00024">Setpoint</a>, <a class="el" href="PIDMotor_8h_source.html#l00016">SIN</a>, <a class="el" href="PIDMotor_8h_source.html#l00047">startSetpoint</a>, <a class="el" href="PIDMotor_8h_source.html#l00049">startTime</a>, <a class="el" href="PIDMotor_8h_source.html#l00069">unitDuration</a>, <a class="el" href="PIDMotor_8h_source.html#l00016">VEL</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00080">velocityLoop()</a>.</p>
+<p>References <a class="el" href="RBEPID_8cpp_source.html#l00031">RBEPID::calc()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00214">calcVel()</a>, <a class="el" href="RBEPID_8cpp_source.html#l00055">RBEPID::clearIntegralBuffer()</a>, <a class="el" href="PIDMotor_8h_source.html#l00084">endSetpoint</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00040">getInterpolationUnitIncrement()</a>, <a class="el" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809">getPosition()</a>, <a class="el" href="PIDMotor_8h_source.html#l00060">Input</a>, <a class="el" href="PIDMotor_8h_source.html#l00061">lastErrPositive</a>, <a class="el" href="PIDMotor_8h_source.html#l00058">lastTimeRunPID</a>, <a class="el" href="PIDMotor_8h_source.html#l00087">mode</a>, <a class="el" href="PIDMotor_8h_source.html#l00110">myPID</a>, <a class="el" href="PIDMotor_8h_source.html#l00060">Output</a>, <a class="el" href="RBEPID_8h_source.html#l00020">RBEPID::sampleRateMs</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00126">setOutputUnitVector()</a>, <a class="el" href="PIDMotor_8h_source.html#l00060">Setpoint</a>, <a class="el" href="PIDMotor_8h_source.html#l00083">startSetpoint</a>, <a class="el" href="PIDMotor_8h_source.html#l00106">unitDuration</a>, <a class="el" href="PIDMotor_8h_source.html#l00016">VEL</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00100">velocityLoop()</a>.</p>
 
-<p>Referenced by <a class="el" href="StudentsRobot_8cpp_source.html#l00061">StudentsRobot::pidLoop()</a>.</p>
+<p>Referenced by <a class="el" href="StudentsRobot_8cpp_source.html#l00109">StudentsRobot::pidLoop()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -713,17 +753,18 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node3" href="classPIDMotor.html#a7f73964441f27c0eb1247604dae09bd0" title="PIDMotor::calcVel" alt="" coords="193,107,322,133"/>
 <area shape="rect" id="node4" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809" title="PIDMotor::getPosition" alt="" coords="426,56,577,83"/>
 <area shape="rect" id="node6" href="classRBEPID.html#adc6954f2aaa12295fc58ca1dcfca3dc1" title="RBEPID::clearIntegralBuffer" alt="" coords="164,157,351,184"/>
-<area shape="rect" id="node7" href="classPIDMotor.html#af3660a46b5b7614ba1a5812a85d103ef" title="PIDMotor::setOutputUnitVector" alt="" coords="399,208,604,235"/>
-<area shape="rect" id="node15" href="classPIDMotor.html#af5a516cd4dc617063b61632ce9968df1" title="PIDMotor::velocityLoop" alt="" coords="178,259,337,285"/>
-<area shape="rect" id="node5" href="classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374" title="PIDMotor::ticksToDeg" alt="" coords="425,107,578,133"/>
-<area shape="rect" id="node8" href="classPIDMotor.html#a81a7e9b5bdcdf4291a22e70b1a540ee8" title="PIDMotor::getOutputStop" alt="" coords="677,31,847,57"/>
-<area shape="rect" id="node9" href="classPIDMotor.html#a8b887c7979f6c92171a0d261356396cf" title="PIDMotor::getOutputMax" alt="" coords="678,81,846,108"/>
-<area shape="rect" id="node10" href="classPIDMotor.html#a937efb0b127059ca11c122f5f823fe71" title="PIDMotor::getOutputMin" alt="" coords="680,132,844,159"/>
-<area shape="rect" id="node11" href="classPIDMotor.html#a4f30d949a3c41afb995caef9fb207e05" title="PIDMotor::myFmap" alt="" coords="693,335,831,361"/>
-<area shape="rect" id="node12" href="classPIDMotor.html#a4de032edefde7388575a7b54d49c01e0" title="PIDMotor::getOutputMaxDeadbad" alt="" coords="652,183,872,209"/>
-<area shape="rect" id="node13" href="classPIDMotor.html#a59430df840fafb87e734ecfbed9fce78" title="PIDMotor::getOutputMinDeadbad" alt="" coords="654,233,870,260"/>
-<area shape="rect" id="node14" href="classPIDMotor.html#af1c954ea7fa21d4685a67b06f66c1982" title="PIDMotor::setOutput" alt="" coords="691,284,833,311"/>
-<area shape="rect" id="node16" href="classPIDMotor.html#a0b1db2bd137a8667ed39d82bc671d1b7" title="PIDMotor::getFreeSpinMax\lDegreesPerSecond" alt="" coords="411,310,592,351"/>
+<area shape="rect" id="node7" href="classPIDMotor.html#a4b178659f339c95aa78bfb1a9e77c338" title="PIDMotor::getInterpolation\lUnitIncrement" alt="" coords="170,209,345,250"/>
+<area shape="rect" id="node8" href="classPIDMotor.html#af3660a46b5b7614ba1a5812a85d103ef" title="PIDMotor::setOutputUnitVector" alt="" coords="399,275,604,301"/>
+<area shape="rect" id="node16" href="classPIDMotor.html#af5a516cd4dc617063b61632ce9968df1" title="PIDMotor::velocityLoop" alt="" coords="178,325,337,352"/>
+<area shape="rect" id="node5" href="classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33" title="PIDMotor::ticksToDeg" alt="" coords="425,107,578,133"/>
+<area shape="rect" id="node9" href="classPIDMotor.html#ac0e60cd163f49aaf5dc34353a6650953" title="PIDMotor::getOutputStop" alt="" coords="677,97,847,124"/>
+<area shape="rect" id="node10" href="classPIDMotor.html#a7a743e25e68c808e71bc5724e8130748" title="PIDMotor::getOutputMax" alt="" coords="678,148,846,175"/>
+<area shape="rect" id="node11" href="classPIDMotor.html#a54dd9a1ed9fa34f9070e3aa473f47fae" title="PIDMotor::getOutputMin" alt="" coords="680,199,844,225"/>
+<area shape="rect" id="node12" href="classPIDMotor.html#a4f30d949a3c41afb995caef9fb207e05" title="PIDMotor::myFmap" alt="" coords="693,401,831,428"/>
+<area shape="rect" id="node13" href="classPIDMotor.html#a63aace26cb7ff89d45d7a6abdc79b3e3" title="PIDMotor::getOutputMaxDeadbad" alt="" coords="652,249,872,276"/>
+<area shape="rect" id="node14" href="classPIDMotor.html#a798b283fb058d321b8627097142a7e6d" title="PIDMotor::getOutputMinDeadbad" alt="" coords="654,300,870,327"/>
+<area shape="rect" id="node15" href="classPIDMotor.html#af1c954ea7fa21d4685a67b06f66c1982" title="PIDMotor::setOutput" alt="" coords="691,351,833,377"/>
+<area shape="rect" id="node17" href="classPIDMotor.html#a702890e63da27ace0ec16b30d53e0c9e" title="PIDMotor::getFreeSpinMax\lDegreesPerSecond" alt="" coords="411,377,592,418"/>
 </map>
 </div>
 </p>
@@ -784,7 +825,7 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00016">16</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00106">setOutputUnitVector()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00080">velocityLoop()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00126">setOutputUnitVector()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00100">velocityLoop()</a>.</p>
 
 </div>
 </div>
@@ -804,11 +845,11 @@ Here is the call graph for this function:</div>
 <p>overrideCurrentPosition Set the current position to be the one provided</p>
 <p>this is for calibrations </p>
 
-<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00138">138</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00158">158</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="RBEPID_8cpp_source.html#l00055">RBEPID::clearIntegralBuffer()</a>, <a class="el" href="PIDMotor_8h_source.html#l00016">LIN</a>, <a class="el" href="PIDMotor_8h_source.html#l00073">myPID</a>, <a class="el" href="classPIDMotor.html#a6a1452c87f6abd3729ec12824a74abca">overrideCurrentPositionHardware()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00238">startInterpolation()</a>.</p>
+<p>References <a class="el" href="RBEPID_8cpp_source.html#l00055">RBEPID::clearIntegralBuffer()</a>, <a class="el" href="PIDMotor_8h_source.html#l00016">LIN</a>, <a class="el" href="PIDMotor_8h_source.html#l00110">myPID</a>, <a class="el" href="classPIDMotor.html#a6a1452c87f6abd3729ec12824a74abca">overrideCurrentPositionHardware()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00258">startInterpolation()</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00171">SetTunings()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00191">SetTunings()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -856,7 +897,7 @@ Here is the call graph for this function:</div>
 
 <p>Implemented in <a class="el" href="classServoAnalogPIDMotor.html#a2a2d6f4b8cef0001347dd26ba0c97c54">ServoAnalogPIDMotor</a>, <a class="el" href="classHBridgeEncoderPIDMotor.html#af6d62529ad7bf29787c1a8d43750482f">HBridgeEncoderPIDMotor</a>, and <a class="el" href="classServoEncoderPIDMotor.html#a6ddb824e5869bbaa03fe865205ae30d7">ServoEncoderPIDMotor</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00138">overrideCurrentPosition()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00158">overrideCurrentPosition()</a>.</p>
 
 </div>
 </div>
@@ -876,9 +917,9 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00033">33</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="RBEPID_8cpp_source.html#l00055">RBEPID::clearIntegralBuffer()</a>, and <a class="el" href="PIDMotor_8h_source.html#l00073">myPID</a>.</p>
+<p>References <a class="el" href="RBEPID_8cpp_source.html#l00055">RBEPID::clearIntegralBuffer()</a>, and <a class="el" href="PIDMotor_8h_source.html#l00110">myPID</a>.</p>
 
-<p>Referenced by <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00019">ServoEncoderPIDMotor::attach()</a>, <a class="el" href="HBridgeEncoderPIDMotor_8cpp_source.html#l00019">HBridgeEncoderPIDMotor::attach()</a>, and <a class="el" href="ServoAnalogPIDMotor_8cpp_source.html#l00015">ServoAnalogPIDMotor::attach()</a>.</p>
+<p>Referenced by <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00024">ServoEncoderPIDMotor::attach()</a>, <a class="el" href="HBridgeEncoderPIDMotor_8cpp_source.html#l00026">HBridgeEncoderPIDMotor::attach()</a>, and <a class="el" href="ServoAnalogPIDMotor_8cpp_source.html#l00017">ServoAnalogPIDMotor::attach()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -918,7 +959,92 @@ Here is the call graph for this function:</div>
 
 <p>Implemented in <a class="el" href="classServoAnalogPIDMotor.html#a27b973ae23d49fbe8dfae98edcdc5ea7">ServoAnalogPIDMotor</a>, <a class="el" href="classHBridgeEncoderPIDMotor.html#a26e55b549bf8cf6b096d9379e555adf8">HBridgeEncoderPIDMotor</a>, and <a class="el" href="classServoEncoderPIDMotor.html#a380934c0f4e53ff842db0c4abf33eb91">ServoEncoderPIDMotor</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00106">setOutputUnitVector()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00126">setOutputUnitVector()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a13b544dea5b972b67dc9035e2c795416"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PIDMotor::setOutputBoundingValues </td>
+          <td>(</td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>outputMin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>outputMax</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>outputStop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>outputMinDeadbad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>outputMaxDeadbad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ticksToDeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>freeSpinMaxDegreesPerSecond</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the bounds of the output stage</p>
+<p>These are the values to determing the opperating range of the output of this PID motor. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outputMin</td><td>the minimum value that the output takes (Full reverse) </td></tr>
+    <tr><td class="paramname">outputMax</td><td>the maximum value the output takes (Full forwared) </td></tr>
+    <tr><td class="paramname">outputStop</td><td>the value of the output to stop moving </td></tr>
+    <tr><td class="paramname">outputMinDeadbad</td><td>a positive value added to the stop value to creep backward </td></tr>
+    <tr><td class="paramname">outputMaxDeadbad</td><td>a positive value subtracted from stop value to creep forwards </td></tr>
+    <tr><td class="paramname">a</td><td>value to convert from degrees to motor units. This number times degrees equals ticks; </td></tr>
+    <tr><td class="paramname">getFreeSpinMaxDegreesPerSecond</td><td>a value in degrees per second that represents the maximum freespinning speed of the motor running at 'outputMax'. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00309">309</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+
+<p>References <a class="el" href="PIDMotor_8h_source.html#l00054">freeSpinMaxDegreesPerSecond</a>, <a class="el" href="PIDMotor_8h_source.html#l00049">myTicksToDeg</a>, <a class="el" href="PIDMotor_8h_source.html#l00027">outputMax</a>, <a class="el" href="PIDMotor_8h_source.html#l00039">outputMaxDeadbad</a>, <a class="el" href="PIDMotor_8h_source.html#l00021">outputMin</a>, <a class="el" href="PIDMotor_8h_source.html#l00033">outputMinDeadbad</a>, <a class="el" href="PIDMotor_8h_source.html#l00045">outputStop</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00377">ticksToDeg()</a>.</p>
+
+<p>Referenced by <a class="el" href="HBridgeEncoderPIDMotor_8cpp_source.html#l00010">HBridgeEncoderPIDMotor::HBridgeEncoderPIDMotor()</a>, <a class="el" href="ServoAnalogPIDMotor_8cpp_source.html#l00010">ServoAnalogPIDMotor::ServoAnalogPIDMotor()</a>, <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00010">ServoEncoderPIDMotor::ServoEncoderPIDMotor()</a>, and <a class="el" href="StudentsRobot_8cpp_source.html#l00010">StudentsRobot::StudentsRobot()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPIDMotor_a13b544dea5b972b67dc9035e2c795416_cgraph.png" border="0" usemap="#classPIDMotor_a13b544dea5b972b67dc9035e2c795416_cgraph" alt=""/></div>
+<map name="classPIDMotor_a13b544dea5b972b67dc9035e2c795416_cgraph" id="classPIDMotor_a13b544dea5b972b67dc9035e2c795416_cgraph">
+<area shape="rect" id="node2" href="classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33" title="PIDMotor::ticksToDeg" alt="" coords="251,13,404,39"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -943,22 +1069,22 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00106">106</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00126">126</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="classPIDMotor.html#a8b887c7979f6c92171a0d261356396cf">getOutputMax()</a>, <a class="el" href="classPIDMotor.html#a4de032edefde7388575a7b54d49c01e0">getOutputMaxDeadbad()</a>, <a class="el" href="classPIDMotor.html#a937efb0b127059ca11c122f5f823fe71">getOutputMin()</a>, <a class="el" href="classPIDMotor.html#a59430df840fafb87e734ecfbed9fce78">getOutputMinDeadbad()</a>, <a class="el" href="classPIDMotor.html#a81a7e9b5bdcdf4291a22e70b1a540ee8">getOutputStop()</a>, <a class="el" href="PIDMotor_8h_source.html#l00084">hardwareOutput</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00016">myFmap()</a>, <a class="el" href="PIDMotor_8h_source.html#l00024">Output</a>, and <a class="el" href="classPIDMotor.html#af1c954ea7fa21d4685a67b06f66c1982">setOutput()</a>.</p>
+<p>References <a class="el" href="PIDMotor_8cpp_source.html#l00334">getOutputMax()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00352">getOutputMaxDeadbad()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00325">getOutputMin()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00343">getOutputMinDeadbad()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00361">getOutputStop()</a>, <a class="el" href="PIDMotor_8h_source.html#l00121">hardwareOutput</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00016">myFmap()</a>, <a class="el" href="PIDMotor_8h_source.html#l00060">Output</a>, and <a class="el" href="classPIDMotor.html#af1c954ea7fa21d4685a67b06f66c1982">setOutput()</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00037">loop()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00080">velocityLoop()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00064">loop()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00100">velocityLoop()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPIDMotor_af3660a46b5b7614ba1a5812a85d103ef_cgraph.png" border="0" usemap="#classPIDMotor_af3660a46b5b7614ba1a5812a85d103ef_cgraph" alt=""/></div>
 <map name="classPIDMotor_af3660a46b5b7614ba1a5812a85d103ef_cgraph" id="classPIDMotor_af3660a46b5b7614ba1a5812a85d103ef_cgraph">
-<area shape="rect" id="node2" href="classPIDMotor.html#a8b887c7979f6c92171a0d261356396cf" title="PIDMotor::getOutputMax" alt="" coords="285,5,453,32"/>
-<area shape="rect" id="node3" href="classPIDMotor.html#a4de032edefde7388575a7b54d49c01e0" title="PIDMotor::getOutputMaxDeadbad" alt="" coords="259,56,479,83"/>
-<area shape="rect" id="node4" href="classPIDMotor.html#a937efb0b127059ca11c122f5f823fe71" title="PIDMotor::getOutputMin" alt="" coords="287,107,451,133"/>
-<area shape="rect" id="node5" href="classPIDMotor.html#a59430df840fafb87e734ecfbed9fce78" title="PIDMotor::getOutputMinDeadbad" alt="" coords="261,157,477,184"/>
-<area shape="rect" id="node6" href="classPIDMotor.html#a81a7e9b5bdcdf4291a22e70b1a540ee8" title="PIDMotor::getOutputStop" alt="" coords="283,208,454,235"/>
+<area shape="rect" id="node2" href="classPIDMotor.html#a7a743e25e68c808e71bc5724e8130748" title="PIDMotor::getOutputMax" alt="" coords="285,5,453,32"/>
+<area shape="rect" id="node3" href="classPIDMotor.html#a63aace26cb7ff89d45d7a6abdc79b3e3" title="PIDMotor::getOutputMaxDeadbad" alt="" coords="259,56,479,83"/>
+<area shape="rect" id="node4" href="classPIDMotor.html#a54dd9a1ed9fa34f9070e3aa473f47fae" title="PIDMotor::getOutputMin" alt="" coords="287,107,451,133"/>
+<area shape="rect" id="node5" href="classPIDMotor.html#a798b283fb058d321b8627097142a7e6d" title="PIDMotor::getOutputMinDeadbad" alt="" coords="261,157,477,184"/>
+<area shape="rect" id="node6" href="classPIDMotor.html#ac0e60cd163f49aaf5dc34353a6650953" title="PIDMotor::getOutputStop" alt="" coords="283,208,454,235"/>
 <area shape="rect" id="node7" href="classPIDMotor.html#a4f30d949a3c41afb995caef9fb207e05" title="PIDMotor::myFmap" alt="" coords="300,259,437,285"/>
 <area shape="rect" id="node8" href="classPIDMotor.html#af1c954ea7fa21d4685a67b06f66c1982" title="PIDMotor::setOutput" alt="" coords="297,309,440,336"/>
 </map>
@@ -983,11 +1109,11 @@ Here is the call graph for this function:</div>
 <p>setSetpoint Set the desired setpoint for the PID controller</p>
 <p>the units for the variable is in sensor 'ticks' this will start a linear interpolation of 0 time </p>
 
-<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00151">151</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00171">171</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="PIDMotor_8h_source.html#l00016">LIN</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00238">startInterpolation()</a>.</p>
+<p>References <a class="el" href="PIDMotor_8h_source.html#l00016">LIN</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00258">startInterpolation()</a>.</p>
 
-<p>Referenced by <a class="el" href="StudentsRobot_8cpp_source.html#l00041">StudentsRobot::attach()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00253">setSetpointDegrees()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00221">stop()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00273">setSetpointDegrees()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00241">stop()</a>, and <a class="el" href="StudentsRobot_8cpp_source.html#l00010">StudentsRobot::StudentsRobot()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1017,9 +1143,9 @@ Here is the call graph for this function:</div>
 <p>setSetpointDegrees Set the desired setpoint for the PID controller</p>
 <p>the units for the variable is in Degrees this will start a linear interpolation of 0 time </p>
 
-<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00253">253</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00273">273</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="PIDMotor_8cpp_source.html#l00151">setSetpoint()</a>, and <a class="el" href="classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374">ticksToDeg()</a>.</p>
+<p>References <a class="el" href="PIDMotor_8cpp_source.html#l00171">setSetpoint()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00377">ticksToDeg()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1027,7 +1153,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classPIDMotor_a707369b2535319b2d2cd7c6c2287926f_cgraph.png" border="0" usemap="#classPIDMotor_a707369b2535319b2d2cd7c6c2287926f_cgraph" alt=""/></div>
 <map name="classPIDMotor_a707369b2535319b2d2cd7c6c2287926f_cgraph" id="classPIDMotor_a707369b2535319b2d2cd7c6c2287926f_cgraph">
 <area shape="rect" id="node2" href="classPIDMotor.html#a45fa4f564edfd6ae7f08bfb635c4d368" title="PIDMotor::setSetpoint" alt="" coords="255,5,407,32"/>
-<area shape="rect" id="node4" href="classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374" title="PIDMotor::ticksToDeg" alt="" coords="255,56,408,83"/>
+<area shape="rect" id="node4" href="classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33" title="PIDMotor::ticksToDeg" alt="" coords="255,56,408,83"/>
 <area shape="rect" id="node3" href="classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b" title="PIDMotor::startInterpolation" alt="" coords="456,5,639,32"/>
 </map>
 </div>
@@ -1074,9 +1200,9 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00171">171</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00191">191</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809">getPosition()</a>, <a class="el" href="PIDMotor_8h_source.html#l00073">myPID</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00138">overrideCurrentPosition()</a>, and <a class="el" href="RBEPID_8cpp_source.html#l00018">RBEPID::setpid()</a>.</p>
+<p>References <a class="el" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809">getPosition()</a>, <a class="el" href="PIDMotor_8h_source.html#l00110">myPID</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00158">overrideCurrentPosition()</a>, and <a class="el" href="RBEPID_8cpp_source.html#l00018">RBEPID::setpid()</a>.</p>
 
 <p>Referenced by <a class="el" href="SetPIDConstants_8cpp_source.html#l00017">SetPIDConstants::event()</a>.</p>
 
@@ -1130,9 +1256,9 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>KI must be 0 for velocity </dd></dl>
 
-<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00088">88</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00108">108</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="RBEPID_8cpp_source.html#l00018">RBEPID::setpid()</a>, and <a class="el" href="PIDMotor_8h_source.html#l00077">velocityPID</a>.</p>
+<p>References <a class="el" href="RBEPID_8cpp_source.html#l00018">RBEPID::setpid()</a>, and <a class="el" href="PIDMotor_8h_source.html#l00114">velocityPID</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1167,16 +1293,16 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00092">92</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00112">112</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="classPIDMotor.html#a0b1db2bd137a8667ed39d82bc671d1b7">getFreeSpinMaxDegreesPerSecond()</a>, <a class="el" href="PIDMotor_8h_source.html#l00051">mode</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00221">stop()</a>, <a class="el" href="PIDMotor_8h_source.html#l00052">targetDegreesPerSecond</a>, and <a class="el" href="PIDMotor_8h_source.html#l00016">VEL</a>.</p>
+<p>References <a class="el" href="PIDMotor_8cpp_source.html#l00369">getFreeSpinMaxDegreesPerSecond()</a>, <a class="el" href="PIDMotor_8h_source.html#l00087">mode</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00241">stop()</a>, <a class="el" href="PIDMotor_8h_source.html#l00088">targetDegreesPerSecond</a>, and <a class="el" href="PIDMotor_8h_source.html#l00016">VEL</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPIDMotor_a7c8326dcf4466f7e2abb0491b0bb80bc_cgraph.png" border="0" usemap="#classPIDMotor_a7c8326dcf4466f7e2abb0491b0bb80bc_cgraph" alt=""/></div>
 <map name="classPIDMotor_a7c8326dcf4466f7e2abb0491b0bb80bc_cgraph" id="classPIDMotor_a7c8326dcf4466f7e2abb0491b0bb80bc_cgraph">
-<area shape="rect" id="node2" href="classPIDMotor.html#a0b1db2bd137a8667ed39d82bc671d1b7" title="PIDMotor::getFreeSpinMax\lDegreesPerSecond" alt="" coords="253,5,435,47"/>
+<area shape="rect" id="node2" href="classPIDMotor.html#a702890e63da27ace0ec16b30d53e0c9e" title="PIDMotor::getFreeSpinMax\lDegreesPerSecond" alt="" coords="253,5,435,47"/>
 <area shape="rect" id="node3" href="classPIDMotor.html#ab70676b6d2cea7a85592715056bdb0dd" title="PIDMotor::stop" alt="" coords="289,71,399,98"/>
 <area shape="rect" id="node4" href="classPIDMotor.html#a45fa4f564edfd6ae7f08bfb635c4d368" title="PIDMotor::setSetpoint" alt="" coords="483,46,635,73"/>
 <area shape="rect" id="node6" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809" title="PIDMotor::getPosition" alt="" coords="483,97,634,123"/>
@@ -1238,11 +1364,11 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00238">238</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00258">258</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="PIDMotor_8h_source.html#l00050">duration</a>, <a class="el" href="PIDMotor_8h_source.html#l00048">endSetpoint</a>, <a class="el" href="PIDMotor_8h_source.html#l00051">mode</a>, <a class="el" href="PIDMotor_8h_source.html#l00024">Setpoint</a>, <a class="el" href="PIDMotor_8h_source.html#l00047">startSetpoint</a>, and <a class="el" href="PIDMotor_8h_source.html#l00049">startTime</a>.</p>
+<p>References <a class="el" href="PIDMotor_8h_source.html#l00086">duration</a>, <a class="el" href="PIDMotor_8h_source.html#l00084">endSetpoint</a>, <a class="el" href="PIDMotor_8h_source.html#l00087">mode</a>, <a class="el" href="PIDMotor_8h_source.html#l00060">Setpoint</a>, <a class="el" href="PIDMotor_8h_source.html#l00083">startSetpoint</a>, and <a class="el" href="PIDMotor_8h_source.html#l00085">startTime</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00138">overrideCurrentPosition()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00151">setSetpoint()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00270">startInterpolationDegrees()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00158">overrideCurrentPosition()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00171">setSetpoint()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00290">startInterpolationDegrees()</a>.</p>
 
 </div>
 </div>
@@ -1297,9 +1423,9 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00270">270</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00290">290</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="PIDMotor_8cpp_source.html#l00238">startInterpolation()</a>, and <a class="el" href="classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374">ticksToDeg()</a>.</p>
+<p>References <a class="el" href="PIDMotor_8cpp_source.html#l00258">startInterpolation()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00377">ticksToDeg()</a>.</p>
 
 <p>Referenced by <a class="el" href="SetPIDSetpoint_8cpp_source.html#l00017">SetPIDSetpoint::event()</a>.</p>
 
@@ -1309,7 +1435,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classPIDMotor_a59a361f6877ad6dd4504273646e433fd_cgraph.png" border="0" usemap="#classPIDMotor_a59a361f6877ad6dd4504273646e433fd_cgraph" alt=""/></div>
 <map name="classPIDMotor_a59a361f6877ad6dd4504273646e433fd_cgraph" id="classPIDMotor_a59a361f6877ad6dd4504273646e433fd_cgraph">
 <area shape="rect" id="node2" href="classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b" title="PIDMotor::startInterpolation" alt="" coords="236,5,419,32"/>
-<area shape="rect" id="node3" href="classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374" title="PIDMotor::ticksToDeg" alt="" coords="251,56,404,83"/>
+<area shape="rect" id="node3" href="classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33" title="PIDMotor::ticksToDeg" alt="" coords="251,56,404,83"/>
 </map>
 </div>
 </p>
@@ -1331,11 +1457,11 @@ Here is the call graph for this function:</div>
 <p>Stop the motion of the motor</p>
 <p>Set the PID position to current position and use the position controller to hold pose </p>
 
-<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00221">221</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00241">241</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809">getPosition()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00151">setSetpoint()</a>.</p>
+<p>References <a class="el" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809">getPosition()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00171">setSetpoint()</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00092">setVelocityDegreesPerSecond()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00112">setVelocityDegreesPerSecond()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1351,32 +1477,26 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a5178fdbeeb39bfbcdced03e0c5ef4374"></a>
+<a class="anchor" id="a292e9bc7f736e94ee0df376a08efae33"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual double PIDMotor::ticksToDeg </td>
+          <td class="memname">double PIDMotor::ticksToDeg </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>ticksToDeg</p>
 <dl class="section return"><dt>Returns</dt><dd>ticksToDeg </dd></dl>
 
-<p>Implemented in <a class="el" href="classHBridgeEncoderPIDMotor.html#a10593d2b367aef5876079805264ac1e6">HBridgeEncoderPIDMotor</a>, <a class="el" href="classServoAnalogPIDMotor.html#a88ecabfe98dc4d11cf6aac6c52c39675">ServoAnalogPIDMotor</a>, and <a class="el" href="classServoEncoderPIDMotor.html#ab14645fdd6c54c050a88327379432656">ServoEncoderPIDMotor</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00377">377</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00194">calcVel()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00184">getAngleDegrees()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00161">getSetPointDegrees()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00253">setSetpointDegrees()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00270">startInterpolationDegrees()</a>.</p>
+<p>References <a class="el" href="PIDMotor_8h_source.html#l00049">myTicksToDeg</a>.</p>
+
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00214">calcVel()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00204">getAngleDegrees()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00181">getSetPointDegrees()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00309">setOutputBoundingValues()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00273">setSetpointDegrees()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00290">startInterpolationDegrees()</a>.</p>
 
 </div>
 </div>
@@ -1394,25 +1514,25 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>velocityLoop updates teh output in velocity mode </p>
 
-<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00080">80</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8cpp_source.html#l00100">100</a> of file <a class="el" href="PIDMotor_8cpp_source.html">PIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="classPIDMotor.html#a0b1db2bd137a8667ed39d82bc671d1b7">getFreeSpinMaxDegreesPerSecond()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00016">myFmap()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00106">setOutputUnitVector()</a>, and <a class="el" href="PIDMotor_8h_source.html#l00052">targetDegreesPerSecond</a>.</p>
+<p>References <a class="el" href="PIDMotor_8cpp_source.html#l00369">getFreeSpinMaxDegreesPerSecond()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00016">myFmap()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00126">setOutputUnitVector()</a>, and <a class="el" href="PIDMotor_8h_source.html#l00088">targetDegreesPerSecond</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00037">loop()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00064">loop()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPIDMotor_af5a516cd4dc617063b61632ce9968df1_cgraph.png" border="0" usemap="#classPIDMotor_af5a516cd4dc617063b61632ce9968df1_cgraph" alt=""/></div>
 <map name="classPIDMotor_af5a516cd4dc617063b61632ce9968df1_cgraph" id="classPIDMotor_af5a516cd4dc617063b61632ce9968df1_cgraph">
-<area shape="rect" id="node2" href="classPIDMotor.html#a0b1db2bd137a8667ed39d82bc671d1b7" title="PIDMotor::getFreeSpinMax\lDegreesPerSecond" alt="" coords="224,5,405,47"/>
+<area shape="rect" id="node2" href="classPIDMotor.html#a702890e63da27ace0ec16b30d53e0c9e" title="PIDMotor::getFreeSpinMax\lDegreesPerSecond" alt="" coords="224,5,405,47"/>
 <area shape="rect" id="node3" href="classPIDMotor.html#a4f30d949a3c41afb995caef9fb207e05" title="PIDMotor::myFmap" alt="" coords="507,46,644,73"/>
 <area shape="rect" id="node4" href="classPIDMotor.html#af3660a46b5b7614ba1a5812a85d103ef" title="PIDMotor::setOutputUnitVector" alt="" coords="212,173,417,199"/>
-<area shape="rect" id="node5" href="classPIDMotor.html#a8b887c7979f6c92171a0d261356396cf" title="PIDMotor::getOutputMax" alt="" coords="491,97,659,123"/>
-<area shape="rect" id="node6" href="classPIDMotor.html#a4de032edefde7388575a7b54d49c01e0" title="PIDMotor::getOutputMaxDeadbad" alt="" coords="465,147,685,174"/>
-<area shape="rect" id="node7" href="classPIDMotor.html#a937efb0b127059ca11c122f5f823fe71" title="PIDMotor::getOutputMin" alt="" coords="493,198,657,225"/>
-<area shape="rect" id="node8" href="classPIDMotor.html#a59430df840fafb87e734ecfbed9fce78" title="PIDMotor::getOutputMinDeadbad" alt="" coords="467,249,683,275"/>
-<area shape="rect" id="node9" href="classPIDMotor.html#a81a7e9b5bdcdf4291a22e70b1a540ee8" title="PIDMotor::getOutputStop" alt="" coords="490,299,661,326"/>
+<area shape="rect" id="node5" href="classPIDMotor.html#a7a743e25e68c808e71bc5724e8130748" title="PIDMotor::getOutputMax" alt="" coords="491,97,659,123"/>
+<area shape="rect" id="node6" href="classPIDMotor.html#a63aace26cb7ff89d45d7a6abdc79b3e3" title="PIDMotor::getOutputMaxDeadbad" alt="" coords="465,147,685,174"/>
+<area shape="rect" id="node7" href="classPIDMotor.html#a54dd9a1ed9fa34f9070e3aa473f47fae" title="PIDMotor::getOutputMin" alt="" coords="493,198,657,225"/>
+<area shape="rect" id="node8" href="classPIDMotor.html#a798b283fb058d321b8627097142a7e6d" title="PIDMotor::getOutputMinDeadbad" alt="" coords="467,249,683,275"/>
+<area shape="rect" id="node9" href="classPIDMotor.html#ac0e60cd163f49aaf5dc34353a6650953" title="PIDMotor::getOutputStop" alt="" coords="490,299,661,326"/>
 <area shape="rect" id="node10" href="classPIDMotor.html#af1c954ea7fa21d4685a67b06f66c1982" title="PIDMotor::setOutput" alt="" coords="504,350,647,377"/>
 </map>
 </div>
@@ -1439,9 +1559,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00026">26</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00062">62</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00194">calcVel()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00214">calcVel()</a>.</p>
 
 </div>
 </div>
@@ -1463,9 +1583,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00050">50</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00086">86</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00037">loop()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00238">startInterpolation()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00040">getInterpolationUnitIncrement()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00258">startInterpolation()</a>.</p>
 
 </div>
 </div>
@@ -1487,9 +1607,33 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00048">48</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00084">84</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00037">loop()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00238">startInterpolation()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00064">loop()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00258">startInterpolation()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a22cea5bee979882d49c1e9ae179a244e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PIDMotor::freeSpinMaxDegreesPerSecond</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00054">54</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00369">getFreeSpinMaxDegreesPerSecond()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00309">setOutputBoundingValues()</a>.</p>
 
 </div>
 </div>
@@ -1505,9 +1649,9 @@ Here is the call graph for this function:</div>
 <p>The value that is being sent to the hardware</p>
 <p>View this variable in order to see what value is being sent to the motor directly </p>
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00084">84</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00121">121</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00106">setOutputUnitVector()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00126">setOutputUnitVector()</a>.</p>
 
 </div>
 </div>
@@ -1529,9 +1673,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00024">24</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00060">60</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00037">loop()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00064">loop()</a>.</p>
 
 </div>
 </div>
@@ -1553,9 +1697,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00025">25</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00061">61</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00037">loop()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00064">loop()</a>.</p>
 
 </div>
 </div>
@@ -1577,9 +1721,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00022">22</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00058">58</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00037">loop()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00064">loop()</a>.</p>
 
 </div>
 </div>
@@ -1601,9 +1745,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00051">51</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00087">87</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00037">loop()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00092">setVelocityDegreesPerSecond()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00238">startInterpolation()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00040">getInterpolationUnitIncrement()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00064">loop()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00112">setVelocityDegreesPerSecond()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00258">startInterpolation()</a>.</p>
 
 </div>
 </div>
@@ -1625,9 +1769,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00029">29</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00065">65</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00194">calcVel()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00214">calcVel()</a>.</p>
 
 </div>
 </div>
@@ -1642,9 +1786,33 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>The PID object for the position controller </p>
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00073">73</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00110">110</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="GetPIDConstants_8cpp_source.html#l00017">GetPIDConstants::event()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00037">loop()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00138">overrideCurrentPosition()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00033">pidinit()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00171">SetTunings()</a>.</p>
+<p>Referenced by <a class="el" href="GetPIDConstants_8cpp_source.html#l00017">GetPIDConstants::event()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00064">loop()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00158">overrideCurrentPosition()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00033">pidinit()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00191">SetTunings()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af6fc02702cf51681bdfe09c209c2e0fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double PIDMotor::myTicksToDeg</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00049">49</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00309">setOutputBoundingValues()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00377">ticksToDeg()</a>.</p>
 
 </div>
 </div>
@@ -1666,9 +1834,137 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00024">24</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00060">60</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00037">loop()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00106">setOutputUnitVector()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00064">loop()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00126">setOutputUnitVector()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aac3fce8d08e1fe1788326bf7aecccf31"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t PIDMotor::outputMax = 100</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>getOutputMax</p>
+<dl class="section return"><dt>Returns</dt><dd>OutputMax </dd></dl>
+
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00027">27</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00334">getOutputMax()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00309">setOutputBoundingValues()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8fd9eb49a0999da0cc6a3d799ed9845a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t PIDMotor::outputMaxDeadbad = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>getOutputMaxDeadbad</p>
+<dl class="section return"><dt>Returns</dt><dd>OutputMaxDeadbad </dd></dl>
+
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00039">39</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00352">getOutputMaxDeadbad()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00309">setOutputBoundingValues()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4db4f7580139184e9ec7ee4a5180e1ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t PIDMotor::outputMin = -100</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00021">21</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00325">getOutputMin()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00309">setOutputBoundingValues()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a24697fc6fef8b2564d4e6dc4bde2e970"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t PIDMotor::outputMinDeadbad = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>getOutputMinDeadbad</p>
+<dl class="section return"><dt>Returns</dt><dd>OutputMinDeadbad </dd></dl>
+
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00033">33</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00343">getOutputMinDeadbad()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00309">setOutputBoundingValues()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa606a607e25953aaae2be040a659b2e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t PIDMotor::outputStop = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>getOutputStop</p>
+<dl class="section return"><dt>Returns</dt><dd>OutputStop </dd></dl>
+
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00045">45</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00361">getOutputStop()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00309">setOutputBoundingValues()</a>.</p>
 
 </div>
 </div>
@@ -1690,9 +1986,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00030">30</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00066">66</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00194">calcVel()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00214">calcVel()</a>.</p>
 
 </div>
 </div>
@@ -1714,9 +2010,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00027">27</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00063">63</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00194">calcVel()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00025">PIDMotor()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00214">calcVel()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00025">PIDMotor()</a>.</p>
 
 </div>
 </div>
@@ -1738,9 +2034,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00024">24</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00060">60</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00157">getSetPoint()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00037">loop()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00238">startInterpolation()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00177">getSetPoint()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00064">loop()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00258">startInterpolation()</a>.</p>
 
 </div>
 </div>
@@ -1762,9 +2058,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00047">47</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00083">83</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00037">loop()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00238">startInterpolation()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00064">loop()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00258">startInterpolation()</a>.</p>
 
 </div>
 </div>
@@ -1786,9 +2082,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00049">49</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00085">85</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00037">loop()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00238">startInterpolation()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00040">getInterpolationUnitIncrement()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00258">startInterpolation()</a>.</p>
 
 </div>
 </div>
@@ -1810,9 +2106,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00052">52</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00088">88</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00092">setVelocityDegreesPerSecond()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00080">velocityLoop()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00112">setVelocityDegreesPerSecond()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00100">velocityLoop()</a>.</p>
 
 </div>
 </div>
@@ -1834,9 +2130,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00028">28</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00064">64</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00194">calcVel()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00214">calcVel()</a>.</p>
 
 </div>
 </div>
@@ -1845,15 +2141,15 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float PIDMotor::unitDuration =1</td>
+          <td class="memname">float PIDMotor::unitDuration = 1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Duration of the interpolation mode, 1 equals done, 0 starting </p>
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00069">69</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00106">106</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00037">loop()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00040">getInterpolationUnitIncrement()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00064">loop()</a>.</p>
 
 </div>
 </div>
@@ -1875,9 +2171,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00031">31</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00067">67</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00194">calcVel()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00025">PIDMotor()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00214">calcVel()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00025">PIDMotor()</a>.</p>
 
 </div>
 </div>
@@ -1892,9 +2188,9 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>THe PID object for the velocity controller (UNIMPLEMENTED) </p>
 
-<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00077">77</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="PIDMotor_8h_source.html#l00114">114</a> of file <a class="el" href="PIDMotor_8h_source.html">PIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00088">SetTuningsVelocity()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00108">SetTuningsVelocity()</a>.</p>
 
 </div>
 </div>

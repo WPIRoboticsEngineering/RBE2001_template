@@ -1,7 +1,7 @@
 var searchData=
 [
   ['sampleratems',['sampleRateMs',['../classRBEPID.html#ad884404bd9dce8ebfd01b0faae6e8d33',1,'RBEPID']]],
-  ['servo',['servo',['../classRobotControlCenter.html#a17e59a8cada1acea62bc45fb12af7630',1,'RobotControlCenter']]],
+  ['servo',['servo',['../classRobotControlCenter.html#a17e59a8cada1acea62bc45fb12af7630',1,'RobotControlCenter::servo()'],['../classStudentsRobot.html#a11933337121daec14441336bf1ade05d',1,'StudentsRobot::servo()']]],
   ['setpoint',['Setpoint',['../classPIDMotor.html#a59307dcd586e604116a91a8ad5cbdf9b',1,'PIDMotor']]],
   ['startsetpoint',['startSetpoint',['../classPIDMotor.html#a7219035b6b90180675544436239a660f',1,'PIDMotor']]],
   ['starttime',['startTime',['../classPIDMotor.html#a54664c4546c0482cd93d404568e5151c',1,'PIDMotor']]],

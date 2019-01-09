@@ -47,11 +47,11 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 			(1.0 / 360.0) * // degrees per revolution
 			motor1->encoder.countsMode,
 			186.0 * 60.0 * 360.0);
-	motor3->setOutputBoundingValues(-HBRIDGE_MAX, //the minimum value that the output takes (Full reverse)
-			HBRIDGE_MAX, //the maximum value the output takes (Full forwared)
+	motor3->setOutputBoundingValues(-255, //the minimum value that the output takes (Full reverse)
+			255, //the maximum value the output takes (Full forwared)
 			0, //the value of the output to stop moving
-			HBRIDGE_DEADBAND, //a positive value added to the stop value to creep backward
-			HBRIDGE_DEADBAND,//a positive value subtracted from stop value to creep forwards
+			138, //a positive value added to the stop value to creep backward
+			138,//a positive value subtracted from stop value to creep forwards
 			16.0 * // Encoder CPR
 			50.0 * // Motor Gear box ratio
 			1.0 * // motor to arm stage ratio

@@ -1,5 +1,5 @@
 <map id="PIDMotor::setVelocityDegreesPerSecond" name="PIDMotor::setVelocityDegreesPerSecond">
-<area shape="rect" id="node2" href="$classPIDMotor.html#a0b1db2bd137a8667ed39d82bc671d1b7" title="PIDMotor::getFreeSpinMax\lDegreesPerSecond" alt="" coords="253,5,435,47"/>
+<area shape="rect" id="node2" href="$classPIDMotor.html#a702890e63da27ace0ec16b30d53e0c9e" title="PIDMotor::getFreeSpinMax\lDegreesPerSecond" alt="" coords="253,5,435,47"/>
 <area shape="rect" id="node3" href="$classPIDMotor.html#ab70676b6d2cea7a85592715056bdb0dd" title="PIDMotor::stop" alt="" coords="289,71,399,98"/>
 <area shape="rect" id="node4" href="$classPIDMotor.html#a45fa4f564edfd6ae7f08bfb635c4d368" title="PIDMotor::setSetpoint" alt="" coords="483,46,635,73"/>
 <area shape="rect" id="node6" href="$classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809" title="PIDMotor::getPosition" alt="" coords="483,97,634,123"/>

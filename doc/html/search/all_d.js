@@ -7,7 +7,7 @@ var searchData=
   ['pid_5foutput_5fcompute_5frange',['PID_OUTPUT_COMPUTE_RANGE',['../PIDMotor_8h.html#a56bf12c4920829e41fa82868e5583301',1,'PIDMotor.h']]],
   ['pidinit',['pidinit',['../classPIDMotor.html#a32adc7f86caa0f3c97161d945ccc1c5c',1,'PIDMotor']]],
   ['pidlist',['pidlist',['../classGetPIDConstants.html#afab58ca090e97aa706037c8183073c84',1,'GetPIDConstants::pidlist()'],['../classGetPIDData.html#aa18e670e5b49e90b3a1e2ecd7d3f3f4d',1,'GetPIDData::pidlist()'],['../classSetPIDConstants.html#a9675ea7e5e4851ea007f4918bf510ac4',1,'SetPIDConstants::pidlist()'],['../classSetPIDSetpoint.html#a3e8065ca4727ea06a52f1f0093b5c1c0',1,'SetPIDSetpoint::pidlist()'],['../classRobotControlCenter.html#a8a2aaf2302e87c102c1294fca696a52b',1,'RobotControlCenter::pidList()']]],
-  ['pidloop',['pidLoop',['../classStudentsRobot.html#a99cb4af51fc5fa405f0730d5080449d2',1,'StudentsRobot']]],
+  ['pidloop',['pidLoop',['../classStudentsRobot.html#a4ee4b70e8a57bb55e272cf0c78b866d5',1,'StudentsRobot']]],
   ['pidmotor',['PIDMotor',['../classPIDMotor.html',1,'PIDMotor'],['../classPIDMotor.html#af82d8544479dc33187c0c3745613f67f',1,'PIDMotor::PIDMotor()']]],
   ['pidmotor_2ecpp',['PIDMotor.cpp',['../PIDMotor_8cpp.html',1,'']]],
   ['pidmotor_2eh',['PIDMotor.h',['../PIDMotor_8h.html',1,'']]],

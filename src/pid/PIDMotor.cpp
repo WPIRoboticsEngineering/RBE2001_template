@@ -39,7 +39,7 @@ void PIDMotor::pidinit() {
  */
 float PIDMotor::getInterpolationUnitIncrement(){
 	float interpElapsed = (float) (millis() - startTime);
-	if(isInterpolationDone()==false){
+	if(interpElapsed < duration && duration > 0){
 		// linear elapsed duration
 		unitDuration = interpElapsed / duration;
 		if (mode == SIN) {
@@ -56,9 +56,7 @@ float PIDMotor::getInterpolationUnitIncrement(){
  * @return bool is the interpolation done
  */
 bool PIDMotor::isInterpolationDone() {
-	// Perform linear/sinusoidal interpolation
-	float interpElapsed = (float) (millis() - startTime);
-	if (interpElapsed < duration && duration > 0)
+	if (getInterpolationUnitIncrement()<1)
 		return false;
 	return true;
 }
@@ -70,7 +68,6 @@ void PIDMotor::loop() {
 		return;
 	}
 	// Perform linear/sinusoidal interpolation
-	float interpElapsed = (float) (millis() - startTime);
 	unitDuration=getInterpolationUnitIncrement();
 	if (unitDuration<1) {
 		float setpointDiff = endSetpoint - startSetpoint;

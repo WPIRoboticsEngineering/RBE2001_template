@@ -84,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a>  </div>
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
 <div class="title">ServoEncoderPIDMotor Class Reference</div>  </div>
 </div><!--header-->
@@ -119,16 +119,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae91dbba63a742e6c173e6e1f339406c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace3748b0fc47372137067424ce7c664f"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServoEncoderPIDMotor.html#ace3748b0fc47372137067424ce7c664f">getPosition</a> ()</td></tr>
 <tr class="separator:ace3748b0fc47372137067424ce7c664f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa95daedaf498056cee306844d1e274ee"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServoEncoderPIDMotor.html#aa95daedaf498056cee306844d1e274ee">getOutputMin</a> ()</td></tr>
-<tr class="separator:aa95daedaf498056cee306844d1e274ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c227ebfeb9056674c8d51285881ee74"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServoEncoderPIDMotor.html#a9c227ebfeb9056674c8d51285881ee74">getOutputMax</a> ()</td></tr>
-<tr class="separator:a9c227ebfeb9056674c8d51285881ee74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98ff26904f028d70530325a20eb00f70"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServoEncoderPIDMotor.html#a98ff26904f028d70530325a20eb00f70">getOutputMinDeadbad</a> ()</td></tr>
-<tr class="separator:a98ff26904f028d70530325a20eb00f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a7687d3f24f7a624f5ca04bf1d8739c"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServoEncoderPIDMotor.html#a8a7687d3f24f7a624f5ca04bf1d8739c">getOutputMaxDeadbad</a> ()</td></tr>
-<tr class="separator:a8a7687d3f24f7a624f5ca04bf1d8739c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d09680e916aac657c18416bef352a1a"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServoEncoderPIDMotor.html#a1d09680e916aac657c18416bef352a1a">getOutputStop</a> ()</td></tr>
-<tr class="separator:a1d09680e916aac657c18416bef352a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a380934c0f4e53ff842db0c4abf33eb91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServoEncoderPIDMotor.html#a380934c0f4e53ff842db0c4abf33eb91">setOutput</a> (int64_t out)</td></tr>
 <tr class="separator:a380934c0f4e53ff842db0c4abf33eb91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ddb824e5869bbaa03fe865205ae30d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServoEncoderPIDMotor.html#a6ddb824e5869bbaa03fe865205ae30d7">overrideCurrentPositionHardware</a> (int64_t val)</td></tr>
@@ -154,6 +144,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a45fa4f564edfd6ae7f08bfb635c4d368 inherit pub_methods_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0aba3994cd6722646cce3f62a5cc056b inherit pub_methods_classPIDMotor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b">startInterpolation</a> (float newSetpoint, long msTimeDuration, <a class="el" href="PIDMotor_8h.html#a5f2bed26bc3981591ee546627fdbbef4">interpolateMode</a> <a class="el" href="classPIDMotor.html#a9a701288ddcc758e51ecdc4ed15180cb">mode</a>)</td></tr>
 <tr class="separator:a0aba3994cd6722646cce3f62a5cc056b inherit pub_methods_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7a8cb2fcf9c941cedd10864b9463fb7 inherit pub_methods_classPIDMotor"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#ac7a8cb2fcf9c941cedd10864b9463fb7">isInterpolationDone</a> ()</td></tr>
+<tr class="separator:ac7a8cb2fcf9c941cedd10864b9463fb7 inherit pub_methods_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b178659f339c95aa78bfb1a9e77c338 inherit pub_methods_classPIDMotor"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a4b178659f339c95aa78bfb1a9e77c338">getInterpolationUnitIncrement</a> ()</td></tr>
+<tr class="separator:a4b178659f339c95aa78bfb1a9e77c338 inherit pub_methods_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a707369b2535319b2d2cd7c6c2287926f inherit pub_methods_classPIDMotor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a707369b2535319b2d2cd7c6c2287926f">setSetpointDegrees</a> (float val)</td></tr>
 <tr class="separator:a707369b2535319b2d2cd7c6c2287926f inherit pub_methods_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59a361f6877ad6dd4504273646e433fd inherit pub_methods_classPIDMotor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a59a361f6877ad6dd4504273646e433fd">startInterpolationDegrees</a> (float newSetpoint, long msTimeDuration, <a class="el" href="PIDMotor_8h.html#a5f2bed26bc3981591ee546627fdbbef4">interpolateMode</a> <a class="el" href="classPIDMotor.html#a9a701288ddcc758e51ecdc4ed15180cb">mode</a>)</td></tr>
@@ -176,18 +170,31 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af3660a46b5b7614ba1a5812a85d103ef inherit pub_methods_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab70676b6d2cea7a85592715056bdb0dd inherit pub_methods_classPIDMotor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#ab70676b6d2cea7a85592715056bdb0dd">stop</a> ()</td></tr>
 <tr class="separator:ab70676b6d2cea7a85592715056bdb0dd inherit pub_methods_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54dd9a1ed9fa34f9070e3aa473f47fae inherit pub_methods_classPIDMotor"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a54dd9a1ed9fa34f9070e3aa473f47fae">getOutputMin</a> ()</td></tr>
+<tr class="separator:a54dd9a1ed9fa34f9070e3aa473f47fae inherit pub_methods_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a743e25e68c808e71bc5724e8130748 inherit pub_methods_classPIDMotor"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a7a743e25e68c808e71bc5724e8130748">getOutputMax</a> ()</td></tr>
+<tr class="separator:a7a743e25e68c808e71bc5724e8130748 inherit pub_methods_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a798b283fb058d321b8627097142a7e6d inherit pub_methods_classPIDMotor"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a798b283fb058d321b8627097142a7e6d">getOutputMinDeadbad</a> ()</td></tr>
+<tr class="separator:a798b283fb058d321b8627097142a7e6d inherit pub_methods_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63aace26cb7ff89d45d7a6abdc79b3e3 inherit pub_methods_classPIDMotor"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a63aace26cb7ff89d45d7a6abdc79b3e3">getOutputMaxDeadbad</a> ()</td></tr>
+<tr class="separator:a63aace26cb7ff89d45d7a6abdc79b3e3 inherit pub_methods_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0e60cd163f49aaf5dc34353a6650953 inherit pub_methods_classPIDMotor"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#ac0e60cd163f49aaf5dc34353a6650953">getOutputStop</a> ()</td></tr>
+<tr class="separator:ac0e60cd163f49aaf5dc34353a6650953 inherit pub_methods_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a702890e63da27ace0ec16b30d53e0c9e inherit pub_methods_classPIDMotor"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a702890e63da27ace0ec16b30d53e0c9e">getFreeSpinMaxDegreesPerSecond</a> ()</td></tr>
+<tr class="separator:a702890e63da27ace0ec16b30d53e0c9e inherit pub_methods_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a292e9bc7f736e94ee0df376a08efae33 inherit pub_methods_classPIDMotor"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33">ticksToDeg</a> ()</td></tr>
+<tr class="separator:a292e9bc7f736e94ee0df376a08efae33 inherit pub_methods_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13b544dea5b972b67dc9035e2c795416 inherit pub_methods_classPIDMotor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a13b544dea5b972b67dc9035e2c795416">setOutputBoundingValues</a> (int64_t <a class="el" href="classPIDMotor.html#a4db4f7580139184e9ec7ee4a5180e1ba">outputMin</a>, int64_t <a class="el" href="classPIDMotor.html#aac3fce8d08e1fe1788326bf7aecccf31">outputMax</a>, int64_t <a class="el" href="classPIDMotor.html#aa606a607e25953aaae2be040a659b2e5">outputStop</a>, int64_t <a class="el" href="classPIDMotor.html#a24697fc6fef8b2564d4e6dc4bde2e970">outputMinDeadbad</a>, int64_t <a class="el" href="classPIDMotor.html#a8fd9eb49a0999da0cc6a3d799ed9845a">outputMaxDeadbad</a>, double <a class="el" href="classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33">ticksToDeg</a>, double <a class="el" href="classPIDMotor.html#a702890e63da27ace0ec16b30d53e0c9e">getFreeSpinMaxDegreesPerSecond</a>)</td></tr>
+<tr class="separator:a13b544dea5b972b67dc9035e2c795416 inherit pub_methods_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
 <tr class="memitem:a0b8a141cab730d4803c3424e0108c57f"><td class="memItemLeft" align="right" valign="top">ESP32Encoder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServoEncoderPIDMotor.html#a0b8a141cab730d4803c3424e0108c57f">encoder</a></td></tr>
 <tr class="separator:a0b8a141cab730d4803c3424e0108c57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acee23a13c3d325abaa2faa2822215163"><td class="memItemLeft" align="right" valign="top">Servo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServoEncoderPIDMotor.html#acee23a13c3d325abaa2faa2822215163">motor</a></td></tr>
 <tr class="separator:acee23a13c3d325abaa2faa2822215163"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_classPIDMotor"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classPIDMotor')"><img src="closed.png" alt="-"/>&#160;Data Fields inherited from <a class="el" href="classPIDMotor.html">PIDMotor</a></td></tr>
-<tr class="memitem:ae9d7514135efe7785de2e12c37596cf3 inherit pub_attribs_classPIDMotor"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#ae9d7514135efe7785de2e12c37596cf3">unitDuration</a> =1</td></tr>
+<tr class="memitem:ae9d7514135efe7785de2e12c37596cf3 inherit pub_attribs_classPIDMotor"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#ae9d7514135efe7785de2e12c37596cf3">unitDuration</a> = 1</td></tr>
 <tr class="separator:ae9d7514135efe7785de2e12c37596cf3 inherit pub_attribs_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0882b047a418b1b4ba6ecd02e07d32bf inherit pub_attribs_classPIDMotor"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRBEPID.html">RBEPID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a0882b047a418b1b4ba6ecd02e07d32bf">myPID</a></td></tr>
 <tr class="separator:a0882b047a418b1b4ba6ecd02e07d32bf inherit pub_attribs_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,6 +202,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a4289fc0e98150a03b5df1ca2c1b37623 inherit pub_attribs_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe2807f8d13938c34046998f85865b95 inherit pub_attribs_classPIDMotor"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#abe2807f8d13938c34046998f85865b95">hardwareOutput</a> = 0</td></tr>
 <tr class="separator:abe2807f8d13938c34046998f85865b95 inherit pub_attribs_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classPIDMotor"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classPIDMotor')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classPIDMotor.html">PIDMotor</a></td></tr>
 <tr class="memitem:a7f73964441f27c0eb1247604dae09bd0 inherit pro_methods_classPIDMotor"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPIDMotor.html#a7f73964441f27c0eb1247604dae09bd0">calcVel</a> ()</td></tr>
 <tr class="separator:a7f73964441f27c0eb1247604dae09bd0 inherit pro_methods_classPIDMotor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -257,6 +267,19 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00010">10</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
 
+<p>References <a class="el" href="ServoEncoderPIDMotor_8h_source.html#l00034">encoder</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00309">PIDMotor::setOutputBoundingValues()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classServoEncoderPIDMotor_a29ca9f15d479dc938d07060f06960eba_cgraph.png" border="0" usemap="#classServoEncoderPIDMotor_a29ca9f15d479dc938d07060f06960eba_cgraph" alt=""/></div>
+<map name="classServoEncoderPIDMotor_a29ca9f15d479dc938d07060f06960eba_cgraph" id="classServoEncoderPIDMotor_a29ca9f15d479dc938d07060f06960eba_cgraph">
+<area shape="rect" id="node2" href="classPIDMotor.html#a13b544dea5b972b67dc9035e2c795416" title="PIDMotor::setOutputBounding\lValues" alt="" coords="221,5,419,47"/>
+<area shape="rect" id="node3" href="classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33" title="PIDMotor::ticksToDeg" alt="" coords="467,13,620,39"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a66a894eaad165783a81f72ddd42c2d6a"></a>
@@ -280,7 +303,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00015">15</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00020">20</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
 
 </div>
 </div>
@@ -324,9 +347,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00019">19</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00024">24</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="ServoEncoderPIDMotor_8h_source.html#l00016">encoder</a>, <a class="el" href="ServoEncoderPIDMotor_8h_source.html#l00017">motor</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00033">PIDMotor::pidinit()</a>.</p>
+<p>References <a class="el" href="ServoEncoderPIDMotor_8h_source.html#l00034">encoder</a>, <a class="el" href="ServoEncoderPIDMotor_8h_source.html#l00035">motor</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00033">PIDMotor::pidinit()</a>.</p>
+
+<p>Referenced by <a class="el" href="StudentsRobot_8cpp_source.html#l00010">StudentsRobot::StudentsRobot()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -367,16 +392,13 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classPIDMotor.html#a500f91801cf488296530931556151fbc">PIDMotor</a>.</p>
 
-<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00057">57</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00037">37</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="a432c41e432d0c6de092733f8268a010e"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">double ServoEncoderPIDMotor::getFreeSpinMaxDegreesPerSecond </td>
@@ -385,163 +407,7 @@ Here is the call graph for this function:</div>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>getFreeSpinMaxDegreesPerSecond</p>
-<dl class="section return"><dt>Returns</dt><dd>FreeSpinMaxDegreesPerSecond </dd></dl>
-
-<p>Implements <a class="el" href="classPIDMotor.html#a0b1db2bd137a8667ed39d82bc671d1b7">PIDMotor</a>.</p>
-
-<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00060">60</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9c227ebfeb9056674c8d51285881ee74"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int64_t ServoEncoderPIDMotor::getOutputMax </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>getOutputMax</p>
-<dl class="section return"><dt>Returns</dt><dd>OutputMax </dd></dl>
-
-<p>Implements <a class="el" href="classPIDMotor.html#a8b887c7979f6c92171a0d261356396cf">PIDMotor</a>.</p>
-
-<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00031">31</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8a7687d3f24f7a624f5ca04bf1d8739c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int64_t ServoEncoderPIDMotor::getOutputMaxDeadbad </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>getOutputMaxDeadbad</p>
-<dl class="section return"><dt>Returns</dt><dd>OutputMaxDeadbad </dd></dl>
-
-<p>Implements <a class="el" href="classPIDMotor.html#a4de032edefde7388575a7b54d49c01e0">PIDMotor</a>.</p>
-
-<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00037">37</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa95daedaf498056cee306844d1e274ee"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int64_t ServoEncoderPIDMotor::getOutputMin </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>getOutputMin</p>
-<dl class="section return"><dt>Returns</dt><dd>OutputMin </dd></dl>
-
-<p>Implements <a class="el" href="classPIDMotor.html#a937efb0b127059ca11c122f5f823fe71">PIDMotor</a>.</p>
-
-<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00028">28</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a98ff26904f028d70530325a20eb00f70"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int64_t ServoEncoderPIDMotor::getOutputMinDeadbad </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>getOutputMinDeadbad</p>
-<dl class="section return"><dt>Returns</dt><dd>OutputMinDeadbad </dd></dl>
-
-<p>Implements <a class="el" href="classPIDMotor.html#a59430df840fafb87e734ecfbed9fce78">PIDMotor</a>.</p>
-
-<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00034">34</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a1d09680e916aac657c18416bef352a1a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int64_t ServoEncoderPIDMotor::getOutputStop </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>getOutputStop</p>
-<dl class="section return"><dt>Returns</dt><dd>OutputStop </dd></dl>
-
-<p>Implements <a class="el" href="classPIDMotor.html#a81a7e9b5bdcdf4291a22e70b1a540ee8">PIDMotor</a>.</p>
-
-<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00040">40</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
 
 </div>
 </div>
@@ -570,9 +436,11 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809">PIDMotor</a>.</p>
 
-<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00025">25</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00040">40</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="ServoEncoderPIDMotor_8h_source.html#l00016">encoder</a>.</p>
+<p>References <a class="el" href="ServoEncoderPIDMotor_8h_source.html#l00034">encoder</a>.</p>
+
+<p>Referenced by <a class="el" href="StudentsRobot_8cpp_source.html#l00010">StudentsRobot::StudentsRobot()</a>.</p>
 
 </div>
 </div>
@@ -608,9 +476,9 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classPIDMotor.html#a6a1452c87f6abd3729ec12824a74abca">PIDMotor</a>.</p>
 
-<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00046">46</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00034">34</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="ServoEncoderPIDMotor_8h_source.html#l00016">encoder</a>.</p>
+<p>References <a class="el" href="ServoEncoderPIDMotor_8h_source.html#l00034">encoder</a>.</p>
 
 </div>
 </div>
@@ -640,18 +508,15 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classPIDMotor.html#af1c954ea7fa21d4685a67b06f66c1982">PIDMotor</a>.</p>
 
-<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00043">43</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00031">31</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
 
-<p>References <a class="el" href="ServoEncoderPIDMotor_8h_source.html#l00017">motor</a>.</p>
+<p>References <a class="el" href="ServoEncoderPIDMotor_8h_source.html#l00035">motor</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="ab14645fdd6c54c050a88327379432656"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">double ServoEncoderPIDMotor::ticksToDeg </td>
@@ -660,20 +525,7 @@ Here is the call graph for this function:</div>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>ticksToDeg</p>
-<dl class="section return"><dt>Returns</dt><dd>ticksToDeg </dd></dl>
-
-<p>Implements <a class="el" href="classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374">PIDMotor</a>.</p>
-
-<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00049">49</a> of file <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html">ServoEncoderPIDMotor.cpp</a>.</p>
-
-<p>References <a class="el" href="ServoEncoderPIDMotor_8h_source.html#l00016">encoder</a>.</p>
 
 </div>
 </div>
@@ -681,48 +533,32 @@ Here is the call graph for this function:</div>
 <a class="anchor" id="a0b8a141cab730d4803c3424e0108c57f"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">ESP32Encoder ServoEncoderPIDMotor::encoder</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8h_source.html#l00016">16</a> of file <a class="el" href="ServoEncoderPIDMotor_8h_source.html">ServoEncoderPIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8h_source.html#l00034">34</a> of file <a class="el" href="ServoEncoderPIDMotor_8h_source.html">ServoEncoderPIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00019">attach()</a>, <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00025">getPosition()</a>, <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00046">overrideCurrentPositionHardware()</a>, and <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00049">ticksToDeg()</a>.</p>
+<p>Referenced by <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00024">attach()</a>, <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00040">getPosition()</a>, <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00034">overrideCurrentPositionHardware()</a>, <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00010">ServoEncoderPIDMotor()</a>, and <a class="el" href="StudentsRobot_8cpp_source.html#l00010">StudentsRobot::StudentsRobot()</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="acee23a13c3d325abaa2faa2822215163"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Servo ServoEncoderPIDMotor::motor</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8h_source.html#l00017">17</a> of file <a class="el" href="ServoEncoderPIDMotor_8h_source.html">ServoEncoderPIDMotor.h</a>.</p>
+<p>Definition at line <a class="el" href="ServoEncoderPIDMotor_8h_source.html#l00035">35</a> of file <a class="el" href="ServoEncoderPIDMotor_8h_source.html">ServoEncoderPIDMotor.h</a>.</p>
 
-<p>Referenced by <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00019">attach()</a>, and <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00043">setOutput()</a>.</p>
+<p>Referenced by <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00024">attach()</a>, and <a class="el" href="ServoEncoderPIDMotor_8cpp_source.html#l00031">setOutput()</a>.</p>
 
 </div>
 </div>

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['sampleratems',['sampleRateMs',['../classRBEPID.html#ad884404bd9dce8ebfd01b0faae6e8d33',1,'RBEPID']]],
-  ['servo',['servo',['../classRobotControlCenter.html#a17e59a8cada1acea62bc45fb12af7630',1,'RobotControlCenter']]],
+  ['servo',['servo',['../classRobotControlCenter.html#a17e59a8cada1acea62bc45fb12af7630',1,'RobotControlCenter::servo()'],['../classStudentsRobot.html#a11933337121daec14441336bf1ade05d',1,'StudentsRobot::servo()']]],
   ['servo_5fpin',['SERVO_PIN',['../config_8h.html#a5218f89aa292654356a48989319aafb1',1,'config.h']]],
   ['servoanalogpidmotor',['ServoAnalogPIDMotor',['../classServoAnalogPIDMotor.html',1,'ServoAnalogPIDMotor'],['../classServoAnalogPIDMotor.html#ad474934df42e8a9353e7ab2a9cb338cb',1,'ServoAnalogPIDMotor::ServoAnalogPIDMotor()']]],
   ['servoanalogpidmotor_2ecpp',['ServoAnalogPIDMotor.cpp',['../ServoAnalogPIDMotor_8cpp.html',1,'']]],
@@ -10,6 +10,7 @@ var searchData=
   ['servoencoderpidmotor_2ecpp',['ServoEncoderPIDMotor.cpp',['../ServoEncoderPIDMotor_8cpp.html',1,'']]],
   ['servoencoderpidmotor_2eh',['ServoEncoderPIDMotor.h',['../ServoEncoderPIDMotor_8h.html',1,'']]],
   ['setoutput',['setOutput',['../classHBridgeEncoderPIDMotor.html#a26e55b549bf8cf6b096d9379e555adf8',1,'HBridgeEncoderPIDMotor::setOutput()'],['../classPIDMotor.html#af1c954ea7fa21d4685a67b06f66c1982',1,'PIDMotor::setOutput()'],['../classServoAnalogPIDMotor.html#a27b973ae23d49fbe8dfae98edcdc5ea7',1,'ServoAnalogPIDMotor::setOutput()'],['../classServoEncoderPIDMotor.html#a380934c0f4e53ff842db0c4abf33eb91',1,'ServoEncoderPIDMotor::setOutput()']]],
+  ['setoutputboundingvalues',['setOutputBoundingValues',['../classPIDMotor.html#a13b544dea5b972b67dc9035e2c795416',1,'PIDMotor']]],
   ['setoutputunitvector',['setOutputUnitVector',['../classPIDMotor.html#af3660a46b5b7614ba1a5812a85d103ef',1,'PIDMotor']]],
   ['setpid',['setpid',['../classRBEPID.html#a38127aaf2918707921b3e8e6c27692f5',1,'RBEPID']]],
   ['setpidconstants',['SetPIDConstants',['../classSetPIDConstants.html',1,'SetPIDConstants'],['../classSetPIDConstants.html#a83524abf25d73e7c993b3f0672697617',1,'SetPIDConstants::SetPIDConstants()']]],
@@ -39,7 +40,7 @@ var searchData=
   ['state_5ft',['state_t',['../RobotControlCenter_8h.html#aa0aafed44fec19806d8f9ad834be1248',1,'RobotControlCenter.h']]],
   ['status',['status',['../classStudentsRobot.html#a7c6e1befe94b94bcb56b9ff626a0c410',1,'StudentsRobot']]],
   ['stop',['stop',['../classPIDMotor.html#ab70676b6d2cea7a85592715056bdb0dd',1,'PIDMotor']]],
-  ['studentsrobot',['StudentsRobot',['../classStudentsRobot.html',1,'StudentsRobot'],['../classStudentsRobot.html#a1a596e08ae5c77b546970c6757e8da4a',1,'StudentsRobot::StudentsRobot()']]],
+  ['studentsrobot',['StudentsRobot',['../classStudentsRobot.html',1,'StudentsRobot'],['../classStudentsRobot.html#a7eefa1a9352a4abdf5f2880e955efbd2',1,'StudentsRobot::StudentsRobot()']]],
   ['studentsrobot_2ecpp',['StudentsRobot.cpp',['../StudentsRobot_8cpp.html',1,'']]],
   ['studentsrobot_2eh',['StudentsRobot.h',['../StudentsRobot_8h.html',1,'']]],
   ['sum_5ferror',['sum_error',['../classRBEPID.html#a79854885c86b4780028af1678dc2b514',1,'RBEPID']]]

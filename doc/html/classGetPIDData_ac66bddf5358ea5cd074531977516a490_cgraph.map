@@ -2,6 +2,6 @@
 <area shape="rect" id="node2" href="$classPIDMotor.html#a30fafa2f674001af8bf25d771532620b" title="PIDMotor::getAngleDegrees" alt="" coords="196,31,383,57"/>
 <area shape="rect" id="node5" href="$classPIDMotor.html#a3c8496df466934c31b344bd342621d6d" title="PIDMotor::getSetPointDegrees" alt="" coords="188,81,391,108"/>
 <area shape="rect" id="node3" href="$classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809" title="PIDMotor::getPosition" alt="" coords="441,5,591,32"/>
-<area shape="rect" id="node4" href="$classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374" title="PIDMotor::ticksToDeg" alt="" coords="439,56,593,83"/>
+<area shape="rect" id="node4" href="$classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33" title="PIDMotor::ticksToDeg" alt="" coords="439,56,593,83"/>
 <area shape="rect" id="node6" href="$classPIDMotor.html#ab4fc140e1212fa3c192feca5bcbd7acc" title="PIDMotor::getSetPoint" alt="" coords="439,107,593,133"/>
 </map>

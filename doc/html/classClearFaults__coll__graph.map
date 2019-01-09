@@ -1,3 +1,7 @@
 <map id="ClearFaults" name="ClearFaults">
-<area shape="rect" id="node3" href="$classStudentsRobot.html" title="StudentsRobot" alt="" coords="176,5,285,32"/>
+<area shape="rect" id="node3" href="$classStudentsRobot.html" title="StudentsRobot" alt="" coords="176,289,285,316"/>
+<area shape="rect" id="node4" href="$classHBridgeEncoderPIDMotor.html" title="HBridgeEncoderPIDMotor" alt="" coords="35,185,208,212"/>
+<area shape="rect" id="node5" href="$classPIDMotor.html" title="PIDMotor" alt="" coords="137,109,215,136"/>
+<area shape="rect" id="node7" href="$classServoEncoderPIDMotor.html" title="ServoEncoderPIDMotor" alt="" coords="232,185,392,212"/>
+<area shape="rect" id="node6" href="$classRBEPID.html" title="RBEPID" alt="" coords="139,5,213,32"/>
 </map>

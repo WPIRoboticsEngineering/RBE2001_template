@@ -1,0 +1,4 @@
+<map id="ServoEncoderPIDMotor::ServoEncoderPIDMotor" name="ServoEncoderPIDMotor::ServoEncoderPIDMotor">
+<area shape="rect" id="node2" href="$classPIDMotor.html#a13b544dea5b972b67dc9035e2c795416" title="PIDMotor::setOutputBounding\lValues" alt="" coords="221,5,419,47"/>
+<area shape="rect" id="node3" href="$classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33" title="PIDMotor::ticksToDeg" alt="" coords="467,13,620,39"/>
+</map>
