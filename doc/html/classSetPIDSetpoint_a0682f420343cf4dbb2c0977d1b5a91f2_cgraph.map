@@ -1,4 +1,5 @@
 <map id="SetPIDSetpoint::event" name="SetPIDSetpoint::event">
-<area shape="rect" id="node2" href="$classPIDMotor.html#a45fa4f564edfd6ae7f08bfb635c4d368" title="PIDMotor::setSetpoint" alt="" coords="207,5,359,32"/>
-<area shape="rect" id="node3" href="$classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b" title="PIDMotor::startInterpolation" alt="" coords="407,5,589,32"/>
+<area shape="rect" id="node2" href="$classPIDMotor.html#a59a361f6877ad6dd4504273646e433fd" title="PIDMotor::startInterpolation\lDegrees" alt="" coords="207,23,389,65"/>
+<area shape="rect" id="node3" href="$classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b" title="PIDMotor::startInterpolation" alt="" coords="437,5,620,32"/>
+<area shape="rect" id="node4" href="$classPIDMotor.html#a5178fdbeeb39bfbcdced03e0c5ef4374" title="PIDMotor::ticksToDeg" alt="" coords="452,56,605,83"/>
 </map>

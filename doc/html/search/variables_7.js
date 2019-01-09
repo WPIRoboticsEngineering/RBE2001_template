@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['last_5ferror',['last_error',['../classRBEPID.html#a4c808d4c33889e4a9cf47e9c6d8839db',1,'RBEPID']]],
-  ['lasterrpositive',['lastErrPositive',['../classPIDMotor.html#a85081ed59ecc29eff6e8dcca784cf4b1',1,'PIDMotor']]],
-  ['lastprint',['lastPrint',['../classRobotControlCenter.html#a294758d4de8713afbf911f497fea24c3',1,'RobotControlCenter']]],
-  ['lasttimerunpid',['lastTimeRunPID',['../classPIDMotor.html#ac2922051312bebdeb590901df8ac3214',1,'PIDMotor']]]
+  ['kd',['kd',['../classRBEPID.html#a28596cc151bd7e925064f97865acb0f9',1,'RBEPID']]],
+  ['ki',['ki',['../classRBEPID.html#aed4ca4717bc067b492c638f723b2addb',1,'RBEPID']]],
+  ['kp',['kp',['../classRBEPID.html#accb2946ca40f9dfc96361aeb5e2a07d7',1,'RBEPID']]]
 ];

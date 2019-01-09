@@ -11,6 +11,7 @@ var searchData=
   ['getpiddata',['GetPIDData',['../classGetPIDData.html#a90dd17043e291437f2db1d0ac4dfccda',1,'GetPIDData']]],
   ['getposition',['getPosition',['../classHBridgeEncoderPIDMotor.html#aaf50960b179c4d9b0a059b3b4b41b14d',1,'HBridgeEncoderPIDMotor::getPosition()'],['../classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809',1,'PIDMotor::getPosition()'],['../classServoAnalogPIDMotor.html#ad6ea5e73f0ee9edf35ae1a3c59eee467',1,'ServoAnalogPIDMotor::getPosition()'],['../classServoEncoderPIDMotor.html#ace3748b0fc47372137067424ce7c664f',1,'ServoEncoderPIDMotor::getPosition()']]],
   ['getsetpoint',['getSetPoint',['../classPIDMotor.html#ab4fc140e1212fa3c192feca5bcbd7acc',1,'PIDMotor']]],
+  ['getsetpointdegrees',['getSetPointDegrees',['../classPIDMotor.html#a3c8496df466934c31b344bd342621d6d',1,'PIDMotor']]],
   ['getstatus',['GetStatus',['../classGetStatus.html#a6d05494722fc80823004142310d7a0ac',1,'GetStatus']]],
   ['getvelocitydegreespersecond',['getVelocityDegreesPerSecond',['../classPIDMotor.html#a1e251bea3d32a8b3b8028e0d400ba47f',1,'PIDMotor']]]
 ];
