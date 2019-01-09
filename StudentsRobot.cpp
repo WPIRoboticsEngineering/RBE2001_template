@@ -17,7 +17,7 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	this->motor3=motor3;
 	motor1->attach(MOTOR1_PWM, MOTOR1_ENCA, MOTOR1_ENCB);
 	motor2->attach(MOTOR2_PWM,  MOTOR2_ENCA, MOTOR2_ENCB);
-	motor3->attach(MOTOR3_PWM,MOTOR2_DIR, MOTOR3_ENCA, MOTOR2_ENCB);
+	motor3->attach(MOTOR3_PWM,MOTOR3_DIR, MOTOR3_ENCA, MOTOR2_ENCB);
 	// After attach, compute ratios
 	/**
 	 * Set the bounds of the output stage
