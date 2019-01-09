@@ -8,7 +8,8 @@
 #include "ServoEncoderPIDMotor.h"
 
 ServoEncoderPIDMotor::ServoEncoderPIDMotor() {
-	setOutputBoundingValues(0, 180, 90, 5, 5,16.0 * // Encoder CPR
+	setOutputBoundingValues(0, 180, 90, 5, 5,
+			16.0 * // Encoder CPR
 			50.0 * // Motor Gear box ratio
 			1.0 * // motor to wheel stage ratio
 			(1.0 / 360.0) * // degrees per revolution

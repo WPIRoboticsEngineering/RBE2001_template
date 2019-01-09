@@ -69,6 +69,10 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	servo->setPeriodHertz(330);
 	servo->attach(SERVO_PIN, 1000, 2000);
 }
+/**
+ * Seperate from running the motor control,
+ * update the state machine for running the final project code here
+ */
 void StudentsRobot::updateStateMachine() {
 	switch (status) {
 	case StartupRobot:
@@ -95,13 +99,21 @@ void StudentsRobot::updateStateMachine() {
 	}
 }
 
-
+/**
+ * This is run fast and should return fast
+ *
+ * You call the PIDMotor's loop function. This will update the whole motor control system
+ * This will read from the concoder and write to the motors and handle the hardware interface.
+ * Instead of allowing this to be called by the controller yopu may call these from a timer interrupt.
+ */
 void StudentsRobot::pidLoop() {
 	motor1->loop();
 	motor2->loop();
 	motor3->loop();
 }
-
+/**
+ * This is called when the approve button is pressed in the GUI
+ */
 void StudentsRobot::Approve(float * data) {
 	// approve the procession to new state
 	Serial.println("StudentsRobot::Approve");
@@ -112,12 +124,20 @@ void StudentsRobot::Approve(float * data) {
 		myCommandsStatus = Ready_for_new_task;
 	}
 }
+/**
+ * this is called when the Clear Faults button in the GUI is called.
+ */
 void StudentsRobot::ClearFaults(float * data) {
 	// clear the faults somehow
 	Serial.println("StudentsRobot::ClearFaults");
 	myCommandsStatus = Ready_for_new_task;
 	status = StartRunning;
 }
+/**
+ * This is called whrn the estop in the GUI is pressed
+ * All motors shuld hault and lock in position
+ * Motors should not go idle and drop the plate
+ */
 void StudentsRobot::EStop(float * buffer) {
 	// Stop the robot immediatly
 	Serial.println("StudentsRobot::EStop");
