@@ -30,16 +30,10 @@ public:
 	 */
 	void attach(int servoPin, int analogPin);
 	int64_t getPosition();
-	int64_t getOutputMin();
-	int64_t getOutputMax();
-	int64_t getOutputMinDeadbad();
-	int64_t getOutputMaxDeadbad();
-	int64_t getOutputStop();
+
 	void setOutput(int64_t out);
 	void overrideCurrentPositionHardware(int64_t val);
 	double calcCur(void);
-	double ticksToDeg();
-	double getFreeSpinMaxDegreesPerSecond();
 };
 
 #endif /* SRC_PID_SERVOANALOGPIDMOTOR_H_ */

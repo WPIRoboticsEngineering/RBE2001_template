@@ -18,8 +18,46 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	motor1->attach(MOTOR1_PWM, MOTOR1_ENCA, MOTOR1_ENCB);
 	motor2->attach(MOTOR2_PWM,  MOTOR2_ENCA, MOTOR2_ENCB);
 	motor3->attach(MOTOR3_PWM,MOTOR2_DIR, MOTOR3_ENCA, MOTOR2_ENCB);
-
-
+	// After attach, compute ratios
+	/**
+	 * Set the bounds of the output stage
+	 *
+	 * These are the values to determing the opperating range of the
+	 * output of this PID motor.
+	 */
+	motor1->setOutputBoundingValues(0,//the minimum value that the output takes (Full reverse)
+			180,//the maximum value the output takes (Full forwared)
+			90,//the value of the output to stop moving
+			5,//a positive value added to the stop value to creep backward
+			5,//a positive value subtracted from stop value to creep forwards
+			16.0 * // Encoder CPR
+			50.0 * // Motor Gear box ratio
+			1.0 * // motor to wheel stage ratio
+			(1.0 / 360.0) * // degrees per revolution
+			motor1->encoder.countsMode,
+			186.0 * 60.0 * 360.0);
+	motor2->setOutputBoundingValues(0, //the minimum value that the output takes (Full reverse)
+			180, //the maximum value the output takes (Full forwared)
+			90, //the value of the output to stop moving
+			5, //a positive value added to the stop value to creep backward
+			5,//a positive value subtracted from stop value to creep forwards
+			16.0 * // Encoder CPR
+			50.0 * // Motor Gear box ratio
+			1.0 * // motor to wheel stage ratio
+			(1.0 / 360.0) * // degrees per revolution
+			motor1->encoder.countsMode,
+			186.0 * 60.0 * 360.0);
+	motor3->setOutputBoundingValues(-HBRIDGE_MAX, //the minimum value that the output takes (Full reverse)
+			HBRIDGE_MAX, //the maximum value the output takes (Full forwared)
+			0, //the value of the output to stop moving
+			HBRIDGE_DEADBAND, //a positive value added to the stop value to creep backward
+			HBRIDGE_DEADBAND,//a positive value subtracted from stop value to creep forwards
+			16.0 * // Encoder CPR
+			50.0 * // Motor Gear box ratio
+			1.0 * // motor to wheel stage ratio
+			(1.0 / 360.0) * // degrees per revolution
+			motor3->encoder.countsMode,
+			186.0 * 60.0 * 360.0);
 
 	motor1->setSetpoint(motor1->getPosition());
 	motor2->setSetpoint(motor2->getPosition());

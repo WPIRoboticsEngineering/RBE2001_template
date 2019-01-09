@@ -270,3 +270,90 @@ void PIDMotor::setSetpointDegrees(float val){
 void PIDMotor::startInterpolationDegrees(float newSetpoint, long msTimeDuration,interpolateMode mode){
 	startInterpolation( newSetpoint*ticksToDeg(),  msTimeDuration, mode);
 }
+
+/**
+ * Set the bounds of the output stage
+ *
+ * These are the values to determing the opperating range of the
+ * output of this PID motor.
+ * @param outputMin the minimum value that the output takes (Full reverse)
+ * @param outputMax the maximum value the output takes (Full forwared)
+ * @param outputStop the value of the output to stop moving
+ * @param outputMinDeadbad a positive value added to the stop value to creep backward
+ * @param outputMaxDeadbad a positive value subtracted from stop value to creep forwards
+ * @param a value to convert from degrees to motor units. This number times degrees equals ticks;
+ * @param getFreeSpinMaxDegreesPerSecond a value in degrees per second that represents the maximum
+ * 		freespinning speed of the motor running at 'outputMax'.
+ */
+void PIDMotor::setOutputBoundingValues(int64_t outputMin, int64_t outputMax,
+		int64_t outputStop, int64_t outputMinDeadbad,
+		int64_t outputMaxDeadbad, double ticksToDeg,
+		double getFreeSpinMaxDegreesPerSecond){
+	this->outputMin=outputMin;
+	this->outputMax=outputMax;
+	this->outputStop=outputStop;
+	this->outputMinDeadbad=outputMinDeadbad;
+	this->outputMaxDeadbad=outputMaxDeadbad;
+	this->ticksToDeg=ticksToDeg;
+	this->getFreeSpinMaxDegreesPerSecond=getFreeSpinMaxDegreesPerSecond;
+}
+/**
+ * getOutputMin
+ *
+ * @return OutputMin
+ */
+int64_t PIDMotor::getOutputMin() {
+	return outputMin;
+}
+;
+/**
+ * getOutputMax
+ *
+ * @return OutputMax
+ */
+int64_t PIDMotor::getOutputMax() {
+	return outputMax;
+}
+;
+/**
+ * getOutputMinDeadbad
+ *
+ * @return OutputMinDeadbad
+ */
+int64_t PIDMotor::getOutputMinDeadbad() {
+	return outputMinDeadbad;
+}
+;
+/**
+ * getOutputMaxDeadbad
+ *
+ * @return OutputMaxDeadbad
+ */
+int64_t PIDMotor::getOutputMaxDeadbad() {
+	return outputMaxDeadbad;
+}
+;
+/**
+ * getOutputStop
+ *
+ * @return OutputStop
+ */
+int64_t PIDMotor::getOutputStop() {
+	return outputStop;
+}
+/**
+ * getFreeSpinMaxDegreesPerSecond
+ *
+ * @return FreeSpinMaxDegreesPerSecond
+ */
+double PIDMotor::getFreeSpinMaxDegreesPerSecond() {
+	return freeSpinMaxDegreesPerSecond;
+}
+/**
+ * ticksToDeg
+ *
+ * @return ticksToDeg
+ */
+double PIDMotor::ticksToDeg() {
+	return myTicksToDeg;
+}

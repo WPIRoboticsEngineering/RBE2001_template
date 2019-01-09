@@ -8,8 +8,10 @@
 #include "ServoAnalogPIDMotor.h"
 #include <esp32-hal-gpio.h>
 ServoAnalogPIDMotor::ServoAnalogPIDMotor() {
-	// TODO Auto-generated constructor stub
-
+	setOutputBoundingValues(0, 180, 90, 5, 5,
+			1.0/(270.0/ //degrees in range
+						(4096.0)),// ticks in range
+			186.0 * 60.0 * 360.0);
 }
 
 void ServoAnalogPIDMotor::attach(int servoPin, int analogPin) {
@@ -41,35 +43,15 @@ int64_t ServoAnalogPIDMotor::getPosition() {
 
 	return computedAvg+offset;
 }
-int64_t ServoAnalogPIDMotor::getOutputMin() {
-	return 0;
-}
-int64_t ServoAnalogPIDMotor::getOutputMax() {
-	return 180;
-}
-int64_t ServoAnalogPIDMotor::getOutputMinDeadbad() {
-	return 5;
-}
-int64_t ServoAnalogPIDMotor::getOutputMaxDeadbad() {
-	return 5;
-}
-int64_t ServoAnalogPIDMotor::getOutputStop() {
-	return 90;
-}
+
 void ServoAnalogPIDMotor::setOutput(int64_t out) {
 	motor.write(out);
 }
 void ServoAnalogPIDMotor::overrideCurrentPositionHardware(int64_t val) {
 	offset = val-(getPosition()-offset);
 }
-double ServoAnalogPIDMotor::ticksToDeg() {
-	return 1.0/(270.0/ //degrees in range
-			(4096.0)); // ticks in range
 
-}
 double ServoAnalogPIDMotor::calcCur(void) {
 	return 0;
 }
-double ServoAnalogPIDMotor::getFreeSpinMaxDegreesPerSecond() {
-	return 186.0 * 60.0 * 360.0;
-}
+

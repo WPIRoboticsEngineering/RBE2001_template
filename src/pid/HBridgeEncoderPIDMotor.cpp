@@ -10,6 +10,13 @@
 HBridgeEncoderPIDMotor::HBridgeEncoderPIDMotor() {
 	// TODO Auto-generated constructor stub
 	this->directionPin = -1;
+	setOutputBoundingValues(-HBRIDGE_MAX, HBRIDGE_MAX, 0, HBRIDGE_DEADBAND, HBRIDGE_DEADBAND,
+			16.0 * // Encoder CPR
+			50.0 * // Motor Gear box ratio
+			1.0 * // motor to wheel stage ratio
+			(1.0 / 360.0) * // degrees per revolution
+			encoder.countsMode,
+			186.0 * 60.0 * 360.0);
 }
 
 HBridgeEncoderPIDMotor::~HBridgeEncoderPIDMotor() {
@@ -28,21 +35,7 @@ void HBridgeEncoderPIDMotor::attach(int pwmPin, int directionPin, int encoderA,
 int64_t HBridgeEncoderPIDMotor::getPosition() {
 	return encoder.getCount();
 }
-int64_t HBridgeEncoderPIDMotor::getOutputMin() {
-	return -HBRIDGE_MAX;
-}
-int64_t HBridgeEncoderPIDMotor::getOutputMax() {
-	return HBRIDGE_MAX;
-}
-int64_t HBridgeEncoderPIDMotor::getOutputMinDeadbad() {
-	return HBRIDGE_DEADBAND;
-}
-int64_t HBridgeEncoderPIDMotor::getOutputMaxDeadbad() {
-	return HBRIDGE_DEADBAND;
-}
-int64_t HBridgeEncoderPIDMotor::getOutputStop() {
-	return 0;
-}
+
 void HBridgeEncoderPIDMotor::setOutput(int64_t out) {
 	if (out > 0) {
 		digitalWrite(directionPin, HIGH); // turn the LED on (HIGH is the voltage level)
@@ -50,8 +43,8 @@ void HBridgeEncoderPIDMotor::setOutput(int64_t out) {
 		digitalWrite(directionPin, LOW);
 	}
 	int myOut = abs(out);
-	if (myOut < HBRIDGE_DEADBAND && out != 0)
-		myOut = HBRIDGE_DEADBAND;
+	if (myOut < getOutputMaxDeadbad() && out != 0)
+		myOut = getOutputMaxDeadbad();
 
 	motor.write(myOut);
 }
@@ -65,16 +58,4 @@ double HBridgeEncoderPIDMotor::calcCur(void) {
 	//convert to volts
 	//converts to current in milliamps
 	return 0;
-}
-
-double HBridgeEncoderPIDMotor::ticksToDeg() {
-	return 16.0 * // Encoder CPR
-			50.0 * // Motor Gear box ratio
-			1.0 * // motor to wheel stage ratio
-			(1.0 / 360.0) * // degrees per revolution
-			encoder.countsMode; // full quadrature, 4 ticks be encoder count, half is 2 and single mode is one
-
-}
-double HBridgeEncoderPIDMotor::getFreeSpinMaxDegreesPerSecond() {
-	return 186.0 * 60.0 * 360.0;
 }

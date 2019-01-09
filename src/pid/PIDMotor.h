@@ -17,6 +17,42 @@ enum interpolateMode {
 };
 
 class PIDMotor {
+private:
+	int64_t outputMin = -100;
+	/**
+	 * getOutputMax
+	 *
+	 * @return OutputMax
+	 */
+	int64_t outputMax = 100;
+	/**
+	 * getOutputMinDeadbad
+	 *
+	 * @return OutputMinDeadbad
+	 */
+	int64_t outputMinDeadbad = 0;
+	/**
+	 * getOutputMaxDeadbad
+	 *
+	 * @return OutputMaxDeadbad
+	 */
+	int64_t outputMaxDeadbad = 0;
+	/**
+	 * getOutputStop
+	 *
+	 * @return OutputStop
+	 */
+	int64_t outputStop = 0;
+	/*
+	 * a value to convert from degrees to motor units. This number times degrees equals ticks;
+	 */
+	double myTicksToDeg;
+	/*
+	 * value in degrees per second that represents the maximum
+	 * freespinning speed of the motor running at 'outputMax'.
+	 */
+	double freeSpinMaxDegreesPerSecond;
+
 protected:
 
 	long lastTimeRunPID = 0;
@@ -55,7 +91,8 @@ protected:
 	 *
 	 *  Custom version of map with bound clamping built in.
 	 */
-	float myFmap(float x, float in_min, float in_max, float out_min,float out_max);
+	float myFmap(float x, float in_min, float in_max, float out_min,
+			float out_max);
 	/**
 	 * Get the setpoint
 	 *
@@ -66,7 +103,7 @@ public:
 	/**
 	 * Duration of the interpolation mode, 1 equals done, 0 starting
 	 */
-	float unitDuration=1;
+	float unitDuration = 1;
 	/**
 	 * The PID object for the position controller
 	 */
@@ -120,7 +157,8 @@ public:
 	 * @param mode The type of interpolation LIN or SIN
 	 * @note To get immediate action set msTimeDuration to 0
 	 */
-	void startInterpolation(float newSetpoint, long msTimeDuration,interpolateMode mode);
+	void startInterpolation(float newSetpoint, long msTimeDuration,
+			interpolateMode mode);
 	/**
 	 * setSetpointDegrees  Set the desired setpoint for the PID controller
 	 *
@@ -143,7 +181,8 @@ public:
 	 * @param mode The type of interpolation LIN or SIN
 	 * @note To get immediate action set msTimeDuration to 0
 	 */
-	void startInterpolationDegrees(float newSetpoint, long msTimeDuration,interpolateMode mode);
+	void startInterpolationDegrees(float newSetpoint, long msTimeDuration,
+			interpolateMode mode);
 
 	/**
 	 * SetTunings Set the P.I.D. gains for the position controller
@@ -208,68 +247,93 @@ public:
 	 */
 	void stop();
 	/**
+	 * getOutputMin
+	 *
+	 * @return OutputMin
+	 */
+	int64_t getOutputMin();
+	/**
+	 * getOutputMax
+	 *
+	 * @return OutputMax
+	 */
+	int64_t getOutputMax();
+	/**
+	 * getOutputMinDeadbad
+	 *
+	 * @return OutputMinDeadbad
+	 */
+	int64_t getOutputMinDeadbad();
+	/**
+	 * getOutputMaxDeadbad
+	 *
+	 * @return OutputMaxDeadbad
+	 */
+	int64_t getOutputMaxDeadbad();
+	/**
+	 * getOutputStop
+	 *
+	 * @return OutputStop
+	 */
+	int64_t getOutputStop();
+	/**
+	 * getFreeSpinMaxDegreesPerSecond
+	 *
+	 * @return FreeSpinMaxDegreesPerSecond
+	 */
+	double getFreeSpinMaxDegreesPerSecond() ;
+	/**
+	 * ticksToDeg
+	 *
+	 * @return ticksToDeg
+	 */
+	double ticksToDeg();
+	/**
+	 * Set the bounds of the output stage
+	 *
+	 * These are the values to determing the opperating range of the
+	 * output of this PID motor.
+	 * @param outputMin the minimum value that the output takes (Full reverse)
+	 * @param outputMax the maximum value the output takes (Full forwared)
+	 * @param outputStop the value of the output to stop moving
+	 * @param outputMinDeadbad a positive value added to the stop value to creep backward
+	 * @param outputMaxDeadbad a positive value subtracted from stop value to creep forwards
+	 * @param a value to convert from degrees to motor units. This number times degrees equals ticks;
+	 * @param getFreeSpinMaxDegreesPerSecond a value in degrees per second that represents the maximum
+	 * 		freespinning speed of the motor running at 'outputMax'.
+	 */
+	void setOutputBoundingValues(int64_t outputMin, int64_t outputMax,
+			int64_t outputStop, int64_t outputMinDeadbad,
+			int64_t outputMaxDeadbad, double ticksToDeg,
+			double getFreeSpinMaxDegreesPerSecond);
+	/**
+	 * calcCur
+	 *
+	 * @return calcCur
+	 */
+	virtual double calcCur(void)=0;
+	/**
 	 * getPosition
 	 *
 	 * @return Position
 	 */
 	virtual int64_t getPosition()=0;
+
 	/**
-		 * getOutputMin
-		 *
-		 * @return OutputMin
-		 */
-	virtual int64_t getOutputMin()=0;
-	/**
-		 * getOutputMax
-		 *
-		 * @return OutputMax
-		 */
-	virtual int64_t getOutputMax()=0;
-	/**
-		 * getOutputMinDeadbad
-		 *
-		 * @return OutputMinDeadbad
-		 */
-	virtual int64_t getOutputMinDeadbad()=0;
-	/**
-		 * getOutputMaxDeadbad
-		 *
-		 * @return OutputMaxDeadbad
-		 */
-	virtual int64_t getOutputMaxDeadbad()=0;
-	/**
-		 * getOutputStop
-		 *
-		 * @return OutputStop
-		 */
-	virtual int64_t getOutputStop()=0;
-	/**
-		 * ticksToDeg
-		 *
-		 * @return ticksToDeg
-		 */
+	 * ticksToDeg
+	 *
+	 * @return ticksToDeg
+	 */
 	virtual double ticksToDeg()=0;
 	/**
-			 * overrideCurrentPositionHardware
-			 *
-			 * forces the hardware provider to return this value
-			 * instead of its internal value and this position
-			 *
-			 * @param val the value to set the sensor to
-			 */
+	 * overrideCurrentPositionHardware
+	 *
+	 * forces the hardware provider to return this value
+	 * instead of its internal value and this position
+	 *
+	 * @param val the value to set the sensor to
+	 */
 	virtual void overrideCurrentPositionHardware(int64_t val)=0;
-	/**
-		 * calcCur
-		 *
-		 * @return calcCur
-		 */
-	virtual double calcCur(void)=0;
-	/**
-		 * getFreeSpinMaxDegreesPerSecond
-		 *
-		 * @return FreeSpinMaxDegreesPerSecond
-		 */
-	virtual double getFreeSpinMaxDegreesPerSecond()=0;
 
 };
 

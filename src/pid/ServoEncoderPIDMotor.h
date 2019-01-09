@@ -26,12 +26,7 @@ public:
 	 * @param encoderB the B channel of the encoder
 	 */
 	void attach(int servoPin, int encoderA, int encoderB);
-	int64_t getPosition();
-	int64_t getOutputMin();
-	int64_t getOutputMax();
-	int64_t getOutputMinDeadbad();
-	int64_t getOutputMaxDeadbad();
-	int64_t getOutputStop();
+
 	void setOutput(int64_t out);
 	void overrideCurrentPositionHardware(int64_t val);
 	double calcCur(void);

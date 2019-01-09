@@ -29,11 +29,6 @@ public:
 	 */
 	void attach(int pwmPin, int directionPin, int encoderA, int encoderB);
 	int64_t getPosition();
-	int64_t getOutputMin();
-	int64_t getOutputMax();
-	int64_t getOutputMinDeadbad();
-	int64_t getOutputMaxDeadbad();
-	int64_t getOutputStop();
 	void setOutput(int64_t out);
 	void overrideCurrentPositionHardware(int64_t val);
 	ESP32Encoder encoder;
@@ -41,8 +36,6 @@ public:
 	//This function should analogRead the current sense from the motor driver
 	//and convert the value to current in milliamps
 	double calcCur(void);
-	double ticksToDeg();
-	double getFreeSpinMaxDegreesPerSecond();
 };
 
 #endif /* SRC_HBRIDGEENCODERPIDMOTOR_H_ */
