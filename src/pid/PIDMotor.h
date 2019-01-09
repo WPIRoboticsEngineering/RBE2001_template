@@ -160,6 +160,16 @@ public:
 	void startInterpolation(float newSetpoint, long msTimeDuration,
 			interpolateMode mode);
 	/**
+	 * isInterpolationDone check if the interpolation is done or not
+	 * @return bool is the interpolation done
+	 */
+	bool isInterpolationDone();
+	/**
+	 * getInterpolationUnitIncrement A unit vector from
+	 * 0 to 1 representing the state of the interpolation.
+	 */
+	float getInterpolationUnitIncrement();
+	/**
 	 * setSetpointDegrees  Set the desired setpoint for the PID controller
 	 *
 	 * the units for the variable is in Degrees

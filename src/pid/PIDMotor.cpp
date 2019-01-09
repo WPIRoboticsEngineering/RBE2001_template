@@ -15,9 +15,9 @@
  */
 float PIDMotor::myFmap(float x, float in_min, float in_max, float out_min,
 		float out_max) {
-	if(x>in_max)
+	if (x > in_max)
 		return out_max;
-	if(x<in_min)
+	if (x < in_min)
 		return out_min;
 	return ((x - in_min) * (out_max - out_min) / (in_max - in_min)) + out_min;
 }
@@ -33,6 +33,35 @@ PIDMotor::~PIDMotor() {
 void PIDMotor::pidinit() {
 	myPID.clearIntegralBuffer();
 }
+/**
+ * getInterpolationUnitIncrement A unit vector from
+ * 0 to 1 representing the state of the interpolation.
+ */
+float PIDMotor::getInterpolationUnitIncrement(){
+	float interpElapsed = (float) (millis() - startTime);
+	if(isInterpolationDone()==false){
+		// linear elapsed duration
+		unitDuration = interpElapsed / duration;
+		if (mode == SIN) {
+			// sinusoidal ramp up and ramp down
+			float sinPortion = (cos(-PI * unitDuration) / 2) + 0.5;
+			unitDuration = 1 - sinPortion;
+		}
+		return unitDuration;
+	}
+	return 1;
+}
+/**
+ * isInterpolationDone check if the interpolation is done or not
+ * @return bool is the interpolation done
+ */
+bool PIDMotor::isInterpolationDone() {
+	// Perform linear/sinusoidal interpolation
+	float interpElapsed = (float) (millis() - startTime);
+	if (interpElapsed < duration && duration > 0)
+		return false;
+	return true;
+}
 
 void PIDMotor::loop() {
 	if (millis() - lastTimeRunPID > myPID.sampleRateMs) {
@@ -42,14 +71,8 @@ void PIDMotor::loop() {
 	}
 	// Perform linear/sinusoidal interpolation
 	float interpElapsed = (float) (millis() - startTime);
-	if (interpElapsed < duration && duration > 0) {
-		// linear elapsed duration
-		unitDuration = interpElapsed / duration;
-		if (mode == SIN) {
-			// sinusoidal ramp up and ramp down
-			float sinPortion = (cos(-PI * unitDuration) / 2) + 0.5;
-			unitDuration = 1-sinPortion;
-		}
+	unitDuration=getInterpolationUnitIncrement();
+	if (unitDuration<1) {
 		float setpointDiff = endSetpoint - startSetpoint;
 		float newSetpoint = startSetpoint + (setpointDiff * unitDuration);
 		Setpoint = newSetpoint;
@@ -158,8 +181,8 @@ float PIDMotor::getSetPoint() {
 	return Setpoint;
 }
 
-float PIDMotor::getSetPointDegrees(){
-	return getSetPoint()/ticksToDeg();
+float PIDMotor::getSetPointDegrees() {
+	return getSetPoint() / ticksToDeg();
 }
 /**
  * SetTunings Set the P.I.D. gains for the position controller
@@ -250,8 +273,8 @@ void PIDMotor::startInterpolation(float newSetpoint, long msTimeDuration,
  * the units for the variable is in Degrees
  * this will start a linear interpolation of 0 time
  */
-void PIDMotor::setSetpointDegrees(float val){
-	setSetpoint((int64_t)(val*ticksToDeg()));
+void PIDMotor::setSetpointDegrees(float val) {
+	setSetpoint((int64_t) (val * ticksToDeg()));
 }
 /**
  * Start a linear interpolation of the motor
@@ -267,8 +290,9 @@ void PIDMotor::setSetpointDegrees(float val){
  * @param msTimeDuration the time of translation
  * @param mode The type of interpolation LIN or SIN
  */
-void PIDMotor::startInterpolationDegrees(float newSetpoint, long msTimeDuration,interpolateMode mode){
-	startInterpolation( newSetpoint*ticksToDeg(),  msTimeDuration, mode);
+void PIDMotor::startInterpolationDegrees(float newSetpoint, long msTimeDuration,
+		interpolateMode mode) {
+	startInterpolation(newSetpoint * ticksToDeg(), msTimeDuration, mode);
 }
 
 /**
@@ -286,16 +310,15 @@ void PIDMotor::startInterpolationDegrees(float newSetpoint, long msTimeDuration,
  * 		freespinning speed of the motor running at 'outputMax'.
  */
 void PIDMotor::setOutputBoundingValues(int64_t outputMin, int64_t outputMax,
-		int64_t outputStop, int64_t outputMinDeadbad,
-		int64_t outputMaxDeadbad, double ticksToDeg,
-		double freeSpinMaxDegreesPerSecond){
-	this->outputMin=outputMin;
-	this->outputMax=outputMax;
-	this->outputStop=outputStop;
-	this->outputMinDeadbad=outputMinDeadbad;
-	this->outputMaxDeadbad=outputMaxDeadbad;
-	this->myTicksToDeg=ticksToDeg;
-	this->freeSpinMaxDegreesPerSecond=freeSpinMaxDegreesPerSecond;
+		int64_t outputStop, int64_t outputMinDeadbad, int64_t outputMaxDeadbad,
+		double ticksToDeg, double freeSpinMaxDegreesPerSecond) {
+	this->outputMin = outputMin;
+	this->outputMax = outputMax;
+	this->outputStop = outputStop;
+	this->outputMinDeadbad = outputMinDeadbad;
+	this->outputMaxDeadbad = outputMaxDeadbad;
+	this->myTicksToDeg = ticksToDeg;
+	this->freeSpinMaxDegreesPerSecond = freeSpinMaxDegreesPerSecond;
 }
 /**
  * getOutputMin
