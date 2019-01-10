@@ -13,7 +13,6 @@
 #include "src/pid/HBridgeEncoderPIDMotor.h"
 #include "src/pid/ServoAnalogPIDMotor.h"
 #include <ESP32Servo.h>
-#include <QTRSensors.h>
 
 
 
@@ -56,8 +55,7 @@ private:
 	ServoEncoderPIDMotor * motor2;
 	HBridgeEncoderPIDMotor * motor3;
 	Servo * servo;
-	unsigned int sensorValues[NUM_SENSORS];
-	unsigned int position=0;
+	int position=0;
 public:
 	/**
 	 * Constructor for StudentsRobot

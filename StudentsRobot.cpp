@@ -6,14 +6,6 @@
  */
 
 #include "StudentsRobot.h"
-#include <QTRSensors.h>
-
-// sensors 0 through 5 are connected to analog inputs 0 through 5, respectively
-QTRSensorsAnalog qtra((unsigned char[] ) {
-	LINE_SENSE_ONE,
-	LINE_SENSE_TWO
-},
-	NUM_SENSORS, NUM_SAMPLES_PER_SENSOR, EMITTER_PIN);
 
 StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 		ServoEncoderPIDMotor * motor2, HBridgeEncoderPIDMotor * motor3,
@@ -92,28 +84,14 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 
 	pinMode(LINE_SENSE_ONE, ANALOG);
 	pinMode(LINE_SENSE_TWO, ANALOG);
-	//pinMode(LINE_SENSE_THREE, ANALOG);
-	for (int i = 0; i < 400; i++) { // make the calibration take about 10 seconds
 
-		qtra.calibrate(); // reads all sensors 10 times at 2.5 ms per six sensors (i.e. ~25 ms per call)
-	}
-	Serial.println(
-			"Line Sensor calibration minimum values measured when emitters were on");
-	for (int i = 0; i < NUM_SENSORS; i++) {
-		Serial.print(qtra.calibratedMinimumOn[i]);
-		Serial.print(' ');
-	}
-	Serial.println("calibration maximum values measured when emitters were on");
-	for (int i = 0; i < NUM_SENSORS; i++) {
-		Serial.print(qtra.calibratedMaximumOn[i]);
-		Serial.print(' ');
-	}
 }
 /**
  * Seperate from running the motor control,
  * update the state machine for running the final project code here
  */
 void StudentsRobot::updateStateMachine() {
+	double sig=0;
 	switch (status) {
 	case StartupRobot:
 		//Do this once at startup
@@ -131,16 +109,17 @@ void StudentsRobot::updateStateMachine() {
 		// read calibrated sensor values and obtain a measure of the line position from 0 to 5000
 		// To get raw sensor values, call:
 		//  qtra.read(sensorValues); instead of unsigned int position = qtra.readLine(sensorValues);
-
-		position = qtra.readLine(sensorValues);
-		Serial.print("\r\nPosition = "+String(position)+" raw = "); // comment this line out if you are using raw values
+		pinMode(LINE_SENSE_ONE, ANALOG);
+		pinMode(LINE_SENSE_TWO, ANALOG);
+		position = ((float)analogRead(LINE_SENSE_ONE)-(float)analogRead(LINE_SENSE_TWO));
+		Serial.print("\r\nPosition = "+String(position)); // comment this line out if you are using raw values
 		// print the sensor values as numbers from 0 to 1000, where 0 means maximum reflectance and
 		// 1000 means minimum reflectance, followed by the line position
-		for (unsigned char i = 0; i < NUM_SENSORS; i++) {
-			Serial.print(sensorValues[i]);
-			Serial.print('\t');
-		}
 
+		sig = ((double)position)*0.1;
+
+		motor1->setVelocityDegreesPerSecond(sig+200);
+		motor2->setVelocityDegreesPerSecond(sig+200);
 
 		//Serial.println("Vel 1 is "+String(motor1->getVelocityDegreesPerSecond())+" max "+String(motor1->getFreeSpinMaxDegreesPerSecond()));
 		//Serial.println("Vel 2 is "+String(motor2->getVelocityDegreesPerSecond())+" max "+String(motor2->getFreeSpinMaxDegreesPerSecond()));
