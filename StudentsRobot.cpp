@@ -6,6 +6,8 @@
  */
 
 #include "StudentsRobot.h"
+#include <QTRSensors.h>
+
 // sensors 0 through 5 are connected to analog inputs 0 through 5, respectively
 QTRSensorsAnalog qtra((unsigned char[] ) {
 	LINE_SENSE_ONE,
