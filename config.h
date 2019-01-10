@@ -8,38 +8,47 @@
 #ifndef SRC_CONFIG_H_
 #define SRC_CONFIG_H_
 
-//#define USE_WIFI
+#define USE_WIFI
 
 // Pins
 /**
  * Drive motor 1 Servo PWM pin
  */
-#define MOTOR1_PWM 18
+#define MOTOR1_PWM 5
 /**
  * Drive motor 2 Servo PWM pin
  */
-#define MOTOR2_PWM 16
+#define MOTOR2_PWM 15
 /**
  * Drive motor 3 10Khz full duty PWM pin
  */
-#define MOTOR3_PWM 17
+#define MOTOR3_PWM 12
 /**
  * Pin for setting the direction of the H-Bridge
  */
-#define MOTOR3_DIR 15
+#define MOTOR3_DIR 13
 
 //Encoder pins
-#define MOTOR1_ENCA 36
-#define MOTOR1_ENCB 39
+#define MOTOR1_ENCA 19
+#define MOTOR1_ENCB 18
 
-#define MOTOR2_ENCA 34
-#define MOTOR2_ENCB 35
+#define MOTOR2_ENCA 17
+#define MOTOR2_ENCB 16
 
-#define MOTOR3_ENCA 33
-#define MOTOR3_ENCB 26
+#define MOTOR3_ENCA 14
+#define MOTOR3_ENCB 27
+
+#define LINE_SENSE_ONE 36
+#define LINE_SENSE_TWO 39
+#define LINE_SENSE_THREE 34
+#define LINE_SENSE_FOUR 35
+#define LINE_SENSE_FIVE 32
+#define LINE_SENSE_SIX 33
+#define LINE_SENSE_SEVEN 25
+#define LINE_SENSE_EIGHT 26
 /**
  * Gripper pin for Servo
  */
-#define SERVO_PIN 27
+#define SERVO_PIN 23
 
 #endif /* SRC_CONFIG_H_ */
