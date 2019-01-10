@@ -44,7 +44,10 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 					50.0 * // Motor Gear box ratio
 					3.0 * // motor to wheel stage ratio
 					(1.0 / 360.0) * // degrees per revolution
-					motor1->encoder.countsMode, 186.0 * 60.0 * 360.0);
+					motor1->encoder.countsMode,
+					186.0 * // Measured max RPM
+					(1/60.0) * // Convert to seconds
+					360.0); // convert to degrees
 	motor2->setOutputBoundingValues(0, //the minimum value that the output takes (Full reverse)
 			180, //the maximum value the output takes (Full forwared)
 			90, //the value of the output to stop moving
@@ -54,7 +57,10 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 					50.0 * // Motor Gear box ratio
 					3.0 * // motor to wheel stage ratio
 					(1.0 / 360.0) * // degrees per revolution
-					motor1->encoder.countsMode, 186.0 * 60.0 * 360.0);
+					motor1->encoder.countsMode,
+					186.0 * // Measured max RPM
+					(1/60.0) * // Convert to seconds
+					360.0); // convert to degrees
 	motor3->setOutputBoundingValues(-255, //the minimum value that the output takes (Full reverse)
 			255, //the maximum value the output takes (Full forwared)
 			0, //the value of the output to stop moving
@@ -64,7 +70,10 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 					50.0 * // Motor Gear box ratio
 					1.0 * // motor to arm stage ratio
 					(1.0 / 360.0) * // degrees per revolution
-					motor3->encoder.countsMode, 186.0 * 60.0 * 360.0);
+					motor3->encoder.countsMode,
+					186.0 * // Measured max RPM
+					(1/60.0) * // Convert to seconds
+					360.0); // convert to degrees
 	// Set the setpoint the current position in motor units to ensure no motion
 	motor1->setSetpoint(motor1->getPosition());
 	motor2->setSetpoint(motor2->getPosition());
@@ -129,8 +138,8 @@ void StudentsRobot::updateStateMachine() {
 		}
 
 		Serial.println("Vel 1 is "+String(motor1->getVelocityDegreesPerSecond())+" max "+String(motor1->getFreeSpinMaxDegreesPerSecond()));
-		Serial.println("Vel 2 is "+String(motor2->getVelocityDegreesPerSecond())+" max "+String(motor2->getFreeSpinMaxDegreesPerSecond()));
-		Serial.println("Vel 3 is "+String(motor3->getVelocityDegreesPerSecond())+" max "+String(motor3->getFreeSpinMaxDegreesPerSecond()));
+		//Serial.println("Vel 2 is "+String(motor2->getVelocityDegreesPerSecond())+" max "+String(motor2->getFreeSpinMaxDegreesPerSecond()));
+		//Serial.println("Vel 3 is "+String(motor3->getVelocityDegreesPerSecond())+" max "+String(motor3->getFreeSpinMaxDegreesPerSecond()));
 
 
 		break;

@@ -223,7 +223,7 @@ double PIDMotor::calcVel() {
 	//encoder ticks since last call
 	movement = curPos - prevPos;
 	//encoder ticks to degrees
-	movement = movement / ticksToDeg();
+	movement = movement * ticksToDeg();
 	//timeInterval in seconds
 	timeInterval = timeInterval / 1000;
 	//Velocity in degrees per seconds
