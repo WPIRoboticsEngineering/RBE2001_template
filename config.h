@@ -40,10 +40,9 @@
 
 #define LINE_SENSE_ONE 			36
 #define LINE_SENSE_TWO 			39
-#define LINE_SENSE_THREE 		34
 #define EMITTER_PIN             13  // emitter is controlled by digital pin 2
 
-#define NUM_SENSORS             3  // number of sensors used
+#define NUM_SENSORS             2  // number of sensors used
 #define NUM_SAMPLES_PER_SENSOR  4  // average 4 analog samples per sensor reading
 
 /**

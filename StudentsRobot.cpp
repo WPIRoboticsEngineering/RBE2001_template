@@ -9,8 +9,7 @@
 // sensors 0 through 5 are connected to analog inputs 0 through 5, respectively
 QTRSensorsAnalog qtra((unsigned char[] ) {
 	LINE_SENSE_ONE,
-	LINE_SENSE_TWO,
-	LINE_SENSE_THREE
+	LINE_SENSE_TWO
 },
 	NUM_SENSORS, NUM_SAMPLES_PER_SENSOR, EMITTER_PIN);
 
@@ -91,7 +90,7 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 
 	pinMode(LINE_SENSE_ONE, ANALOG);
 	pinMode(LINE_SENSE_TWO, ANALOG);
-	pinMode(LINE_SENSE_THREE, ANALOG);
+	//pinMode(LINE_SENSE_THREE, ANALOG);
 	for (int i = 0; i < 400; i++) { // make the calibration take about 10 seconds
 
 		qtra.calibrate(); // reads all sensors 10 times at 2.5 ms per six sensors (i.e. ~25 ms per call)
