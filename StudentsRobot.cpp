@@ -91,9 +91,10 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
  * update the state machine for running the final project code here
  */
 void StudentsRobot::updateStateMachine() {
-	double sigl=0;
-	double sigr=0;
-	float target = 0;
+	float sigl=0;
+	float sigr=0;
+	float target = 3000;// the value that the sensors read
+	float gain =0.02;
 	switch (status) {
 	case StartupRobot:
 		//Do this once at startup
@@ -108,14 +109,11 @@ void StudentsRobot::updateStateMachine() {
 	case Running:
 		// Do something
 
-		// read calibrated sensor values and obtain a measure of the line position from 0 to 5000
-		// To get raw sensor values, call:
-		//  qtra.read(sensorValues); instead of unsigned int position = qtra.readLine(sensorValues);
 		pinMode(LINE_SENSE_ONE, ANALOG);
 		pinMode(LINE_SENSE_TWO, ANALOG);
 
 		digitalWrite(EMITTER_PIN, 1);
-		delay(1);
+		delayMicroseconds(500);
 		lsensorVal=(float)analogRead(LINE_SENSE_ONE);
 		rsensorVal=(float)analogRead(LINE_SENSE_TWO);
 		digitalWrite(EMITTER_PIN, 0);
@@ -123,11 +121,17 @@ void StudentsRobot::updateStateMachine() {
 		// print the sensor values as numbers from 0 to 1000, where 0 means maximum reflectance and
 		// 1000 means minimum reflectance, followed by the line position
 
-		sigl = (lsensorVal-target)*0.1;
-		sigr = (rsensorVal-target)*0.1;
+		sigl = (lsensorVal-target)*gain;
+		sigr = (rsensorVal-target)*gain;
+		if(sigl>0)
+			sigl=0;
+		if(sigr>0)
+				sigr=0;
 		Serial.print(" Set = "+String(sigl)+" "+String(sigr));
-		motor1->setVelocityDegreesPerSecond(sigl+200);
-		motor2->setVelocityDegreesPerSecond(sigr+200);
+		motor2->setVelocityDegreesPerSecond(-sigl);
+		motor1->setVelocityDegreesPerSecond(-sigr);
+		if(sigl==0&&sigr==0)
+			status =Halting;
 
 		//Serial.println("Vel 1 is "+String(motor1->getVelocityDegreesPerSecond())+" max "+String(motor1->getFreeSpinMaxDegreesPerSecond()));
 		//Serial.println("Vel 2 is "+String(motor2->getVelocityDegreesPerSecond())+" max "+String(motor2->getFreeSpinMaxDegreesPerSecond()));
