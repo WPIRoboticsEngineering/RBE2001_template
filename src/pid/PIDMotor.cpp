@@ -218,16 +218,18 @@ double PIDMotor::calcVel() {
 	curTime = millis();
 	//time change in ms from last call
 	timeInterval = curTime - prevTime;
-	if (timeInterval < 20)
+	if (timeInterval < 50)
 		return Vel;	// If this is polled too fast, return the cached velocity
 	//encoder ticks since last call
 	movement = curPos - prevPos;
 	//encoder ticks to degrees
-	movement = movement * ticksToDeg();
+	double movementdeg = movement * ticksToDeg();
 	//timeInterval in seconds
-	timeInterval = timeInterval / 1000;
+	double timeIntervalsec = timeInterval / 1000.0;
 	//Velocity in degrees per seconds
-	Vel = movement / timeInterval;
+	Vel = movementdeg * timeIntervalsec;
+	Serial.println("Vel "+String(movementdeg)+" Per "+String(timeIntervalsec)+" is "+String(Vel)+" max "+String(getFreeSpinMaxDegreesPerSecond()));
+
 	//sets curent vals to previous
 	prevPos = curPos;
 	prevTime = curTime;
