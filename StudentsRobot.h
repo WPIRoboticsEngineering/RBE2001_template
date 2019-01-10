@@ -57,6 +57,7 @@ private:
 	HBridgeEncoderPIDMotor * motor3;
 	Servo * servo;
 	unsigned int sensorValues[NUM_SENSORS];
+	unsigned int position=0;
 public:
 	/**
 	 * Constructor for StudentsRobot

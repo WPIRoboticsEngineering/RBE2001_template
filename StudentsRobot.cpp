@@ -8,8 +8,8 @@
 #include "StudentsRobot.h"
 // sensors 0 through 5 are connected to analog inputs 0 through 5, respectively
 QTRSensorsAnalog qtra((unsigned char[] ) { LINE_SENSE_ONE, LINE_SENSE_TWO,
-				LINE_SENSE_THREE, LINE_SENSE_FOUR, LINE_SENSE_FIVE,
-				LINE_SENSE_SIX },
+		LINE_SENSE_THREE, LINE_SENSE_FOUR, LINE_SENSE_FIVE,
+		LINE_SENSE_SIX },
 		NUM_SENSORS, NUM_SAMPLES_PER_SENSOR, EMITTER_PIN);
 
 StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
@@ -64,11 +64,22 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	motor1->setSetpoint(motor1->getPosition());
 	motor2->setSetpoint(motor2->getPosition());
 	motor3->setSetpoint(motor3->getPosition());
-
+	ESP32PWM dummy;
+	dummy.getChannel(); // skip the secong 10khz motor
 	// Set up digital servo for the gripper
 	servo->setPeriodHertz(330);
 	servo->attach(SERVO_PIN, 1000, 2000);
 
+	pinMode(LINE_SENSE_ONE, ANALOG);
+	pinMode(LINE_SENSE_TWO, ANALOG);
+	pinMode(LINE_SENSE_THREE, ANALOG);
+	pinMode(LINE_SENSE_FOUR, ANALOG);
+	pinMode(LINE_SENSE_FIVE, ANALOG);
+	pinMode(LINE_SENSE_SIX, ANALOG);
+	for (int i = 0; i < 400; i++) { // make the calibration take about 10 seconds
+
+		qtra.calibrate(); // reads all sensors 10 times at 2.5 ms per six sensors (i.e. ~25 ms per call)
+	}
 	Serial.println(
 			"Line Sensor calibration minimum values measured when emitters were on");
 	for (int i = 0; i < NUM_SENSORS; i++) {
@@ -102,8 +113,9 @@ void StudentsRobot::updateStateMachine() {
 		// read calibrated sensor values and obtain a measure of the line position from 0 to 5000
 		// To get raw sensor values, call:
 		//  qtra.read(sensorValues); instead of unsigned int position = qtra.readLine(sensorValues);
-		unsigned int position = qtra.readLine(sensorValues);
 
+		position = qtra.readLine(sensorValues);
+		Serial.print("\r\nPosition = "+String(position)+" raw = "); // comment this line out if you are using raw values
 		// print the sensor values as numbers from 0 to 1000, where 0 means maximum reflectance and
 		// 1000 means minimum reflectance, followed by the line position
 		for (unsigned char i = 0; i < NUM_SENSORS; i++) {
@@ -111,7 +123,6 @@ void StudentsRobot::updateStateMachine() {
 			Serial.print('\t');
 		}
 		//Serial.println(); // uncomment this line if you are using raw values
-		Serial.println(position); // comment this line out if you are using raw values
 		break;
 	case Halting:
 		// save state and enter safe mode
