@@ -6,18 +6,23 @@
  */
 
 #include "StudentsRobot.h"
+// sensors 0 through 5 are connected to analog inputs 0 through 5, respectively
+QTRSensorsAnalog qtra((unsigned char[] ) { LINE_SENSE_ONE, LINE_SENSE_TWO,
+				LINE_SENSE_THREE, LINE_SENSE_FOUR, LINE_SENSE_FIVE,
+				LINE_SENSE_SIX },
+		NUM_SENSORS, NUM_SAMPLES_PER_SENSOR, EMITTER_PIN);
 
 StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 		ServoEncoderPIDMotor * motor2, HBridgeEncoderPIDMotor * motor3,
 		Servo * servo) {
 	Serial.println("StudentsRobot::StudentsRobot called here ");
-	this->servo=servo;
-	this->motor1=motor1;
-	this->motor2=motor2;
-	this->motor3=motor3;
+	this->servo = servo;
+	this->motor1 = motor1;
+	this->motor2 = motor2;
+	this->motor3 = motor3;
 	motor1->attach(MOTOR1_PWM, MOTOR1_ENCA, MOTOR1_ENCB);
-	motor2->attach(MOTOR2_PWM,  MOTOR2_ENCA, MOTOR2_ENCB);
-	motor3->attach(MOTOR3_PWM,MOTOR3_DIR, MOTOR3_ENCA, MOTOR2_ENCB);
+	motor2->attach(MOTOR2_PWM, MOTOR2_ENCA, MOTOR2_ENCB);
+	motor3->attach(MOTOR3_PWM, MOTOR3_DIR, MOTOR3_ENCA, MOTOR2_ENCB);
 	// After attach, compute ratios
 	/**
 	 * Set the bounds of the output stage
@@ -25,49 +30,56 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	 * These are the values to determing the opperating range of the
 	 * output of this PID motor.
 	 */
-	motor1->setOutputBoundingValues(0,//the minimum value that the output takes (Full reverse)
-			180,//the maximum value the output takes (Full forwared)
-			90,//the value of the output to stop moving
-			5,//a positive value added to the stop value to creep backward
-			5,//a positive value subtracted from stop value to creep forwards
+	motor1->setOutputBoundingValues(0, //the minimum value that the output takes (Full reverse)
+			180, //the maximum value the output takes (Full forwared)
+			90, //the value of the output to stop moving
+			5, //a positive value added to the stop value to creep backward
+			5, //a positive value subtracted from stop value to creep forwards
 			16.0 * // Encoder CPR
-			50.0 * // Motor Gear box ratio
-			3.0 * // motor to wheel stage ratio
-			(1.0 / 360.0) * // degrees per revolution
-			motor1->encoder.countsMode,
-			186.0 * 60.0 * 360.0);
+					50.0 * // Motor Gear box ratio
+					3.0 * // motor to wheel stage ratio
+					(1.0 / 360.0) * // degrees per revolution
+					motor1->encoder.countsMode, 186.0 * 60.0 * 360.0);
 	motor2->setOutputBoundingValues(0, //the minimum value that the output takes (Full reverse)
 			180, //the maximum value the output takes (Full forwared)
 			90, //the value of the output to stop moving
 			5, //a positive value added to the stop value to creep backward
-			5,//a positive value subtracted from stop value to creep forwards
+			5, //a positive value subtracted from stop value to creep forwards
 			16.0 * // Encoder CPR
-			50.0 * // Motor Gear box ratio
-			3.0 * // motor to wheel stage ratio
-			(1.0 / 360.0) * // degrees per revolution
-			motor1->encoder.countsMode,
-			186.0 * 60.0 * 360.0);
+					50.0 * // Motor Gear box ratio
+					3.0 * // motor to wheel stage ratio
+					(1.0 / 360.0) * // degrees per revolution
+					motor1->encoder.countsMode, 186.0 * 60.0 * 360.0);
 	motor3->setOutputBoundingValues(-255, //the minimum value that the output takes (Full reverse)
 			255, //the maximum value the output takes (Full forwared)
 			0, //the value of the output to stop moving
 			138, //a positive value added to the stop value to creep backward
-			138,//a positive value subtracted from stop value to creep forwards
+			138, //a positive value subtracted from stop value to creep forwards
 			16.0 * // Encoder CPR
-			50.0 * // Motor Gear box ratio
-			1.0 * // motor to arm stage ratio
-			(1.0 / 360.0) * // degrees per revolution
-			motor3->encoder.countsMode,
-			186.0 * 60.0 * 360.0);
+					50.0 * // Motor Gear box ratio
+					1.0 * // motor to arm stage ratio
+					(1.0 / 360.0) * // degrees per revolution
+					motor3->encoder.countsMode, 186.0 * 60.0 * 360.0);
 	// Set the setpoint the current position in motor units to ensure no motion
 	motor1->setSetpoint(motor1->getPosition());
 	motor2->setSetpoint(motor2->getPosition());
 	motor3->setSetpoint(motor3->getPosition());
 
-
-
 	// Set up digital servo for the gripper
 	servo->setPeriodHertz(330);
 	servo->attach(SERVO_PIN, 1000, 2000);
+
+	Serial.println(
+			"Line Sensor calibration minimum values measured when emitters were on");
+	for (int i = 0; i < NUM_SENSORS; i++) {
+		Serial.print(qtra.calibratedMinimumOn[i]);
+		Serial.print(' ');
+	}
+	Serial.println("calibration maximum values measured when emitters were on");
+	for (int i = 0; i < NUM_SENSORS; i++) {
+		Serial.print(qtra.calibratedMaximumOn[i]);
+		Serial.print(' ');
+	}
 }
 /**
  * Seperate from running the motor control,
@@ -86,6 +98,20 @@ void StudentsRobot::updateStateMachine() {
 		break;
 	case Running:
 		// Do something
+
+		// read calibrated sensor values and obtain a measure of the line position from 0 to 5000
+		// To get raw sensor values, call:
+		//  qtra.read(sensorValues); instead of unsigned int position = qtra.readLine(sensorValues);
+		unsigned int position = qtra.readLine(sensorValues);
+
+		// print the sensor values as numbers from 0 to 1000, where 0 means maximum reflectance and
+		// 1000 means minimum reflectance, followed by the line position
+		for (unsigned char i = 0; i < NUM_SENSORS; i++) {
+			Serial.print(sensorValues[i]);
+			Serial.print('\t');
+		}
+		//Serial.println(); // uncomment this line if you are using raw values
+		Serial.println(position); // comment this line out if you are using raw values
 		break;
 	case Halting:
 		// save state and enter safe mode

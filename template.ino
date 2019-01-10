@@ -7,6 +7,7 @@
 #include <Esp32SimplePacketComs.h>
 #include <wifi/WifiManager.h>
 #include <server/NameCheckerServer.h>
+#include <QTRSensors.h>
 
 #include "src/RobotControlCenter.h"
 

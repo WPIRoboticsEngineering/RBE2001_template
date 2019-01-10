@@ -26,7 +26,7 @@
 /**
  * Pin for setting the direction of the H-Bridge
  */
-#define MOTOR3_DIR 13
+#define MOTOR3_DIR 26
 
 //Encoder pins
 #define MOTOR1_ENCA 19
@@ -38,14 +38,17 @@
 #define MOTOR3_ENCA 14
 #define MOTOR3_ENCB 27
 
-#define LINE_SENSE_ONE 36
-#define LINE_SENSE_TWO 39
-#define LINE_SENSE_THREE 34
-#define LINE_SENSE_FOUR 35
-#define LINE_SENSE_FIVE 32
-#define LINE_SENSE_SIX 33
-#define LINE_SENSE_SEVEN 25
-#define LINE_SENSE_EIGHT 26
+#define LINE_SENSE_ONE 			36
+#define LINE_SENSE_TWO 			39
+#define LINE_SENSE_THREE 		34
+#define LINE_SENSE_FOUR 		35
+#define LINE_SENSE_FIVE 		32
+#define LINE_SENSE_SIX 			33
+#define EMITTER_PIN             13  // emitter is controlled by digital pin 2
+
+#define NUM_SENSORS             6  // number of sensors used
+#define NUM_SAMPLES_PER_SENSOR  4  // average 4 analog samples per sensor reading
+
 /**
  * Gripper pin for Servo
  */

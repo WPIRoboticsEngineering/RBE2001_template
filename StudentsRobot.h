@@ -13,6 +13,10 @@
 #include "src/pid/HBridgeEncoderPIDMotor.h"
 #include "src/pid/ServoAnalogPIDMotor.h"
 #include <ESP32Servo.h>
+#include <QTRSensors.h>
+
+
+
 /**
  * @enum RobotStateMachine
  * These are sample values for a sample state machine.
@@ -52,7 +56,7 @@ private:
 	ServoEncoderPIDMotor * motor2;
 	HBridgeEncoderPIDMotor * motor3;
 	Servo * servo;
-
+	unsigned int sensorValues[NUM_SENSORS];
 public:
 	/**
 	 * Constructor for StudentsRobot
