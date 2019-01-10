@@ -92,9 +92,6 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	pinMode(LINE_SENSE_ONE, ANALOG);
 	pinMode(LINE_SENSE_TWO, ANALOG);
 	pinMode(LINE_SENSE_THREE, ANALOG);
-	pinMode(LINE_SENSE_FOUR, ANALOG);
-	pinMode(LINE_SENSE_FIVE, ANALOG);
-	pinMode(LINE_SENSE_SIX, ANALOG);
 	for (int i = 0; i < 400; i++) { // make the calibration take about 10 seconds
 
 		qtra.calibrate(); // reads all sensors 10 times at 2.5 ms per six sensors (i.e. ~25 ms per call)
