@@ -8,6 +8,8 @@
 #ifndef SRC_CONFIG_H_
 #define SRC_CONFIG_H_
 
+#define TEAM_NAME "IMU-Team21"
+
 #define USE_WIFI
 
 // Pins

@@ -55,7 +55,9 @@ private:
 	ServoEncoderPIDMotor * motor2;
 	HBridgeEncoderPIDMotor * motor3;
 	Servo * servo;
-	int position=0;
+	float lsensorVal=0;
+	float rsensorVal=0;
+
 public:
 	/**
 	 * Constructor for StudentsRobot
