@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['emitter_5fpin',['EMITTER_PIN',['../config_8h.html#aa65cafeb327644498877c02100ad3f8f',1,'config.h']]],
   ['encoder',['encoder',['../classHBridgeEncoderPIDMotor.html#ab76f628fc994fa529af8f71e97b92139',1,'HBridgeEncoderPIDMotor::encoder()'],['../classServoEncoderPIDMotor.html#a0b8a141cab730d4803c3424e0108c57f',1,'ServoEncoderPIDMotor::encoder()']]],
   ['endsetpoint',['endSetpoint',['../classPIDMotor.html#a196f7c4b7e8e39269d594d775eb3200b',1,'PIDMotor']]],
   ['estop',['EStop',['../classEStop.html',1,'EStop'],['../classEStop.html#ad5159227329fa3c131af43a1363338bb',1,'EStop::EStop()'],['../classStudentsRobot.html#a9ec969e85e7b74508cecab382bcb0d6a',1,'StudentsRobot::EStop()']]],

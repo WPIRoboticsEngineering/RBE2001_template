@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['manager',['manager',['../classRobotControlCenter.html#a861c369e3fc1ddfeddee859b8a1d489d',1,'RobotControlCenter']]],
   ['mode',['mode',['../classPIDMotor.html#a9a701288ddcc758e51ecdc4ed15180cb',1,'PIDMotor']]],
   ['motor',['motor',['../classHBridgeEncoderPIDMotor.html#a73fd724b7d66a85cd2d50218f20605cd',1,'HBridgeEncoderPIDMotor::motor()'],['../classServoAnalogPIDMotor.html#ad87d43052b6d9ba47f0e8aa20b8a679d',1,'ServoAnalogPIDMotor::motor()'],['../classServoEncoderPIDMotor.html#acee23a13c3d325abaa2faa2822215163',1,'ServoEncoderPIDMotor::motor()']]],
   ['motor1',['motor1',['../classRobotControlCenter.html#a356aa41acd26fe5acc0a843e703087f5',1,'RobotControlCenter::motor1()'],['../classStudentsRobot.html#af5eaeca4389eb389fdc502bd272a4d28',1,'StudentsRobot::motor1()']]],

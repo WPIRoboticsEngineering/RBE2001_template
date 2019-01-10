@@ -10,6 +10,7 @@ var searchData=
   ['robotcontrolcenter_2eh',['RobotControlCenter.h',['../RobotControlCenter_8h.html',1,'']]],
   ['robotpointer',['robotPointer',['../classApprove.html#a42d63c404b261de1b51a318991e8feb0',1,'Approve::robotPointer()'],['../classClearFaults.html#a19a4e4af8aa9cb763f982d6d8ec9f470',1,'ClearFaults::robotPointer()'],['../classEStop.html#ac312938499766b0ba543aa545a82a7a9',1,'EStop::robotPointer()'],['../classGetStatus.html#a37d71590c59d6b25e2dcef49e3c01e4d',1,'GetStatus::robotPointer()'],['../classPickOrder.html#abaa7d2e7e28c674a7e3c1c19fcb59435',1,'PickOrder::robotPointer()']]],
   ['robotstatemachine',['RobotStateMachine',['../StudentsRobot_8h.html#a2fa48347d45a4cb9d5fdbf4f077b5374',1,'StudentsRobot.h']]],
+  ['rsensorval',['rsensorVal',['../classStudentsRobot.html#a28f8baa806d79dfb2557c562f1081f09',1,'StudentsRobot']]],
   ['run',['run',['../RobotControlCenter_8h.html#aa0aafed44fec19806d8f9ad834be1248a28587bd6fdb2fda96552863fb27851cd',1,'RobotControlCenter.h']]],
   ['running',['Running',['../StudentsRobot_8h.html#a2fa48347d45a4cb9d5fdbf4f077b5374a2f5f2c4a8c4f4f0519d503dcdfbf55cb',1,'StudentsRobot.h']]]
 ];

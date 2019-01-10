@@ -1,7 +1,7 @@
 var searchData=
 [
   ['getangledegrees',['getAngleDegrees',['../classPIDMotor.html#a30fafa2f674001af8bf25d771532620b',1,'PIDMotor']]],
-  ['getfreespinmaxdegreespersecond',['getFreeSpinMaxDegreesPerSecond',['../classPIDMotor.html#a702890e63da27ace0ec16b30d53e0c9e',1,'PIDMotor::getFreeSpinMaxDegreesPerSecond()'],['../classServoEncoderPIDMotor.html#a432c41e432d0c6de092733f8268a010e',1,'ServoEncoderPIDMotor::getFreeSpinMaxDegreesPerSecond()']]],
+  ['getfreespinmaxdegreespersecond',['getFreeSpinMaxDegreesPerSecond',['../classPIDMotor.html#a702890e63da27ace0ec16b30d53e0c9e',1,'PIDMotor']]],
   ['getinterpolationunitincrement',['getInterpolationUnitIncrement',['../classPIDMotor.html#a4b178659f339c95aa78bfb1a9e77c338',1,'PIDMotor']]],
   ['getoutputmax',['getOutputMax',['../classPIDMotor.html#a7a743e25e68c808e71bc5724e8130748',1,'PIDMotor']]],
   ['getoutputmaxdeadbad',['getOutputMaxDeadbad',['../classPIDMotor.html#a63aace26cb7ff89d45d7a6abdc79b3e3',1,'PIDMotor']]],

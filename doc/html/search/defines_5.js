@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['servo_5fpin',['SERVO_PIN',['../config_8h.html#a5218f89aa292654356a48989319aafb1',1,'config.h']]],
-  ['src_5fcomgets_5fpidconfiguresimplepacketcomsserver_5fh_5f',['SRC_COMGetS_PIDCONFIGURESIMPLEPACKETCOMSSERVER_H_',['../GetPIDConstants_8h.html#aee9747ee3b04578566bcc7dec5b4db75',1,'GetPIDConstants.h']]]
+  ['num_5fsamples_5fper_5fsensor',['NUM_SAMPLES_PER_SENSOR',['../config_8h.html#a0cb72739aac6fce394ec8d2fc4d85b10',1,'config.h']]],
+  ['num_5fsensors',['NUM_SENSORS',['../config_8h.html#add02d1c189e3b727b722638327642a8b',1,'config.h']]],
+  ['numberofpid',['numberOfPID',['../RobotControlCenter_8h.html#aa92f722067465104b12471609ea2d3de',1,'RobotControlCenter.h']]]
 ];

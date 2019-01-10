@@ -105,7 +105,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:accb2946ca40f9dfc96361aeb5e2a07d7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRBEPID.html#accb2946ca40f9dfc96361aeb5e2a07d7">kp</a> = 0.01</td></tr>
+<tr class="memitem:accb2946ca40f9dfc96361aeb5e2a07d7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRBEPID.html#accb2946ca40f9dfc96361aeb5e2a07d7">kp</a> = 0.00015</td></tr>
 <tr class="separator:accb2946ca40f9dfc96361aeb5e2a07d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed4ca4717bc067b492c638f723b2addb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRBEPID.html#aed4ca4717bc067b492c638f723b2addb">ki</a> = 0</td></tr>
 <tr class="separator:aed4ca4717bc067b492c638f723b2addb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,8 +136,6 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="RBEPID_8cpp_source.html#l00011">11</a> of file <a class="el" href="RBEPID_8cpp_source.html">RBEPID.cpp</a>.</p>
-
-<p>References <a class="el" href="RBEPID_8h_source.html#l00017">kd</a>, <a class="el" href="RBEPID_8h_source.html#l00016">ki</a>, and <a class="el" href="RBEPID_8h_source.html#l00015">kp</a>.</p>
 
 </div>
 </div>
@@ -175,7 +173,7 @@ Data Fields</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a value from -1.0 to 1.0 representing the PID control signel </dd></dl>
 
-<p>Definition at line <a class="el" href="RBEPID_8cpp_source.html#l00031">31</a> of file <a class="el" href="RBEPID_8cpp_source.html">RBEPID.cpp</a>.</p>
+<p>Definition at line <a class="el" href="RBEPID_8cpp_source.html#l00029">29</a> of file <a class="el" href="RBEPID_8cpp_source.html">RBEPID.cpp</a>.</p>
 
 <p>References <a class="el" href="RBEPID_8h_source.html#l00015">kp</a>.</p>
 
@@ -197,7 +195,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Clear the internal representation fo the integral term. </p>
 
-<p>Definition at line <a class="el" href="RBEPID_8cpp_source.html#l00055">55</a> of file <a class="el" href="RBEPID_8cpp_source.html">RBEPID.cpp</a>.</p>
+<p>Definition at line <a class="el" href="RBEPID_8cpp_source.html#l00053">53</a> of file <a class="el" href="RBEPID_8cpp_source.html">RBEPID.cpp</a>.</p>
 
 <p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00064">PIDMotor::loop()</a>, <a class="el" href="PIDMotor_8cpp_source.html#l00158">PIDMotor::overrideCurrentPosition()</a>, and <a class="el" href="PIDMotor_8cpp_source.html#l00033">PIDMotor::pidinit()</a>.</p>
 
@@ -234,7 +232,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>setpid set PID constants </p>
 
-<p>Definition at line <a class="el" href="RBEPID_8cpp_source.html#l00018">18</a> of file <a class="el" href="RBEPID_8cpp_source.html">RBEPID.cpp</a>.</p>
+<p>Definition at line <a class="el" href="RBEPID_8cpp_source.html#l00016">16</a> of file <a class="el" href="RBEPID_8cpp_source.html">RBEPID.cpp</a>.</p>
 
 <p>References <a class="el" href="RBEPID_8h_source.html#l00017">kd</a>, <a class="el" href="RBEPID_8h_source.html#l00016">ki</a>, and <a class="el" href="RBEPID_8h_source.html#l00015">kp</a>.</p>
 
@@ -255,7 +253,7 @@ Data Fields</h2></td></tr>
 
 <p>Definition at line <a class="el" href="RBEPID_8h_source.html#l00017">17</a> of file <a class="el" href="RBEPID_8h_source.html">RBEPID.h</a>.</p>
 
-<p>Referenced by <a class="el" href="GetPIDConstants_8cpp_source.html#l00017">GetPIDConstants::event()</a>, <a class="el" href="RBEPID_8cpp_source.html#l00011">RBEPID()</a>, and <a class="el" href="RBEPID_8cpp_source.html#l00018">setpid()</a>.</p>
+<p>Referenced by <a class="el" href="GetPIDConstants_8cpp_source.html#l00017">GetPIDConstants::event()</a>, and <a class="el" href="RBEPID_8cpp_source.html#l00016">setpid()</a>.</p>
 
 </div>
 </div>
@@ -271,7 +269,7 @@ Data Fields</h2></td></tr>
 
 <p>Definition at line <a class="el" href="RBEPID_8h_source.html#l00016">16</a> of file <a class="el" href="RBEPID_8h_source.html">RBEPID.h</a>.</p>
 
-<p>Referenced by <a class="el" href="GetPIDConstants_8cpp_source.html#l00017">GetPIDConstants::event()</a>, <a class="el" href="RBEPID_8cpp_source.html#l00011">RBEPID()</a>, and <a class="el" href="RBEPID_8cpp_source.html#l00018">setpid()</a>.</p>
+<p>Referenced by <a class="el" href="GetPIDConstants_8cpp_source.html#l00017">GetPIDConstants::event()</a>, and <a class="el" href="RBEPID_8cpp_source.html#l00016">setpid()</a>.</p>
 
 </div>
 </div>
@@ -280,14 +278,14 @@ Data Fields</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float RBEPID::kp = 0.01</td>
+          <td class="memname">float RBEPID::kp = 0.00015</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="RBEPID_8h_source.html#l00015">15</a> of file <a class="el" href="RBEPID_8h_source.html">RBEPID.h</a>.</p>
 
-<p>Referenced by <a class="el" href="RBEPID_8cpp_source.html#l00031">calc()</a>, <a class="el" href="GetPIDConstants_8cpp_source.html#l00017">GetPIDConstants::event()</a>, <a class="el" href="RBEPID_8cpp_source.html#l00011">RBEPID()</a>, and <a class="el" href="RBEPID_8cpp_source.html#l00018">setpid()</a>.</p>
+<p>Referenced by <a class="el" href="RBEPID_8cpp_source.html#l00029">calc()</a>, <a class="el" href="GetPIDConstants_8cpp_source.html#l00017">GetPIDConstants::event()</a>, and <a class="el" href="RBEPID_8cpp_source.html#l00016">setpid()</a>.</p>
 
 </div>
 </div>
@@ -317,7 +315,7 @@ Data Fields</h2></td></tr>
 
 <p>Definition at line <a class="el" href="RBEPID_8h_source.html#l00020">20</a> of file <a class="el" href="RBEPID_8h_source.html">RBEPID.h</a>.</p>
 
-<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00064">PIDMotor::loop()</a>.</p>
+<p>Referenced by <a class="el" href="PIDMotor_8cpp_source.html#l00064">PIDMotor::loop()</a>, and <a class="el" href="StudentsRobot_8cpp_source.html#l00010">StudentsRobot::StudentsRobot()</a>.</p>
 
 </div>
 </div>

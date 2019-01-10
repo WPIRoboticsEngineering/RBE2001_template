@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['use_5fwifi',['USE_WIFI',['../config_8h.html#a038b45d7c3c759d55de15e9fe019f580',1,'config.h']]]
+  ['pid_5foutput_5fcompute_5frange',['PID_OUTPUT_COMPUTE_RANGE',['../PIDMotor_8h.html#a56bf12c4920829e41fa82868e5583301',1,'PIDMotor.h']]]
 ];

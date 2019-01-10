@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['hbridge_5fdeadband',['HBRIDGE_DEADBAND',['../HBridgeEncoderPIDMotor_8h.html#a91da1b886e3e59ac75331d5176adde83',1,'HBridgeEncoderPIDMotor.h']]],
-  ['hbridge_5fmax',['HBRIDGE_MAX',['../HBridgeEncoderPIDMotor_8h.html#a6c83804441f44ddea9f66fdd9ecac9d1',1,'HBridgeEncoderPIDMotor.h']]]
+  ['filtersize',['filterSize',['../ServoAnalogPIDMotor_8h.html#a42f923d939aa47adef20f094493b70a8',1,'ServoAnalogPIDMotor.h']]]
 ];
