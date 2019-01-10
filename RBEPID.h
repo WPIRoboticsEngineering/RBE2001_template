@@ -12,7 +12,7 @@ class RBEPID {
 
 public:
 	RBEPID();
-	float kp = 0.01;
+	float kp = 0.00015;
 	float ki = 0;
 	float kd = 0;
 	float last_error = 0;

@@ -9,9 +9,7 @@
 
 //Class constructor
 RBEPID::RBEPID() {
-	kp = 0.01;
-	ki = 0;
-	kd = 0;
+
 }
 
 //Function to set PID gain values
