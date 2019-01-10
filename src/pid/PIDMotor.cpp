@@ -258,6 +258,8 @@ void PIDMotor::stop() {
  */
 void PIDMotor::startInterpolation(float newSetpoint, long msTimeDuration,
 		interpolateMode mode) {
+	if(newSetpoint==Setpoint &&msTimeDuration== duration&& this->mode==mode)
+		return;
 	startSetpoint = Setpoint;
 	endSetpoint = newSetpoint;
 	startTime = millis();
