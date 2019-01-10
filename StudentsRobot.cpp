@@ -123,7 +123,7 @@ void StudentsRobot::updateStateMachine() {
 	case StartRunning:
 		Serial.println("Start Running");
 		status = Running;
-		motor1->setVelocityDegreesPerSecond(motor1->getFreeSpinMaxDegreesPerSecond());
+
 		break;
 	case Running:
 		// Do something
@@ -168,8 +168,8 @@ void StudentsRobot::updateStateMachine() {
  */
 void StudentsRobot::pidLoop() {
 	motor1->loop();
-	//motor2->loop();
-	//motor3->loop();
+	motor2->loop();
+	motor3->loop();
 }
 /**
  * Approve
