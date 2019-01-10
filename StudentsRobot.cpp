@@ -23,6 +23,11 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	motor1->attach(MOTOR1_PWM, MOTOR1_ENCA, MOTOR1_ENCB);
 	motor2->attach(MOTOR2_PWM, MOTOR2_ENCA, MOTOR2_ENCB);
 	motor3->attach(MOTOR3_PWM, MOTOR3_DIR, MOTOR3_ENCA, MOTOR2_ENCB);
+	// Set the PID CLock gating rate
+	motor1->myPID.sampleRateMs=30;
+	motor2->myPID.sampleRateMs=30;
+	motor3->myPID.sampleRateMs=1;
+
 	// After attach, compute ratios
 	/**
 	 * Set the bounds of the output stage
@@ -115,14 +120,19 @@ void StudentsRobot::updateStateMachine() {
 		//  qtra.read(sensorValues); instead of unsigned int position = qtra.readLine(sensorValues);
 
 		position = qtra.readLine(sensorValues);
-		Serial.print("\r\nPosition = "+String(position)+" raw = "); // comment this line out if you are using raw values
+		//Serial.print("\r\nPosition = "+String(position)+" raw = "); // comment this line out if you are using raw values
 		// print the sensor values as numbers from 0 to 1000, where 0 means maximum reflectance and
 		// 1000 means minimum reflectance, followed by the line position
 		for (unsigned char i = 0; i < NUM_SENSORS; i++) {
-			Serial.print(sensorValues[i]);
-			Serial.print('\t');
+			//Serial.print(sensorValues[i]);
+			//Serial.print('\t');
 		}
-		//Serial.println(); // uncomment this line if you are using raw values
+
+		Serial.println("Vel 1 is "+String(motor1->getVelocityDegreesPerSecond())+" max "+String(motor1->getFreeSpinMaxDegreesPerSecond()));
+		Serial.println("Vel 2 is "+String(motor2->getVelocityDegreesPerSecond())+" max "+String(motor2->getFreeSpinMaxDegreesPerSecond()));
+		Serial.println("Vel 3 is "+String(motor3->getVelocityDegreesPerSecond())+" max "+String(motor3->getFreeSpinMaxDegreesPerSecond()));
+
+
 		break;
 	case Halting:
 		// save state and enter safe mode

@@ -29,8 +29,6 @@ public:
 	void setOutput(int64_t out);
 	void overrideCurrentPositionHardware(int64_t val);
 	double calcCur(void);
-	double ticksToDeg();
-	double getFreeSpinMaxDegreesPerSecond();
 	ESP32Encoder encoder;
 	Servo motor;
 };
