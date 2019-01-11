@@ -10,7 +10,7 @@
 
 #define TEAM_NAME "IMU-Team21"
 
-#define USE_WIFI
+//#define USE_WIFI
 
 // Pins
 /**
