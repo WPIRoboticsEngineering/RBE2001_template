@@ -99,46 +99,5 @@ Android phones hotspot mode works well. the Iphone hotspot does not work and see
 
 
 
-# Commit your changes
-
-### Unfamiliar with Git?
-
-run through this tutorial: https://resources.github.com/videos/github-best-practices/
-
-Also check out this cheat sheet: http://overapi.com/git
-
-### Familiar with Git?
-When you make a change to any line of code, you should commit your changes. If you have worked for ~1 hour, then you should make a commit with a message describing your work. To do so, go back to 
-
-Finally right click on your project
-```
-Team->Commit
-```
-Be sure to set the "Author" and "Committer" fields sould both contain the same data like this:
-```
-Kevin Harrington <harrington@wpi.edu>
-```
-
-Messages should consist of 60 charrectors of short description describing what changed, 2 new lines, then a t least one full sentance describing the justification for the change. If you have more than one file, only commit one at a time. using the "+" and "-" buttons in the Git Staging section. 
-
-When you have chages to share with your team, first Right click on the repository and select "Pull". Merge any changes your team mates made and published to upstream. Then commit the merge (or commit nothing if the merge was clean) and push your changes to the upstream server.
-
-Once you have pushed your changes, be sure to verify that they are on GitHub. On your repository, go to
-```
-Insights->Network
-```
-and verify your changes are there. 
-
-
-
-# Troubleshooting
-
-## arduinoPlugin\tools\make\make not found in PATH
-
-There can be a currupted download to the Make tools, if this error comes up follow these instructions to correct it
-Follow the instructions here : https://github.com/Sloeber/arduino-eclipse-plugin/issues/767
-
-
-
 
 
