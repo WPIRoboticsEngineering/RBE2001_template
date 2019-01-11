@@ -62,24 +62,24 @@ bool PIDMotor::isInterpolationDone() {
 }
 
 void PIDMotor::loop() {
+	calcVel(); // ensure the velocity value is kept up to date
 	if (millis() - lastTimeRunPID > myPID.sampleRateMs) {
 		lastTimeRunPID = millis();
 	} else {
 		return;
 	}
-	// Perform linear/sinusoidal interpolation
-	unitDuration=getInterpolationUnitIncrement();
-	if (unitDuration<1) {
-		float setpointDiff = endSetpoint - startSetpoint;
-		float newSetpoint = startSetpoint + (setpointDiff * unitDuration);
-		Setpoint = newSetpoint;
-	} else {
-		// If there is no interpoation to perform, set the setpoint to the end state
-		Setpoint = endSetpoint;
-	}
 	// Done Performing linear/sinusoidal interpolation
-	calcVel(); // ensure the velocity value is kept up to date
 	if (mode != VEL) {
+		// Perform linear/sinusoidal interpolation
+		unitDuration=getInterpolationUnitIncrement();
+		if (unitDuration<1) {
+			float setpointDiff = endSetpoint - startSetpoint;
+			float newSetpoint = startSetpoint + (setpointDiff * unitDuration);
+			Setpoint = newSetpoint;
+		} else {
+			// If there is no interpoation to perform, set the setpoint to the end state
+			Setpoint = endSetpoint;
+		}
 		// Position mode
 		Input = (float) getPosition();
 		//check for integral windup

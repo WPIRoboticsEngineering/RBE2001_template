@@ -82,6 +82,7 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	servo->setPeriodHertz(330);
 	servo->attach(SERVO_PIN, 1000, 2000);
 
+	// Set up the line tracker
 	pinMode(LINE_SENSE_ONE, ANALOG);
 	pinMode(LINE_SENSE_TWO, ANALOG);
 	pinMode(EMITTER_PIN, OUTPUT);
@@ -113,30 +114,20 @@ void StudentsRobot::updateStateMachine() {
 		pinMode(LINE_SENSE_TWO, ANALOG);
 
 		digitalWrite(EMITTER_PIN, 1);
-		delayMicroseconds(500);
+		delayMicroseconds(50);
 		lsensorVal=(float)analogRead(LINE_SENSE_ONE);
 		rsensorVal=(float)analogRead(LINE_SENSE_TWO);
 		digitalWrite(EMITTER_PIN, 0);
-		Serial.print("\r\nPosition = "+String(lsensorVal)+" "+String(rsensorVal)); // comment this line out if you are using raw values
-		// print the sensor values as numbers from 0 to 1000, where 0 means maximum reflectance and
-		// 1000 means minimum reflectance, followed by the line position
-
 		sigl = (lsensorVal-target)*gain;
 		sigr = (rsensorVal-target)*gain;
 		if(sigl>0)
 			sigl=0;
 		if(sigr>0)
 				sigr=0;
-		Serial.print(" Set = "+String(sigl)+" "+String(sigr));
 		motor2->setVelocityDegreesPerSecond(-sigl);
 		motor1->setVelocityDegreesPerSecond(-sigr);
 		if(sigl==0&&sigr==0)
 			status =Halting;
-
-		//Serial.println("Vel 1 is "+String(motor1->getVelocityDegreesPerSecond())+" max "+String(motor1->getFreeSpinMaxDegreesPerSecond()));
-		//Serial.println("Vel 2 is "+String(motor2->getVelocityDegreesPerSecond())+" max "+String(motor2->getFreeSpinMaxDegreesPerSecond()));
-		//Serial.println("Vel 3 is "+String(motor3->getVelocityDegreesPerSecond())+" max "+String(motor3->getFreeSpinMaxDegreesPerSecond()));
-
 
 		break;
 	case Halting:
