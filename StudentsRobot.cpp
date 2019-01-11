@@ -102,28 +102,14 @@ void StudentsRobot::updateStateMachine() {
 		digitalWrite(EMITTER_PIN, 1);
 		break;
 	case Running:
-		// Do something
-
-		pinMode(LINE_SENSE_ONE, ANALOG);
-		pinMode(LINE_SENSE_TWO, ANALOG);
-		lsensorVal=(float)analogRead(LINE_SENSE_ONE);
-		rsensorVal=(float)analogRead(LINE_SENSE_TWO);
-		sigl = (lsensorVal-target)*gain;
-		sigr = (rsensorVal-target)*gain;
-		if(sigl>0)
-			sigl=0;
-		if(sigr>0)
-			sigr=0;
-		motor2->setVelocityDegreesPerSecond(-sigl);
-		motor1->setVelocityDegreesPerSecond(-sigr);
-		if(sigl==0&&sigr==0)// detect black line
-			status =Halting;
+		//TODO Do something
 
 		break;
 	case Halting:
 		// save state and enter safe mode
 		Serial.println("Halting State machine");
 		digitalWrite(EMITTER_PIN, 0);
+		motor3->stop();
 		motor2->stop();
 		motor1->stop();
 
