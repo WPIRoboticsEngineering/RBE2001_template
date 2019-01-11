@@ -48,7 +48,7 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 					50.0 * // Motor Gear box ratio
 					motorToWheel * // motor to wheel stage ratio
 					(1.0 / 360.0) * // degrees per revolution
-					motor1->encoder.countsMode,// Number of edges that are used to increment the value
+					motor2->encoder.countsMode,// Number of edges that are used to increment the value
 					117.5 * // Measured max RPM
 					(1/60.0) * // Convert to seconds
 					(1/motorToWheel)*  // motor to wheel ratio
@@ -71,7 +71,7 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	motor2->setSetpoint(motor2->getPosition());
 	motor3->setSetpoint(motor3->getPosition());
 	ESP32PWM dummy;
-	dummy.getChannel(); // skip the secong 10khz motor
+	dummy.getChannel(); // skip the second 10khz motor
 	// Set up digital servo for the gripper
 	servo->setPeriodHertz(330);
 	servo->attach(SERVO_PIN, 1000, 2000);
