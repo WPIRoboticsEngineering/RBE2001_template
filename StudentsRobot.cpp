@@ -28,8 +28,8 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	motor1->setOutputBoundingValues(0, //the minimum value that the output takes (Full reverse)
 			180, //the maximum value the output takes (Full forward)
 			90, //the value of the output to stop moving
-			1, //a positive value added to the stop value to creep backward
-			1, //a positive value subtracted from stop value to creep forwards
+			1, //a positive value added to the stop value to creep forwards
+			1, //a positive value subtracted from stop value to creep backward
 			16.0 * // Encoder CPR
 					50.0 * // Motor Gear box ratio
 					motorToWheel * // motor to wheel stage ratio
@@ -42,8 +42,8 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	motor2->setOutputBoundingValues(0, //the minimum value that the output takes (Full reverse)
 			180, //the maximum value the output takes (Full forward)
 			90, //the value of the output to stop moving
-			1, //a positive value added to the stop value to creep backward
-			1, //a positive value subtracted from stop value to creep forwards
+			1, //a positive value added to the stop value to creep forwards
+			1, //a positive value subtracted from stop value to creep backward
 			16.0 * // Encoder CPR
 					50.0 * // Motor Gear box ratio
 					motorToWheel * // motor to wheel stage ratio
@@ -56,8 +56,8 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	motor3->setOutputBoundingValues(-255, //the minimum value that the output takes (Full reverse)
 			255, //the maximum value the output takes (Full forward)
 			0, //the value of the output to stop moving
-			50, //a positive value added to the stop value to creep backward
-			50, //a positive value subtracted from stop value to creep forwards
+			1, //a positive value added to the stop value to creep forwards
+			1, //a positive value subtracted from stop value to creep backward
 			16.0 * // Encoder CPR
 					50.0 * // Motor Gear box ratio
 					1.0 * // motor to arm stage ratio
