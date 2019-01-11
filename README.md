@@ -25,16 +25,16 @@ You and your team members should find your repository made with the template cod
 
 ## (Optional) Install Eclipse on Personal Machine
 
- [See Eclipse install instructions in InstallEclipse.md](InstallEclipse.md)
+ [See Eclipse install instructions in InstallEclipse.md](https://github.com/WPIRoboticsEngineering/RobotInterfaceBoard/InstallEclipse.md)
 
 ## Clone your project
 You may either 
 
-Use [Arduino IDE and Github Desktop](UseArduinoGithubDesktop.md)
+Use [Arduino IDE and Github Desktop](https://github.com/WPIRoboticsEngineering/RobotInterfaceBoard/UseArduinoGithubDesktop.md)
 
 or
  
-(Optional) Use Eclipse [using the Eclipse instructions](UseEclipse.md)
+(Optional) Use Eclipse [using the Eclipse instructions](https://github.com/WPIRoboticsEngineering/RobotInterfaceBoard/UseEclipse.md)
 
 # Code theory, structure and what to edit
 
