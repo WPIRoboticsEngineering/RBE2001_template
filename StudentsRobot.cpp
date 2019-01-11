@@ -18,24 +18,18 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	motor1->attach(MOTOR1_PWM, MOTOR1_ENCA, MOTOR1_ENCB);
 	motor2->attach(MOTOR2_PWM, MOTOR2_ENCA, MOTOR2_ENCB);
 	motor3->attach(MOTOR3_PWM, MOTOR3_DIR, MOTOR3_ENCA, MOTOR2_ENCB);
-	// Set the PID CLock gating rate
+	// Set the PID Clock gating rate
 	motor1->myPID.sampleRateMs=30;
 	motor2->myPID.sampleRateMs=30;
 	motor3->myPID.sampleRateMs=1;
 
-	// After attach, compute ratios
-	/**
-	 * Set the bounds of the output stage
-	 *
-	 * These are the values to determing the opperating range of the
-	 * output of this PID motor.
-	 */
+	// After attach, compute ratios and bounding
 	double motorToWheel = 3;
 	motor1->setOutputBoundingValues(0, //the minimum value that the output takes (Full reverse)
 			180, //the maximum value the output takes (Full forward)
 			90, //the value of the output to stop moving
-			5, //a positive value added to the stop value to creep backward
-			5, //a positive value subtracted from stop value to creep forwards
+			1, //a positive value added to the stop value to creep backward
+			1, //a positive value subtracted from stop value to creep forwards
 			16.0 * // Encoder CPR
 					50.0 * // Motor Gear box ratio
 					motorToWheel * // motor to wheel stage ratio
@@ -48,8 +42,8 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	motor2->setOutputBoundingValues(0, //the minimum value that the output takes (Full reverse)
 			180, //the maximum value the output takes (Full forward)
 			90, //the value of the output to stop moving
-			5, //a positive value added to the stop value to creep backward
-			5, //a positive value subtracted from stop value to creep forwards
+			1, //a positive value added to the stop value to creep backward
+			1, //a positive value subtracted from stop value to creep forwards
 			16.0 * // Encoder CPR
 					50.0 * // Motor Gear box ratio
 					motorToWheel * // motor to wheel stage ratio
@@ -62,8 +56,8 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	motor3->setOutputBoundingValues(-255, //the minimum value that the output takes (Full reverse)
 			255, //the maximum value the output takes (Full forward)
 			0, //the value of the output to stop moving
-			138, //a positive value added to the stop value to creep backward
-			138, //a positive value subtracted from stop value to creep forwards
+			50, //a positive value added to the stop value to creep backward
+			50, //a positive value subtracted from stop value to creep forwards
 			16.0 * // Encoder CPR
 					50.0 * // Motor Gear box ratio
 					1.0 * // motor to arm stage ratio
@@ -105,34 +99,34 @@ void StudentsRobot::updateStateMachine() {
 	case StartRunning:
 		Serial.println("Start Running");
 		status = Running;
-
+		digitalWrite(EMITTER_PIN, 1);
 		break;
 	case Running:
 		// Do something
 
 		pinMode(LINE_SENSE_ONE, ANALOG);
 		pinMode(LINE_SENSE_TWO, ANALOG);
-
-		digitalWrite(EMITTER_PIN, 1);
-		delayMicroseconds(50);
 		lsensorVal=(float)analogRead(LINE_SENSE_ONE);
 		rsensorVal=(float)analogRead(LINE_SENSE_TWO);
-		digitalWrite(EMITTER_PIN, 0);
 		sigl = (lsensorVal-target)*gain;
 		sigr = (rsensorVal-target)*gain;
 		if(sigl>0)
 			sigl=0;
 		if(sigr>0)
-				sigr=0;
+			sigr=0;
 		motor2->setVelocityDegreesPerSecond(-sigl);
 		motor1->setVelocityDegreesPerSecond(-sigr);
-		if(sigl==0&&sigr==0)
+		if(sigl==0&&sigr==0)// detect black line
 			status =Halting;
 
 		break;
 	case Halting:
 		// save state and enter safe mode
 		Serial.println("Halting State machine");
+		digitalWrite(EMITTER_PIN, 0);
+		motor2->stop();
+		motor1->stop();
+
 		status = Halt;
 		break;
 	case Halt:
