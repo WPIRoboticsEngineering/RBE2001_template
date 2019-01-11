@@ -96,7 +96,13 @@ Connecting to a hotspot or home wifi can be don with the esp32 and the serial mo
 
 Android phones hotspot mode works well. the Iphone hotspot does not work and seems to filter the communication packets out. 
 
+### Filed controller app
 
+The field controller can be fround here:
+
+https://github.com/WPIRoboticsEngineering/2001_Field_Controller/releases
+
+It is a runnable .JAR file. Download it and run.  
 
 
 # Commit your changes
