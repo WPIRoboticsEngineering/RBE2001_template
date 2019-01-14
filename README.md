@@ -47,15 +47,15 @@ then start here.
 
 The first thing to dig into is not the code, but the documentation. The template code that you all got copies of is documented using [Doxygen](https://mesos.readthedocs.io/en/latest/c++-style-guide/) a code auto-documentation tool. It generates a rather nice website of hyperlinked documentation of all the code in this repository. Besides the normal text based documentation, it also will generate very nice graphs such as
 
-Include graphs:
+Include graphs (what headers include other headrs):
 
 ![include graphs](/doc/html/StudentsRobot_8h__incl.png) 
 
-function call graphs:
+function call graphs (what function calls other functions):
 
 ![function call graphs](/doc/html/template_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.png)
 
-and collaboration graphs:
+and collaboration graphs (what data structures contain other data structures):
 
 ![collaboration graphs](doc/html/classRobotControlCenter__coll__graph.png)
 
