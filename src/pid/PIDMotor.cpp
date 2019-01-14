@@ -265,6 +265,9 @@ void PIDMotor::startInterpolation(float newSetpoint, long msTimeDuration,
 	startTime = millis();
 	duration = msTimeDuration;
 	this->mode = mode;
+	if(msTimeDuration<1){
+		Setpoint=newSetpoint;
+	}
 }
 
 /**
