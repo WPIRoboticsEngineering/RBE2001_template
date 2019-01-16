@@ -15,14 +15,12 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	this->motor1 = motor1;
 	this->motor2 = motor2;
 	this->motor3 = motor3;
-	motor1->attach(MOTOR1_PWM, MOTOR1_ENCA, MOTOR1_ENCB);
-	motor2->attach(MOTOR2_PWM, MOTOR2_ENCA, MOTOR2_ENCB);
-	motor3->attach(MOTOR3_PWM, MOTOR3_DIR, MOTOR3_ENCA, MOTOR2_ENCB);
+
 	// Set the PID Clock gating rate
 	motor1->myPID.sampleRateMs=10;
 	motor2->myPID.sampleRateMs=10;
 	motor3->myPID.sampleRateMs=1;
-	
+	// Set default P.I.D gains
 	motor1->SetTunings(0.00015, 0,0);
 	motor2->SetTunings(0.00015, 0,0);
 	motor3->SetTunings(0.00015, 0,0);
@@ -70,15 +68,6 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 					117.5 * // Measured max RPM
 					(1/60.0) * // Convert to seconds
 					360.0); // convert to degrees
-	// Set the setpoint the current position in motor units to ensure no motion
-	motor1->setSetpoint(motor1->getPosition());
-	motor2->setSetpoint(motor2->getPosition());
-	motor3->setSetpoint(motor3->getPosition());
-	ESP32PWM dummy;
-	dummy.getChannel(); // skip the second 10khz motor
-	// Set up digital servo for the gripper
-	servo->setPeriodHertz(330);
-	servo->attach(SERVO_PIN, 1000, 2000);
 
 	// Set up the line tracker
 	pinMode(LINE_SENSE_ONE, ANALOG);

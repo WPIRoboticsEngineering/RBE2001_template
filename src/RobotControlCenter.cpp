@@ -52,6 +52,19 @@ void RobotControlCenter::setup() {
 #else
 	Serial.begin(115200);
 #endif
+
+	motor1.attach(MOTOR1_PWM, MOTOR1_ENCA, MOTOR1_ENCB);
+	motor2.attach(MOTOR2_PWM, MOTOR2_ENCA, MOTOR2_ENCB);
+	motor3.attach(MOTOR3_PWM, MOTOR3_DIR, MOTOR3_ENCA, MOTOR2_ENCB);
+	// Set the setpoint the current position in motor units to ensure no motion
+	motor1.setSetpoint(motor1.getPosition());
+	motor2.setSetpoint(motor2.getPosition());
+	motor3.setSetpoint(motor3.getPosition());
+	ESP32PWM dummy;
+	dummy.getChannel(); // skip the second 10khz motor
+	// Set up digital servo for the gripper
+	servo.setPeriodHertz(330);
+	servo.attach(SERVO_PIN, 1000, 2000);
 	robot = new StudentsRobot(&motor1, &motor2, &motor3, &servo);
 
 
