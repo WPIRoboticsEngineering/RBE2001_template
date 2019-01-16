@@ -19,9 +19,13 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	motor2->attach(MOTOR2_PWM, MOTOR2_ENCA, MOTOR2_ENCB);
 	motor3->attach(MOTOR3_PWM, MOTOR3_DIR, MOTOR3_ENCA, MOTOR2_ENCB);
 	// Set the PID Clock gating rate
-	motor1->myPID.sampleRateMs=30;
-	motor2->myPID.sampleRateMs=30;
+	motor1->myPID.sampleRateMs=10;
+	motor2->myPID.sampleRateMs=10;
 	motor3->myPID.sampleRateMs=1;
+	
+	motor1->SetTunings(0.00015, 0,0);
+	motor2->SetTunings(0.00015, 0,0);
+	motor3->SetTunings(0.00015, 0,0);
 
 	// After attach, compute ratios and bounding
 	double motorToWheel = 3;
