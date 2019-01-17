@@ -16,10 +16,10 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	this->motor2 = motor2;
 	this->motor3 = motor3;
 
-	// Set the PID Clock gating rate
-	motor1->myPID.sampleRateMs = 10;
-	motor2->myPID.sampleRateMs = 10;
-	motor3->myPID.sampleRateMs = 1;
+	// Set the PID Clock gating rate. Thie must be 10 times slower than the motors update rate
+	motor1->myPID.sampleRateMs = 30; // 330hz servo, 3ms update, 30 ms PID
+	motor2->myPID.sampleRateMs = 30; // 330hz servo, 3ms update, 30 ms PID
+	motor3->myPID.sampleRateMs = 1;  // 10khz H-Bridge, 0.1ms update, 1 ms PID
 	// Set default P.I.D gains
 	motor1->SetTunings(0.00015, 0, 0);
 	motor2->SetTunings(0.00015, 0, 0);
@@ -90,6 +90,7 @@ void StudentsRobot::updateStateMachine() {
 		Serial.println("Start Running");
 
 		digitalWrite(EMITTER_PIN, 1);
+		// Start an interpolation of the motors
 		motor1->startInterpolation(motor1->getAngleDegrees(), 1000, SIN);
 		motor2->startInterpolation(motor2->getAngleDegrees(), 1000, SIN);
 		motor3->startInterpolation(motor3->getAngleDegrees(), 1000, SIN);
@@ -97,8 +98,7 @@ void StudentsRobot::updateStateMachine() {
 		nextStatus = Running; // the next status to move to when the motors finish
 		break;
 	case Running:
-		//TODO Do something
-		Serial.println(" Running State Machine ");
+		Serial.println(" Running State Machine "+String(millis()));
 		// Set up a non-blocking 1000 ms delay
 		status=WAIT_FOR_TIME;
 		nextTime=millis()+1000;
@@ -106,7 +106,9 @@ void StudentsRobot::updateStateMachine() {
 		nextStatus=Running;
 		break;
 	case WAIT_FOR_TIME:
+		// Check to see if enough time has elapsed
 		if(nextTime<=millis()){
+			// if the time is up, move on to the next state
 			status = nextStatus;
 		}
 		break;
