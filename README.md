@@ -64,7 +64,7 @@ To access the full documentation, after cloning the code to your disk, open the 
 
 There are only 2 classes you need to edit to do all of your labs,  StudentsRobot and RBEPID. Use the Doxygen to search for them and navigate the Doxygen pages to learn about what these 2 classes are and how the code uses them. 
 
-PIDMotor is a helper class that you will use but not have to modify (unless you want to, then go for it!). This class will use your PID implementation (it is defaulted to a simple p controller). It provides helper functions and structure for your PID controller. This class is also used by the communication layer to view and edit the PID controller from Java. PIDMotor has 2 subclasses
+PIDMotor is a helper class that you will use but not have to modify (unless you want to, then go for it!). This class will use your PID implementation (it is defaulted to a simple p controller). It provides helper functions and structure for your PID controller. This class is also used by the communication layer to view and edit the PID controller from Java. PIDMotor has 3 subclasses
 
 ![PIDMotor](doc/html/classPIDMotor__inherit__graph.png)
 
@@ -72,12 +72,16 @@ HBridgeEncoderPIDMotor wrapps the ESP32Encoder and an h-Bridge control using ESP
 
 ServoEncoderPIDMotor wrapps the ESP32Encoder and the ESP32Servo objects.
 
+ServoAnalogPIDMotor wrapps the ESP32Encoder and the ADC module.
+
 Both classes can be used interchangably using the methods in PIDMotor. You can set setpoints using startInterpolationDegrees, or set the motor to run at a velocity using setVelocityDegreesPerSecond. You can read the position of the motor using getAngleDegrees and its velocity using getVelocityDegreesPerSecond.  Use the Doxygen pages to look up usage information. 
 
 Your robot's program will go in StudentsRobot. This class will get passed the PIDMotor objects to attach. This class will then be passes those same objects again each time the loop is called via the pidLoop method. After each pidLoop, the updateStateMachine is called and the motor objects are passed in.  
 
 
 Your PID code will go in RBEPID. You will implement a PID controller in one of your labs and tune it for your robots motors. By default there is a simple P controller in the compute function. Note that you will need to implement both calc and clearIntegralBuffer. 
+
+'config.h' contains all of the pin definitions and the name of the robot. You should not change any of the pin definitions. You can add other pin definitions in header for the Final project, but do not change the pre-defined values. You should change TEAM_NAME to match your team number before using WiFi. 
 
 ### Commands
 

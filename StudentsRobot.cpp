@@ -17,13 +17,13 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	this->motor3 = motor3;
 
 	// Set the PID Clock gating rate
-	motor1->myPID.sampleRateMs=10;
-	motor2->myPID.sampleRateMs=10;
-	motor3->myPID.sampleRateMs=1;
+	motor1->myPID.sampleRateMs = 10;
+	motor2->myPID.sampleRateMs = 10;
+	motor3->myPID.sampleRateMs = 1;
 	// Set default P.I.D gains
-	motor1->SetTunings(0.00015, 0,0);
-	motor2->SetTunings(0.00015, 0,0);
-	motor3->SetTunings(0.00015, 0,0);
+	motor1->SetTunings(0.00015, 0, 0);
+	motor2->SetTunings(0.00015, 0, 0);
+	motor3->SetTunings(0.00015, 0, 0);
 
 	// After attach, compute ratios and bounding
 	double motorToWheel = 3;
@@ -36,10 +36,10 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 					50.0 * // Motor Gear box ratio
 					motorToWheel * // motor to wheel stage ratio
 					(1.0 / 360.0) * // degrees per revolution
-					motor1->encoder.countsMode,// Number of edges that are used to increment the value
-					117.5 * // Measured max RPM
-					(1/60.0) * // Convert to seconds
-					(1/motorToWheel)*  // motor to wheel ratio
+					motor1->encoder.countsMode, // Number of edges that are used to increment the value
+			117.5 * // Measured max RPM
+					(1 / 60.0) * // Convert to seconds
+					(1 / motorToWheel) *  // motor to wheel ratio
 					360.0); // convert to degrees
 	motor2->setOutputBoundingValues(0, //the minimum value that the output takes (Full reverse)
 			180, //the maximum value the output takes (Full forward)
@@ -50,10 +50,10 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 					50.0 * // Motor Gear box ratio
 					motorToWheel * // motor to wheel stage ratio
 					(1.0 / 360.0) * // degrees per revolution
-					motor2->encoder.countsMode,// Number of edges that are used to increment the value
-					117.5 * // Measured max RPM
-					(1/60.0) * // Convert to seconds
-					(1/motorToWheel)*  // motor to wheel ratio
+					motor2->encoder.countsMode, // Number of edges that are used to increment the value
+			117.5 * // Measured max RPM
+					(1 / 60.0) * // Convert to seconds
+					(1 / motorToWheel) *  // motor to wheel ratio
 					360.0); // convert to degrees
 	motor3->setOutputBoundingValues(-255, //the minimum value that the output takes (Full reverse)
 			255, //the maximum value the output takes (Full forward)
@@ -64,9 +64,9 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 					50.0 * // Motor Gear box ratio
 					1.0 * // motor to arm stage ratio
 					(1.0 / 360.0) * // degrees per revolution
-					motor3->encoder.countsMode,// Number of edges that are used to increment the value
-					117.5 * // Measured max RPM
-					(1/60.0) * // Convert to seconds
+					motor3->encoder.countsMode, // Number of edges that are used to increment the value
+			117.5 * // Measured max RPM
+					(1 / 60.0) * // Convert to seconds
 					360.0); // convert to degrees
 
 	// Set up the line tracker
@@ -79,10 +79,7 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
  * update the state machine for running the final project code here
  */
 void StudentsRobot::updateStateMachine() {
-	float sigl=0;
-	float sigr=0;
-	float target = 3000;// the value that the sensors read
-	float gain =0.02;
+
 	switch (status) {
 	case StartupRobot:
 		//Do this once at startup
@@ -91,12 +88,33 @@ void StudentsRobot::updateStateMachine() {
 		break;
 	case StartRunning:
 		Serial.println("Start Running");
-		status = Running;
+
 		digitalWrite(EMITTER_PIN, 1);
+		motor1->startInterpolation(motor1->getAngleDegrees(), 1000, SIN);
+		motor2->startInterpolation(motor2->getAngleDegrees(), 1000, SIN);
+		motor3->startInterpolation(motor3->getAngleDegrees(), 1000, SIN);
+		status = WAIT_FOR_MOTORS_TO_FINNISH; // set the state machine to wait for the motors to finish
+		nextStatus = Running; // the next status to move to when the motors finish
 		break;
 	case Running:
 		//TODO Do something
-
+		Serial.println(" Running State Machine ");
+		// Set up a non-blocking 1000 ms delay
+		status=WAIT_FOR_TIME;
+		nextTime=millis()+1000;
+		// After 1000 ms, come back to this state
+		nextStatus=Running;
+		break;
+	case WAIT_FOR_TIME:
+		if(nextTime<=millis()){
+			status = nextStatus;
+		}
+		break;
+	case WAIT_FOR_MOTORS_TO_FINNISH:
+		if (motor1->isInterpolationDone() && motor2->isInterpolationDone()
+				&& motor3->isInterpolationDone()) {
+			status = nextStatus;
+		}
 		break;
 	case Halting:
 		// save state and enter safe mode
