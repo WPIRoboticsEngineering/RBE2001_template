@@ -107,7 +107,8 @@ void StudentsRobot::updateStateMachine() {
     nextStatus=Running;
      
     // Do something
-		Serial.println(" Running State Machine "+String((now-startTime))); 
+    if(!digitalRead(0))
+		  Serial.println(" Running State Machine "+String((now-startTime))); 
 		break;
 	case WAIT_FOR_TIME:
 		// Check to see if enough time has elapsed
