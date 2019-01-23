@@ -1,4 +1,4 @@
-/*
+ /*
  * config.h
  *
  *  Created on: Nov 5, 2018
@@ -10,7 +10,10 @@
 
 #define TEAM_NAME "IMU-Team21"
 
-//#define USE_WIFI
+#define USE_WIFI
+
+#define WHEEL_TRACK 175.0
+#define WHEEL_RADIUS (2.0*25.4/2.0)
 
 // Pins
 /**
@@ -42,10 +45,9 @@
 
 #define LINE_SENSE_ONE 			36
 #define LINE_SENSE_TWO 			39
-#define EMITTER_PIN             13  // emitter is controlled by digital pin 2
+#define EMITTER_PIN             13  // emitter is controlled by digital pin
 
 #define NUM_SENSORS             2  // number of sensors used
-#define NUM_SAMPLES_PER_SENSOR  4  // average 4 analog samples per sensor reading
 
 /**
  * Gripper pin for Servo

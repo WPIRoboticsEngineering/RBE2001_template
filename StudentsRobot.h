@@ -58,6 +58,7 @@ private:
 	float lsensorVal=0;
 	float rsensorVal=0;
 	long nextTime =0;
+  long startTime =0;
 	RobotStateMachine nextStatus = StartupRobot;
 public:
 	/**

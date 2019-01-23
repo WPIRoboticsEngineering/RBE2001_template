@@ -79,7 +79,7 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
  * update the state machine for running the final project code here
  */
 void StudentsRobot::updateStateMachine() {
-
+  long now=millis();
 	switch (status) {
 	case StartupRobot:
 		//Do this once at startup
@@ -96,14 +96,18 @@ void StudentsRobot::updateStateMachine() {
 		motor3->startInterpolation(motor3->getAngleDegrees(), 1000, SIN);
 		status = WAIT_FOR_MOTORS_TO_FINNISH; // set the state machine to wait for the motors to finish
 		nextStatus = Running; // the next status to move to when the motors finish
+    startTime=now+1000;// the motors should be done in 1000 ms
+    nextTime=startTime+1000;// the next timer loop should be 1000ms after the motors stop
 		break;
 	case Running:
-		Serial.println(" Running State Machine "+String(millis()));
-		// Set up a non-blocking 1000 ms delay
-		status=WAIT_FOR_TIME;
-		nextTime=millis()+1000;
-		// After 1000 ms, come back to this state
-		nextStatus=Running;
+    // Set up a non-blocking 1000 ms delay
+    status=WAIT_FOR_TIME;
+    nextTime=nextTime+1000;// ensure no timer drift by incremeting the target
+    // After 1000 ms, come back to this state
+    nextStatus=Running;
+     
+    // Do something
+		Serial.println(" Running State Machine "+String((now-startTime))); 
 		break;
 	case WAIT_FOR_TIME:
 		// Check to see if enough time has elapsed
