@@ -10,6 +10,7 @@ In you checked out code, open doc/html/annotated.html to see the Doxygen documen
 # Hardware Electrical Documentation
 
 See: https://github.com/WPIRoboticsEngineering/RobotInterfaceBoard
+![Wiring Diagram](wiring.png)
 
 # Arduino Setup and Development Computer Options 
 
