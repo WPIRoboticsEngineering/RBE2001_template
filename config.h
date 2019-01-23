@@ -42,12 +42,12 @@
 
 #define MOTOR3_ENCA 14
 #define MOTOR3_ENCB 27
-
+// Line Sensor Pins
 #define LINE_SENSE_ONE 			36
 #define LINE_SENSE_TWO 			39
 #define EMITTER_PIN             13  // emitter is controlled by digital pin
 
-#define NUM_SENSORS             2  // number of sensors used
+
 
 /**
  * Gripper pin for Servo
