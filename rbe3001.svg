@@ -111,6 +111,21 @@
          style="fill:#ababab;fill-opacity:1;fill-rule:evenodd;stroke:#ababab;stroke-width:1.00000003pt;stroke-opacity:1"
          transform="scale(0.8)" />
     </marker>
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutL-6-2"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path11728-0-3"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#ababab;fill-opacity:1;fill-rule:evenodd;stroke:#ababab;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.8)" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -119,9 +134,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="8.0000004"
-     inkscape:cx="118.58455"
-     inkscape:cy="116.02541"
+     inkscape:zoom="32.000002"
+     inkscape:cx="64.63361"
+     inkscape:cy="110.91284"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -135,7 +150,7 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:lockguides="true"
-     showguides="false" />
+     showguides="true" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -5348,7 +5363,7 @@
        height="0.25037199"
        width="0.9746623"
        id="rect3732-6-0-6"
-       style="fill:#808080;stroke-width:0.08253182"
+       style="fill:#808080;stroke-width:0.05;stroke-miterlimit:4;stroke-dasharray:none;stroke:#ff0000;stroke-opacity:1"
        inkscape:export-xdpi="799.77283"
        inkscape:export-ydpi="799.77283" />
     <rect
@@ -6428,5 +6443,32 @@
          y="25.945766"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Teko;-inkscape-font-specification:Teko;text-align:end;text-anchor:end;fill:#e6e6e6;stroke-width:0.01970066"
          id="tspan3015-8">w/ 16 CPR Encoder</tspan></text>
+    <path
+       style="fill:none;stroke:#ababab;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutL-6-2)"
+       d="m 23.630664,32.927618 c 2.957631,0.124307 5.878911,1.968231 5.878911,1.968231"
+       id="path11584-7-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="799.77283"
+       inkscape:export-ydpi="799.77283" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:0.78802663px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.01970066"
+       x="16.676542"
+       y="32.534489"
+       id="text5644-54-7-8-1"
+       inkscape:export-xdpi="799.77283"
+       inkscape:export-ydpi="799.77283"><tspan
+         sodipodi:role="line"
+         x="16.676542"
+         y="32.534489"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Teko;-inkscape-font-specification:Teko;fill:#000000;fill-opacity:1;stroke-width:0.01970066"
+         id="tspan3015-9"
+         dy="0.36000001">This connection is critical</tspan><tspan
+         sodipodi:role="line"
+         x="16.676542"
+         y="33.548939"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Teko;-inkscape-font-specification:Teko;fill:#000000;fill-opacity:1;stroke-width:0.01970066"
+         id="tspan2442">omitting it will cause damage</tspan></text>
   </g>
 </svg>
