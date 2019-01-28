@@ -152,7 +152,7 @@ public:
 	 * or the trajectory can be either Sinusoidal, with the SIN mode
 	 * the units for the variable is in sensor 'ticks'
 	 *
-	 * @param newSetpoint the new setpoint in degrees
+	 * @param newSetpoint the new setpoint in motor ticks
 	 * @param msTimeDuration the time of translation in miliseconds
 	 * @param mode The type of interpolation LIN or SIN
 	 * @note To get immediate action set msTimeDuration to 0
@@ -186,8 +186,8 @@ public:
 	 * or the trajectory can be either Sinusoidal, with the SIN mode
 	 * the units for the variable is in Degrees
 	 *
-	 * @param newSetpoint the new setpoint
-	 * @param msTimeDuration the time of translation
+	 * @param newSetpoint the new setpoint in degrees
+	 * @param msTimeDuration the time of translation in miliseconds
 	 * @param mode The type of interpolation LIN or SIN
 	 * @note To get immediate action set msTimeDuration to 0
 	 */
