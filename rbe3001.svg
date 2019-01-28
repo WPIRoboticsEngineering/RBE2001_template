@@ -144,7 +144,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -6398,12 +6398,12 @@
          x="5.7607284"
          y="24.931314"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Teko;-inkscape-font-specification:Teko;fill:#e6e6e6;stroke-width:0.01970066"
-         id="tspan3013">100:1 Gear Motor </tspan><tspan
+         id="tspan3013">50:1 Gear Motor </tspan><tspan
          sodipodi:role="line"
          x="5.7607284"
          y="25.945766"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Teko;-inkscape-font-specification:Teko;fill:#e6e6e6;stroke-width:0.01970066"
-         id="tspan3015">w/ 64 CPR Encoder</tspan></text>
+         id="tspan3015">w/ 16 CPR Encoder</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:0.78802663px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.01970066"
@@ -6422,11 +6422,11 @@
          x="56.340996"
          y="24.931314"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Teko;-inkscape-font-specification:Teko;text-align:end;text-anchor:end;fill:#e6e6e6;stroke-width:0.01970066"
-         id="tspan3013-3">100:1 Gear Motor </tspan><tspan
+         id="tspan3013-3">50:1 Gear Motor </tspan><tspan
          sodipodi:role="line"
          x="56.2271"
          y="25.945766"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Teko;-inkscape-font-specification:Teko;text-align:end;text-anchor:end;fill:#e6e6e6;stroke-width:0.01970066"
-         id="tspan3015-8">w/ 64 CPR Encoder</tspan></text>
+         id="tspan3015-8">w/ 16 CPR Encoder</tspan></text>
   </g>
 </svg>
