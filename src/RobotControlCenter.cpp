@@ -55,7 +55,7 @@ void RobotControlCenter::setup() {
 
 	motor1.attach(MOTOR1_PWM, MOTOR1_ENCA, MOTOR1_ENCB);
 	motor2.attach(MOTOR2_PWM, MOTOR2_ENCA, MOTOR2_ENCB);
-	motor3.attach(MOTOR3_PWM, MOTOR3_DIR, MOTOR3_ENCA, MOTOR2_ENCB);
+	motor3.attach(MOTOR3_PWM, MOTOR3_DIR, MOTOR3_ENCA, MOTOR3_ENCB);
 	// Set the setpoint the current position in motor units to ensure no motion
 	motor1.setSetpoint(motor1.getPosition());
 	motor2.setSetpoint(motor2.getPosition());
