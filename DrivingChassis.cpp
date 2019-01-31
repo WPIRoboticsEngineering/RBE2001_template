@@ -20,7 +20,7 @@
  * @return the wheel angle delta in degrees
  */
 float DrivingChassis::distanceToWheelAngle(float distance) {
-
+	return 0;
 }
 
 /**
@@ -37,11 +37,11 @@ float DrivingChassis::distanceToWheelAngle(float distance) {
  * @return is the linear distance the wheel needs to travel given the this CHassis's wheel track
  */
 float DrivingChassis::chassisRotationToWheelDistance(float angle) {
-
+	return 0;
 }
 
 DrivingChassis::~DrivingChassis() {
-
+	// do nothing
 }
 
 /**
@@ -94,5 +94,5 @@ void DrivingChassis::turnDegrees(float degreesToRotateBase, int msDuration) {
  *  @note this function is fast-return and should not block
  */
 bool DrivingChassis::isChassisDoneDriving() {
-
+	return false;
 }
