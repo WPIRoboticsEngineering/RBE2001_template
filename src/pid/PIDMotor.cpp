@@ -223,11 +223,11 @@ double PIDMotor::calcVel() {
 	//encoder ticks since last call
 	movement = curPos - prevPos;
 	//encoder ticks to degrees
-	double movementdeg = movement * ticksToDeg();
+	double movementdeg = movement / ticksToDeg();
 	//timeInterval in seconds
 	double timeIntervalsec = timeInterval / 1000.0;
 	//Velocity in degrees per seconds
-	Vel = movementdeg * timeIntervalsec;
+	Vel = movementdeg / timeIntervalsec;
 	//Serial.println("Vel "+String(movementdeg)+" Per "+String(timeIntervalsec)+" is "+String(Vel)+" max "+String(getFreeSpinMaxDegreesPerSecond()));
 	//sets curent vals to previous
 	prevPos = curPos;
