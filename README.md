@@ -10,7 +10,7 @@ In you checked out code, open doc/html/annotated.html to see the Doxygen documen
 # Hardware Electrical Documentation
 
 See: https://github.com/WPIRoboticsEngineering/RobotInterfaceBoard
-![Wiring Diagram](wiring.png)
+![Wiring Diagram](wiring-schematic.png)
 
 ## A note about the level shifter
 It is important to make sure the red connection (3.3v) is attatched to the level shifter. Omitting this connection can damage your esp32. Check Twice!
