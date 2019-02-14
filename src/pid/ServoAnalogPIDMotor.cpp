@@ -44,7 +44,7 @@ int64_t ServoAnalogPIDMotor::getPosition() {
 	return computedAvg+offset;
 }
 
-void ServoAnalogPIDMotor::setOutput(int64_t out) {
+void ServoAnalogPIDMotor::setOutput(int32_t out) {
 	motor.write(out);
 }
 void ServoAnalogPIDMotor::overrideCurrentPositionHardware(int64_t val) {

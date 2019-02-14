@@ -36,7 +36,7 @@ int64_t HBridgeEncoderPIDMotor::getPosition() {
 	return encoder.getCount();
 }
 
-void HBridgeEncoderPIDMotor::setOutput(int64_t out) {
+void HBridgeEncoderPIDMotor::setOutput(int32_t out) {
 	if (out > 0) {
 		digitalWrite(directionPin, HIGH); // turn the LED on (HIGH is the voltage level)
 	} else {

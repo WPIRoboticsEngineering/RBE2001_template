@@ -155,7 +155,7 @@ void PIDMotor::setOutputUnitVector(float out) {
  *
  * this is for calibrations
  */
-void PIDMotor::overrideCurrentPosition(int64_t val) {
+void PIDMotor::overrideCurrentPosition(int32_t val) {
 	overrideCurrentPositionHardware(val);
 
 	startInterpolation((float) val, 0, LIN);
@@ -168,7 +168,7 @@ void PIDMotor::overrideCurrentPosition(int64_t val) {
  * the units for the variable is in sensor 'ticks'
  * this will start a linear interpolation of 0 time
  */
-void PIDMotor::setSetpoint(int64_t val) {
+void PIDMotor::setSetpoint(int32_t val) {
 	startInterpolation((float) val, 0, LIN);
 }
 
@@ -277,7 +277,7 @@ void PIDMotor::startInterpolation(float newSetpoint, long msTimeDuration,
  * this will start a linear interpolation of 0 time
  */
 void PIDMotor::setSetpointDegrees(float val) {
-	setSetpoint((int64_t) (val * ticksToDeg()));
+	setSetpoint((int32_t) (val * ticksToDeg()));
 }
 /**
  * Start a linear interpolation of the motor
@@ -312,8 +312,8 @@ void PIDMotor::startInterpolationDegrees(float newSetpoint, long msTimeDuration,
  * @param freeSpinMaxDegreesPerSecond a value in degrees per second that represents the maximum
  * 		freespinning speed of the motor running at 'outputMax'.
  */
-void PIDMotor::setOutputBoundingValues(int64_t outputMin, int64_t outputMax,
-		int64_t outputStop, int64_t outputMinDeadbad, int64_t outputMaxDeadbad,
+void PIDMotor::setOutputBoundingValues(int32_t outputMin, int32_t outputMax,
+		int32_t outputStop, int32_t outputMinDeadbad, int32_t outputMaxDeadbad,
 		double ticksToDeg, double freeSpinMaxDegreesPerSecond) {
 	this->outputMin = outputMin;
 	this->outputMax = outputMax;
@@ -328,7 +328,7 @@ void PIDMotor::setOutputBoundingValues(int64_t outputMin, int64_t outputMax,
  *
  * @return OutputMin
  */
-int64_t PIDMotor::getOutputMin() {
+int32_t PIDMotor::getOutputMin() {
 	return outputMin;
 }
 ;
@@ -337,7 +337,7 @@ int64_t PIDMotor::getOutputMin() {
  *
  * @return OutputMax
  */
-int64_t PIDMotor::getOutputMax() {
+int32_t PIDMotor::getOutputMax() {
 	return outputMax;
 }
 ;
@@ -346,7 +346,7 @@ int64_t PIDMotor::getOutputMax() {
  *
  * @return OutputMinDeadbad
  */
-int64_t PIDMotor::getOutputMinDeadbad() {
+int32_t PIDMotor::getOutputMinDeadbad() {
 	return outputMinDeadbad;
 }
 ;
@@ -355,7 +355,7 @@ int64_t PIDMotor::getOutputMinDeadbad() {
  *
  * @return OutputMaxDeadbad
  */
-int64_t PIDMotor::getOutputMaxDeadbad() {
+int32_t PIDMotor::getOutputMaxDeadbad() {
 	return outputMaxDeadbad;
 }
 ;
@@ -364,7 +364,7 @@ int64_t PIDMotor::getOutputMaxDeadbad() {
  *
  * @return OutputStop
  */
-int64_t PIDMotor::getOutputStop() {
+int32_t PIDMotor::getOutputStop() {
 	return outputStop;
 }
 /**
@@ -382,4 +382,13 @@ double PIDMotor::getFreeSpinMaxDegreesPerSecond() {
  */
 double PIDMotor::ticksToDeg() {
 	return myTicksToDeg;
+}
+/**
+ * The value that is being sent to the hardware
+ *
+ * View this variable in order to see what value is being sent to the motor directly
+ *
+ */
+int32_t  PIDMotor::getHardwareOutput(){
+	return hardwareOutput;
 }

@@ -28,7 +28,7 @@ void ServoEncoderPIDMotor::attach(int servoPin, int encoderA, int encoderB) {
 	pidinit();
 }
 
-void ServoEncoderPIDMotor::setOutput(int64_t out) {
+void ServoEncoderPIDMotor::setOutput(int32_t out) {
 	motor.write(out);
 }
 void ServoEncoderPIDMotor::overrideCurrentPositionHardware(int64_t val) {

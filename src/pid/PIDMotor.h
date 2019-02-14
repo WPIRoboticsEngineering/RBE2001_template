@@ -18,31 +18,31 @@ enum interpolateMode {
 
 class PIDMotor {
 private:
-	int64_t outputMin = -100;
+	int32_t outputMin = -100;
 	/**
 	 * getOutputMax
 	 *
 	 * @return OutputMax
 	 */
-	int64_t outputMax = 100;
+	int32_t outputMax = 100;
 	/**
 	 * getOutputMinDeadbad
 	 *
 	 * @return OutputMinDeadbad
 	 */
-	int64_t outputMinDeadbad = 0;
+	int32_t outputMinDeadbad = 0;
 	/**
 	 * getOutputMaxDeadbad
 	 *
 	 * @return OutputMaxDeadbad
 	 */
-	int64_t outputMaxDeadbad = 0;
+	int32_t outputMaxDeadbad = 0;
 	/**
 	 * getOutputStop
 	 *
 	 * @return OutputStop
 	 */
-	int64_t outputStop = 0;
+	int32_t outputStop = 0;
 	/*
 	 * a value to convert from degrees to motor units. This number times degrees equals ticks;
 	 */
@@ -52,6 +52,13 @@ private:
 	 * freespinning speed of the motor running at 'outputMax'.
 	 */
 	double freeSpinMaxDegreesPerSecond=1000;
+	/**
+	 * The value that is being sent to the hardware
+	 *
+	 * View this variable in order to see what value is being sent to the motor directly
+	 *
+	 */
+	int32_t hardwareOutput = 0;
 
 protected:
 
@@ -73,7 +80,7 @@ protected:
 	 * the zero deadbanding should already be taken care of
 	 *
 	 */
-	virtual void setOutput(int64_t out)=0;
+	virtual void setOutput(int32_t out)=0;
 	/**
 	 * Returns Vel in degress/second
 	 *
@@ -101,6 +108,13 @@ protected:
 	float getSetPoint();
 public:
 	/**
+	 * The value that is being sent to the hardware
+	 *
+	 * View this variable in order to see what value is being sent to the motor directly
+	 *
+	 */
+	int32_t getHardwareOutput();
+	/**
 	 * Duration of the interpolation mode, 1 equals done, 0 starting
 	 */
 	float unitDuration = 1;
@@ -112,13 +126,7 @@ public:
 	 * THe PID object for the velocity controller (UNIMPLEMENTED)
 	 */
 	RBEPID velocityPID;
-	/**
-	 * The value that is being sent to the hardware
-	 *
-	 * View this variable in order to see what value is being sent to the motor directly
-	 *
-	 */
-	int64_t hardwareOutput = 0;
+
 	PIDMotor();
 	virtual ~PIDMotor();
 	/**
@@ -134,14 +142,14 @@ public:
 	 *
 	 * this is for calibrations
 	 */
-	void overrideCurrentPosition(int64_t val);
+	void overrideCurrentPosition(int32_t val);
 	/**
 	 * setSetpoint  Set the desired setpoint for the PID controller
 	 *
 	 * the units for the variable is in sensor 'ticks'
 	 * this will start a linear interpolation of 0 time
 	 */
-	void setSetpoint(int64_t val);
+	void setSetpoint(int32_t val);
 	/**
 	 * Start a linear interpolation of the motor
 	 *
@@ -261,31 +269,31 @@ public:
 	 *
 	 * @return OutputMin
 	 */
-	int64_t getOutputMin();
+	int32_t getOutputMin();
 	/**
 	 * getOutputMax
 	 *
 	 * @return OutputMax
 	 */
-	int64_t getOutputMax();
+	int32_t getOutputMax();
 	/**
 	 * getOutputMinDeadbad
 	 *
 	 * @return OutputMinDeadbad
 	 */
-	int64_t getOutputMinDeadbad();
+	int32_t getOutputMinDeadbad();
 	/**
 	 * getOutputMaxDeadbad
 	 *
 	 * @return OutputMaxDeadbad
 	 */
-	int64_t getOutputMaxDeadbad();
+	int32_t getOutputMaxDeadbad();
 	/**
 	 * getOutputStop
 	 *
 	 * @return OutputStop
 	 */
-	int64_t getOutputStop();
+	int32_t getOutputStop();
 	/**
 	 * getFreeSpinMaxDegreesPerSecond
 	 *
@@ -312,9 +320,9 @@ public:
 	 * @param freeSpinMaxDegreesPerSecond a value in degrees per second that represents the maximum
 	 * 		freespinning speed of the motor running at 'outputMax'.
 	 */
-	void setOutputBoundingValues(int64_t outputMin, int64_t outputMax,
-			int64_t outputStop, int64_t outputMinDeadbad,
-			int64_t outputMaxDeadbad, double ticksToDeg,
+	void setOutputBoundingValues(int32_t outputMin, int32_t outputMax,
+			int32_t outputStop, int32_t outputMinDeadbad,
+			int32_t outputMaxDeadbad, double ticksToDeg,
 			double getFreeSpinMaxDegreesPerSecond);
 	/**
 	 * calcCur

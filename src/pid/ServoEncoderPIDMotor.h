@@ -26,7 +26,7 @@ public:
 	void attach(int servoPin, int encoderA, int encoderB);
 	int64_t getPosition();
 
-	void setOutput(int64_t out);
+	void setOutput(int32_t out);
 	void overrideCurrentPositionHardware(int64_t val);
 	double calcCur(void);
 	ESP32Encoder encoder;

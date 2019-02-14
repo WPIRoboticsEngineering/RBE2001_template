@@ -29,7 +29,7 @@ public:
 	 */
 	void attach(int pwmPin, int directionPin, int encoderA, int encoderB);
 	int64_t getPosition();
-	void setOutput(int64_t out);
+	void setOutput(int32_t out);
 	void overrideCurrentPositionHardware(int64_t val);
 	ESP32Encoder encoder;
 	ESP32PWM motor;
