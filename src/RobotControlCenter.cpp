@@ -63,7 +63,7 @@ void RobotControlCenter::setup() {
 	ESP32PWM dummy;
 	dummy.getChannel(); // skip the second 10khz motor
 	// Set up digital servo for the gripper
-	servo.setPeriodHertz(330);
+	servo.setPeriodHertz(50);
 	servo.attach(SERVO_PIN, 1000, 2000);
 	robot = new StudentsRobot(&motor1, &motor2, &motor3, &servo);
 
