@@ -6,11 +6,18 @@ Template code for the RBE 2001 final project
 
 In you checked out code, open doc/html/annotated.html to see the Doxygen documentation. The best way to understand this code is to start in the Files section of the documentation, and look at the .ino file. Look at the setup and loop call graphs.
 
+# Base Bot CAD
+
+Source https://github.com/WPIRoboticsEngineering/RBELabCustomParts/blob/master/WheelModule.groovy
+
+STL's https://github.com/WPIRoboticsEngineering/RBELabCustomParts/releases/download/0.0.2/2000BaseRobot.zip
 
 # Hardware Electrical Documentation
 
 See: https://github.com/WPIRoboticsEngineering/RobotInterfaceBoard
 ![Wiring Diagram](wiring-schematic.png)
+
+
 
 ## A note about the level shifter
 It is important to make sure the red connection (3.3v) is attatched to the level shifter. Omitting this connection can damage your esp32. Check Twice!
@@ -113,4 +120,8 @@ https://github.com/WPIRoboticsEngineering/2001_Field_Controller/releases
 
 
 It is a runnable .JAR file. Download it and run.  
+
+# FAQ and Troubleshooting
+
+See https://github.com/WPIRoboticsEngineering/RobotInterfaceBoard#faq-and-troubleshooting
 
