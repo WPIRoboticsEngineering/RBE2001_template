@@ -91,8 +91,8 @@ protected:
 	float endSetpoint = 0;
 	float startTime = 0;
 	float duration = 0;
-	interpolateMode mode = LIN;
-	float targetDegreesPerSecond = 0;
+
+
 	/**
 	 * myFmap local mapping function
 	 *
@@ -107,6 +107,14 @@ protected:
 	 */
 	float getSetPoint();
 public:
+	/**
+	 * Target of the velocity degrees per second
+	 */
+	float targetDegreesPerSecond = 0;
+	/**
+	 * Current interpolation mode
+	 */
+	interpolateMode mode = LIN;
 	/**
 	 * The value that is being sent to the hardware
 	 *
