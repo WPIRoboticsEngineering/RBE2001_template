@@ -52,13 +52,7 @@ private:
 	 * freespinning speed of the motor running at 'outputMax'.
 	 */
 	double freeSpinMaxDegreesPerSecond=1000;
-	/**
-	 * The value that is being sent to the hardware
-	 *
-	 * View this variable in order to see what value is being sent to the motor directly
-	 *
-	 */
-	int32_t hardwareOutput = 0;
+
 
 protected:
 
@@ -107,6 +101,13 @@ protected:
 	 */
 	float getSetPoint();
 public:
+	/**
+	 * The value that is being sent to the hardware
+	 *
+	 * View this variable in order to see what value is being sent to the motor directly
+	 *
+	 */
+	int32_t hardwareOutput = 0;
 	/**
 	 * Target of the velocity degrees per second
 	 */
