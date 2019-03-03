@@ -76,6 +76,11 @@ void RobotControlCenter::setup() {
 	coms.attach(new GetPIDData(numberOfPID, pidList)); // @suppress("Method cannot be resolved")
 	coms.attach( // @suppress("Method cannot be resolved")
 			new GetPIDConstants(numberOfPID, pidList));
+	coms.attach(new GetPIDVelocity(numberOfPID, pidList));
+	coms.attach(new GetPDVelocityConstants(numberOfPID, pidList));
+	coms.attach(new SetPIDVelocity(numberOfPID, pidList));
+	coms.attach(new SetPDVelocityConstants(numberOfPID, pidList));
+
 	coms.attach(new EStop(robot)); // @suppress("Method cannot be resolved")
 	// clear any fault command
 	coms.attach(new ClearFaults(robot));// @suppress("Method cannot be resolved")

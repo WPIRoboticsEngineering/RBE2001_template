@@ -10,7 +10,7 @@
 
 #define TEAM_NAME "IMU-Team21"
 
-//#define USE_WIFI
+#define USE_WIFI
 
 #define WHEEL_TRACK 175.0
 #define WHEEL_RADIUS (2.0*25.4/2.0)

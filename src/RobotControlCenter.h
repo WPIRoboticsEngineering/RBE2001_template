@@ -35,6 +35,11 @@
 #include "commands/GetStatus.h"
 #include "commands/PickOrder.h"
 #include "../StudentsRobot.h"
+#include "commands/SetPDVelocityConstants.h"
+#include "commands/SetPIDVelocity.h"
+#include "commands/GetPDVelocityConstants.h"
+#include "commands/GetPIDVelocity.h"
+
 enum state_t {
 	Startup, WaitForConnect, run
 // Add more states here and be sure to add them to the cycle
