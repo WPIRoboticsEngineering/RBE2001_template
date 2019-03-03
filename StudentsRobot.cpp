@@ -17,8 +17,8 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	this->motor3 = motor3;
 
 	// Set the PID Clock gating rate. Thie must be 10 times slower than the motors update rate
-	motor1->myPID.sampleRateMs = 30; // 330hz servo, 3ms update, 30 ms PID
-	motor2->myPID.sampleRateMs = 30; // 330hz servo, 3ms update, 30 ms PID
+	motor1->myPID.sampleRateMs = 5; // 330hz servo, 3ms update, 30 ms PID
+	motor2->myPID.sampleRateMs = 5; // 330hz servo, 3ms update, 30 ms PID
 	motor3->myPID.sampleRateMs = 1;  // 10khz H-Bridge, 0.1ms update, 1 ms PID
 	// Set default P.I.D gains
 	motor1->SetTunings(0.00015, 0, 0);
@@ -30,8 +30,8 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	motor1->setOutputBoundingValues(0, //the minimum value that the output takes (Full reverse)
 			180, //the maximum value the output takes (Full forward)
 			90, //the value of the output to stop moving
-			1, //a positive value added to the stop value to creep forwards
-			1, //a positive value subtracted from stop value to creep backward
+			12, //a positive value added to the stop value to creep forwards
+			8, //a positive value subtracted from stop value to creep backward
 			16.0 * // Encoder CPR
 					50.0 * // Motor Gear box ratio
 					motorToWheel * // motor to wheel stage ratio
@@ -44,8 +44,8 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	motor2->setOutputBoundingValues(0, //the minimum value that the output takes (Full reverse)
 			180, //the maximum value the output takes (Full forward)
 			90, //the value of the output to stop moving
-			1, //a positive value added to the stop value to creep forwards
-			1, //a positive value subtracted from stop value to creep backward
+			12, //a positive value added to the stop value to creep forwards
+			8, //a positive value subtracted from stop value to creep backward
 			16.0 * // Encoder CPR
 					50.0 * // Motor Gear box ratio
 					motorToWheel * // motor to wheel stage ratio
@@ -58,8 +58,8 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	motor3->setOutputBoundingValues(-255, //the minimum value that the output takes (Full reverse)
 			255, //the maximum value the output takes (Full forward)
 			0, //the value of the output to stop moving
-			1, //a positive value added to the stop value to creep forwards
-			1, //a positive value subtracted from stop value to creep backward
+			128, //a positive value added to the stop value to creep forwards
+			128, //a positive value subtracted from stop value to creep backward
 			16.0 * // Encoder CPR
 					50.0 * // Motor Gear box ratio
 					1.0 * // motor to arm stage ratio
