@@ -20,11 +20,15 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	motor1->myPID.sampleRateMs = 5; // 330hz servo, 3ms update, 30 ms PID
 	motor2->myPID.sampleRateMs = 5; // 330hz servo, 3ms update, 30 ms PID
 	motor3->myPID.sampleRateMs = 1;  // 10khz H-Bridge, 0.1ms update, 1 ms PID
-	// Set default P.I.D gains
-	motor1->SetTunings(0.00015, 0, 0);
-	motor2->SetTunings(0.00015, 0, 0);
-	motor3->SetTunings(0.00015, 0, 0);
 
+	// Set default P.I.D gains
+	motor1->myPID.setpid(0.00015, 0, 0);
+	motor2->myPID.setpid(0.00015, 0, 0);
+	motor3->myPID.setpid(0.00015, 0, 0);
+
+	motor1->velocityPID.setpid(0.1, 0, 0);
+	motor2->velocityPID.setpid(0.1, 0, 0);
+	motor3->velocityPID.setpid(0.1, 0, 0);
 	// After attach, compute ratios and bounding
 	double motorToWheel = 3;
 	motor1->setOutputBoundingValues(0, //the minimum value that the output takes (Full reverse)

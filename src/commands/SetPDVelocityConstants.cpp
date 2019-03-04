@@ -21,7 +21,7 @@ SetPDVelocityConstants::~SetPDVelocityConstants() {
 void SetPDVelocityConstants::event(float * buffer) {
 	for (int i = 0; i < numPID; i++) {
 		double kp = buffer[(i * 3) + 0];
-		double ki = buffer[(i * 3) + 1];
+		double ki = 0;
 		double kd = buffer[(i * 3) + 2];
 		Serial.print("\r\nSetting gains index "+String(i));
 		Serial.print(" p= ");Serial.print(kp,6);
