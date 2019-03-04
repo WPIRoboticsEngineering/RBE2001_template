@@ -41,7 +41,7 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 					motorToWheel * // motor to wheel stage ratio
 					(1.0 / 360.0) * // degrees per revolution
 					motor1->encoder.countsMode, // Number of edges that are used to increment the value
-			117.5 * // Measured max RPM
+			204 * // Measured max RPM
 					(1 / 60.0) * // Convert to seconds
 					(1 / motorToWheel) *  // motor to wheel ratio
 					360.0); // convert to degrees
@@ -55,7 +55,7 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 					motorToWheel * // motor to wheel stage ratio
 					(1.0 / 360.0) * // degrees per revolution
 					motor2->encoder.countsMode, // Number of edges that are used to increment the value
-			117.5 * // Measured max RPM
+			204 * // Measured max RPM
 					(1 / 60.0) * // Convert to seconds
 					(1 / motorToWheel) *  // motor to wheel ratio
 					360.0); // convert to degrees
@@ -69,7 +69,7 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 					1.0 * // motor to arm stage ratio
 					(1.0 / 360.0) * // degrees per revolution
 					motor3->encoder.countsMode, // Number of edges that are used to increment the value
-			117.5 * // Measured max RPM
+			204* // Measured max RPM
 					(1 / 60.0) * // Convert to seconds
 					360.0); // convert to degrees
 
