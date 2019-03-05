@@ -20,7 +20,7 @@ void ServoAnalogPIDMotor::attach(int servoPin, int analogPin) {
 		while (1);
 	}
 	adcPin=analogPin;
-	motor.setPeriodHertz(50);
+	motor.setPeriodHertz(200);
 	motor.attach(servoPin, 1000, 2000);
 	pidinit();
 	pinMode(adcPin, ANALOG);

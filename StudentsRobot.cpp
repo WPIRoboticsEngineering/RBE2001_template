@@ -17,8 +17,8 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	this->motor3 = motor3;
 
 	// Set the PID Clock gating rate. Thie must be 10 times slower than the motors update rate
-	motor1->myPID.sampleRateMs = 30; // 330hz servo, 3ms update, 30 ms PID
-	motor2->myPID.sampleRateMs = 30; // 330hz servo, 3ms update, 30 ms PID
+	motor1->myPID.sampleRateMs = 5; // 330hz servo, 3ms update, 30 ms PID
+	motor2->myPID.sampleRateMs = 5; // 330hz servo, 3ms update, 30 ms PID
 	motor3->myPID.sampleRateMs = 1;  // 10khz H-Bridge, 0.1ms update, 1 ms PID
 
 	// Set default P.I.D gains
@@ -31,11 +31,11 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	motor3->velocityPID.setpid(0.1, 0, 0);
 	// After attach, compute ratios and bounding
 	double motorToWheel = 3;
-	motor1->setOutputBoundingValues(0, //the minimum value that the output takes (Full reverse)
-			180, //the maximum value the output takes (Full forward)
+	motor1->setOutputBoundingValues(57, //the minimum value that the output takes (Full reverse)
+			150, //the maximum value the output takes (Full forward)
 			90, //the value of the output to stop moving
 			7, //a positive value subtracted from stop value to creep backward
-			15, //a positive value added to the stop value to creep forwards
+			14, //a positive value added to the stop value to creep forwards
 			16.0 * // Encoder CPR
 					50.0 * // Motor Gear box ratio
 					motorToWheel * // motor to wheel stage ratio
@@ -47,8 +47,8 @@ StudentsRobot::StudentsRobot(ServoEncoderPIDMotor * motor1,
 	motor2->setOutputBoundingValues(0, //the minimum value that the output takes (Full reverse)
 			180, //the maximum value the output takes (Full forward)
 			90, //the value of the output to stop moving
-			8, //a positive value subtracted from stop value to creep backward
-			15, //a positive value added to the stop value to creep forwards
+			7, //a positive value subtracted from stop value to creep backward
+			14, //a positive value added to the stop value to creep forwards
 			16.0 * // Encoder CPR
 					50.0 * // Motor Gear box ratio
 					motorToWheel * // motor to wheel stage ratio
