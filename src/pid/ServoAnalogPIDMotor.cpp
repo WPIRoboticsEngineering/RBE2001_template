@@ -11,7 +11,7 @@ ServoAnalogPIDMotor::ServoAnalogPIDMotor() {
 	setOutputBoundingValues(0, 180, 90, 5, 5,
 			1.0/(270.0/ //degrees in range
 						(4096.0)),// ticks in range
-			186.0 * 60.0 * 360.0);
+			186.0 * 60.0 * 360.0,0);
 }
 
 void ServoAnalogPIDMotor::attach(int servoPin, int analogPin) {
@@ -20,7 +20,7 @@ void ServoAnalogPIDMotor::attach(int servoPin, int analogPin) {
 		while (1);
 	}
 	adcPin=analogPin;
-	motor.setPeriodHertz(330);
+	motor.setPeriodHertz(50);
 	motor.attach(servoPin, 1000, 2000);
 	pidinit();
 	pinMode(adcPin, ANALOG);

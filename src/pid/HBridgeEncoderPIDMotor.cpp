@@ -16,7 +16,7 @@ HBridgeEncoderPIDMotor::HBridgeEncoderPIDMotor() {
 			1.0 * // motor to wheel stage ratio
 			(1.0 / 360.0) * // degrees per revolution
 			encoder.countsMode,
-			186.0 * 60.0 * 360.0);
+			186.0 * 60.0 * 360.0,0);
 }
 
 HBridgeEncoderPIDMotor::~HBridgeEncoderPIDMotor() {

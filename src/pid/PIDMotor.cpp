@@ -98,9 +98,16 @@ void PIDMotor::loop() {
 	}
 }
 void PIDMotor::velocityLoop() {
-	double openLoopTerm = myFmap(targetDegreesPerSecond,
-			-getFreeSpinMaxDegreesPerSecond(), getFreeSpinMaxDegreesPerSecond(),
-			-1, 1);
+	double openLoopTerm=0;
+	if(targetDegreesPerSecond>0)
+		openLoopTerm= myFmap(targetDegreesPerSecond,
+				freeSpinMinDegreesPerSecond, getFreeSpinMaxDegreesPerSecond(),
+			0, 1);
+	else
+		openLoopTerm= myFmap(targetDegreesPerSecond,
+						-getFreeSpinMaxDegreesPerSecond(),
+						-freeSpinMinDegreesPerSecond,
+					-1,0);
 	// TODO Apply PD velocity terms here, 2002 velocity lab
 	setOutputUnitVector(openLoopTerm);
 }
@@ -115,6 +122,10 @@ void PIDMotor::setVelocityDegreesPerSecond(float degreesPerSecond) {
 			degreesPerSecond = getFreeSpinMaxDegreesPerSecond();
 		if (degreesPerSecond < -getFreeSpinMaxDegreesPerSecond())
 			degreesPerSecond = -getFreeSpinMaxDegreesPerSecond();
+		if(degreesPerSecond>0 && degreesPerSecond < freeSpinMinDegreesPerSecond)
+			degreesPerSecond=freeSpinMinDegreesPerSecond;
+		if(degreesPerSecond<0 && degreesPerSecond > -freeSpinMinDegreesPerSecond)
+			degreesPerSecond=-freeSpinMinDegreesPerSecond;
 		targetDegreesPerSecond = degreesPerSecond;
 		mode = VEL;
 	} else {
@@ -311,10 +322,13 @@ void PIDMotor::startInterpolationDegrees(float newSetpoint, long msTimeDuration,
  * @param ticksToDeg a value to convert from degrees to motor units. This number times degrees equals ticks;
  * @param freeSpinMaxDegreesPerSecond a value in degrees per second that represents the maximum
  * 		freespinning speed of the motor running at 'outputMax'.
+ * 	@param speedAtPositiveCreepValue the speed in degrees per second that the motor spins when the hardware output is at creep forwards
  */
 void PIDMotor::setOutputBoundingValues(int32_t outputMin, int32_t outputMax,
-		int32_t outputStop, int32_t outputMinDeadbad, int32_t outputMaxDeadbad,
-		double ticksToDeg, double freeSpinMaxDegreesPerSecond) {
+		int32_t outputStop, int32_t outputMinDeadbad,
+		int32_t outputMaxDeadbad, double ticksToDeg,
+		double getFreeSpinMaxDegreesPerSecond,
+		double speedAtPositiveCreepValue) {
 	this->outputMin = outputMin;
 	this->outputMax = outputMax;
 	this->outputStop = outputStop;
@@ -322,6 +336,7 @@ void PIDMotor::setOutputBoundingValues(int32_t outputMin, int32_t outputMax,
 	this->outputMaxDeadbad = outputMaxDeadbad;
 	this->myTicksToDeg = ticksToDeg;
 	this->freeSpinMaxDegreesPerSecond = freeSpinMaxDegreesPerSecond;
+	freeSpinMinDegreesPerSecond=speedAtPositiveCreepValue;
 }
 /**
  * getOutputMin

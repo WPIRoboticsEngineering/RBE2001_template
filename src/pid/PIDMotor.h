@@ -53,7 +53,11 @@ private:
 	 */
 	double freeSpinMaxDegreesPerSecond=1000;
 
-
+	/*
+	 * value in degrees per second that represents the maximum
+	 * freespinning speed of the motor running at 'outputMax'.
+	 */
+	double freeSpinMinDegreesPerSecond=100;
 protected:
 
 	long lastTimeRunPID = 0;
@@ -328,11 +332,13 @@ public:
 	 * @param ticksToDeg a value to convert from degrees to motor units. This number times degrees equals ticks;
 	 * @param freeSpinMaxDegreesPerSecond a value in degrees per second that represents the maximum
 	 * 		freespinning speed of the motor running at 'outputMax'.
+	 * 	@param speedAtPositiveCreepValue the speed in degrees per second that the motor spins when the hardware output is at creep forwards
 	 */
 	void setOutputBoundingValues(int32_t outputMin, int32_t outputMax,
 			int32_t outputStop, int32_t outputMinDeadbad,
 			int32_t outputMaxDeadbad, double ticksToDeg,
-			double getFreeSpinMaxDegreesPerSecond);
+			double getFreeSpinMaxDegreesPerSecond,
+			double speedAtPositiveCreepValue);
 	/**
 	 * calcCur
 	 *

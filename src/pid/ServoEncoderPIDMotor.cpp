@@ -14,7 +14,7 @@ ServoEncoderPIDMotor::ServoEncoderPIDMotor() {
 			1.0 * // motor to wheel stage ratio
 			(1.0 / 360.0) * // degrees per revolution
 			encoder.countsMode,
-			186.0 * 60.0 * 360.0);
+			186.0 * 60.0 * 360.0,0);
 }
 
 ServoEncoderPIDMotor::~ServoEncoderPIDMotor() {
@@ -23,7 +23,7 @@ ServoEncoderPIDMotor::~ServoEncoderPIDMotor() {
 
 void ServoEncoderPIDMotor::attach(int servoPin, int encoderA, int encoderB) {
 	encoder.attachHalfQuad(encoderA, encoderB);
-	motor.setPeriodHertz(330);
+	motor.setPeriodHertz(50);
 	motor.attach(servoPin, 1000, 2000);
 	pidinit();
 }
