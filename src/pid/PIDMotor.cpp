@@ -335,7 +335,7 @@ void PIDMotor::setOutputBoundingValues(int32_t outputMin, int32_t outputMax,
 	this->outputMinDeadbad = outputMinDeadbad;
 	this->outputMaxDeadbad = outputMaxDeadbad;
 	this->myTicksToDeg = ticksToDeg;
-	this->freeSpinMaxDegreesPerSecond = freeSpinMaxDegreesPerSecond;
+	this->freeSpinMaxDegreesPerSecond = getFreeSpinMaxDegreesPerSecond;
 	freeSpinMinDegreesPerSecond=speedAtPositiveCreepValue;
 }
 /**
