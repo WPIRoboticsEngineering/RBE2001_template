@@ -24,9 +24,9 @@ void GetPDVelocityConstants::event(float * buffer) {
 			buffer[(i * 3) + 0] = current->kp;
 			buffer[(i * 3) + 1] = current->ki;
 			buffer[(i * 3) + 2] = current->kd;
-			Serial.print("\r\nGetting Vel gains index "+String(i));
-			Serial.print(" vp= ");Serial.print(current->kp,6);
-			Serial.print(" vd= ");Serial.print(current->kd,6);
+			//Serial.print("\r\nGetting Vel gains index "+String(i));
+			//Serial.print(" vp= ");Serial.print(current->kp,6);
+			//Serial.print(" vd= ");Serial.print(current->kd,6);
 		}
 
 
