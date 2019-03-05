@@ -51,9 +51,9 @@ enum ComStackStatusState {
  */
 class StudentsRobot {
 private:
-	ServoEncoderPIDMotor * motor1;
-	ServoEncoderPIDMotor * motor2;
-	HBridgeEncoderPIDMotor * motor3;
+	PIDMotor * motor1;
+	PIDMotor * motor2;
+	PIDMotor * motor3;
 	Servo * servo;
 	float lsensorVal=0;
 	float rsensorVal=0;
@@ -71,8 +71,8 @@ public:
 	 * DO NOT reuse pins or fail to attach any of the objects
 	 *
 	 */
-	StudentsRobot(ServoEncoderPIDMotor * motor1,
-			ServoEncoderPIDMotor * motor2, HBridgeEncoderPIDMotor * motor3,
+	StudentsRobot(PIDMotor * motor1,
+			PIDMotor * motor2, PIDMotor * motor3,
 			Servo * servo);
 	/**
 	 * Command status
