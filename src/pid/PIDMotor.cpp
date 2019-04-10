@@ -168,7 +168,7 @@ void PIDMotor::setOutputUnitVector(float out) {
  */
 void PIDMotor::overrideCurrentPosition(int32_t val) {
 	overrideCurrentPositionHardware(val);
-
+	prevPos=val;
 	startInterpolation((float) val, 0, LIN);
 
 	myPID.clearIntegralBuffer();
