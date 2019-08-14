@@ -60,8 +60,7 @@ void RobotControlCenter::setup() {
 	motor1.setSetpoint(motor1.getPosition());
 	motor2.setSetpoint(motor2.getPosition());
 	motor3.setSetpoint(motor3.getPosition());
-	ESP32PWM dummy;
-	dummy.getChannel(); // skip the second 10khz motor
+
 	// Set up digital servo for the gripper
 	servo.setPeriodHertz(50);
 	servo.attach(SERVO_PIN, 1000, 2000);
