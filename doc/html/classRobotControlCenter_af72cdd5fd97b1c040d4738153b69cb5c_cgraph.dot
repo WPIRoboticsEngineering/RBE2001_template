@@ -1,0 +1,23 @@
+digraph "RobotControlCenter::setup"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node92 [label="RobotControlCenter\l::setup",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node92 -> Node93 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node93 [label="HBridgeEncoderPIDMotor\l::attach",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classHBridgeEncoderPIDMotor.html#ad971f5e3e4932ac465135018d976defc"];
+  Node93 -> Node94 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node94 [label="PIDMotor::pidinit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a32adc7f86caa0f3c97161d945ccc1c5c"];
+  Node94 -> Node95 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node95 [label="RBEPID::clearIntegralBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRBEPID.html#adc6954f2aaa12295fc58ca1dcfca3dc1"];
+  Node93 -> Node96 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node96 [label="HBridgeEncoderPIDMotor\l::setOutput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classHBridgeEncoderPIDMotor.html#af2b2cfdf8c465b5c9af290cb9a680514"];
+  Node96 -> Node97 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node97 [label="PIDMotor::getOutputMaxDeadbad",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a4abe212ce5ed85b3f6f9b0d6065a2d19"];
+  Node92 -> Node98 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node98 [label="HBridgeEncoderPIDMotor\l::getPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classHBridgeEncoderPIDMotor.html#aaf50960b179c4d9b0a059b3b4b41b14d"];
+  Node92 -> Node99 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node99 [label="PIDMotor::setSetpoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a53e76c65cbb75d139eed71cac76d688d"];
+  Node99 -> Node100 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node100 [label="PIDMotor::startInterpolation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b"];
+}

@@ -1,12 +1,8 @@
 var searchData=
 [
-  ['offset',['offset',['../classServoAnalogPIDMotor.html#ad179094b9c1bb66aa1e6a3dc8f4dd04f',1,'ServoAnalogPIDMotor']]],
-  ['output',['Output',['../classPIDMotor.html#afcb862e2a68b0244426d3ed978e4f1e8',1,'PIDMotor']]],
-  ['outputmax',['outputMax',['../classPIDMotor.html#aac3fce8d08e1fe1788326bf7aecccf31',1,'PIDMotor']]],
-  ['outputmaxdeadbad',['outputMaxDeadbad',['../classPIDMotor.html#a8fd9eb49a0999da0cc6a3d799ed9845a',1,'PIDMotor']]],
-  ['outputmin',['outputMin',['../classPIDMotor.html#a4db4f7580139184e9ec7ee4a5180e1ba',1,'PIDMotor']]],
-  ['outputmindeadbad',['outputMinDeadbad',['../classPIDMotor.html#a24697fc6fef8b2564d4e6dc4bde2e970',1,'PIDMotor']]],
-  ['outputstop',['outputStop',['../classPIDMotor.html#aa606a607e25953aaae2be040a659b2e5',1,'PIDMotor']]],
-  ['overridecurrentposition',['overrideCurrentPosition',['../classPIDMotor.html#a5de9794349b06acb6e94076064508fe5',1,'PIDMotor']]],
-  ['overridecurrentpositionhardware',['overrideCurrentPositionHardware',['../classHBridgeEncoderPIDMotor.html#af6d62529ad7bf29787c1a8d43750482f',1,'HBridgeEncoderPIDMotor::overrideCurrentPositionHardware()'],['../classPIDMotor.html#a6a1452c87f6abd3729ec12824a74abca',1,'PIDMotor::overrideCurrentPositionHardware()'],['../classServoAnalogPIDMotor.html#a2a2d6f4b8cef0001347dd26ba0c97c54',1,'ServoAnalogPIDMotor::overrideCurrentPositionHardware()'],['../classServoEncoderPIDMotor.html#a6ddb824e5869bbaa03fe865205ae30d7',1,'ServoEncoderPIDMotor::overrideCurrentPositionHardware()']]]
+  ['name',['name',['../classRobotControlCenter.html#a7267326e05f39c52b056193472bab6d1',1,'RobotControlCenter']]],
+  ['nextstatus',['nextStatus',['../classStudentsRobot.html#abb9c3966ae26ed3018ce212d571ebc87',1,'StudentsRobot']]],
+  ['nexttime',['nextTime',['../classStudentsRobot.html#a4f9142bac7fe1ccb391f9b9d6a7ef9ee',1,'StudentsRobot']]],
+  ['numberofpid',['numberOfPID',['../RobotControlCenter_8h.html#aa92f722067465104b12471609ea2d3de',1,'RobotControlCenter.h']]],
+  ['numpid',['numPID',['../classGetPDVelocityConstants.html#a3d8a97ea1d67733256bd87119453668b',1,'GetPDVelocityConstants::numPID()'],['../classGetPIDConstants.html#aeb7a168384e03e5263729959b5748ada',1,'GetPIDConstants::numPID()'],['../classGetPIDData.html#ade61350e75f7bc96b00b62ab979a557c',1,'GetPIDData::numPID()'],['../classGetPIDVelocity.html#a434658c4472a016d11fabb1a5c15f723',1,'GetPIDVelocity::numPID()'],['../classSetPDVelocityConstants.html#a7d12bbd6bc00357abfeb9a166ab21eb6',1,'SetPDVelocityConstants::numPID()'],['../classSetPIDConstants.html#aa1a66e1851cd0eb44fafe1257b9d37d4',1,'SetPIDConstants::numPID()'],['../classSetPIDSetpoint.html#a5a9f3cbb649a6573c4515e49bc80d332',1,'SetPIDSetpoint::numPID()'],['../classSetPIDVelocity.html#af4f9a612ca09d13f615c646b0db25ee2',1,'SetPIDVelocity::numPID()']]]
 ];

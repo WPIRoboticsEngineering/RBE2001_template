@@ -1,0 +1,13 @@
+digraph "ServoAnalogPIDMotor::attach"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="ServoAnalogPIDMotor\l::attach",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="ServoAnalogPIDMotor\l::getPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classServoAnalogPIDMotor.html#ad6ea5e73f0ee9edf35ae1a3c59eee467"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PIDMotor::pidinit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a32adc7f86caa0f3c97161d945ccc1c5c"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="RBEPID::clearIntegralBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRBEPID.html#adc6954f2aaa12295fc58ca1dcfca3dc1"];
+}

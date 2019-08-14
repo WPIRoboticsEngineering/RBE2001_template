@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['use_5fwifi',['USE_WIFI',['../config_8h.html#a038b45d7c3c759d55de15e9fe019f580',1,'config.h']]]
+  ['team_5fname',['TEAM_NAME',['../config_8h.html#a79031bbc7e82848ae06effd0b0f4e2b6',1,'config.h']]]
 ];

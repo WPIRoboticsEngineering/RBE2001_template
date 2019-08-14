@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['filtersize',['filterSize',['../ServoAnalogPIDMotor_8h.html#a42f923d939aa47adef20f094493b70a8',1,'ServoAnalogPIDMotor.h']]]
+  ['boot_5fflag_5fpin',['BOOT_FLAG_PIN',['../config_8h.html#a88ae201421ebdf8709ec200d184e1392',1,'config.h']]]
 ];

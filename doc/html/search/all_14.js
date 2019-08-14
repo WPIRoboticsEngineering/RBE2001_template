@@ -1,16 +1,11 @@
 var searchData=
 [
-  ['_7eapprove',['~Approve',['../classApprove.html#afe6d2b2f78a5c72d2f26d1bb5d8f47e4',1,'Approve']]],
-  ['_7eclearfaults',['~ClearFaults',['../classClearFaults.html#a5533bfdfb8cfacc579bfea59482120ab',1,'ClearFaults']]],
-  ['_7eestop',['~EStop',['../classEStop.html#a19ad075086b643a0ae7126d794b3d9c9',1,'EStop']]],
-  ['_7egetpidconstants',['~GetPIDConstants',['../classGetPIDConstants.html#aa29fcfec31be43eaadf3c80c80ce1e58',1,'GetPIDConstants']]],
-  ['_7egetpiddata',['~GetPIDData',['../classGetPIDData.html#a65141e6b104c839be09d42a78078ee2a',1,'GetPIDData']]],
-  ['_7egetstatus',['~GetStatus',['../classGetStatus.html#ac86a7b0de7e89a19dd3c19ecd944260c',1,'GetStatus']]],
-  ['_7ehbridgeencoderpidmotor',['~HBridgeEncoderPIDMotor',['../classHBridgeEncoderPIDMotor.html#aad2579f713ce0f24225c804f1ae72a6e',1,'HBridgeEncoderPIDMotor']]],
-  ['_7epickorder',['~PickOrder',['../classPickOrder.html#a598b81de9c578fe4cf305c1ccbc09945',1,'PickOrder']]],
-  ['_7epidmotor',['~PIDMotor',['../classPIDMotor.html#a8e939b1f6b9f8b48fc8c3778aefd7692',1,'PIDMotor']]],
-  ['_7erobotcontrolcenter',['~RobotControlCenter',['../classRobotControlCenter.html#acdd59669b1fc8ae9c2d2d09c96ce59b2',1,'RobotControlCenter']]],
-  ['_7eservoencoderpidmotor',['~ServoEncoderPIDMotor',['../classServoEncoderPIDMotor.html#a66a894eaad165783a81f72ddd42c2d6a',1,'ServoEncoderPIDMotor']]],
-  ['_7esetpidconstants',['~SetPIDConstants',['../classSetPIDConstants.html#a9e165ef3610e7f8b4b961c3b920f570f',1,'SetPIDConstants']]],
-  ['_7esetpidsetpoint',['~SetPIDSetpoint',['../classSetPIDSetpoint.html#ac88124d7149a1d534a7ea7ea1d50090f',1,'SetPIDSetpoint']]]
+  ['wait_5ffor_5fmotors_5fto_5ffinnish',['WAIT_FOR_MOTORS_TO_FINNISH',['../StudentsRobot_8h.html#a2fa48347d45a4cb9d5fdbf4f077b5374a9408c0e78d3c91d5d338fb358a709ac1',1,'StudentsRobot.h']]],
+  ['wait_5ffor_5ftime',['WAIT_FOR_TIME',['../StudentsRobot_8h.html#a2fa48347d45a4cb9d5fdbf4f077b5374ae0f5fe28e4f3dc759d25d2ab487bff6c',1,'StudentsRobot.h']]],
+  ['waitforconnect',['WaitForConnect',['../RobotControlCenter_8h.html#aa0aafed44fec19806d8f9ad834be1248a49d074eacfc356c244ead4b4f4138d30',1,'RobotControlCenter.h']]],
+  ['waiting_5ffor_5fapproval_5fto_5fdropoff',['Waiting_for_approval_to_dropoff',['../StudentsRobot_8h.html#a1224568eebab348cfd8b7d5418b61620a73a129b90b2ca4a9a4cb4e9ba4746228',1,'StudentsRobot.h']]],
+  ['waiting_5ffor_5fapproval_5fto_5fpickup',['Waiting_for_approval_to_pickup',['../StudentsRobot_8h.html#a1224568eebab348cfd8b7d5418b61620a238238c7ec78a288a682de3428c8a318',1,'StudentsRobot.h']]],
+  ['wheel_5fradius',['WHEEL_RADIUS',['../config_8h.html#aaa6f04f6f0d7cf1008a53279acf49f07',1,'config.h']]],
+  ['wheel_5ftrack',['WHEEL_TRACK',['../config_8h.html#aa9cd2eaae3d5c89c36ebd4cccd174d4d',1,'config.h']]],
+  ['wii_5fcontroller_5fdetect',['WII_CONTROLLER_DETECT',['../config_8h.html#a0a42c87cb5792c0118fbf71abe4a5f98',1,'config.h']]]
 ];

@@ -1,6 +1,11 @@
 var searchData=
 [
-  ['unitduration',['unitDuration',['../classPIDMotor.html#ae9d7514135efe7785de2e12c37596cf3',1,'PIDMotor']]],
-  ['updatestatemachine',['updateStateMachine',['../classStudentsRobot.html#a67255944c57772b33390dcc786505afe',1,'StudentsRobot']]],
-  ['use_5fwifi',['USE_WIFI',['../config_8h.html#a038b45d7c3c759d55de15e9fe019f580',1,'config.h']]]
+  ['targetdegreespersecond',['targetDegreesPerSecond',['../classPIDMotor.html#aae65b1fb2b94080453fdf7a486c9dc89',1,'PIDMotor']]],
+  ['team_5fname',['TEAM_NAME',['../config_8h.html#a79031bbc7e82848ae06effd0b0f4e2b6',1,'config.h']]],
+  ['template_2eino',['template.ino',['../template_8ino.html',1,'']]],
+  ['tickstodeg',['ticksToDeg',['../classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33',1,'PIDMotor']]],
+  ['timeinterval',['timeInterval',['../classPIDMotor.html#ab547780109f04c9477253919c5fd64ae',1,'PIDMotor']]],
+  ['torque',['torque',['../classLookup.html#ac5f02b668c84d1150d259d7f79256c51',1,'Lookup']]],
+  ['torquearray',['torqueArray',['../LookupTable_8cpp.html#a837c2a2b7a5b1a0669424c161e31b62e',1,'LookupTable.cpp']]],
+  ['turndegrees',['turnDegrees',['../classDrivingChassis.html#aae7b414e06493721595a7ea1cad7a821',1,'DrivingChassis']]]
 ];

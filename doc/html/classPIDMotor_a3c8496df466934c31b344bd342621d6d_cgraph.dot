@@ -1,0 +1,11 @@
+digraph "PIDMotor::getSetPointDegrees"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node19 [label="PIDMotor::getSetPointDegrees",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node19 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="PIDMotor::getSetPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#ab4fc140e1212fa3c192feca5bcbd7acc"];
+  Node19 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="PIDMotor::ticksToDeg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33"];
+}

@@ -1,0 +1,15 @@
+digraph "GetPIDVelocity::event"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="GetPIDVelocity::event",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PIDMotor::getVelocityDegrees\lPerSecond",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a1e251bea3d32a8b3b8028e0d400ba47f"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PIDMotor::calcVel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a7f73964441f27c0eb1247604dae09bd0"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PIDMotor::getPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PIDMotor::ticksToDeg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33"];
+}

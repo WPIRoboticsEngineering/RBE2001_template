@@ -1,0 +1,26 @@
+digraph "PIDMotor::velocityLoop"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node95 [label="PIDMotor::velocityLoop",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node95 -> Node96 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node96 [label="PIDMotor::getFreeSpinMax\lDegreesPerSecond",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a702890e63da27ace0ec16b30d53e0c9e"];
+  Node95 -> Node97 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node97 [label="PIDMotor::myFmap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a4f30d949a3c41afb995caef9fb207e05"];
+  Node95 -> Node98 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node98 [label="PIDMotor::setOutputUnitVector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#af3660a46b5b7614ba1a5812a85d103ef"];
+  Node98 -> Node99 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node99 [label="PIDMotor::getOutputMax",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#aeac2d568ea99d5ed87511f6107681919"];
+  Node98 -> Node100 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node100 [label="PIDMotor::getOutputMaxDeadbad",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a4abe212ce5ed85b3f6f9b0d6065a2d19"];
+  Node98 -> Node101 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node101 [label="PIDMotor::getOutputMin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a48ccac9c1c76693f15b54e5db7a33df1"];
+  Node98 -> Node102 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node102 [label="PIDMotor::getOutputMinDeadbad",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a7cd2e4d3e82e28e60999eca98a96be7d"];
+  Node98 -> Node103 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node103 [label="PIDMotor::getOutputStop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#aab8f58c624bc04015c6179e2c029fec3"];
+  Node98 -> Node97 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node98 -> Node104 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node104 [label="PIDMotor::setOutput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a017ecfd1aca8cc1e6ac04dafabf8e29e"];
+}

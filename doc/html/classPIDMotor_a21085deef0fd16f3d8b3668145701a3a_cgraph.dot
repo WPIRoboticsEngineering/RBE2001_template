@@ -1,0 +1,19 @@
+digraph "PIDMotor::SetTunings"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node71 [label="PIDMotor::SetTunings",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node71 -> Node72 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node72 [label="PIDMotor::getPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809"];
+  Node71 -> Node73 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node73 [label="PIDMotor::overrideCurrent\lPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a57d2725997f8dfd23af5fdcfd8e97928"];
+  Node73 -> Node74 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node74 [label="RBEPID::clearIntegralBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRBEPID.html#adc6954f2aaa12295fc58ca1dcfca3dc1"];
+  Node73 -> Node75 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node75 [label="PIDMotor::overrideCurrent\lPositionHardware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a6a1452c87f6abd3729ec12824a74abca"];
+  Node73 -> Node76 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node76 [label="PIDMotor::startInterpolation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b"];
+  Node71 -> Node77 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node77 [label="RBEPID::setpid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRBEPID.html#a38127aaf2918707921b3e8e6c27692f5"];
+}

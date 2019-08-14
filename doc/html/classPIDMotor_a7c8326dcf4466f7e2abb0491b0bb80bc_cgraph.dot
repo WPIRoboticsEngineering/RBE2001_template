@@ -1,0 +1,17 @@
+digraph "PIDMotor::setVelocityDegreesPerSecond"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node80 [label="PIDMotor::setVelocityDegrees\lPerSecond",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node80 -> Node81 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node81 [label="PIDMotor::getFreeSpinMax\lDegreesPerSecond",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a702890e63da27ace0ec16b30d53e0c9e"];
+  Node80 -> Node82 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node82 [label="PIDMotor::stop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#ab70676b6d2cea7a85592715056bdb0dd"];
+  Node82 -> Node83 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node83 [label="PIDMotor::setSetpoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a53e76c65cbb75d139eed71cac76d688d"];
+  Node83 -> Node84 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node84 [label="PIDMotor::startInterpolation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a0aba3994cd6722646cce3f62a5cc056b"];
+  Node82 -> Node85 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node85 [label="PIDMotor::getPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809"];
+}

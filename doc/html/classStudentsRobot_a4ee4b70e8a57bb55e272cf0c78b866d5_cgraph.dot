@@ -1,0 +1,44 @@
+digraph "StudentsRobot::pidLoop"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node9 [label="StudentsRobot::pidLoop",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="PIDMotor::loop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#ac1374ed36dde94f3a14f8bf78e81c20c"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="RBEPID::calc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRBEPID.html#a74256fe09d111f68c97f7fcfaa858960"];
+  Node10 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="PIDMotor::calcVel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a7f73964441f27c0eb1247604dae09bd0"];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="PIDMotor::getPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a804fb78d6d87e55d96d4b798935c8809"];
+  Node12 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="PIDMotor::ticksToDeg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a292e9bc7f736e94ee0df376a08efae33"];
+  Node10 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="RBEPID::clearIntegralBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRBEPID.html#adc6954f2aaa12295fc58ca1dcfca3dc1"];
+  Node10 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="PIDMotor::getInterpolation\lUnitIncrement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a4b178659f339c95aa78bfb1a9e77c338"];
+  Node10 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="PIDMotor::setOutputUnitVector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#af3660a46b5b7614ba1a5812a85d103ef"];
+  Node17 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="PIDMotor::getOutputMax",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#aeac2d568ea99d5ed87511f6107681919"];
+  Node17 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="PIDMotor::getOutputMaxDeadbad",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a4abe212ce5ed85b3f6f9b0d6065a2d19"];
+  Node17 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="PIDMotor::getOutputMin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a48ccac9c1c76693f15b54e5db7a33df1"];
+  Node17 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="PIDMotor::getOutputMinDeadbad",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a7cd2e4d3e82e28e60999eca98a96be7d"];
+  Node17 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="PIDMotor::getOutputStop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#aab8f58c624bc04015c6179e2c029fec3"];
+  Node17 -> Node23 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="PIDMotor::myFmap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a4f30d949a3c41afb995caef9fb207e05"];
+  Node17 -> Node24 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="PIDMotor::setOutput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a017ecfd1aca8cc1e6ac04dafabf8e29e"];
+  Node10 -> Node25 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="PIDMotor::velocityLoop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#af5a516cd4dc617063b61632ce9968df1"];
+  Node25 -> Node26 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="PIDMotor::getFreeSpinMax\lDegreesPerSecond",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPIDMotor.html#a702890e63da27ace0ec16b30d53e0c9e"];
+  Node25 -> Node23 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}
