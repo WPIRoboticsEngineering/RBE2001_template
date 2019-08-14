@@ -188,7 +188,7 @@ void StudentsRobot::ClearFaults(float * buffer) {
 	// clear the faults somehow
 	Serial.println("StudentsRobot::ClearFaults");
 	myCommandsStatus = Ready_for_new_task;
-	status = StartRunning;
+	status = Running;
 }
 
 /**
