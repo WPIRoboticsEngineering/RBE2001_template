@@ -103,8 +103,8 @@ public:
 	 */
 	StudentsRobot * robot;
 protected:
-	ServoEncoderPIDMotor motor1;  // PID controlled motor object
-	ServoEncoderPIDMotor motor2; // PID controlled motor object
+	HBridgeEncoderPIDMotor motor1;  // PID controlled motor object
+	HBridgeEncoderPIDMotor motor2; // PID controlled motor object
 	HBridgeEncoderPIDMotor motor3; // PID controlled motor object
 	// Servo objects
 	Servo servo;

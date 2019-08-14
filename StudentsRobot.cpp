@@ -16,10 +16,10 @@ StudentsRobot::StudentsRobot(PIDMotor * motor1,
 	this->motor2 = motor2;
 	this->motor3 = motor3;
 
-	// Set the PID Clock gating rate. Thie must be 10 times slower than the motors update rate
+	// Set the PID Clock gating rate. The PID must be 10 times slower than the motors update rate
 	motor1->myPID.sampleRateMs = 5; //
 	motor2->myPID.sampleRateMs = 5; //
-	motor3->myPID.sampleRateMs = 1;  // 10khz H-Bridge, 0.1ms update, 1 ms PID
+	motor3->myPID.sampleRateMs = 5;  // 10khz H-Bridge, 0.1ms update, 1 ms PID
 
 	// Set default P.I.D gains
 	motor1->myPID.setpid(0.00015, 0, 0);
@@ -31,32 +31,32 @@ StudentsRobot::StudentsRobot(PIDMotor * motor1,
 	motor3->velocityPID.setpid(0.1, 0, 0);
 	// compute ratios and bounding
 	double motorToWheel = 3;
-	motor1->setOutputBoundingValues(57, //the minimum value that the output takes (Full reverse)
-			150, //the maximum value the output takes (Full forward)
-			90, //the value of the output to stop moving
-			6, //a positive value subtracted from stop value to creep backward
-			14, //a positive value added to the stop value to creep forwards
+	motor1->setOutputBoundingValues(-255, //the minimum value that the output takes (Full reverse)
+			255, //the maximum value the output takes (Full forward)
+			0, //the value of the output to stop moving
+			125, //a positive value subtracted from stop value to creep backward
+			125, //a positive value added to the stop value to creep forwards
 			16.0 * // Encoder CPR
 					50.0 * // Motor Gear box ratio
 					motorToWheel * // motor to wheel stage ratio
 					(1.0 / 360.0) * // degrees per revolution
 					2, // Number of edges that are used to increment the value
-			480,// measured max degrees per second
-			150// the speed in degrees per second that the motor spins when the hardware output is at creep forwards
-	);
-	motor2->setOutputBoundingValues(0, //the minimum value that the output takes (Full reverse)
-			180, //the maximum value the output takes (Full forward)
-			90, //the value of the output to stop moving
-			7, //a positive value subtracted from stop value to creep backward
-			14, //a positive value added to the stop value to creep forwards
+			480, // measured max degrees per second
+			150 // the speed in degrees per second that the motor spins when the hardware output is at creep forwards
+			);
+	motor2->setOutputBoundingValues(-255, //the minimum value that the output takes (Full reverse)
+			255, //the maximum value the output takes (Full forward)
+			0, //the value of the output to stop moving
+			125, //a positive value subtracted from stop value to creep backward
+			125, //a positive value added to the stop value to creep forwards
 			16.0 * // Encoder CPR
 					50.0 * // Motor Gear box ratio
 					motorToWheel * // motor to wheel stage ratio
 					(1.0 / 360.0) * // degrees per revolution
 					2, // Number of edges that are used to increment the value
-			480,// measured max degrees per second
+			480, // measured max degrees per second
 			150	// the speed in degrees per second that the motor spins when the hardware output is at creep forwards
-	);
+			);
 	motor3->setOutputBoundingValues(-255, //the minimum value that the output takes (Full reverse)
 			255, //the maximum value the output takes (Full forward)
 			0, //the value of the output to stop moving
@@ -67,13 +67,13 @@ StudentsRobot::StudentsRobot(PIDMotor * motor1,
 					1.0 * // motor to arm stage ratio
 					(1.0 / 360.0) * // degrees per revolution
 					2, // Number of edges that are used to increment the value
-			1400,// measured max degrees per second
-			150// the speed in degrees per second that the motor spins when the hardware output is at creep forwards
-	);
+			1400, // measured max degrees per second
+			50 // the speed in degrees per second that the motor spins when the hardware output is at creep forwards
+			);
 	// Set up the line tracker
-	pinMode(LINE_SENSE_ONE, ANALOG);
-	pinMode(LINE_SENSE_TWO, ANALOG);
-	pinMode(EMITTER_PIN, OUTPUT);
+	pinMode(ANALOG_SENSE_ONE, ANALOG);
+	pinMode(ANALOG_SENSE_TWO, ANALOG);
+	pinMode(H_BRIDGE_ENABLE, OUTPUT);
 }
 /**
  * Seperate from running the motor control,
@@ -90,7 +90,7 @@ void StudentsRobot::updateStateMachine() {
 	case StartRunning:
 		Serial.println("Start Running");
 
-		digitalWrite(EMITTER_PIN, 1);
+		digitalWrite(H_BRIDGE_ENABLE, 1);
 		// Start an interpolation of the motors
 		motor1->startInterpolationDegrees(motor1->getAngleDegrees(), 1000, SIN);
 		motor2->startInterpolationDegrees(motor2->getAngleDegrees(), 1000, SIN);
@@ -128,7 +128,7 @@ void StudentsRobot::updateStateMachine() {
 	case Halting:
 		// save state and enter safe mode
 		Serial.println("Halting State machine");
-		digitalWrite(EMITTER_PIN, 0);
+		digitalWrite(H_BRIDGE_ENABLE, 0);
 		motor3->stop();
 		motor2->stop();
 		motor1->stop();
