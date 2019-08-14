@@ -128,7 +128,7 @@ void StudentsRobot::updateStateMachine() {
 	case Halting:
 		// save state and enter safe mode
 		Serial.println("Halting State machine");
-		digitalWrite(H_BRIDGE_ENABLE, 0);
+		//digitalWrite(H_BRIDGE_ENABLE, 0); // Disable and idle motors
 		motor3->stop();
 		motor2->stop();
 		motor1->stop();
