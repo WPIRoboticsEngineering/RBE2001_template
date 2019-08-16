@@ -26,7 +26,7 @@ In you checked out code, open doc/html/annotated.html to see the Doxygen documen
 
 ## 2.1 Base Bot CAD
 
-([Bowler Studio](https://github.com/CommonWealthRobotics/BowlerStudio)) files for BaseBot modules are located in the [RBELabCustomParts](https://github.com/WPIRoboticsEngineering/RBELabCustomParts/blob/master/WheelModule.groovy) repository. [STL files](https://github.com/WPIRoboticsEngineering/RBELabCustomParts/releases/download/0.0.2/BaseBot2019.zip) are located under the release tab.
+[Bowler Studio](http://commonwealthrobotics.com/) files for BaseBot modules are located in the [RBELabCustomParts](https://github.com/WPIRoboticsEngineering/RBELabCustomParts/blob/master/WheelModule.groovy) repository. [STL files](https://github.com/WPIRoboticsEngineering/RBELabCustomParts/releases/download/0.0.2/BaseBot2019.zip) are located under the release tab.
 
 ## 2.2 Hardware Electrical Documentation
 
