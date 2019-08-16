@@ -2,9 +2,11 @@
 
 Template code for the RBE 2001 final project
 
-# Libraries
+# 1. Libraries
 
-Search and install:
+## 1.1 Search and install
+
+Open ArduinoIDE and search for these libraries using Library Manager
 
 ```
 ESP32Servo
@@ -18,38 +20,40 @@ Esp32SimplePacketComs
 SimplePacketComs
 ```
 
-## Code Documentation Doxygen
+# 2. Code Documentation Doxygen
 
 In you checked out code, open doc/html/annotated.html to see the Doxygen documentation. The best way to understand this code is to start in the Files section of the documentation, and look at the .ino file. Look at the setup and loop call graphs.
 
-## Base Bot CAD
+## 2.1 Base Bot CAD
 
 ([Bowler Studio](https://github.com/CommonWealthRobotics/BowlerStudio)) files for BaseBot modules are located in the [RBELabCustomParts](https://github.com/WPIRoboticsEngineering/RBELabCustomParts/blob/master/WheelModule.groovy) repository. [STL files](https://github.com/WPIRoboticsEngineering/RBELabCustomParts/releases/download/0.0.2/BaseBot2019.zip) are located under the release tab.
 
-## Hardware Electrical Documentation
+## 2.2 Hardware Electrical Documentation
 
 Hardware Documentation: https://github.com/WPIRoboticsEngineering/RobotInterfaceBoard
 
 [Wiring Diagram](wiring/wiring.md)
 
-### A note about the level shifter
+### 2.3 A note about the level shifter
 
 It is important to make sure the red connection (3.3v) is attached to the level shifter. Omitting this connection can damage your ESP32. Check Twice!
 
-## Where Is My Code?
+# 3. Where Is My Code?
 
 Your private Repository has been created for you here: https://github.com/RBE200x-lab
 
 You and your team members should find your repository made with the template code in there.
 
-# Development of your code
-## Install Eclipse And Setup Eclipse on Personal Machine
+
+
+# 4. Install Eclipse And Setup Eclipse on ( Personal Machine ONLY)
 
  [See Eclipse install instructions in InstallEclipse.md](https://github.com/WPIRoboticsEngineering/RobotInterfaceBoard/blob/master/InstallEclipse.md)
  
+# 5. Development of your code
  [Open Projects in Eclipse using the Eclipse instructions](https://github.com/WPIRoboticsEngineering/RobotInterfaceBoard/blob/master/UseEclipse.md)
 
-## Code theory, structure and what to edit
+# 6. Code theory, structure and what to edit
 
 If find yourself saying:
 
@@ -58,6 +62,7 @@ Geez, thats a lot of code :/ I dont even know where to begin...
 ```
 then start here.
 
+## 6.1 Documentation
 The first thing to dig into is not the code, but the documentation. The template code that you all got copies of is documented using [Doxygen](https://mesos.readthedocs.io/en/latest/c++-style-guide/) a code auto-documentation tool. It generates a rather nice website of hyperlinked documentation of all the code in this repository. Besides the normal text based documentation, it also will generate very nice graphs such as
 
 Include graphs (what headers include other headers):
@@ -94,7 +99,7 @@ Your PID code will go in RBEPID. You will implement a PID controller in one of y
 
 The 'config.h' file contains all of the pin definitions and the name of the robot. You should not change any of the pin definitions. You can add other pin definitions in header for the Final project, but do not change the pre-defined values. You should change TEAM_NAME to match your team number before using WiFi.
 
-### Commands
+## 6.2 Commands
 
 Commands from Java are sent over the WiFi. For the WiFi to work the computer running the Java application and the ESP32 need to have the same subnet. This means out of the 4 number IP address printed by the ESP32's serial port when it connects:
 
@@ -106,13 +111,13 @@ the first 3 match the computer that the Java application is running on. The lab 
 
 To search for your device, type the name you set in your .ino file. Use the control application to search for that device. If it finds it, it will open up the controls and you can send commands from the Java application to your robot. Those commands will call the associated method in StudentsRobot object.
 
-### Alternate WiFi connections using Android Phone or Home WIfi
+## 6.3 Alternate WiFi connections using Android Phone or Home WIfi
 
 Connecting to a hotspot or home wifi can be done with the ESP32 and the serial monitor. Make sure the serial monitor is not using any line endings and open at 115200 and you can see the print statements of the core running. Type the name of the WiFi network you want to connect to into the serial send bar and once ita all there, hit enter. Wait for the WifiManager to prompt you for the password, then type that in as well and hit enter.
 
 Android phones hotspot mode works well. the iPhone hotspot does not work and seems to filter the communication packets out.
 
-### Field controller app
+# 7. Field controller app
 
 The field controller can be found here:
 
@@ -120,6 +125,6 @@ https://github.com/WPIRoboticsEngineering/2001_Field_Controller/releases
 
 It is a runnable .JAR file. Download it and run.  
 
-## FAQ and Troubleshooting
+# 8. FAQ and Troubleshooting
 
 See https://github.com/WPIRoboticsEngineering/RobotInterfaceBoard#faq-and-troubleshooting
