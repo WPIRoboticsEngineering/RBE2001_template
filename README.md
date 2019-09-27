@@ -28,13 +28,15 @@ In you checked out code, open doc/html/annotated.html to see the Doxygen documen
 
 [Bowler Studio](http://commonwealthrobotics.com/) files for BaseBot modules are located in the [RBELabCustomParts](https://github.com/WPIRoboticsEngineering/RBELabCustomParts/blob/master/WheelModule.groovy) repository. [STL files](https://github.com/WPIRoboticsEngineering/RBELabCustomParts/releases/download/0.0.2/2019BaseBot-2.zip) are located under the release tab.
 
-## 2.2 Hardware Electrical Documentation
+## 2.2 Hardware Documentation
 
 Hardware Documentation: https://github.com/WPIRoboticsEngineering/RobotInterfaceBoard
 
+## 2.3 Electrical Documentation
+
 [Wiring Diagram](wiring/wiring.md)
 
-### 2.3 A note about the level shifter
+### 2.3.1 A note about the level shifter
 
 It is important to make sure the red connection (3.3v) is attached to the level shifter. Omitting this connection can damage your ESP32. Check Twice!
 
